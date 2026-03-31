@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Tech Briefing — March 31, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d1117;--surface:#161b22;--surface2:#1c2333;--border:#30363d;
+  --text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--accent2:#3fb950;
+  --tag-ai:#da3633;--tag-apple:#a371f7;--tag-security:#f0883e;
+  --tag-devtools:#58a6ff;--tag-startup:#3fb950;--tag-tech:#79c0ff;
+  --tag-community:#d2a8ff;--tag-hardware:#f778ba;
+}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:860px;margin:0 auto;padding:16px}
+
+header{padding:24px 0 16px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.date-label{font-size:13px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
+h1{font-size:28px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px}
+.subtitle{color:var(--text2);font-size:14px}
+.meta{display:flex;gap:16px;margin-top:12px;font-size:12px;color:var(--text2)}
+.meta span{display:flex;align-items:center;gap:4px}
+
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;align-items:center}
+.search-box{flex:1;min-width:200px;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;font-family:inherit;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.search-box::placeholder{color:var(--text2)}
+.filter-btn{padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:20px;color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;font-family:inherit}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.category-section{margin-bottom:32px}
+.category-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:12px;user-select:none}
+.category-header h2{font-size:18px;font-weight:600;display:flex;align-items:center;gap:8px}
+.category-header .count{font-size:13px;color:var(--text2);font-weight:400}
+.chevron{color:var(--text2);transition:transform .2s;font-size:14px}
+.category-section.collapsed .chevron{transform:rotate(-90deg)}
+.category-section.collapsed .items{display:none}
+
+.item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:10px;transition:border-color .15s}
+.item:hover{border-color:var(--accent)}
+.item-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+.item h3{font-size:15px;font-weight:600;line-height:1.4}
+.item h3 a{color:var(--text)}
+.item h3 a:hover{color:var(--accent)}
+.tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.tag-ai{background:rgba(218,54,51,.15);color:var(--tag-ai)}
+.tag-apple{background:rgba(163,113,247,.15);color:var(--tag-apple)}
+.tag-security{background:rgba(240,136,62,.15);color:var(--tag-security)}
+.tag-devtools{background:rgba(88,166,255,.15);color:var(--tag-devtools)}
+.tag-startup{background:rgba(63,185,80,.15);color:var(--tag-startup)}
+.tag-tech{background:rgba(121,192,255,.15);color:var(--tag-tech)}
+.tag-community{background:rgba(210,168,255,.15);color:var(--tag-community)}
+.tag-hardware{background:rgba(247,120,186,.15);color:var(--tag-hardware)}
+.item p{font-size:14px;color:var(--text2);line-height:1.55}
+.source{font-size:12px;color:var(--text2);margin-top:8px;opacity:.7}
+
+.empty-state{text-align:center;padding:48px 16px;color:var(--text2)}
+
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text2);margin-top:24px}
+
+@media(max-width:600px){
+  .container{padding:12px}
+  h1{font-size:22px}
+  .controls{gap:6px}
+  .filter-btn{padding:5px 10px;font-size:11px}
+  .item{padding:12px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="date-label">Tuesday, March 31, 2026</div>
+    <h1>Daily Tech Briefing</h1>
+    <div class="subtitle">Curated intelligence for builders, hackers, and security-minded developers</div>
+    <div class="meta">
+      <span id="item-count"></span>
+      <span id="last-updated"></span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <input type="text" class="search-box" id="search" placeholder="Search stories...">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ai">AI / ML</button>
+    <button class="filter-btn" data-filter="apple">Apple / iOS</button>
+    <button class="filter-btn" data-filter="security">Security</button>
+    <button class="filter-btn" data-filter="devtools">Dev Tools</button>
+    <button class="filter-btn" data-filter="startup">Startups</button>
+    <button class="filter-btn" data-filter="tech">Tech</button>
+    <button class="filter-btn" data-filter="hardware">Hardware</button>
+  </div>
+
+  <div id="content"></div>
+
+  <footer>
+    Built with Claude &middot; Sources verified as of March 31, 2026
+  </footer>
+</div>
+
+<script>
+const ITEMS = [
+  // ── AI / ML ────────────────────────────────────────────────
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "Claude Opus 4.6 & Sonnet 4.6 Ship with 1M-Token Context",
+    url: "https://danielquinteros.medium.com/google-openai-anthropic-updates-edc94fc6f10e",
+    analysis: "Anthropic deployed its latest models with a million-token context window in beta — enabling entire monorepo analysis, long-document reasoning, and multi-file refactoring in a single pass. For developers, this changes the practical ceiling of what an AI coding assistant can hold in working memory.",
+    source: "AI Pulse / Medium"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "Gemini 3.1 Flash-Lite: 2.5× Faster at $0.25/M Input Tokens",
+    url: "https://llm-stats.com/llm-updates",
+    analysis: "Google's new inference tier targets latency-sensitive applications at rock-bottom pricing. This puts serious pressure on OpenAI and Anthropic in the cost-per-token race and makes real-time AI features more viable for indie developers on tight budgets.",
+    source: "LLM Stats"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "OpenAI Kills Sora Public API — Video Gen Economics Don't Work",
+    url: "https://www.digitalapplied.com/blog/march-2026-ai-roundup-month-that-changed-everything",
+    analysis: "OpenAI quietly sunset the Sora API citing unsustainable inference costs. This is a reality check: not every generative modality is commercially viable at scale. Developers building on video-gen APIs should take note of platform risk.",
+    source: "Digital Applied"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "GPT-5.4 Launches with Reusable 'Skills' Feature",
+    url: "https://danielquinteros.medium.com/google-openai-anthropic-updates-edc94fc6f10e",
+    analysis: "OpenAI introduced modular, shareable workflow bundles called Skills — reusable instructions, code, and examples that ChatGPT applies automatically. This raises the ceiling for agentic automation and mirrors the plugin/skill patterns emerging across all major AI platforms.",
+    source: "AI Pulse / Medium"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "Mistral Small 4 Tops Open-Source Reasoning Benchmarks",
+    url: "https://blog.mean.ceo/new-ai-model-releases-news-march-2026/",
+    analysis: "Mistral's latest open-weight model beats larger competitors on reasoning tasks, reinforcing that parameter count isn't everything. For developers who need local or self-hosted inference, this is a strong option that runs efficiently on consumer hardware.",
+    source: "Mean CEO Blog"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "Mistral Releases Open-Source Speech Generation Model",
+    url: "https://techcrunch.com/2026/03/26/mistral-releases-a-new-open-source-model-for-speech-generation/",
+    analysis: "Mistral dropped an open-source TTS model for voice AI assistants and enterprise use. This continues their strategy of democratizing capabilities that were previously locked behind proprietary APIs — a direct gift to developers building voice-first experiences.",
+    source: "TechCrunch"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "EPFL Solves Generative Video Drift — No More Time Limits",
+    url: "https://techxplore.com/news/2026-02-ai-limits-generative-video.html",
+    analysis: "Researchers developed a method that works with generation errors rather than fighting them, enabling arbitrarily long AI videos without quality degradation. This removes a fundamental bottleneck that's constrained every video gen model to date.",
+    source: "TechXplore"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "Yann LeCun's AMI Labs Raises €1.03B for World Models",
+    url: "https://aifundingtracker.com/top-50-ai-startups/",
+    analysis: "The largest European seed round ever, funding JEPA-based world models as an alternative to transformer architectures. This validates investment in fundamentally different AI approaches and signals the field isn't converging on a single architecture.",
+    source: "AI Funding Tracker"
+  },
+  {
+    cat: "ai", catLabel: "AI / ML",
+    title: "MCP Reaches 97M Installs — Standardized AI Integration Goes Mainstream",
+    url: "https://techcrunch.com/2026/03/13/the-biggest-ai-stories-of-the-year-so-far/",
+    analysis: "Every major AI provider now ships MCP-compatible tooling. This is a tipping point: the protocol Anthropic open-sourced has become the de facto standard for connecting AI agents to external tools, databases, and services.",
+    source: "TechCrunch"
+  },
+
+  // ── Apple / iOS ────────────────────────────────────────────
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "WWDC 2026 Confirmed: June 8–12, iOS 27 Incoming",
+    url: "https://www.apple.com/newsroom/2026/03/apples-worldwide-developers-conference-returns-the-week-of-june-8/",
+    analysis: "Apple officially announced WWDC26 with hybrid online/in-person format. iOS 27 will be the flagship reveal, with AI advancements and dev tools as headline themes. Time to start planning session priorities and beta testing strategies.",
+    source: "Apple Newsroom"
+  },
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "Xcode 26.4 Ships with New SwiftUI Performance Instruments",
+    url: "https://developer.apple.com/xcode/whats-new/",
+    analysis: "The March 24 release adds a dedicated SwiftUI instrument for visualizing data-driven view updates, plus explicit view invalidation controls and performance counters. If you're shipping SwiftUI apps, these profiling tools directly address the 'why is this view reloading?' debugging pain.",
+    source: "Apple Developer"
+  },
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "Swift 6.4: HTML Coverage Reports + Testing Proposals",
+    url: "https://www.swift.org/swift-evolution/",
+    analysis: "SE-0501 brings HTML coverage reports to swift test, and ST-0022 (custom reflection during testing) is under review through April 14. Swift's evolution continues to focus on testing and developer experience — less flashy than concurrency changes, but practically impactful.",
+    source: "Swift.org"
+  },
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "App Store Age Verification Laws Now Enforced (TX, CA, LA, UT)",
+    url: "https://developer.apple.com/news/?id=btkirlj8",
+    analysis: "As of January 2026, apps in four states must implement age assurance and parental consent for minors under 18. Updated App Review Guidelines require creator apps to identify age-restricted content. If your app has UGC, this is compliance-critical.",
+    source: "Apple Developer"
+  },
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "Apple Removes 'Vibe Coding' Apps from App Store",
+    url: "https://www.newsdirectory3.com/apple-tightens-app-store-rules-faces-regulatory-scrutiny-investor-implications/",
+    analysis: "Apple pulled AI-assisted development tools from the store and blocked updates to others mid-month. This signals stricter governance of generative AI tools ahead of WWDC — developers building AI-powered coding apps should watch policy changes closely.",
+    source: "News Directory"
+  },
+  {
+    cat: "apple", catLabel: "Apple / iOS",
+    title: "Siri AI Overhaul: Google Gemini Partnership for Q2 Launch",
+    url: "https://www.theneuron.ai/ai-news-digests/-around-the-horn-digest-everything-that-happened-in-ai-this-weekend-march-28-29-2026/",
+    analysis: "Apple is reportedly pivoting Siri's AI backbone to Google's 1.2T parameter Gemini model, with inference running through Private Cloud Compute for privacy. If true, this would be the most significant Siri upgrade in years and changes the competitive landscape for voice-first iOS apps.",
+    source: "The Neuron"
+  },
+
+  // ── Security ───────────────────────────────────────────────
+  {
+    cat: "security", catLabel: "Security",
+    title: "Microsoft Patch Tuesday: 79 Flaws, 2 Zero-Days in Office",
+    url: "https://www.bleepingcomputer.com/news/microsoft/microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws/",
+    analysis: "Two publicly disclosed zero-days (CVE-2026-26113, CVE-2026-26110) trigger via Preview Pane in Office. Over half of the 79 CVEs are privilege escalation bugs. Critical RCE flaws in Windows Graphics, Kernel, SMB Server, and Winlogon make this a must-patch month.",
+    source: "BleepingComputer"
+  },
+  {
+    cat: "security", catLabel: "Security",
+    title: "SharePoint RCE (CVE-2026-20963, CVSS 9.8) Actively Exploited",
+    url: "https://www.helpnetsecurity.com/2026/03/19/sharepoint-vulnerability-cve-2026-20963-exploited/",
+    analysis: "CISA added this critical SharePoint deserialization flaw to its Known Exploited Vulnerabilities catalog, ordering federal agencies to patch within 3 days. Affects Subscription Edition, 2019, and Enterprise 2016 — if you're self-hosting SharePoint, patch immediately.",
+    source: "CISA / Help Net Security"
+  },
+  {
+    cat: "security", catLabel: "Security",
+    title: "FBI Dismantles IoT Botnet of 3M+ Compromised Devices",
+    url: "https://krebsonsecurity.com/2026/03/feds-disrupt-iot-botnets-behind-huge-ddos-attacks/",
+    analysis: "A joint US/Canada/Germany operation took down four botnets comprising routers and cameras, linked to operators as young as 15. Reinforces why IoT device security hygiene matters — your smart home cameras could be participating in DDoS attacks.",
+    source: "Krebs on Security"
+  },
+  {
+    cat: "security", catLabel: "Security",
+    title: "European Commission, TELUS Digital, Crunchyroll Breached",
+    url: "https://techcrunch.com/2026/03/27/european-commission-confirms-cyberattack-after-hackers-claim-data-breach/",
+    analysis: "March saw high-profile breaches across government and enterprise: EC cloud infrastructure compromised, TELUS lost a petabyte to ShinyHunterz ransomware, and Crunchyroll's 6.8M users were exposed via compromised Okta SSO credentials. The Okta vector is especially notable — SSO is only as strong as its weakest admin.",
+    source: "TechCrunch"
+  },
+  {
+    cat: "security", catLabel: "Security",
+    title: "AI Agents Create New Attack Surface as They Gain System Access",
+    url: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/",
+    analysis: "Krebs examines how autonomous AI agents with broad system permissions create an emerging threat model. These programs can automate any task with system-level access — a single compromised agent prompt could execute arbitrary actions. Relevant to anyone building or using AI coding tools.",
+    source: "Krebs on Security"
+  },
+
+  // ── Dev Tools & Open Source ────────────────────────────────
+  {
+    cat: "devtools", catLabel: "Dev Tools",
+    title: "Claude Code Outperforms Cursor in Blind Coding Benchmark",
+    url: "https://tech-insider.org/claude-code-vs-cursor-2026/",
+    analysis: "Claude Code's 1M-token context on Sonnet 4.6 achieves 72.5% on SWE-bench with a 67% lead over Cursor in code quality. The emerging best practice: Cursor for iterative work, Claude Code for complex discrete tasks. For monorepo refactoring, the context advantage is decisive.",
+    source: "Tech Insider"
+  },
+  {
+    cat: "devtools", catLabel: "Dev Tools",
+    title: "OpenClaw Hits 210K+ GitHub Stars — Fastest-Growing OSS Project of 2026",
+    url: "https://medium.com/write-a-catalyst/top-ai-github-repositories-in-2026-e08af3e88314",
+    analysis: "OpenClaw is a personal AI assistant that runs entirely on-device and connects to 50+ integrations via a local gateway. Its explosion from 9K to 210K stars signals massive demand for privacy-first, locally-hosted AI infrastructure that developers control.",
+    source: "Medium"
+  },
+  {
+    cat: "devtools", catLabel: "Dev Tools",
+    title: "Nvidia Open-Sources NemoClaw Enterprise Agent Platform",
+    url: "https://www.cnbc.com/2026/03/10/nvidia-open-source-ai-agent-platform-nemoclaw-wired-agentic-tools-openclaw-clawdbot-moltbot.html",
+    analysis: "Nvidia's NemoClaw targets enterprise AI agent orchestration with open-source tooling. GTC 2026 was dominated by agent deployment stories, marking the industry's shift from inference optimization to agent orchestration as the primary infrastructure challenge.",
+    source: "CNBC"
+  },
+  {
+    cat: "devtools", catLabel: "Dev Tools",
+    title: "AMD Releases Free AI-Optimized Rocky Linux for EPYC/Instinct",
+    url: "https://www.opensourceforu.com/2026/03/amd-takes-on-cuda-with-open-source-ai-linux-push/",
+    analysis: "AMD and CIQ shipped a free Linux distro pre-configured with validated drivers and ROCm stack for AI workloads. This lowers the barrier to running local ML inference without NVIDIA's proprietary ecosystem — meaningful for cost-conscious indie developers.",
+    source: "Open Source For You"
+  },
+
+  // ── Startups & Indie ───────────────────────────────────────
+  {
+    cat: "startup", catLabel: "Startups",
+    title: "YC W26 Demo Day: ~190 Startups, AI-First Dominates",
+    url: "https://techcrunch.com/2026/03/26/16-of-the-most-interesting-startups-from-yc-w26-demo-day/",
+    analysis: "Y Combinator's Winter 2026 batch showcased nearly 190 companies at Demo Day, with AI infrastructure, enterprise software, and hardware innovation as the leading categories. Investor appetite for AI-first companies remains strong despite market skepticism.",
+    source: "TechCrunch"
+  },
+  {
+    cat: "startup", catLabel: "Startups",
+    title: "YC Spring RFS: Two-Person AI Teams Can Outperform 50-Person Companies",
+    url: "https://superframeworks.com/articles/yc-rfs-startup-ideas-indie-hackers-2026",
+    analysis: "Y Combinator's latest Request for Startups explicitly calls out AI leverage as a force multiplier — small teams with automation replacing manual work can achieve disproportionate impact. The signal is clear: headcount is no longer the competitive moat.",
+    source: "Superframeworks"
+  },
+  {
+    cat: "startup", catLabel: "Startups",
+    title: "TrustMRR Hits $13.8K MRR in 48 Hours — Revenue Verification for Indies",
+    url: "https://www.somethingsblog.com/2026/01/24/real-indie-hacker-success-stories-that-prove-its-still-possible-in-2026/",
+    analysis: "A revenue verification platform for bootstrapped founders hit product-market fit instantly. Open source credibility is cited as the most effective free marketing channel. Proof that B2B tools for the indie ecosystem itself remain a viable niche.",
+    source: "Something's Blog"
+  },
+  {
+    cat: "startup", catLabel: "Startups",
+    title: "Anthropic Fights DOD 'Supply Chain Risk' Designation in Court",
+    url: "https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/",
+    analysis: "Anthropic filed to reverse a government supply chain risk label, drawing cross-industry support from OpenAI and Google employees. This sets precedent for AI governance boundaries and signals that frontier labs are drawing hard lines on military/surveillance use cases.",
+    source: "TechCrunch"
+  },
+
+  // ── General Tech ───────────────────────────────────────────
+  {
+    cat: "tech", catLabel: "Tech",
+    title: "Arm Designs Its First Chip After 35 Years — AI-Focused AGI CPU",
+    url: "https://techcrunch.com/2026/03/24/arm-is-releasing-its-first-in-house-chip-in-its-35-year-history/",
+    analysis: "Arm broke with its licensing-only model to design a production chip optimized for AI inference in data centers. This strategic shift could reshape the chip industry — Arm competing directly with its own licensees is unprecedented.",
+    source: "TechCrunch"
+  },
+  {
+    cat: "tech", catLabel: "Tech",
+    title: "Ars Technica Fires Reporter Over AI-Fabricated Quotes",
+    url: "https://www.thewrap.com/media-platforms/journalism/ars-technica-fires-ai-reporter-fabricated-quotes/",
+    analysis: "Senior reporter Benj Edwards was terminated after AI-generated fabricated quotes were attributed to real sources in a published story. A cautionary tale for anyone using AI-assisted writing — always verify generated content, especially attributed statements.",
+    source: "TheWrap"
+  },
+  {
+    cat: "tech", catLabel: "Tech",
+    title: "$650B AI Infrastructure Spend in 2026 — Energy Is the Bottleneck",
+    url: "https://radicaldatascience.wordpress.com/2026/03/30/ai-news-briefs-bulletin-board-for-march-2026/",
+    analysis: "AI infrastructure investment is up 60% YoY, but power grid capacity — not compute or capital — has emerged as the binding constraint. This could cap the industry's growth rate and makes energy-efficient inference (quantized models, Apple Silicon) increasingly strategic.",
+    source: "Radical Data Science"
+  },
+  {
+    cat: "tech", catLabel: "Tech",
+    title: "Netflix Raises Prices Again Across All Tiers",
+    url: "https://techcrunch.com/2026/03/26/netflix-confirms-its-raising-prices-again/",
+    analysis: "Ad-supported up to $8.99, standard to $19.99, premium to $26.99. The streaming profitability playbook continues: fewer subscribers, higher ARPU. Relevant for anyone thinking about subscription pricing psychology for their own apps.",
+    source: "TechCrunch"
+  },
+
+  // ── Hardware ───────────────────────────────────────────────
+  {
+    cat: "hardware", catLabel: "Hardware",
+    title: "M5 Pro & M5 Max: 4× AI Performance, Up to 307GB/s Memory Bandwidth",
+    url: "https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/",
+    analysis: "Apple's new Fusion Architecture chips deliver over 4× peak GPU compute for AI vs M4. For developers running local LLMs and on-device ML, unified memory and raw neural engine throughput make these the best consumer hardware for AI inference, period.",
+    source: "Apple Newsroom"
+  },
+  {
+    cat: "hardware", catLabel: "Hardware",
+    title: "AirPods Max 2: H2 Chip, 1.5× Better ANC, Pre-Orders Live",
+    url: "https://www.macrumors.com/2026/03/27/apple-to-launch-15-products-later-this-year/",
+    analysis: "Pre-orders opened March 25 with early April delivery. The H2 chip brings meaningful ANC improvements and positions Apple to expand spatial audio capabilities ahead of visionOS updates expected at WWDC.",
+    source: "MacRumors"
+  },
+  {
+    cat: "hardware", catLabel: "Hardware",
+    title: "Apple Silicon Dominates Local LLM Performance Discussions",
+    url: "https://blog.premai.io/self-hosted-ai-models-a-practical-guide-to-running-llms-locally-2026/",
+    analysis: "Community benchmarks show M-series Macs running larger models more efficiently per GB than equivalent PC setups. The unified memory architecture advantage is decisive for transformer workloads — a MacBook Pro is becoming the default dev machine for local AI.",
+    source: "Premai.io"
+  },
+
+  // ── Community ──────────────────────────────────────────────
+  {
+    cat: "community", catLabel: "Community",
+    title: "r/LocalLLaMA: Self-Hosted AI Crosses 'Actually Useful' Threshold",
+    url: "https://www.aitooldiscovery.com/guides/local-llm-reddit",
+    analysis: "The 266K-member community reports quantized models + Ollama have made self-hosted LLMs genuinely production-ready on consumer hardware. Llama 3.3 70B's efficiency is the inflection point — privacy-preserving AI is no longer just a hobby project.",
+    source: "AI Tool Discovery"
+  },
+  {
+    cat: "community", catLabel: "Community",
+    title: "Shopify CEO Trains 0.8B Model That Beats 1.6B Using Autoresearch",
+    url: "https://softteco.com/blog/machine-learning-trends",
+    analysis: "Autoresearch automates model optimization — editing code, running experiments, validating metrics overnight — enabling non-ML experts to beat larger models with smaller, optimized ones. The 'small beats large when tuned well' narrative is gaining real evidence.",
+    source: "SoftTeco"
+  }
+];
+
+const CATEGORIES = {
+  ai: { label: "AI / ML", icon: "🧠" },
+  apple: { label: "Apple / iOS", icon: "🍎" },
+  security: { label: "Security", icon: "🔒" },
+  devtools: { label: "Dev Tools & Open Source", icon: "🛠" },
+  startup: { label: "Startups & Indie", icon: "🚀" },
+  tech: { label: "General Tech", icon: "📡" },
+  hardware: { label: "Hardware", icon: "💻" },
+  community: { label: "Community Intel", icon: "💬" }
+};
+
+let activeFilter = "all";
+let searchQuery = "";
+
+function render() {
+  const el = document.getElementById("content");
+  const filtered = ITEMS.filter(i => {
+    if (activeFilter !== "all" && i.cat !== activeFilter) return false;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      return (i.title + i.analysis + i.source + i.catLabel).toLowerCase().includes(q);
+    }
+    return true;
+  });
+
+  if (!filtered.length) {
+    el.innerHTML = '<div class="empty-state">No stories match your filter.</div>';
+    return;
+  }
+
+  const grouped = {};
+  for (const item of filtered) {
+    (grouped[item.cat] = grouped[item.cat] || []).push(item);
+  }
+
+  const order = ["ai","apple","security","devtools","startup","tech","hardware","community"];
+  let html = "";
+  for (const cat of order) {
+    if (!grouped[cat]) continue;
+    const c = CATEGORIES[cat];
+    html += `<div class="category-section" data-cat="${cat}">
+      <div class="category-header" onclick="toggleSection(this)">
+        <h2>${c.icon} ${c.label} <span class="count">(${grouped[cat].length})</span></h2>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="items">`;
+    for (const item of grouped[cat]) {
+      html += `<div class="item">
+        <div class="item-header">
+          <h3><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a></h3>
+          <span class="tag tag-${item.cat}">${item.catLabel}</span>
+        </div>
+        <p>${item.analysis}</p>
+        <div class="source">${item.source}</div>
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+  el.innerHTML = html;
+}
+
+function toggleSection(header) {
+  header.closest(".category-section").classList.toggle("collapsed");
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  searchQuery = e.target.value;
+  render();
+});
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+document.getElementById("item-count").textContent = ITEMS.length + " stories";
+document.getElementById("last-updated").textContent = "Updated " + new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+render();
+</script>
+</body>
+</html>
