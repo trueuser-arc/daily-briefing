@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.ian.daily-briefing-push</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/ianp/daily-briefing/auto-push.sh</string>
+    </array>
+
+    <!-- Run at 6:45am — 15 min after the briefing task starts.
+         The script retries every 2 min for up to 30 min,
+         so it covers the window from 6:45am to 7:15am. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>6</integer>
+        <key>Minute</key>
+        <integer>45</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/ianp/daily-briefing/auto-push.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/ianp/daily-briefing/auto-push.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- Allow the retry loop to run for up to 35 minutes -->
+    <key>TimeOut</key>
+    <integer>2100</integer>
+</dict>
+</plist>
