@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Tech Briefing — April 3, 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-dim: #1f6feb33;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+    --pink: #f778ba;
+    --update-badge: #d29922;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+  .header .date {
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .header .meta {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 12px;
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Category sections */
+  .category {
+    margin-bottom: 24px;
+  }
+  .category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .category-header:hover { background: var(--surface-hover); }
+  .category-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .category-header .count {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .category-header .chevron {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+  }
+  .category.collapsed .chevron { transform: rotate(-90deg); }
+  .category.collapsed .category-items { display: none; }
+
+  .category-items {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+
+  /* Items */
+  .item {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .item:last-child { border-bottom: none; }
+  .item:hover { background: var(--surface); }
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .item h3 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .item h3 a:hover { color: var(--accent); }
+  .item .analysis {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .item .item-meta {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  .tag-source {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+  .tag-update {
+    background: #d2992233;
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  /* Category colors */
+  .cat-ai .category-header { border-left: 3px solid var(--purple); }
+  .cat-apple .category-header { border-left: 3px solid var(--text); }
+  .cat-security .category-header { border-left: 3px solid var(--red); }
+  .cat-dev .category-header { border-left: 3px solid var(--green); }
+  .cat-business .category-header { border-left: 3px solid var(--orange); }
+  .cat-hardware .category-header { border-left: 3px solid var(--pink); }
+  .cat-oss .category-header { border-left: 3px solid var(--accent); }
+  .cat-policy .category-header { border-left: 3px solid #d29922; }
+
+  /* Archive */
+  .archive-section {
+    margin-top: 40px;
+    padding: 20px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .archive-section h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+  }
+  .archive-section p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Search */
+  .search-box {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-box:focus { border-color: var(--accent); }
+  .search-box::placeholder { color: var(--text-muted); }
+
+  .hidden { display: none !important; }
+
+  /* Stats bar */
+  .stats {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="date">Friday, April 3, 2026</div>
+    <h1>Daily Tech Briefing</h1>
+    <div class="meta">Last updated: April 3, 2026 · Auto-generated morning digest</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">22</div><div class="stat-label">Stories</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Sources</div></div>
+  </div>
+
+  <input type="text" class="search-box" placeholder="Search stories..." id="searchBox" />
+
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ai">AI/ML</button>
+    <button class="filter-btn" data-filter="apple">Apple/iOS</button>
+    <button class="filter-btn" data-filter="security">Security</button>
+    <button class="filter-btn" data-filter="dev">Dev Tools</button>
+    <button class="filter-btn" data-filter="business">Business</button>
+    <button class="filter-btn" data-filter="hardware">Hardware</button>
+    <button class="filter-btn" data-filter="oss">Open Source</button>
+    <button class="filter-btn" data-filter="policy">Policy</button>
+  </div>
+
+  <div id="content">
+
+    <!-- AI/ML -->
+    <div class="category cat-ai" data-category="ai">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>🧠 AI / Machine Learning</h2>
+        <div><span class="count">6 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="google gemma 4 apache open source open weight models">
+          <div class="item-header"><h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank">Google Releases Gemma 4 Under Apache 2.0 — Most Capable Open Models Yet</a></h3></div>
+          <p class="analysis">Google DeepMind dropped four open-weight models (E2B, E4B, 26B, 31B) built from Gemini 3 research, now under the permissive Apache 2.0 license — no MAU limits, no acceptable-use policy enforcement. Supports 140+ languages, multimodal understanding, and is up to 4x faster with 60% less battery usage. This is a massive shift from Google's previous restrictive Gemma licenses and directly challenges Llama 4's community license.</p>
+          <div class="item-meta"><span class="tag tag-source">Google Blog</span></div>
+        </div>
+
+        <div class="item" data-searchable="anthropic claude mythos capybara frontier model">
+          <div class="item-header"><h3><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" target="_blank">Anthropic's Claude Mythos: "Step Change in Capabilities" — Now in Early Access</a></h3></div>
+          <p class="analysis">Anthropic's unreleased Mythos model, part of a new "Capybara" tier above Opus, plans and executes multi-step action sequences autonomously across systems. It dramatically outscores Opus 4.6 on coding, reasoning, and cybersecurity benchmarks. Anthropic is privately warning government officials that Mythos makes large-scale cyberattacks more likely — a remarkable admission that's fueling calls for regulatory guardrails before wider release.</p>
+          <div class="item-meta"><span class="tag tag-source">Fortune</span><span class="tag tag-source">Axios</span></div>
+        </div>
+
+        <div class="item" data-searchable="openai spud gpt 5.5 super app sora discontinued">
+          <div class="item-header"><h3><a href="https://www.revolutioninai.com/2026/03/openai-spud-model-gpt6-terence-tao-math-proof-2026.html" target="_blank">OpenAI's "Spud" Finished Training — Super App Consolidation Incoming</a></h3></div>
+          <p class="analysis">OpenAI's next-gen model codenamed Spud finished pretraining around March 24 and is expected to ship within weeks as GPT-5.5 or GPT-6. Spud will power a unified "super app" merging ChatGPT, Codex, and Atlas (browser) into one native desktop interface. OpenAI killed Sora to redirect resources here — a clear pivot from creative tools to enterprise-oriented AI that generates actual revenue.</p>
+          <div class="item-meta"><span class="tag tag-source">RevolutionInAI</span><span class="tag tag-source">Geeky Gadgets</span></div>
+        </div>
+
+        <div class="item" data-searchable="openai 122 billion funding round IPO revenue">
+          <div class="item-header"><h3><a href="https://blog.mean.ceo/ai-startup-funding-news-april-2026/" target="_blank">OpenAI Closes Historic $122B Funding Round, IPO Prep Underway</a></h3></div>
+          <p class="analysis">OpenAI secured a staggering $122 billion in funding — the largest private round in history — while generating $2B/month in revenue (approaching $25B annualized). An IPO is reportedly being planned for late 2026. Meanwhile, Anthropic is approaching $19B annualized revenue. The scale of capital flowing into frontier AI is unprecedented and reshaping how the industry thinks about valuation.</p>
+          <div class="item-meta"><span class="tag tag-source">Mean CEO Blog</span></div>
+        </div>
+
+        <div class="item" data-searchable="anthropic google cloud TPU expansion billion">
+          <div class="item-header"><h3><a href="https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services" target="_blank">Anthropic Expands Google Cloud Deal: Up to 1 Million TPUs</a></h3></div>
+          <p class="analysis">Anthropic announced a massive expansion of its Google Cloud partnership, scaling up to one million TPUs with a deal worth tens of billions of dollars. The expansion is expected to bring over a gigawatt of compute capacity online in 2026. This signals that Anthropic sees compute as the bottleneck for its Capybara-tier models and is locking in infrastructure ahead of competitors.</p>
+          <div class="item-meta"><span class="tag tag-source">Anthropic Blog</span></div>
+        </div>
+
+        <div class="item" data-searchable="meta llama 4 scout context window million tokens">
+          <div class="item-header"><h3><a href="https://elephas.app/blog/best-open-source-ai-models" target="_blank">Meta's Llama 4 Scout: 10M Token Context Window Shakes Up Open-Source</a></h3></div>
+          <p class="analysis">While Llama 4 Scout's raw reasoning scores trail competitors, its industry-leading 10-million token context window is a game-changer for massive-scale document processing. Combined with enterprises running open models for internal workloads (89% of orgs now use open-source AI), this positions Scout as the go-to for legal, financial, and research use cases where context length matters more than peak MMLU scores.</p>
+          <div class="item-meta"><span class="tag tag-source">Elephas</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Apple/iOS -->
+    <div class="category cat-apple" data-category="apple">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>🍎 Apple / iOS Ecosystem</h2>
+        <div><span class="count">4 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="apple app store submission sdk april 28 requirements ios 26">
+          <div class="item-header"><h3><a href="https://developer.apple.com/news/upcoming-requirements/" target="_blank">App Store SDK Deadline: iOS 26 SDK Required Starting April 28</a></h3></div>
+          <p class="analysis">Starting April 28, all new App Store submissions must be built with the iOS 26/iPadOS 26 SDK or later. watchOS apps now require 64-bit support and watchOS 26 SDK. If you haven't migrated to the new SDK and Liquid Glass design system yet, the clock is ticking — you have 25 days. This is the most aggressive SDK deadline Apple has set in recent years.</p>
+          <div class="item-meta"><span class="tag tag-source">Apple Developer</span></div>
+        </div>
+
+        <div class="item" data-searchable="xcode 26 llm coding assistant chatgpt claude compilation caching">
+          <div class="item-header"><h3><a href="https://developer.apple.com/xcode/whats-new/" target="_blank">Xcode 26 Now Integrates LLM Coding Assistance (ChatGPT & Claude)</a></h3></div>
+          <p class="analysis">Xcode 26 has officially added LLM-powered coding assistance with support for GPT-4.1/GPT-5 and Claude Sonnet 4. A new opt-in compilation caching feature also speeds up iterative builds by caching results across branch switches and clean builds. The LLM integration is significant — Apple is acknowledging that AI-assisted coding is table stakes for modern IDEs rather than fighting it.</p>
+          <div class="item-meta"><span class="tag tag-source">Apple Developer</span></div>
+        </div>
+
+        <div class="item" data-searchable="apple four products pending new siri gurman wwdc">
+          <div class="item-header"><h3><a href="https://9to5mac.com/2026/04/02/apple-reportedly-has-four-new-products-ready-to-launch-pending-one-thing/" target="_blank">Apple Has Four Products Ready to Ship — All Waiting on New Siri</a></h3></div>
+          <p class="analysis">Mark Gurman reports Apple has four finished products sitting on the shelf, all blocked on the delayed next-gen Siri. WWDC 2026 invitations have started going out for June 8. This bottleneck reinforces how central Apple Intelligence has become to their product strategy — and how the Siri overhaul timeline is gatekeeping their entire hardware roadmap.</p>
+          <div class="item-meta"><span class="tag tag-source">9to5Mac</span></div>
+        </div>
+
+        <div class="item" data-searchable="apple russia payments app store april">
+          <div class="item-header"><h3><a href="https://9to5mac.com/2026/04/02/apple-pulls-the-plug-on-all-payments-in-russia-following-government-diktat/" target="_blank">Apple Pulls All Payment Processing in Russia</a></h3></div>
+          <p class="analysis">Effective April 1, Apple has shut down all payment processing for App Store and Apple Media Services in Russia. This is the final step in Apple's multi-year withdrawal from the Russian market. If you have Russian users, in-app purchases and subscriptions are now non-functional — plan your comms accordingly.</p>
+          <div class="item-meta"><span class="tag tag-source">9to5Mac</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="category cat-security" data-category="security">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>🔒 Cybersecurity</h2>
+        <div><span class="count">4 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="chrome zero day cve 2026 5281 dawn exploit patch">
+          <div class="item-header"><h3><a href="https://thehackernews.com/2026/04/new-chrome-zero-day-cve-2026-5281-under.html" target="_blank">Chrome Zero-Day CVE-2026-5281 Under Active Exploitation — Patch Now</a></h3></div>
+          <p class="analysis">Google patched 21 Chrome flaws including CVE-2026-5281, a use-after-free in the Dawn graphics layer that lets attackers execute arbitrary code via crafted HTML. This is Chrome's fourth zero-day of 2026. The renderer-process escape chain makes this particularly dangerous — update immediately. The Dawn component keeps showing up as an attack surface.</p>
+          <div class="item-meta"><span class="tag tag-source">The Hacker News</span></div>
+        </div>
+
+        <div class="item" data-searchable="cisco imc critical vulnerability cve 2026 20093 authentication bypass">
+          <div class="item-header"><h3><a href="https://www.bleepingcomputer.com/" target="_blank">Cisco IMC Critical Auth Bypass — CVSS 9.8</a></h3></div>
+          <p class="analysis">Cisco released patches for CVE-2026-20093, a critical (CVSS 9.8) authentication bypass in its Integrated Management Controller. An unauthenticated remote attacker can gain elevated-privilege access to affected systems. If you run Cisco hardware with IMC enabled (and who doesn't), patch immediately — this is trivially exploitable with no credentials required.</p>
+          <div class="item-meta"><span class="tag tag-source">BleepingComputer</span></div>
+        </div>
+
+        <div class="item" data-searchable="stryker breach CISA intune microsoft warning">
+          <div class="item-header"><h3><a href="https://www.bleepingcomputer.com/news/security/cisa-warns-businesses-to-secure-microsoft-intune-systems-after-stryker-breach/" target="_blank">CISA Warns Orgs to Lock Down Intune After Stryker Breach</a></h3></div>
+          <p class="analysis">CISA issued a warning after the Handala hacktivist group exploited Microsoft Intune to wipe medical tech giant Stryker's systems. Microsoft published hardening guidance for Intune administrative controls in response. This is a wake-up call for MDM/UEM admins: if your endpoint management platform is misconfigured, an attacker can nuke your entire fleet.</p>
+          <div class="item-meta"><span class="tag tag-source">CISA</span><span class="tag tag-source">BleepingComputer</span></div>
+        </div>
+
+        <div class="item" data-searchable="windows shell cve 2026 21510 bypass single click">
+          <div class="item-header"><h3><a href="https://thehackernews.com/" target="_blank">Windows Shell Bypass CVE-2026-21510: One Click, No Warning</a></h3></div>
+          <p class="analysis">CVE-2026-21510 is a security feature bypass in Windows Shell where a single click on a malicious link silently bypasses protections and runs attacker-controlled content — no consent dialogs, no warnings. Affects all supported Windows versions. This is the kind of vulnerability that makes phishing campaigns devastatingly effective.</p>
+          <div class="item-meta"><span class="tag tag-source">The Hacker News</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dev Tools -->
+    <div class="category cat-dev" data-category="dev">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>🛠 Developer Tools</h2>
+        <div><span class="count">3 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="google jules tools agentic cli coding agent">
+          <div class="item-header"><h3><a href="https://aibusiness.com/agentic-ai/google-releases-jules-tools-agentic-cli" target="_blank">Google Releases Jules Tools — Agentic CLI for Devs</a></h3></div>
+          <p class="analysis">Google launched Jules Tools, a CLI that lets developers start, stop, and verify AI coding tasks alongside their own terminal commands. The agent handles code generation, bug fixing, test writing, and performance optimization. This is Google's answer to Claude Code and GitHub Copilot CLI — the terminal is becoming the primary AI interaction surface for developers.</p>
+          <div class="item-meta"><span class="tag tag-source">AI Business</span></div>
+        </div>
+
+        <div class="item" data-searchable="claude code trending github oh my codex typescript">
+          <div class="item-header"><h3><a href="https://github.com/trending" target="_blank">GitHub Trending: claude-code, oh-my-codex, openscreen Lead the Charts</a></h3></div>
+          <p class="analysis">Anthropic's claude-code remains a top trending repo on GitHub, alongside oh-my-codex (a TypeScript framework for AI agent hooks and teams) and openscreen (free open-source demo creation tool). The trend is clear: developers are building tooling around AI agents, not just using them — the meta-tooling layer is where the innovation is happening.</p>
+          <div class="item-meta"><span class="tag tag-source">GitHub</span></div>
+        </div>
+
+        <div class="item" data-searchable="vibe coding swiftui simon willison ai">
+          <div class="item-header"><h3><a href="https://simonwillison.net/2026/Mar/27/vibe-coding-swiftui/" target="_blank">Simon Willison: "Vibe Coding SwiftUI Apps Is a Lot of Fun"</a></h3></div>
+          <p class="analysis">Simon Willison's blog post on using AI to "vibe code" SwiftUI apps has been making the rounds. His key insight: AI tools have removed friction from UI layout generation, but this actually increases the value of developers who understand the underlying Swift code. The SwiftUI-first design language in iOS 26 makes this combination especially potent for rapid prototyping.</p>
+          <div class="item-meta"><span class="tag tag-source">Simon Willison</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Open Source -->
+    <div class="category cat-oss" data-category="oss">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>📦 Open Source</h2>
+        <div><span class="count">2 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="openclaw personal ai assistant 210k stars viral open source local">
+          <div class="item-header"><h3><a href="https://blog.bytebytego.com/p/top-ai-github-repositories-in-2026" target="_blank">OpenClaw Hits 210K Stars — Fastest-Growing Open Source Project in GitHub History</a></h3></div>
+          <p class="analysis">OpenClaw, a personal AI assistant that runs entirely on-device, surged from 9K to 210K+ stars after going viral. It acts as a local gateway connecting AI models to 50+ integrations including WhatsApp, Telegram, Slack, Discord, Signal, and iMessage. This is the "local-first AI" thesis made real — users want AI that works without sending data to the cloud.</p>
+          <div class="item-meta"><span class="tag tag-source">ByteByteGo</span></div>
+        </div>
+
+        <div class="item" data-searchable="deepseek r1 reasoning model offline mac local">
+          <div class="item-header"><h3><a href="https://elephas.app/blog/best-open-source-ai-models" target="_blank">DeepSeek R1 Gains Traction as Go-To Local Reasoning Model</a></h3></div>
+          <p class="analysis">DeepSeek R1 is emerging as the preferred open-source reasoning model for developers who want transparent chain-of-thought that runs completely offline on Mac hardware. It rivals OpenAI's o1 on reasoning tasks while providing full visibility into its thought process. For iOS developers exploring on-device intelligence, this is worth benchmarking against Apple's Foundation Models framework.</p>
+          <div class="item-meta"><span class="tag tag-source">Elephas</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Hardware -->
+    <div class="category cat-hardware" data-category="hardware">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>⚡ Hardware / Edge AI</h2>
+        <div><span class="count">2 stories</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="asus ugen300 usb ai accelerator hailo 40 tops edge">
+          <div class="item-header"><h3><a href="https://press.asus.com/news/press-releases/asus-ugen300-usb-ai-accelerator-generative-ai-edge/" target="_blank">ASUS Announces UGen300 — USB AI Accelerator with 40 TOPS</a></h3></div>
+          <p class="analysis">ASUS revealed the UGen300, the first USB AI accelerator from the company. Powered by a Hailo-10H processor delivering 40 TOPS, it brings local LLM and VLM inference to any USB-equipped device. At this performance level, you can run 7B-13B parameter models at usable speeds from a dongle — edge AI is getting absurdly accessible.</p>
+          <div class="item-meta"><span class="tag tag-source">ASUS Pressroom</span></div>
+        </div>
+
+        <div class="item" data-searchable="apple ai server chip baltra broadcom mass production 2026">
+          <div class="item-header"><h3><a href="https://appleinsider.com/articles/26/01/13/ming-chi-kuo-apple-will-get-serious-about-ai-server-chips-in-2026" target="_blank">Apple's Custom Server AI Chip "Baltra" Entering Mass Production H2 2026</a></h3></div>
+          <p class="analysis">Apple's custom-designed AI server chips (codenamed Baltra, developed with Broadcom) will enter mass production in the second half of 2026. This is Apple's play to control its AI inference stack end-to-end — on-device with Neural Accelerators, and now server-side with custom silicon. The vertical integration play extends from pocket to data center.</p>
+          <div class="item-meta"><span class="tag tag-source">AppleInsider</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Business -->
+    <div class="category cat-business" data-category="business">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>💼 Business / Startups</h2>
+        <div><span class="count">1 story</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="microsoft singapore 5.5 billion AI investment education">
+          <div class="item-header"><h3><a href="https://news.microsoft.com/source/asia/2026/04/01/microsoft-announces-5-5-billion-spend-and-new-microsoft-elevate-programs-to-support-every-tertiary-student-educator-and-nonprofit-to-power-singapores-ai-future/" target="_blank">Microsoft Commits $5.5B to Singapore's AI Future</a></h3></div>
+          <p class="analysis">Microsoft announced $5.5 billion in spending through 2029 to support Singapore's AI ecosystem, including programs targeting every tertiary student, educator, and nonprofit. This is part of the broader trend of hyperscalers making sovereign AI investments — countries are competing for AI infrastructure and talent, and the checks keep getting bigger.</p>
+          <div class="item-meta"><span class="tag tag-source">Microsoft News</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Policy -->
+    <div class="category cat-policy" data-category="policy">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>📜 Policy / Regulation</h2>
+        <div><span class="count">1 story</span> <span class="chevron">▼</span></div>
+      </div>
+      <div class="category-items">
+
+        <div class="item" data-searchable="newsom california ai executive order regulation procurement">
+          <div class="item-header"><h3><a href="https://calmatters.org/politics/2026/04/newsom-moves-for-california-ai-startups/" target="_blank">Newsom Signs AI Executive Order — California Sets National Testing Ground</a></h3></div>
+          <p class="analysis">Gov. Newsom signed executive order N-5-26, creating new AI procurement requirements for companies doing business with California. Companies must disclose policies on content moderation, bias, civil rights compliance, and CSAM generation. California is moving aggressively as the Trump administration pushes for federal preemption of state AI laws — this is the regulatory tug-of-war to watch.</p>
+          <div class="item-meta"><span class="tag tag-source">CalMatters</span><span class="tag tag-source">Axios</span></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end #content -->
+
+  <div class="archive-section">
+    <h2>📁 Archive</h2>
+    <p>Previous briefings will appear here once the archive directory is connected. Check back after the GitHub Pages repo is configured.</p>
+  </div>
+
+  <div class="footer">
+    Generated by Ian's Daily Tech Briefing · Powered by Claude
+  </div>
+</div>
+
+<script>
+// Category toggle
+function toggleCategory(header) {
+  header.parentElement.classList.toggle('collapsed');
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.category').forEach(cat => {
+      if (filter === 'all' || cat.dataset.category === filter) {
+        cat.classList.remove('hidden');
+      } else {
+        cat.classList.add('hidden');
+      }
+    });
+  });
+});
+
+// Search
+document.getElementById('searchBox').addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.item').forEach(item => {
+    const text = (item.textContent + ' ' + (item.dataset.searchable || '')).toLowerCase();
+    item.style.display = text.includes(q) ? '' : 'none';
+  });
+  // Show categories that have visible items
+  document.querySelectorAll('.category').forEach(cat => {
+    const visibleItems = cat.querySelectorAll('.item[style=""], .item:not([style])');
+    // Actually check computed display
+    let hasVisible = false;
+    cat.querySelectorAll('.item').forEach(item => {
+      if (item.style.display !== 'none') hasVisible = true;
+    });
+    if (q === '') {
+      cat.classList.remove('hidden');
+    } else {
+      cat.classList.toggle('hidden', !hasVisible);
+    }
+  });
+});
+</script>
+</body>
+</html>

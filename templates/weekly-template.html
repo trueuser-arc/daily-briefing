@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Tech Briefing — Week of WEEK_START_DATE</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-dim: #1f6feb33;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+    --pink: #f778ba;
+    --update-badge: #d29922;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 2px;
+  }
+  .header .week-range {
+    font-size: 17px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .header .meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Stats */
+  .stats {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Day tabs */
+  .day-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    padding: 6px;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .day-tab {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 6px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .day-tab:hover { background: var(--surface-hover); color: var(--text); }
+  .day-tab.active {
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .day-tab.today {
+    border: 1px solid var(--accent);
+  }
+  .day-tab.empty {
+    opacity: 0.35;
+    cursor: default;
+  }
+  .day-tab .tab-day { display: block; font-size: 13px; font-weight: 600; }
+  .day-tab .tab-date { display: block; font-size: 10px; opacity: 0.7; }
+  .day-tab .tab-count {
+    display: block;
+    font-size: 10px;
+    margin-top: 2px;
+    color: var(--green);
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding: 10px;
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .filter-btn {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Search */
+  .search-box {
+    width: 100%;
+    padding: 9px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-box:focus { border-color: var(--accent); }
+  .search-box::placeholder { color: var(--text-muted); }
+
+  /* Day sections */
+  .day-section {
+    margin-bottom: 32px;
+    scroll-margin-top: 16px;
+  }
+  .day-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    padding: 12px 0 8px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .day-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .day-header .day-story-count {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Category sections */
+  .category { margin-bottom: 16px; }
+  .category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .category-header:hover { background: var(--surface-hover); }
+  .category-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .category-header .count {
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 2px 7px;
+    border-radius: 10px;
+  }
+  .category-header .chevron {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+  }
+  .category.collapsed .chevron { transform: rotate(-90deg); }
+  .category.collapsed .category-items { display: none; }
+  .category-items {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+
+  /* Category color accents */
+  .cat-ai .category-header { border-left: 3px solid var(--purple); }
+  .cat-apple .category-header { border-left: 3px solid var(--text); }
+  .cat-security .category-header { border-left: 3px solid var(--red); }
+  .cat-dev .category-header { border-left: 3px solid var(--green); }
+  .cat-business .category-header { border-left: 3px solid var(--orange); }
+  .cat-hardware .category-header { border-left: 3px solid var(--pink); }
+  .cat-oss .category-header { border-left: 3px solid var(--accent); }
+  .cat-policy .category-header { border-left: 3px solid #d29922; }
+
+  /* Items */
+  .item {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .item:last-child { border-bottom: none; }
+  .item:hover { background: var(--surface); }
+  .item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .item h4 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .item h4 a:hover { color: var(--accent); }
+  .item .analysis {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .item .item-meta {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  .tag-source {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+  .tag-update {
+    background: #d2992233;
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  /* Update thread */
+  .update-thread {
+    margin-left: 16px;
+    border-left: 2px solid var(--orange);
+    padding-left: 12px;
+    margin-top: 8px;
+  }
+  .update-entry {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .update-entry:last-child { border-bottom: none; }
+  .update-date {
+    font-size: 11px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .update-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* Archive */
+  .archive-section {
+    margin-top: 32px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .archive-section h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+  }
+  .archive-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .archive-links a {
+    font-size: 13px;
+    padding: 4px 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .archive-links a:hover { border-color: var(--accent); }
+
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Weekly Tech Briefing</h1>
+    <div class="week-range"><!-- WEEK_RANGE e.g. "March 30 – April 5, 2026" --></div>
+    <div class="meta">Last updated: <!-- LAST_UPDATED --> · Auto-generated daily</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="totalStories">0</div><div class="stat-label">Stories</div></div>
+    <div class="stat"><div class="stat-num" id="totalCategories">0</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num" id="totalDays">0</div><div class="stat-label">Days</div></div>
+  </div>
+
+  <div class="day-tabs" id="dayTabs">
+    <!-- JS populates these from day-section data -->
+  </div>
+
+  <input type="text" class="search-box" placeholder="Search all stories this week..." id="searchBox" />
+
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ai">AI/ML</button>
+    <button class="filter-btn" data-filter="apple">Apple/iOS</button>
+    <button class="filter-btn" data-filter="security">Security</button>
+    <button class="filter-btn" data-filter="dev">Dev Tools</button>
+    <button class="filter-btn" data-filter="business">Business</button>
+    <button class="filter-btn" data-filter="hardware">Hardware</button>
+    <button class="filter-btn" data-filter="oss">Open Source</button>
+    <button class="filter-btn" data-filter="policy">Policy</button>
+  </div>
+
+  <div id="content">
+    <!-- DAY_SECTIONS_START -->
+    <!-- Each daily run appends a new day-section here -->
+    <!-- DAY_SECTIONS_END -->
+  </div>
+
+  <div class="archive-section">
+    <h2>Previous Weeks</h2>
+    <div class="archive-links" id="archiveLinks">
+      <!-- ARCHIVE_LINKS -->
+    </div>
+  </div>
+
+  <div class="footer">
+    Generated by Ian's Weekly Tech Briefing · Powered by Claude
+  </div>
+</div>
+
+<script>
+(function() {
+  // Build day tabs from day-section elements
+  const sections = document.querySelectorAll('.day-section');
+  const tabContainer = document.getElementById('dayTabs');
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const today = new Date().toISOString().slice(0, 10);
+
+  // Figure out the full Mon-Sun week
+  const weekDates = [];
+  if (sections.length > 0) {
+    const firstDate = sections[0].dataset.date;
+    const d = new Date(firstDate + 'T12:00:00');
+    const dayOfWeek = d.getDay();
+    const monday = new Date(d);
+    monday.setDate(d.getDate() - ((dayOfWeek + 6) % 7));
+    for (let i = 0; i < 7; i++) {
+      const wd = new Date(monday);
+      wd.setDate(monday.getDate() + i);
+      weekDates.push(wd.toISOString().slice(0, 10));
+    }
+  }
+
+  const sectionDates = new Set();
+  sections.forEach(s => sectionDates.add(s.dataset.date));
+
+  weekDates.forEach(dateStr => {
+    const d = new Date(dateStr + 'T12:00:00');
+    const btn = document.createElement('button');
+    btn.className = 'day-tab';
+    const hasContent = sectionDates.has(dateStr);
+    if (!hasContent) btn.classList.add('empty');
+    if (dateStr === today) btn.classList.add('today');
+
+    const storyCount = hasContent
+      ? document.querySelector(`.day-section[data-date="${dateStr}"]`).querySelectorAll('.item').length
+      : 0;
+
+    btn.innerHTML = `<span class="tab-day">${dayNames[d.getDay()]}</span><span class="tab-date">${d.toLocaleDateString('en-US', {month:'short', day:'numeric'})}</span>${storyCount > 0 ? `<span class="tab-count">${storyCount}</span>` : ''}`;
+
+    if (hasContent) {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelector(`.day-section[data-date="${dateStr}"]`).scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    tabContainer.appendChild(btn);
+  });
+
+  // Auto-select today's tab or most recent
+  const todayTab = tabContainer.querySelector('.day-tab.today:not(.empty)');
+  if (todayTab) todayTab.classList.add('active');
+  else {
+    const tabs = tabContainer.querySelectorAll('.day-tab:not(.empty)');
+    if (tabs.length) tabs[tabs.length - 1].classList.add('active');
+  }
+
+  // Stats
+  const totalItems = document.querySelectorAll('.item').length;
+  const cats = new Set();
+  document.querySelectorAll('.category').forEach(c => cats.add(c.dataset.category));
+  document.getElementById('totalStories').textContent = totalItems;
+  document.getElementById('totalCategories').textContent = cats.size;
+  document.getElementById('totalDays').textContent = sections.length;
+
+  // Category toggle
+  window.toggleCategory = function(header) {
+    header.parentElement.classList.toggle('collapsed');
+  };
+
+  // Filters
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.category').forEach(cat => {
+        cat.classList.toggle('hidden', filter !== 'all' && cat.dataset.category !== filter);
+      });
+      // Hide empty day sections
+      document.querySelectorAll('.day-section').forEach(ds => {
+        const visible = ds.querySelectorAll('.category:not(.hidden)').length > 0;
+        ds.classList.toggle('hidden', !visible);
+      });
+    });
+  });
+
+  // Search
+  document.getElementById('searchBox').addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase();
+    document.querySelectorAll('.item').forEach(item => {
+      const text = (item.textContent + ' ' + (item.dataset.searchable || '')).toLowerCase();
+      item.style.display = text.includes(q) ? '' : 'none';
+    });
+    document.querySelectorAll('.category').forEach(cat => {
+      let hasVisible = false;
+      cat.querySelectorAll('.item').forEach(item => {
+        if (item.style.display !== 'none') hasVisible = true;
+      });
+      cat.classList.toggle('hidden', q !== '' && !hasVisible);
+    });
+    document.querySelectorAll('.day-section').forEach(ds => {
+      const visible = ds.querySelectorAll('.category:not(.hidden)').length > 0;
+      ds.classList.toggle('hidden', q !== '' && !visible);
+    });
+  });
+})();
+</script>
+</body>
+</html>
