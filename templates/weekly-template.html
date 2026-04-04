@@ -106,7 +106,6 @@
   }
   .day-tab.empty {
     opacity: 0.35;
-    cursor: default;
   }
   .day-tab .tab-day { display: block; font-size: 13px; font-weight: 600; }
   .day-tab .tab-date { display: block; font-size: 10px; opacity: 0.7; }
@@ -371,6 +370,10 @@
     <!-- JS populates these from day-section data -->
   </div>
 
+  <div id="emptyDayState" class="hidden" style="text-align:center;padding:48px 16px;color:var(--text-muted);font-size:14px;">
+    No stories yet for this day — check back later.
+  </div>
+
   <input type="text" class="search-box" placeholder="Search all stories this week..." id="searchBox" />
 
   <div class="filter-bar" id="filterBar">
@@ -408,8 +411,12 @@
   // Build day tabs from day-section elements
   const sections = document.querySelectorAll('.day-section');
   const tabContainer = document.getElementById('dayTabs');
+  const emptyState = document.getElementById('emptyDayState');
   const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   const today = new Date().toISOString().slice(0, 10);
+
+  // Hide all sections initially — tabs will show/hide them
+  sections.forEach(s => s.classList.add('hidden'));
 
   // Figure out the full Mon-Sun week
   const weekDates = [];
@@ -429,37 +436,58 @@
   const sectionDates = new Set();
   sections.forEach(s => sectionDates.add(s.dataset.date));
 
+  function showDay(dateStr) {
+    tabContainer.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+    const activeBtn = tabContainer.querySelector('[data-date="' + dateStr + '"]');
+    if (activeBtn) activeBtn.classList.add('active');
+
+    const target = document.querySelector('.day-section[data-date="' + dateStr + '"]');
+    sections.forEach(s => s.classList.add('hidden'));
+    if (target) {
+      target.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+    } else {
+      emptyState.classList.remove('hidden');
+    }
+  }
+
   weekDates.forEach(dateStr => {
     const d = new Date(dateStr + 'T12:00:00');
     const btn = document.createElement('button');
     btn.className = 'day-tab';
+    btn.dataset.date = dateStr;
     const hasContent = sectionDates.has(dateStr);
     if (!hasContent) btn.classList.add('empty');
     if (dateStr === today) btn.classList.add('today');
 
     const storyCount = hasContent
-      ? document.querySelector(`.day-section[data-date="${dateStr}"]`).querySelectorAll('.item').length
+      ? document.querySelector('.day-section[data-date="' + dateStr + '"]').querySelectorAll('.item').length
       : 0;
 
-    btn.innerHTML = `<span class="tab-day">${dayNames[d.getDay()]}</span><span class="tab-date">${d.toLocaleDateString('en-US', {month:'short', day:'numeric'})}</span>${storyCount > 0 ? `<span class="tab-count">${storyCount}</span>` : ''}`;
-
-    if (hasContent) {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelector(`.day-section[data-date="${dateStr}"]`).scrollIntoView({ behavior: 'smooth' });
-      });
+    const daySpan = document.createElement('span');
+    daySpan.className = 'tab-day';
+    daySpan.textContent = dayNames[d.getDay()];
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'tab-date';
+    dateSpan.textContent = d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+    btn.appendChild(daySpan);
+    btn.appendChild(dateSpan);
+    if (storyCount > 0) {
+      const countSpan = document.createElement('span');
+      countSpan.className = 'tab-count';
+      countSpan.textContent = storyCount;
+      btn.appendChild(countSpan);
     }
+
+    btn.addEventListener('click', () => showDay(dateStr));
     tabContainer.appendChild(btn);
   });
 
-  // Auto-select today's tab or most recent
-  const todayTab = tabContainer.querySelector('.day-tab.today:not(.empty)');
-  if (todayTab) todayTab.classList.add('active');
-  else {
-    const tabs = tabContainer.querySelectorAll('.day-tab:not(.empty)');
-    if (tabs.length) tabs[tabs.length - 1].classList.add('active');
-  }
+  // Auto-select today if it has content, else the most recent day with content
+  const initialDate = sectionDates.has(today)
+    ? today
+    : (weekDates.filter(d => sectionDates.has(d)).pop() || weekDates[0]);
+  showDay(initialDate);
 
   // Stats
   const totalItems = document.querySelectorAll('.item').length;
