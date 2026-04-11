@@ -357,7 +357,7 @@
   <div class="header">
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">April 6 – April 12, 2026</div>
-    <div class="meta">Last updated: Thursday, April 9, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: Saturday, April 11, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -698,6 +698,185 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="day-section" data-date="2026-04-11">
+  <div class="day-header">
+    <h2>Saturday, April 11</h2>
+    <span class="day-story-count">20 stories</span>
+  </div>
+
+  <!-- AI/ML -->
+  <div class="category cat-ai" data-category="ai">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🤖 AI &amp; Machine Learning</h3>
+      <div><span class="count">5 stories</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="gemma 4 google open model multimodal apache reasoning agentic">
+        <h4><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank">Gemma 4 deep dive: 31B params that rival 400B closed models</a></h4>
+        <p class="analysis">Google's Apache 2.0 release spans four sizes (E2B to 31B) with native multimodal input — text, image, video, and audio. The 31B variant ranks #3 on Arena AI's open leaderboard, making frontier-class reasoning genuinely accessible for local and edge deployment. 256K context on the larger models is competitive with commercial APIs.</p>
+        <div class="item-meta"><span class="tag tag-source">Google AI Blog</span></div>
+      </div>
+      <div class="item" data-searchable="qwen3.5 reasoning distilled claude opus open weights hugging face">
+        <h4><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Qwen3.5-27B distilled from Claude Opus 4.6 tops Hugging Face trending</a></h4>
+        <p class="analysis">A community-distilled Qwen3.5-27B reasoning model, trained on Claude Opus 4.6 traces, has racked up 2,289 likes on Hugging Face and become the most-engaged open reasoning model this week. Demonstrates how open-weight distillation from frontier models continues to close the gap with closed APIs.</p>
+        <div class="item-meta"><span class="tag tag-source">Hugging Face</span></div>
+      </div>
+      <div class="item" data-searchable="dmax diffusion language model efficient parallel decoding iclr">
+        <h4><a href="https://huggingface.co/papers/trending" target="_blank">DMax: efficient diffusion LMs cut error accumulation in parallel decoding</a></h4>
+        <p class="analysis">Presented at ICLR 2026, DMax introduces self-refinement and unified training strategies that let diffusion-based language models decode in parallel without the error cascading that plagued earlier approaches. Could be a meaningful step toward non-autoregressive inference at scale.</p>
+        <div class="item-meta"><span class="tag tag-source">ICLR 2026 / Hugging Face Papers</span></div>
+      </div>
+      <div class="item" data-searchable="dflash speculative decoding block diffusion model speedup">
+        <h4><a href="https://huggingface.co/papers/trending" target="_blank">DFlash: speculative decoding via lightweight block diffusion drafting</a></h4>
+        <p class="analysis">Uses a compact block diffusion model to draft multiple tokens in parallel, then verifies against the target model. Claims significant speedup over standard autoregressive decoding while maintaining output quality — another sign that hybrid generation strategies are maturing fast.</p>
+        <div class="item-meta"><span class="tag tag-source">Hugging Face Papers</span></div>
+      </div>
+      <div class="item" data-searchable="mcp model context protocol 97 million installs standard agents">
+        <h4><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">Anthropic's MCP crosses 97 million installs — now the de facto agent integration standard</a></h4>
+        <p class="analysis">Every major AI provider now ships MCP-compatible tooling, cementing Model Context Protocol as the default way agents connect to external tools, APIs, and data sources. At 97M installs and counting, the ecosystem lock-in makes it increasingly costly for any vendor to go a different direction.</p>
+        <div class="item-meta"><span class="tag tag-source">Crescendo AI</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security -->
+  <div class="category cat-security" data-category="security">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🔒 Security</h3>
+      <div><span class="count">5 stories</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="axios npm supply chain attack north korea sapphire sleet rat compromised">
+        <h4><a href="https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan" target="_blank">Axios npm supply chain attack attributed to North Korea's Sapphire Sleet</a></h4>
+        <p class="analysis">Malicious axios versions 1.14.1 and 0.30.4 were live for ~3 hours on March 30 after a maintainer's account was compromised via social engineering. The payload was a cross-platform RAT hidden in a fake dependency. Microsoft and Google threat intel both attribute the attack to North Korean state actors. Given axios sees ~100M weekly downloads, the blast radius could have been catastrophic with a longer window.</p>
+        <div class="item-meta"><span class="tag tag-source">StepSecurity / Microsoft / Google Cloud</span></div>
+      </div>
+      <div class="item" data-searchable="smart slider 3 pro wordpress supply chain backdoor nextend">
+        <h4><a href="https://www.bleepingcomputer.com/news/security/smart-slider-updates-hijacked-to-push-malicious-wordpress-joomla-versions/" target="_blank">Smart Slider 3 Pro update hijacked — full RAT deployed to 800K+ WP sites</a></h4>
+        <p class="analysis">Attackers compromised Nextend's update servers on April 7 and pushed a weaponized v3.5.1.35 through the official channel for ~6 hours. The payload included multi-layered persistence, credential exfiltration, and C2 registration. Only the Pro edition was affected; the free WordPress.org version was safe. Sites that received the update need full incident response, not just a version bump.</p>
+        <div class="item-meta"><span class="tag tag-source">BleepingComputer / Patchstack</span></div>
+      </div>
+      <div class="item" data-searchable="marimo python notebook rce cve-2026-39987 websocket exploit">
+        <h4><a href="https://thehackernews.com/2026/04/marimo-rce-flaw-cve-2026-39987.html" target="_blank">Marimo notebook RCE (CVE-2026-39987) exploited within 10 hours of disclosure</a></h4>
+        <p class="analysis">A pre-auth RCE in Marimo's terminal WebSocket endpoint — the /terminal/ws route skipped authentication entirely. Sysdig observed the first exploit 9 hours 41 minutes after the advisory dropped, with no public PoC at the time. Attackers built a working exploit from the advisory alone and had full credential theft running in under 3 minutes. Upgrade to 0.23.0+.</p>
+        <div class="item-meta"><span class="tag tag-source">The Hacker News / Sysdig</span></div>
+      </div>
+      <div class="item" data-searchable="cve-2026-40175 axios prototype pollution rce cloud compromise critical">
+        <h4><a href="https://www.thehackerwire.com/vulnerability/CVE-2026-40175/" target="_blank">CVE-2026-40175: Axios prototype pollution → RCE chain scores CVSS 10</a></h4>
+        <p class="analysis">A "gadget" attack chain lets any prototype pollution bug in a third-party dependency escalate to full RCE or AWS IMDSv2 bypass through axios prior to 1.15.0. Rated CVSS 10 because the vulnerability surface is broad — any polluting dependency in your tree becomes an RCE vector. Patch to axios 1.15.0 immediately.</p>
+        <div class="item-meta"><span class="tag tag-source">TheHackerWire / Snyk</span></div>
+      </div>
+      <div class="item" data-searchable="russian forest blizzard router hacking campaign 18000 networks tokens">
+        <h4><a href="https://krebsonsecurity.com/" target="_blank">Russian "Forest Blizzard" harvested auth tokens from 18,000+ routers — no malware needed</a></h4>
+        <p class="analysis">State-backed Russian hackers siphoned authentication tokens from end-of-life and unpatched routers across 18,000+ networks without deploying any code. The campaign peaked in December 2025 and relied entirely on credential extraction from routers running outdated firmware. A reminder that "no malware" doesn't mean "no compromise."</p>
+        <div class="item-meta"><span class="tag tag-source">Krebs on Security</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Apple/iOS -->
+  <div class="category cat-apple" data-category="apple">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🍎 Apple &amp; iOS</h3>
+      <div><span class="count">3 stories</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="deep dish swift 2026 conference chicago april ios developer">
+        <h4><a href="https://deepdishswift.com/" target="_blank">Deep Dish Swift 2026 kicks off tomorrow in Chicago</a></h4>
+        <p class="analysis">The fourth annual Deep Dish Swift runs April 12–14 at Loews O'Hare in Rosemont. All sessions will be streamed and recorded. The mix of technical talks, indie dev sessions, and community events makes it one of the best mid-size Swift conferences — worth following even if you're not attending in person.</p>
+        <div class="item-meta"><span class="tag tag-source">Deep Dish Swift</span></div>
+      </div>
+      <div class="item" data-searchable="airpods max 2 review h2 chip anc battery 549 apple">
+        <h4><a href="https://www.macrumors.com/2026/03/31/airpods-max-2-review/" target="_blank">AirPods Max 2 reviews land: better ANC, same design, still $549</a></h4>
+        <p class="analysis">Powered by the H2 chip, ANC is 1.5x more effective and new features like Live Translation and Conversation Awareness arrive. But 20-hour battery life looks dated next to Sony and Sennheiser's 35+ hours, and the unchanged industrial design feels like a missed opportunity for a product that hadn't been refreshed in years.</p>
+        <div class="item-meta"><span class="tag tag-source">MacRumors / Bloomberg</span></div>
+      </div>
+      <div class="item" data-searchable="swift ide cursor vscodium kiro antigravity open vsx">
+        <h4><a href="https://developer.apple.com/news/" target="_blank">Swift now available in Cursor, VSCodium, Kiro, and Antigravity via Open VSX</a></h4>
+        <p class="analysis">Apple's Swift extension is now accessible through the Open VSX Registry, expanding Swift development beyond Xcode and VS Code to Cursor, AWS's Kiro, Google's Antigravity, and VSCodium. A significant step toward making Swift a truly cross-editor language, especially relevant for developers who live in AI-native editors.</p>
+        <div class="item-meta"><span class="tag tag-source">Apple Developer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dev Tools -->
+  <div class="category cat-dev" data-category="dev">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🛠️ Dev Tools</h3>
+      <div><span class="count">2 stories</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="caveman claude code skill token reduction 65 percent">
+        <h4><a href="https://github.com/JuliusBrussee/caveman" target="_blank">Caveman: a Claude Code skill that cuts 65% of tokens by talking like a caveman</a></h4>
+        <p class="analysis">Trending on GitHub, this creative hack instructs Claude Code to communicate in abbreviated caveman-speak during tool calls, slashing token usage by ~65% on typical coding sessions. Gimmicky on the surface, but the underlying insight — that structured prompt compression can dramatically cut costs — is genuinely useful for heavy agentic workloads.</p>
+        <div class="item-meta"><span class="tag tag-source">GitHub Trending</span></div>
+      </div>
+      <div class="item" data-searchable="n8n workflow automation ai native open source 400 integrations">
+        <h4><a href="https://github.com/n8n-io/n8n" target="_blank">n8n hits new adoption highs with native AI workflow capabilities</a></h4>
+        <p class="analysis">The open-source workflow automation platform now features native AI capabilities alongside its 400+ integrations, combining visual no-code building with custom code flexibility. Trending on GitHub as teams look for self-hostable alternatives to Zapier and Make that can orchestrate LLM-powered pipelines.</p>
+        <div class="item-meta"><span class="tag tag-source">GitHub Trending</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Business -->
+  <div class="category cat-business" data-category="business">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>💼 Business &amp; Startups</h3>
+      <div><span class="count">3 stories</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="q1 2026 venture funding 300 billion record ai startup investment">
+        <h4><a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank">Q1 2026 venture funding shatters all records at $300B — 80% went to AI</a></h4>
+        <p class="analysis">Global startup investment hit $297B in Q1, a 2.5x increase over the previous quarter. AI captured $242B (80% of total), driven by mega-rounds from OpenAI ($122B), Anthropic ($30B), xAI ($20B), and Waymo ($16B). Four of the five largest venture rounds ever were closed this quarter. The concentration at the top is staggering — and arguably unsustainable.</p>
+        <div class="item-meta"><span class="tag tag-source">Crunchbase</span></div>
+      </div>
+      <div class="item" data-searchable="perplexity 450 million arr growth search ai 100 million users">
+        <h4><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">Perplexity hits $450M ARR on 100M+ monthly users</a></h4>
+        <p class="analysis">A 50% ARR jump in a single month puts Perplexity at $450M, fueled by 100M+ monthly active users. Still modest compared to Cursor ($2B) or Anthropic ($30B), but the trajectory suggests AI-native search is carving out real market share from traditional search. The question is whether Google's AI Overviews will throttle this growth.</p>
+        <div class="item-meta"><span class="tag tag-source">Crescendo AI</span></div>
+      </div>
+      <div class="item" data-searchable="eu ai act august 2026 high risk compliance enforcement deadline">
+        <h4><a href="https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" target="_blank">EU AI Act: August 2 high-risk deadline looms with no grace period</a></h4>
+        <p class="analysis">The August 2, 2026 deadline for Annex III high-risk AI systems (employment, credit, education, law enforcement) is now under four months away. The European AI Office has begun audits with fines up to 7% of global turnover. A proposed "Digital Omnibus" extension to December 2027 exists but shouldn't be relied upon — treat August as firm.</p>
+        <div class="item-meta"><span class="tag tag-source">LegalNodes</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hardware -->
+  <div class="category cat-hardware" data-category="hardware">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🖥️ Hardware</h3>
+      <div><span class="count">1 story</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="m5 mac mini refresh apple silicon first half 2026">
+        <h4><a href="https://www.macrumors.com/guide/upcoming-apple-products/" target="_blank">M5 Mac mini most likely next Apple Silicon refresh — could land this month</a></h4>
+        <p class="analysis">With the MacBook Air M5 and MacBook Pro M5 Pro/Max already shipped, the Mac mini is the most probable candidate for an M5 refresh in the first half of 2026. April or May timing would follow Apple's cadence of staggering Mac updates. The mini remains the best price-to-performance entry point for Apple Silicon.</p>
+        <div class="item-meta"><span class="tag tag-source">MacRumors</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open Source -->
+  <div class="category cat-oss" data-category="oss">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>🌐 Open Source</h3>
+      <div><span class="count">1 story</span> <span class="chevron">▼</span></div>
+    </div>
+    <div class="category-items">
+      <div class="item" data-searchable="meta open source upcoming ai models llama next gen">
+        <h4><a href="https://www.axios.com/2026/04/06/meta-open-source-ai-models" target="_blank">Meta will open-source its next generation of AI models</a></h4>
+        <p class="analysis">Per Axios, Meta is developing open-source versions of its upcoming AI models, continuing its strategy of releasing weights publicly. Post-Muse Spark, the next open releases should benefit from the $14B Scale AI partnership. For the local LLM community, this means more competitive open options alongside Qwen, Gemma, and DeepSeek.</p>
+        <div class="item-meta"><span class="tag tag-source">Axios</span></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
     <!-- DAY_SECTIONS_END -->
