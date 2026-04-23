@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">April 20 – 26, 2026</div>
-    <div class="meta">Last updated: 2026-04-23 07:07 UTC · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-04-23 19:45 UTC · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -675,6 +675,12 @@
         <p class="story-analysis">Vercel's Saturday bulletin confirms an intruder reached internal systems by pivoting through a Google Workspace OAuth token for Context.ai, a third-party AI tool used by a Vercel employee. A limited set of customers has already been contacted for credential rotation, and a ShinyHunters-linked actor is publicly shopping access keys, source code, database excerpts, and deployment tokens. Vercel is still assessing exfiltration scope and has engaged IR firms and law enforcement.</p>
         <div class="key-takeaway">Audit every Google Workspace OAuth app connected to your org this morning — this is a textbook AI-tool supply-chain breach, and crypto teams with Vercel-hosted dapps are already rotating keys.</div>
         <div class="story-meta"><span class="tag tag-source">Vercel Security Bulletin</span></div>
+        <div class="update-thread">
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Thursday, April 23</div>
+            <p class="update-text">CyberScoop traces the full kill chain: a Context.ai employee downloaded Roblox "auto-farm" scripts in February, infecting their machine with Lumma Stealer. The malware harvested Google Workspace OAuth tokens, which the attacker used to pivot into Vercel's enterprise Workspace — the Vercel employee had granted Context.ai full OAuth scope. Vercel says "sensitive" (encrypted) env vars were not accessed; plaintext env vars for a limited set of customers were. <a href="https://cyberscoop.com/vercel-security-breach-third-party-attack-context-ai-lumma-stealer/">CyberScoop</a></p>
+          </div>
+        </div>
       </div>
 
       <div class="story-card" data-importance="medium" data-published="2026-04-17T14:00:00Z" data-searchable="mcgraw hill data breach salesforce misconfiguration shinyhunters 13.5 million extortion leak edtech">
@@ -866,7 +872,7 @@
 <div class="day-section" data-date="2026-04-23">
   <div class="day-header">
     <h2>Thursday, April 23</h2>
-    <span class="day-story-count">19 stories</span>
+    <span class="day-story-count">24 stories</span>
     <span class="reading-time"></span>
   </div>
 
@@ -875,12 +881,14 @@
     <span class="highlight-pill">SpaceX buys option on Cursor for $60B</span>
     <span class="highlight-pill">CISA KEV deadline hits today for Cisco SD-WAN</span>
     <span class="highlight-pill">Apple patches notification-retention bug</span>
+    <span class="highlight-pill">Gemini 3.1 Pro enters preview</span>
+    <span class="highlight-pill">SECURE Data Act targets state privacy</span>
   </div>
 
   <div class="category cat-ai" data-category="ai">
     <div class="category-header" onclick="toggleCategory(this)">
       <h3>&#129302; AI / ML</h3>
-      <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+      <div><span class="count">6 stories</span> <span class="chevron">&#9660;</span></div>
     </div>
     <div class="category-items">
 
@@ -901,6 +909,21 @@
         </div>
         <p class="story-analysis">Google's swing at Salesforce's and Microsoft's agent stacks is a full bundle: Agent Designer, long-running agents, Skills shortcuts, Canvas in-app editing, plus enterprise plumbing — Agent-to-Agent (A2A) Orchestration, Agent Registry, Agent Identity, Agent Gateway, and Agent Observability. It leans on Vertex AI for runtime and ships with OIDC-style agent identity so IT can audit cross-agent calls. A2A is pitched as an open spec, but the real leverage is the Registry-as-control-plane.</p>
         <div class="story-meta"><span class="tag tag-source">TheNextWeb</span></div>
+        <div class="update-thread">
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Thursday, April 23 (Day 2)</div>
+            <p class="update-text">Developer keynote adds Workspace Studio (no-code agent builder with governance controls), a Workspace MCP Server in preview for Drive/Gmail/Calendar/Chat integration, and a $750M partner fund to help Google Cloud's 120,000-member ecosystem build and sell AI agents. <a href="https://workspace.google.com/blog/product-announcements/10-more-announcements-workspace-at-next-2026">Google Workspace Blog</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-23T16:00:00Z" data-searchable="google cloud next day 2 gemini 3.1 pro preview project mariner web browsing agent managed mcp servers veo 3.1 lite lyria 3 pro workspace mcp 750 million partner fund">
+        <div class="story-header">
+          <h4><a href="https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month" target="_blank">Cloud Next Day 2: Gemini 3.1 Pro in Preview, Project Mariner Scores 83.5% on WebVoyager</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">The developer keynote dropped the model stack: Gemini 3.1 Pro is in preview across Vertex AI, AI Studio, Android Studio, and Gemini CLI with a 1M-token context window and top-tier reasoning benchmarks. Project Mariner — DeepMind's web-browsing agent — hit 83.5% on WebVoyager and now handles 10 concurrent tasks on cloud VMs. Also shipping: Veo 3.1 Lite (video gen at &lt;50% of Veo 3.1 Fast cost), Lyria 3 Pro for full-length music, and managed MCP servers for BigQuery, Compute Engine, Kubernetes Engine, and Maps. For iOS devs using Google APIs, the Workspace MCP Server alone could eliminate a chunk of boilerplate integration code.</p>
+        <div class="story-meta"><span class="tag tag-source">Google Cloud Blog</span></div>
       </div>
 
       <div class="story-card" data-importance="medium" data-published="2026-04-22T19:00:00Z" data-searchable="openai chatgpt images 2.0 o-series reasoning ui generation real figures sam altman text-in-image long blocks image model launch">
@@ -983,9 +1006,18 @@
   <div class="category cat-security" data-category="security">
     <div class="category-header" onclick="toggleCategory(this)">
       <h3>&#128274; Security</h3>
-      <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+      <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
     </div>
     <div class="category-items">
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-22T12:00:00Z" data-searchable="windows defender zero-day bluehammer redsun undefend cve-2026-33825 privilege escalation toctou ntfs junction huntress chaotic eclipse microsoft patch tuesday exploit poc unpatched">
+        <div class="story-header">
+          <h4><a href="https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html" target="_blank">Windows Defender Triple Zero-Day: BlueHammer Patched, RedSun and UnDefend Still Wide Open</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">A single researcher ("Chaotic Eclipse") disclosed three Defender zero-days in 13 days after losing patience with MSRC. BlueHammer (CVE-2026-33825) — a TOCTOU race condition that grants SYSTEM via NTFS junction redirection — was patched April 14. RedSun turns Defender's own remediation engine into a payload delivery mechanism, and UnDefend lets a standard user block signature updates entirely; both remain unpatched with no CVE and no fix timeline. Huntress confirms all three have been exploited in the wild since April 10–16, and the PoC repos are public. If you run Windows dev machines, this is a "monitor and compensate" situation until Microsoft ships the remaining patches.</p>
+        <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+      </div>
 
       <div class="story-card" data-importance="high" data-published="2026-04-21T22:00:00Z" data-searchable="cisa cisco catalyst sd-wan manager cve-2026-20133 kev exploited federal deadline april 24 information disclosure api unauthenticated remote 6.5">
         <div class="story-header">
@@ -1021,7 +1053,7 @@
   <div class="category cat-business" data-category="business">
     <div class="category-header" onclick="toggleCategory(this)">
       <h3>&#128188; Business</h3>
-      <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+      <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
     </div>
     <div class="category-items">
 
@@ -1062,13 +1094,22 @@
         <div class="story-meta"><span class="tag tag-source">Tech Startups</span></div>
       </div>
 
+      <div class="story-card" data-importance="low" data-published="2026-04-22T18:00:00Z" data-searchable="palantir usda 300 million food supply chain farmland security national farm security action plan agriculture data platform fraud foreign adversary pltr stock">
+        <div class="story-header">
+          <h4><a href="https://www.cnbc.com/2026/04/22/palantir-inks-300-million-deal-with-usda-to-safeguard-food-supply.html" target="_blank">Palantir Lands $300M USDA Deal — Real-Time Food Supply Chain Monitoring and Farmland Security</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Palantir's multi-year blanket purchase agreement with USDA will build an integrated data platform to monitor America's food supply chain in real time, secure farmland ownership records against foreign-adversary influence, and shield farm programs from fraud. The deal supports the National Farm Security Action Plan and extends Palantir's government AI footprint beyond its defense base. PLTR was up on the news. For the broader AI-infra market, it's another signal that government spending on operational AI platforms is accelerating well beyond the defense vertical.</p>
+        <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+      </div>
+
     </div>
   </div>
 
   <div class="category cat-dev" data-category="dev">
     <div class="category-header" onclick="toggleCategory(this)">
       <h3>&#128736; Dev Tools</h3>
-      <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+      <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
     </div>
     <div class="category-items">
 
@@ -1090,15 +1131,33 @@
         <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
       </div>
 
+      <div class="story-card" data-importance="medium" data-published="2026-04-22T15:00:00Z" data-searchable="databricks unity ai gateway agent governance coding agents codex cursor gemini cli mcp model context protocol permissions audit cost observability on-behalf-of obo unity catalog">
+        <div class="story-header">
+          <h4><a href="https://www.databricks.com/blog/governing-coding-agent-sprawl-unity-ai-gateway" target="_blank">Databricks Ships Unity AI Gateway — Centralized Governance for Codex, Cursor, and Gemini CLI</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">AI Gateway is now part of Unity Catalog, extending Databricks' governance model to agentic AI. The practical pitch: one hub that governs how Codex, Cursor, Gemini CLI, and other coding agents access LLMs and MCP servers, with on-behalf-of (OBO) user execution so MCP calls run under the requesting user's exact permissions rather than a shared service account. Observability covers LLM and MCP calls with cost attribution across models, teams, and workflows. If your org is feeling the "every dev picked a different agent" sprawl, this is the first real enterprise control plane for the problem.</p>
+        <div class="story-meta"><span class="tag tag-source">Databricks Blog</span></div>
+      </div>
+
     </div>
   </div>
 
   <div class="category cat-policy" data-category="policy">
     <div class="category-header" onclick="toggleCategory(this)">
       <h3>&#128220; Policy</h3>
-      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+      <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
     </div>
     <div class="category-items">
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-21T17:00:00Z" data-searchable="secure data act hr 8413 federal privacy bill preemption state laws data broker registry ftc enforcement right to delete access correct port opt out targeted advertising rep joyce congress house republicans consumer data">
+        <div class="story-header">
+          <h4><a href="https://iapp.org/news/a/secure-data-act-analysis-of-the-new-federal-privacy-bill" target="_blank">SECURE Data Act (HR 8413) Drops — First Federal Privacy Bill With Total State-Law Preemption</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Rep. Joyce (R-PA) introduced the "Securing and Establishing Consumer Uniform Rights and Enforcement over Data Act" on April 21 with full preemption: no state may enforce any privacy rule that overlaps the Act — not a floor states can build on, but a ceiling that replaces all 20+ state regimes entirely. The bill grants rights to access, correct, delete, and port personal data, mandates opt-out of targeted ads and data sales, creates an FTC-administered data broker registry, and imposes data-minimization obligations on controllers. Whether it advances is uncertain, but the preemption language alone is reshaping compliance planning for anyone shipping apps in multiple US states.</p>
+        <div class="story-meta"><span class="tag tag-source">IAPP / CNBC</span></div>
+      </div>
 
       <div class="story-card" data-importance="low" data-published="2026-04-21T14:00:00Z" data-searchable="european commission 63.2 million euros ai innovation health online safety funding eu ai act august 2026 compliance high risk systems transparency">
         <div class="story-header">
