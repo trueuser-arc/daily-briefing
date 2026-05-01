@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">April 27 – May 3, 2026</div>
-    <div class="meta">Last updated: 2026-04-30T09:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-05-01T09:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -801,6 +801,10 @@
             <div class="update-date">UPDATE — Thursday, April 30</div>
             <p class="update-text">Today is Apple's Q2 earnings day — results drop after market close at 5 PM ET in Cook's final call as CEO. Last night's Big Tech earnings set a high bar: Alphabet Cloud +63%, Microsoft AI ARR +123%, Meta capex raised to $145B, Amazon AWS reaccelerating to +28%. Analyst consensus holds at $109.7B revenue and $1.95 EPS, with iPhone revenue (~$56.5B) and Services (~$30B) as the key line items. Options pricing implies a ~5% post-earnings move either direction. <a href="https://www.marketbeat.com/earnings/reports/2026-4-30-apple-inc-stock/">MarketBeat</a></p>
           </div>
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Friday, May 1</div>
+            <p class="update-text">Apple beat across the board: $111.2B revenue (+17%), $2.01 EPS, iPhone at $57B (+22% — a March quarter record), and Services hit an all-time $31B. But Cook's parting warning overshadowed the beat: "significantly higher memory costs" expected in Q3 and beyond, with Mac Studio and Mac mini supply-constrained for months due to unexpectedly high demand for AI/agentic workloads. Cook said Apple will "look at a range of options" — analysts read that as potential price hikes. Ternus teased "the most exciting" product lineup of his 25-year career. <a href="https://www.macrumors.com/2026/04/30/apple-2q-2026-earnings/">MacRumors</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -862,6 +866,10 @@
           <div class="update-entry">
             <div class="update-date">UPDATE — Thursday, April 30</div>
             <p class="update-text">The House passed Section 702 reauthorization 235-191 late Wednesday, extending the program for three years — covering the remainder of Trump's term — without a warrant requirement. New safeguards require attorney approval before querying Americans' data, written justifications submitted to ODNI, and up to five years in prison for misuse. The bill now faces an uncertain Senate path before the midnight deadline tonight, complicated by the attached anti-CBDC provision that some senators oppose. Twenty-two Republicans and 149 Democrats voted no. <a href="https://www.npr.org/2026/04/29/g-s1-119094/congress-fisa-702">NPR</a></p>
+          </div>
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Friday, May 1</div>
+            <p class="update-text">The 3-year House bill died in the Senate — the attached anti-CBDC provision was the dealbreaker. Both chambers instead passed a 45-day extension by votes of 261-111 (House) and unanimous consent (Senate), sending it to Trump's desk. The extension buys time until mid-June and sets up another round of debate when Congress returns from recess in mid-May. The warrant requirement remains unresolved. <a href="https://www.cnbc.com/2026/04/30/fisa-section-702-congress-extension.html">CNBC</a></p>
           </div>
         </div>
       </div>
@@ -1160,6 +1168,194 @@
         </div>
         <p class="story-analysis">The four Big Tech earnings reports filed within hours of each other reveal a combined quarterly capital expenditure exceeding $160B: Alphabet $35.7B (+107% YoY), Amazon $44.2B, Microsoft targeting $190B annualized, and Meta raising full-year guidance to $125–145B. Two years ago, combined quarterly spend across these companies was roughly $40B. The acceleration is driven entirely by AI training and inference infrastructure — data centers, custom silicon (TPUs, Trainium, MTIA), and GPU procurement — with no signs of deceleration in guidance.</p>
         <div class="story-meta"><span class="tag tag-source">Quartz</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="day-section" data-date="2026-05-01">
+  <div class="day-header">
+    <h2>Friday, May 1</h2>
+    <span class="day-story-count">13 stories</span>
+    <span class="reading-time"></span>
+  </div>
+  <div class="day-highlights">
+    <span class="highlight-pill">cPanel auth bypass exploited</span>
+    <span class="highlight-pill">Linux Copy Fail: root in 732 bytes</span>
+    <span class="highlight-pill">PyTorch Lightning hijacked</span>
+  </div>
+
+  <div class="category cat-security" data-category="security">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128274; Security</h3>
+      <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="high" data-published="2026-04-30T14:00:00Z" data-searchable="cPanel WHM CVE-2026-41940 CVSS 9.8 authentication bypass CRLF injection hosting web panel CISA KEV zero-day exploit critical">
+        <div class="story-header">
+          <h4><a href="https://cyberscoop.com/cpanel-authentication-bypass-vulnerability-cve-2026-41940-exploited/" target="_blank">cPanel Auth Bypass Exploited Since February — CVSS 9.8 Flaw Affects 1.5M Exposed Instances, CISA Deadline May 3</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">CVE-2026-41940 is a critical CRLF injection in cPanel &amp; WHM's login and session-loading flow that allows unauthenticated remote attackers to bypass authentication entirely. Exploitation has been ongoing since at least February 23, months before cPanel shipped a patch on April 28. CISA added it to the KEV catalog with a May 3 deadline for federal agencies. Shodan shows approximately 1.5 million cPanel instances exposed to the internet — successful exploitation grants full control over the host, its databases, and every website it manages.</p>
+        <div class="key-takeaway">If you run cPanel or WHM, update immediately to the patched version. If you can't patch right now, block inbound traffic on ports 2083, 2087, 2095, and 2096 at the firewall and stop the cpsrvd and cpdavd services.</div>
+        <div class="story-meta"><span class="tag tag-source">CyberScoop</span></div>
+      </div>
+
+      <div class="story-card" data-importance="high" data-published="2026-04-30T10:00:00Z" data-searchable="Linux kernel Copy Fail CVE-2026-31431 privilege escalation root local 732 bytes Python exploit authencesn cryptographic page cache setuid Kubernetes CI/CD CERT-EU">
+        <div class="story-header">
+          <h4><a href="https://www.theregister.com/2026/04/30/linux_cryptographic_code_flaw/" target="_blank">Linux "Copy Fail" (CVE-2026-31431): 732-Byte Python Script Gives Root on Every Distro Since 2017</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">A nine-year-old flaw in the Linux kernel's authencesn cryptographic template lets an unprivileged local user write four controlled bytes into the page cache of any readable file — then target a setuid binary to gain root. Unlike Dirty Cow or Dirty Pipe, there is no race condition to win: the same 10-line, 732-byte Python proof-of-concept works reliably across every major distribution released since 2017. CERT-EU rated it High (CVSS 7.8) and is urging immediate kernel updates, particularly on Kubernetes nodes and CI/CD runners where local access is common.</p>
+        <div class="key-takeaway">Prioritize kernel patching on any multi-tenant system, container host, or CI runner. The exploit is trivial and public — no race condition means near-100% reliability.</div>
+        <div class="story-meta"><span class="tag tag-source">The Register</span></div>
+      </div>
+
+      <div class="story-card" data-importance="high" data-published="2026-04-30T16:00:00Z" data-searchable="PyTorch Lightning PyPI supply chain attack malicious package credential theft SSH keys cloud tokens Team PCP Mini Shai-Hulud LAPSUS lightning 2.6.2 2.6.3 Socket deep learning">
+        <div class="story-header">
+          <h4><a href="https://thehackernews.com/2026/04/pytorch-lightning-compromised-in-pypi.html" target="_blank">PyTorch Lightning Hijacked on PyPI — Malicious Versions Auto-Harvest SSH Keys, Cloud Creds on Import</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Malicious versions 2.6.2 and 2.6.3 of the popular deep learning framework 'lightning' were published to PyPI on April 30. The payload — hidden in a _runtime directory — executes automatically on import with zero user interaction, harvesting SSH keys, shell histories, cloud credentials, GitHub/npm tokens, and cryptocurrency wallets, then exfiltrating to attacker-controlled GitHub repos. Socket flagged the packages within 18 minutes. The campaign is linked to Team PCP's Mini Shai-Hulud operation, which also hit the Bitwarden CLI earlier this month.</p>
+        <div class="key-takeaway">If you installed lightning 2.6.2 or 2.6.3, immediately rotate all credentials on the affected machine. Pin to version 2.6.1 (the latest clean release) and run `pip install lightning==2.6.1 --force-reinstall`.</div>
+        <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-29T12:00:00Z" data-searchable="LiteLLM CVE-2026-42208 SQL injection pre-auth CVSS 9.3 LLM gateway proxy API keys OpenAI Anthropic AWS Bedrock credential theft exploit 36 hours">
+        <div class="story-header">
+          <h4><a href="https://www.bleepingcomputer.com/news/security/hackers-are-exploiting-a-critical-litellm-pre-auth-sqli-flaw/" target="_blank">LiteLLM Pre-Auth SQLi (CVE-2026-42208) Exploited 36 Hours After Disclosure — Attackers Target Upstream API Keys</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">A critical pre-authentication SQL injection (CVSS 9.3) in LiteLLM, the open-source LLM gateway used as a proxy for OpenAI, Anthropic, and other model providers, was exploited just 26 hours after the GitHub advisory was indexed. The flaw concatenates the caller-supplied Bearer token directly into a SQL query without parameterization, allowing attackers to dump the litellm_credentials table — which typically holds OpenAI org keys, Anthropic console credentials, and AWS Bedrock IAM secrets. Fix is in version 1.83.7; if you can't upgrade, set 'disable_error_logs: true' to block the vulnerable code path.</p>
+        <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-30T08:00:00Z" data-searchable="Vimeo Anodot breach ShinyHunters third-party analytics Snowflake customer data email metadata ransom extortion video platform">
+        <div class="story-header">
+          <h4><a href="https://www.bleepingcomputer.com/news/security/video-service-vimeo-confirms-anodot-breach-exposed-user-data/" target="_blank">Vimeo Confirms Breach via Anodot Analytics Vendor — ShinyHunters Threatened Leak by April 30</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Vimeo disclosed that attackers accessed customer data through a breach at Anodot, a third-party analytics vendor. The same ShinyHunters group behind the Carnival Corp breach leveraged stolen Anodot authentication tokens to access Snowflake-linked customer environments, exfiltrating technical data, video titles, metadata, and some customer email addresses. No video content, login credentials, or payment data was compromised. Vimeo has disabled all Anodot credentials and removed the integration entirely.</p>
+        <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-ai" data-category="ai">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#129302; AI &amp; ML</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-04-30T12:00:00Z" data-searchable="Spotify Verified badge AI generated music authenticity trust human artist verification SongDNA credits label fake profiles streaming">
+        <div class="story-header">
+          <h4><a href="https://newsroom.spotify.com/2026-04-30/verified-by-spotify-badge-artist-details/" target="_blank">Spotify Launches "Verified by Spotify" Badge — AI-Generated Artist Profiles Ineligible for Verification</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Spotify introduced a new "Verified by Spotify" badge to help listeners distinguish human artists from the growing flood of AI-generated music profiles. To earn the green checkmark, artists must demonstrate sustained listener engagement, comply with platform rules, and show a genuine presence beyond Spotify — concert dates, merchandise, linked social media. AI-persona profiles are explicitly ineligible at launch. Spotify is also adding career highlights, release patterns, and live performance history to all artist pages, building on its existing SongDNA and AI credits features.</p>
+        <div class="story-meta"><span class="tag tag-source">Spotify Newsroom</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-apple" data-category="apple">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#63743; Apple &amp; iOS</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-04-27T10:00:00Z" data-searchable="Apple App Store monthly installment billing annual subscription 12-month commitment iOS 26.5 developer churn retention StoreKit revenue pricing">
+        <div class="story-header">
+          <h4><a href="https://developer.apple.com/news/?id=agq42lxe" target="_blank">Apple Introduces Monthly Installments for Annual Subscriptions — Rolling Out With iOS 26.5</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Apple announced a new subscription model letting users commit to a 12-month subscription while spreading the annual cost across monthly payments. Developers can already configure the option in App Store Connect and Xcode, with public availability tied to iOS 26.5's release in May. Cancellation stops future billing only after the commitment period ends, giving developers stronger retention than standard monthly plans. The US and Singapore are excluded from the initial launch — Apple hasn't said why — with rollout across iPadOS, macOS, tvOS, and visionOS simultaneously.</p>
+        <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-dev" data-category="dev">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128736; Dev Tools</h3>
+      <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-05-01T00:00:00Z" data-searchable="Google I/O 2026 May 19 developer conference Gemini agentic coding Android 17 Shoreline keynote Mountain View">
+        <div class="story-header">
+          <h4><a href="https://developers.googleblog.com/get-ready-for-google-io-2026/" target="_blank">Google I/O 2026 Set for May 19–20 — Agentic Coding and Gemini Model Updates Top the Agenda</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Google confirmed I/O 2026 for May 19–20 at Shoreline Amphitheatre in Mountain View with live streaming via io.google. The confirmed agenda centers on agentic coding workflows and the latest Gemini model updates, alongside the expected Android 17 preview and updates across Chrome, Cloud, and the broader Google ecosystem. After Cloud Next's Gemini 3.1 Pro preview and Ironwood TPU announcements last week, I/O will likely pivot to developer-facing tools and consumer-facing Gemini integrations.</p>
+        <div class="story-meta"><span class="tag tag-source">Google Developers Blog</span></div>
+      </div>
+
+      <div class="story-card" data-importance="low" data-published="2026-05-01T06:00:00Z" data-searchable="Windows 11 KB5083631 Xbox mode AI taskbar agents File Explorer May update preview gaming handheld PC controller Copilot haptic">
+        <div class="story-header">
+          <h4><a href="https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5083631-update-released-with-34-changes-and-fixes/" target="_blank">Windows 11 May Preview Drops With Xbox Mode for PCs, AI Taskbar Agents, and 34 Fixes</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Microsoft released KB5083631 for Windows 11 24H2/25H2, introducing Xbox Mode — a full-screen, controller-first interface that turns any Windows PC into a console-like gaming environment via Win+F11. It is designed primarily for handheld gaming PCs. The update also adds AI agent monitoring in the taskbar (starting with Microsoft 365 Copilot), haptic feedback support, File Explorer performance improvements, and driver trust hardening across 34 total changes.</p>
+        <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+      </div>
+
+      <div class="story-card" data-importance="low" data-published="2026-04-29T10:00:00Z" data-searchable="Microsoft Exchange Online legacy TLS 1.0 1.1 deprecation POP IMAP July 2026 email security migration enterprise">
+        <div class="story-header">
+          <h4><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-to-deprecate-legacy-tls-in-exchange-online-starting-july/" target="_blank">Microsoft Will Block TLS 1.0/1.1 for POP and IMAP in Exchange Online Starting July</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Microsoft announced that POP3 and IMAP4 connections to Exchange Online will require TLS 1.2 or later starting July 2026. Connections using TLS 1.0 or 1.1 — industry-deprecated protocols with known weaknesses — will be rejected outright. The change primarily affects organizations that previously opted into using legacy endpoints, but custom or embedded systems (IoT devices, legacy mail clients, automated scripts) may silently fail if not updated.</p>
+        <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-business" data-category="business">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128188; Business</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-04-27T14:00:00Z" data-searchable="Ineffable Intelligence David Silver DeepMind $1.1 billion seed round reinforcement learning superintelligence Sequoia Nvidia UK AI Founders Pledge AlphaGo">
+        <div class="story-header">
+          <h4><a href="https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/" target="_blank">DeepMind's David Silver Raises Record $1.1B Seed for Ineffable Intelligence — AI That Learns Without Human Data</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">David Silver, the UCL professor and former lead of DeepMind's reinforcement learning team who created AlphaGo and AlphaZero, raised $1.1 billion in the largest European seed round ever at a $5.1 billion valuation. Ineffable Intelligence aims to build a "superlearner" that discovers knowledge through reinforcement learning without relying on human-generated training data. Sequoia and Lightspeed co-led, with Nvidia, Google, DST Global, and the UK Sovereign AI Fund participating. Silver has pledged 100% of his equity proceeds to Founders Pledge — potentially multiple billions.</p>
+        <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-hardware" data-category="hardware">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128421; Hardware</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-05-01T08:00:00Z" data-searchable="Japan Airlines JAL humanoid robot Unitree Haneda airport baggage handling labor shortage trial tarmac automation Tokyo LiDAR">
+        <div class="story-header">
+          <h4><a href="https://www.cnbc.com/2026/05/01/japan-airlines-humanoid-robots-haneda-labor-shortage.html" target="_blank">Japan Airlines Begins Two-Year Humanoid Robot Trial at Haneda — Unitree Bots Handle Baggage on the Tarmac</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">JAL launched a two-year trial deploying Chinese-made Unitree humanoid robots for tarmac baggage and cargo handling at Tokyo Haneda, the world's fifth-busiest airport with 60M+ annual passengers. The 130cm robots navigate using 3D LiDAR and depth cameras, pushing heavy cargo onto conveyor belts with demonstrated precision. Current limitations include 2–3 hour battery life and degraded performance in wet or icy conditions. Human workers retain all safety management responsibilities, with robot duties planned to expand to cabin cleaning later in the trial.</p>
+        <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-oss" data-category="oss">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128230; Open Source</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-04-30T06:00:00Z" data-searchable="Rust CPython PEP Python 3.16 build system Guido van Rossum memory safety extension modules cargo bindgen cross-platform">
+        <div class="story-header">
+          <h4><a href="https://blog.python.org/2026/04/rust-for-cpython-2026-04/" target="_blank">Rust for CPython Hits Build System Milestone — PEP Draft Targets June, Python 3.16 Will Optionally Include Rust</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">The Rust-for-CPython project announced that its fork now successfully builds CPython with Rust components on every supported platform. With Guido van Rossum's explicit blessing, the team is drafting a PEP for June–July 2026, targeting Python 3.16 (beta May 2027, GA October 2027). Initially, Rust will power optional extension modules only — no Rust compiler required to build or run standard CPython. The bridge uses cpython-sys with bindgen for automatic C header bindings and cargo vendoring to bundle all Rust dependencies with the CPython source tree.</p>
+        <div class="story-meta"><span class="tag tag-source">Python Insider</span></div>
       </div>
     </div>
   </div>
