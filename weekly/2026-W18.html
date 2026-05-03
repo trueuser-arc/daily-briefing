@@ -1214,6 +1214,12 @@
         <p class="story-analysis">A nine-year-old flaw in the Linux kernel's authencesn cryptographic template lets an unprivileged local user write four controlled bytes into the page cache of any readable file — then target a setuid binary to gain root. Unlike Dirty Cow or Dirty Pipe, there is no race condition to win: the same 10-line, 732-byte Python proof-of-concept works reliably across every major distribution released since 2017. CERT-EU rated it High (CVSS 7.8) and is urging immediate kernel updates, particularly on Kubernetes nodes and CI/CD runners where local access is common.</p>
         <div class="key-takeaway">Prioritize kernel patching on any multi-tenant system, container host, or CI runner. The exploit is trivial and public — no race condition means near-100% reliability.</div>
         <div class="story-meta"><span class="tag tag-source">The Register</span></div>
+        <div class="update-thread">
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Sunday, May 3</div>
+            <p class="update-text">CISA added CVE-2026-31431 to the Known Exploited Vulnerabilities catalog on May 1, confirming active exploitation in the wild. Federal civilian agencies now face a May 15 patch deadline. Microsoft published its own analysis detailing how the flaw enables root privilege escalation across cloud environments including Amazon Linux, RHEL, SUSE, and Ubuntu. <a href="https://www.cisa.gov/news-events/alerts/2026/05/01/cisa-adds-one-known-exploited-vulnerability-catalog">CISA Alert</a></p>
+          </div>
+        </div>
       </div>
 
       <div class="story-card" data-importance="high" data-published="2026-04-30T16:00:00Z" data-searchable="PyTorch Lightning PyPI supply chain attack malicious package credential theft SSH keys cloud tokens Team PCP Mini Shai-Hulud LAPSUS lightning 2.6.2 2.6.3 Socket deep learning">
@@ -1392,6 +1398,12 @@
         <p class="story-analysis">The Department of Defense formally launched GenAI.mil, its centralized AI platform for classified networks, signing agreements with NVIDIA, Microsoft, AWS, Google, OpenAI, SpaceX, and Reflection AI (a former-DeepMind startup backed by NVIDIA). The seven firms will deploy models at Impact Levels 6 and 7 for warfighter decision-making and data synthesis. Anthropic remains explicitly excluded — Pentagon tech chief reaffirmed Claude's "supply-chain risk" designation despite an April 17 White House meeting between Dario Amodei and senior administration officials. Separately, the Pentagon noted it treats Anthropic's Mythos cybersecurity model as "a separate issue" from the broader Claude ban.</p>
         <div class="key-takeaway">The DoD's 7-vendor strategy avoids lock-in but consolidates around labs willing to grant unrestricted military use. Developers building on Anthropic APIs should note this has no impact on commercial access — the ban is government-only.</div>
         <div class="story-meta"><span class="tag tag-source">TechCrunch</span> <span class="tag tag-source">CNN</span></div>
+        <div class="update-thread">
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Sunday, May 3</div>
+            <p class="update-text">Oracle was added as the eighth GenAI.mil vendor within days of the initial launch, leveraging its existing DoD cloud infrastructure. The rapid expansion suggests the Pentagon is keeping the door open for additional firms — though Anthropic remains excluded. <a href="https://breakingdefense.com/2026/05/pentagon-clears-7-tech-firms-to-deploy-their-ai-on-its-classified-networks/">Breaking Defense</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1469,6 +1481,12 @@
         </div>
         <p class="story-analysis">Apple is expected to release iOS 26.5 publicly around May 11–12, and unlike the iOS 26.4 beta (where Apple explicitly said E2EE for RCS "will not ship in this release"), the 26.5 beta 4 release notes carry no such disclaimer. When active, cross-platform iPhone-to-Android conversations are encrypted end-to-end via the GSMA's MLS-based RCS E2EE protocol. The toggle appears in Settings &gt; Apps &gt; Messages &gt; RCS Messaging as "End-to-End Encryption (Beta)." This would make iOS 26.5 the first Apple release to encrypt green-bubble conversations by default.</p>
         <div class="story-meta"><span class="tag tag-source">9to5Mac</span></div>
+        <div class="update-thread">
+          <div class="update-entry">
+            <div class="update-date">UPDATE — Sunday, May 3</div>
+            <p class="update-text">Additional reports narrow the public release window to May 11 or 12 based on Apple's historical cadence. Beyond RCS E2EE, iOS 26.5 also adds Maps Suggested Places, a dedicated Inuktitut keyboard, and — in the EU — extends iPhone notifications, Live Activities, and AirPods-like pairing to third-party smartwatches and headphones. <a href="https://9to5mac.com/2026/04/02/ios-26-5-release-date-heres-when-to-expect-new-iphone-features/">9to5Mac</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1495,6 +1513,158 @@
         </div>
         <p class="story-analysis">Fortune analyzed Alphabet and Amazon's Q1 earnings and found that a significant portion of their reported "AI profit growth" stems from unrealized gains on their respective Anthropic equity stakes — not from actual AI product revenue. With Anthropic's valuation rising from $61B to $350B in a year, both companies booked substantial mark-to-market gains that flow through their income statements. The piece argues this creates a misleading picture of AI monetization progress and questions whether Wall Street's "AI revenue acceleration" narrative is partly an accounting artifact.</p>
         <div class="story-meta"><span class="tag tag-source">Fortune</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="day-section" data-date="2026-05-03">
+  <div class="day-header">
+    <h2>Sunday, May 3</h2>
+    <span class="day-story-count">10 stories</span>
+    <span class="reading-time"></span>
+  </div>
+  <div class="day-highlights">
+    <span class="highlight-pill">GitHub RCE: 88% GHES unpatched</span>
+    <span class="highlight-pill">Trellix source code breached</span>
+    <span class="highlight-pill">Meta buys humanoid robotics startup</span>
+    <span class="highlight-pill">WWDC26 hardware leaks pile up</span>
+  </div>
+
+  <div class="category cat-security" data-category="security">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128274; Security</h3>
+      <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="high" data-published="2026-04-29T14:00:00Z" data-searchable="GitHub CVE-2026-3854 RCE remote code execution Wiz git push command injection Enterprise Server GHES cross-tenant repository access CVSS 8.7 millions repos unpatched">
+        <div class="story-header">
+          <h4><a href="https://www.wiz.io/blog/github-rce-vulnerability-cve-2026-3854" target="_blank">GitHub RCE (CVE-2026-3854): Single git push Gave Cross-Tenant Access to Millions of Repos — 88% of Enterprise Servers Still Unpatched</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Wiz Research publicly disclosed CVE-2026-3854 (CVSS 8.7), a command injection flaw in GitHub's internal git infrastructure that allowed any authenticated user with push access to execute arbitrary commands via crafted push option values. Because user-supplied X-Stat header values were not sanitized, an attacker could inject metadata fields that override security-critical configuration and bypass sandboxing. Due to GitHub's multi-tenant architecture, achieving code execution on a shared storage node exposed millions of public and private repositories belonging to other organizations. GitHub deployed a fix to github.com within two hours of Wiz's March 4 report and found no evidence of exploitation, but Wiz's scan data shows 88% of internet-reachable GitHub Enterprise Server instances remain unpatched.</p>
+        <div class="key-takeaway">Upgrade all GHES instances to 3.19.3 (or your branch's patched version) immediately. Any authenticated user — including bots and CI tokens — could have exploited this with a stock git client.</div>
+        <div class="story-meta"><span class="tag tag-source">Wiz</span> <span class="tag tag-source">GitHub Blog</span> <span class="tag tag-source">SecurityWeek</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-05-02T10:00:00Z" data-searchable="Trellix source code breach repository unauthorized access cybersecurity vendor compromise forensic investigation law enforcement">
+        <div class="story-header">
+          <h4><a href="https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html" target="_blank">Trellix Confirms Source Code Repository Breach — No Evidence of Exploitation Yet, Forensic Investigation Ongoing</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Cybersecurity vendor Trellix disclosed that attackers gained unauthorized access to a portion of its source code repository. The company says it has engaged external forensic experts and notified law enforcement, but has not disclosed the attack vector, the scope of accessed code, or how long the intruders had access. Trellix claims no evidence that its software release or distribution pipeline was compromised, and no customer data is believed affected. The breach is particularly notable because Trellix is itself a security company — formed from the McAfee Enterprise and FireEye merger — making this a supply-chain trust issue for its enterprise customers.</p>
+        <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-source">SecurityAffairs</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-05-01T16:00:00Z" data-searchable="CrowdStrike Cordial Spider Snarky Spider voice phishing vishing SSO SaaS extortion AiTM adversary-in-the-middle SharePoint HubSpot Google Workspace data exfiltration Scattered Spider The Com">
+        <div class="story-header">
+          <h4><a href="https://cyberscoop.com/crowdstrike-cordial-spider-snarky-spider-extortion-attacks/" target="_blank">CrowdStrike: Two New Threat Groups Speedrun Scattered Spider's SaaS Playbook With Voice Phishing and SSO Hijacking</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">CrowdStrike published research tracking Cordial Spider and Snarky Spider, two financially-motivated groups affiliated with The Com that have been running rapid SaaS extortion campaigns since October 2025. Both groups use voice phishing to direct employees to adversary-in-the-middle SSO login pages, capture session tokens that bypass MFA, then immediately pivot into SaaS apps — SharePoint, HubSpot, Google Workspace — to exfiltrate data at scale. They use residential proxy networks (Mullvad, Oxylabs, NetNut) to blend with legitimate traffic and delete email alerts to delay detection. The playbook closely mirrors Scattered Spider's but with faster execution times.</p>
+        <div class="story-meta"><span class="tag tag-source">CyberScoop</span> <span class="tag tag-source">CrowdStrike</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-04-28T12:00:00Z" data-searchable="Pitney Bowes ShinyHunters breach Salesforce 8.2 million records phishing email employee account data leak Have I Been Pwned HIBP">
+        <div class="story-header">
+          <h4><a href="https://www.theregister.com/2026/04/28/pitney_bowes_is_the_latest/" target="_blank">Pitney Bowes Confirms ShinyHunters Breach — 8.2M Records Exposed After Employee Salesforce Account Phished</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Pitney Bowes confirmed that ShinyHunters gained unauthorized access to its Salesforce CRM environment on April 9 after successfully phishing an employee email account. The breach exposed 8.2 million unique email addresses along with names, phone numbers, and physical addresses, now confirmed by Have I Been Pwned. This marks the fourth major ShinyHunters Salesforce-based breach in the current window — following Amtrak (2.1M records), Carnival Corp (8.7M), and Vimeo — suggesting the group has systematized a repeatable Salesforce CRM exploitation playbook rather than developing novel exploits.</p>
+        <div class="story-meta"><span class="tag tag-source">The Register</span> <span class="tag tag-source">HIBP</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-ai" data-category="ai">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#129302; AI &amp; ML</h3>
+      <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-05-01T18:00:00Z" data-searchable="Meta Assured Robot Intelligence acquisition humanoid robotics AI Superintelligence Labs Lerrel Pinto Xiaolong Wang foundation models physical labor household NVIDIA UC San Diego Bloomberg">
+        <div class="story-header">
+          <h4><a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank">Meta Acquires Assured Robot Intelligence — Humanoid AI Startup Team Joins Superintelligence Labs</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Meta closed the acquisition of Assured Robot Intelligence (ARI), a startup building foundation models for humanoid robots that can understand, predict, and adapt to human behaviors in dynamic environments. Co-founders Lerrel Pinto and Xiaolong Wang (formerly of NVIDIA and UC San Diego) will join Meta's Superintelligence Labs division. Financial terms weren't disclosed. Meta's broader strategy mirrors the Android/Qualcomm mobile playbook: build the sensors, software stack, and AI foundation that third-party hardware manufacturers can adopt, positioning Meta as the platform layer for the humanoid robotics industry rather than a pure hardware maker.</p>
+        <div class="story-meta"><span class="tag tag-source">TechCrunch</span> <span class="tag tag-source">Bloomberg</span></div>
+      </div>
+
+      <div class="story-card" data-importance="medium" data-published="2026-05-01T12:00:00Z" data-searchable="Google Gemini Android Automotive cars Google built-in Assistant replacement GM Buick Cadillac Chevrolet GMC OTA vehicle infotainment Gemini Live natural language">
+        <div class="story-header">
+          <h4><a href="https://blog.google/products-and-platforms/platforms/android/cars-with-google-built-in-gemini-tips-2026/" target="_blank">Google Gemini Replaces Assistant in Cars With Google Built-In — OTA Update Rolling Out to 4M+ GM Vehicles</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Google is pushing Gemini to replace Google Assistant in cars via an over-the-air update, starting with model year 2022+ Buick, Cadillac, Chevrolet, and GMC vehicles in the US. The update enables natural-language vehicle control, integration with the car's owner manual for model-specific queries, and real-time EV battery and charger information. Gemini Live (beta) adds free-flowing conversational mode while driving. This is the largest single deployment of Gemini outside phones and browsers, affecting roughly 4 million GM vehicles. Developers building Android Automotive apps should expect Gemini-powered voice interactions to replace traditional Assistant intents.</p>
+        <div class="story-meta"><span class="tag tag-source">Google Blog</span> <span class="tag tag-source">9to5Google</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-apple" data-category="apple">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#63743; Apple &amp; iOS</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-05-02T14:00:00Z" data-searchable="WWDC26 WWDC 2026 June 8 hardware leaks M5 Mac Mini iMac Ultra Apple TV A17 Pro iOS 27 Siri redesign Dynamic Island AI chatbot MacRumors Tom's Guide Geeky Gadgets">
+        <div class="story-header">
+          <h4><a href="https://www.macrumors.com/roundup/wwdc/" target="_blank">WWDC26 Hardware Leaks Intensify — M5 Mac Mini, iMac Ultra, New Apple TV, and Siri Overhaul All Reportedly Lined Up for June 8</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Five weeks before Apple's June 8 WWDC keynote, hardware leaks are accelerating. Multiple sources now report an M5-powered Mac Mini and iMac refresh, a new Mac Studio with M5 Max and M5 Ultra options, and a new Apple TV with the A17 Pro chip and HDMI pass-through. On the software side, iOS 27 is expected to debut a fully redesigned Siri that functions as a complete AI chatbot, surfaced through a new Dynamic Island interface showing a "Search or Ask" prompt with a glowing cursor. Both the Mac Mini and iMac are said to finally ship with 512GB base storage. For iOS developers, the Siri redesign signals a fundamental shift from structured SiriKit intents toward natural-language agent interactions.</p>
+        <div class="story-meta"><span class="tag tag-source">MacRumors</span> <span class="tag tag-source">Tom's Guide</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-dev" data-category="dev">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128736; Dev Tools</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-05-02T08:00:00Z" data-searchable="Craft Agents open source Apache 2.0 Lukilabs desktop agent framework multi-provider LLM MCP Model Context Protocol Claude Code GitHub Trending macOS Windows Linux sessions inbox">
+        <div class="story-header">
+          <h4><a href="https://www.craft.do/blog/introducing-craft-agents" target="_blank">Craft Agents Open-Sourced Under Apache 2.0 — Lukilabs Ships Cross-Platform Agent Desktop With Multi-Provider LLM and MCP Integration</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Lukilabs (the team behind Craft Docs) released Craft Agents as an open-source desktop application under Apache 2.0, and it immediately hit GitHub Trending. The app provides a multi-session inbox with status workflows, streaming LLM responses with tool visualization, and supports multiple AI providers — Anthropic, OpenAI, Google AI Studio, and GitHub Copilot — simultaneously. The standout feature is Craft MCP Integration, giving agents access to 32+ document tools. Users can say "add Linear as a source" and the agent discovers APIs, reads docs, and configures credentials automatically. Available on macOS, Windows, and Linux, it positions itself as a provider-neutral alternative to single-vendor agent experiences.</p>
+        <div class="story-meta"><span class="tag tag-source">Craft Blog</span> <span class="tag tag-source">GitHub</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-business" data-category="business">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128188; Business</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="medium" data-published="2026-04-29T16:00:00Z" data-searchable="Parallel Web Systems Parag Agrawal $100M Series B $2B valuation Sequoia Kleiner Perkins AI agents web infrastructure search API Clay Harvey Notion Opendoor former Twitter CEO">
+        <div class="story-header">
+          <h4><a href="https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/" target="_blank">Parallel Web Systems Raises $100M Series B at $2B Valuation — Parag Agrawal's Agent Infrastructure Play Doubles in Five Months</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">Former Twitter CEO Parag Agrawal's Parallel Web Systems closed a $100M Series B led by Sequoia at a $2B valuation, just five months after its $100M Series A at $740M. The startup offers web search and research APIs purpose-built for AI agents — handling the messy work of fetching, parsing, and structuring real-time web data that LLMs need to complete tasks. Customers include Clay, Harvey, Notion, and Opendoor, with over 100K developers on the platform. Total funding stands at $230M. The 170% valuation jump in under six months underscores how critical "agent infrastructure" has become as every AI lab's roadmap now assumes persistent, web-capable agents.</p>
+        <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category cat-oss" data-category="oss">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <h3>&#128230; Open Source</h3>
+      <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+    </div>
+    <div class="category-items">
+      <div class="story-card" data-importance="low" data-published="2026-05-03T06:00:00Z" data-searchable="TradingAgents TauricResearch GitHub Trending multi-agent LLM financial trading open source framework autonomous agents market analysis">
+        <div class="story-header">
+          <h4><a href="https://github.com/TauricResearch/TradingAgents" target="_blank">TradingAgents Hits GitHub Trending — Open-Source Multi-Agent LLM Framework for Autonomous Financial Trading</a></h4>
+          <span class="story-time"></span>
+        </div>
+        <p class="story-analysis">TauricResearch's TradingAgents repository surged onto GitHub Trending, offering an open-source framework that orchestrates multiple LLM-based agents for financial market analysis and trading. Each agent specializes in a different function — technical analysis, sentiment parsing, risk management, and execution — then coordinates through a structured pipeline. The framework supports multiple LLM backends and is designed for backtesting before live deployment. While the domain is niche, it exemplifies the broader pattern of agent frameworks moving from general-purpose chatbots to vertical, multi-agent orchestration for specific industries.</p>
+        <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
       </div>
     </div>
   </div>
