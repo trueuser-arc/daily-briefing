@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 11 – May 17, 2026</div>
-    <div class="meta">Last updated: 2026-05-14T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-05-15T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1238,6 +1238,12 @@
             <p class="story-analysis">As Trump and Xi opened their two-day summit in Beijing, Washington cleared H200 AI chip sales to 10 major Chinese firms — Alibaba, Tencent, ByteDance, JD.com among them — but not a single chip has shipped. Beijing pulled back after authorities signaled concerns about foreign dependency, and Trump's proposed 25% revenue-sharing structure (chips route through U.S. territory first) adds friction. Jensen Huang joined the delegation after a personal invite from Trump, underlining how central GPU access has become to great-power diplomacy.</p>
             <div class="key-takeaway">If H200 deliveries proceed, expect GPU cloud pricing pressure to ease as supply expands. If they don't, Chinese labs will double down on domestic chips — potentially fragmenting the AI hardware ecosystem developers build on.</div>
             <div class="story-meta"><span class="tag tag-source">CNBC / Reuters</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Friday, May 15</div>
+                <p class="update-text">Summit wrapped with a "constructive China-U.S. relationship of strategic stability" framework but few concrete deliverables. China agreed to buy 200 Boeing jets (first major order in a decade) and U.S. oil, but Taiwan tensions remained unresolved — Xi warned mishandling Taiwan puts the relationship in "great jeopardy." H200 deliveries remain stalled despite the clearance. Both sides agreed to meet again this fall. <a href="https://www.cnbc.com/2026/05/15/trump-xi-summit-the-3-big-takeaways-from-historic-meeting-in-beijing.html">CNBC</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="low" data-published="2026-05-14T12:00:00Z" data-searchable="US China AI safety dialogue autonomous weapons model misbehavior AI attacks non-state actors bilateral framework Trump Xi summit governance recurring Thucydides Trap">
@@ -1393,6 +1399,178 @@
 
     </div>
 
+
+    <div class="day-section" data-date="2026-05-15">
+      <div class="day-header">
+        <h2>Friday, May 15</h2>
+        <span class="day-story-count">11 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Cisco SD-WAN CVSS 10 Exploited</span>
+        <span class="highlight-pill">NGINX Rift: 18-Year Hidden Bug</span>
+        <span class="highlight-pill">Anthropic + Gates $200M Deal</span>
+        <span class="highlight-pill">OpenAI May Sue Apple</span>
+      </div>
+
+      <!-- ═══ SECURITY ═══ -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🔒 Security</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-15T06:00:00Z" data-searchable="Cisco Catalyst SD-WAN Controller CVE-2026-20182 CVSS 10.0 authentication bypass zero-day active exploitation CISA KEV May 17 deadline vdaemon DTLS UDP 12346 UAT-8616 Talos patch vHub peering PSIRT">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/" target="_blank">Cisco SD-WAN CVE-2026-20182 (CVSS 10.0) Under Active Exploitation — CISA Deadline Is Saturday</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A perfect-10 CVSS authentication bypass in Cisco Catalyst SD-WAN Controller lets unauthenticated attackers masquerade as a vHub peer and gain high-privilege access without certificate verification. Talos clusters the exploitation under UAT-8616, a "highly sophisticated" threat actor that began exploiting the flaw within hours of disclosure. CISA added it to the KEV catalog with a May 17 federal remediation deadline — making this weekend a critical patching window. The bug affects the vdaemon service on DTLS (UDP 12346), the same attack surface as the earlier CVE-2026-20127 but exploiting a different code path.</p>
+            <div class="key-takeaway">If you run Cisco SD-WAN infrastructure, this is a drop-everything patch. The CISA deadline is Saturday May 17 and exploitation is already happening in the wild by a sophisticated actor.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-05-13T14:00:00Z" data-searchable="NGINX Rift CVE-2026-42945 CVSS 9.2 heap buffer overflow ngx_http_rewrite_module 18 years 2008 PCRE capture named unnamed ASLR RCE DoS nginx Open Source 0.6.27 1.30.0 Plus R32 R36 AI depthfirst discovery web server critical patch">
+            <div class="story-header">
+              <h4><a href="https://securityaffairs.com/192132/hacking/nginx-rift-an-18-year-old-flaw-in-the-worlds-most-deployed-web-server-just-came-to-light.html" target="_blank">NGINX Rift (CVE-2026-42945) — AI Discovers 18-Year-Old Critical Heap Overflow in the Web's Most Deployed Server</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">An AI-powered analysis system by depthfirst uncovered a CVSS 9.2 heap buffer overflow hiding in nginx's rewrite module since 2008. The bug triggers when unnamed PCRE captures ($1, $2) combine with a question mark in the replacement string — characters like +, %, and &amp; expand differently between the size-calculation and write passes, overrunning the buffer. Every nginx version from 0.6.27 through 1.30.0 and Plus R32–R36 is affected. With nginx powering roughly 34% of all websites, the blast radius is enormous. RCE is achievable on hosts without ASLR; on modern systems the crash alone causes denial of service.</p>
+            <div class="key-takeaway">Check every nginx instance you operate — the fix is upgrading to 1.30.1+ or switching from unnamed ($1) to named PCRE captures in rewrite directives, which sidesteps the buggy code path entirely.</div>
+            <div class="story-meta"><span class="tag tag-source">SecurityAffairs / SC World</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-13T12:00:00Z" data-searchable="Windows Netlogon CVE-2026-41089 CVSS 9.8 stack buffer overflow domain controller SYSTEM privileges unauthenticated RCE SMB CrowdStrike Chinese APT NTDS.dit Golden Ticket Active Directory Zerologon Patch Tuesday May 2026 critical">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/microsoft-patches-138-vulnerabilities.html" target="_blank">Windows Netlogon CVE-2026-41089 (CVSS 9.8) Exploited Within Hours — Chinese APT Targeting Domain Controllers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Buried in May's Patch Tuesday is a Zerologon-class stack buffer overflow in Windows Netlogon that grants SYSTEM privileges on domain controllers via a single crafted network request — no authentication, no user interaction. CrowdStrike observed exploitation attempts by 06:00 UTC on May 13 from IPs linked to a Chinese APT group. The attack surface is enormous: any machine that can reach a DC over SMB can trigger it. Successful exploitation enables NTDS.dit dumping, Golden Ticket attacks, and simultaneous ransomware deployment to every domain-joined machine.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News / CrowdStrike</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T18:00:00Z" data-searchable="PraisonAI CVE-2026-44338 auth bypass open source multi-agent orchestration framework AI agent exploitation 4 hours disclosure Python RCE remote code execution supply chain AI tools vulnerability">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html" target="_blank">PraisonAI Auth Bypass (CVE-2026-44338) Exploited Within Four Hours — AI Agent Frameworks Now in Crosshairs</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Threat actors began exploiting CVE-2026-44338, an authentication bypass in PraisonAI — an open-source multi-agent orchestration framework — within four hours of public disclosure. The speed of exploitation underscores a growing pattern: AI agent frameworks are becoming high-value targets because they often run with elevated privileges, chain tool calls automatically, and are deployed by teams that prioritize functionality over hardening. If you self-host any AI agent framework, audit its authentication surface now — these tools weren't built with adversarial exposure in mind.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T15:00:00Z" data-searchable="Cushman Wakefield vishing breach ShinyHunters Qilin Salesforce 50GB data dump ransom 500K records PII social engineering phone call credential theft commercial real estate dual ransomware listing dark web">
+            <div class="story-header">
+              <h4><a href="https://www.theregister.com/security/2026/05/05/cushman-wakefield-confirms-vishing-cyberattack/5228718" target="_blank">Cushman &amp; Wakefield Vishing Breach — ShinyHunters Dumps 50GB Salesforce Data After Ransom Talks Collapse</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">ShinyHunters compromised commercial real estate giant Cushman &amp; Wakefield via vishing — convincing an employee by phone to hand over Salesforce credentials — then exfiltrated 50GB of customer PII and internal records. When ransom negotiations failed, the full dataset was published. A second group, Qilin, independently listed the firm, suggesting either a separate intrusion or initial access sold on dark web markets. The vishing vector is notable: no malware, no phishing email, just a phone call. It's a reminder that social engineering targeting SaaS credentials is often the cheapest and most effective attack path.</p>
+            <div class="story-meta"><span class="tag tag-source">The Register</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══ AI/ML ═══ -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🤖 AI &amp; Machine Learning</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-14T16:00:00Z" data-searchable="Anthropic Gates Foundation $200 million partnership global health education agriculture AI Claude API credits low-income countries vaccines therapies farming 4.6 billion underserved precision agriculture LLM social impact">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/gates-foundation-partnership" target="_blank">Anthropic and Gates Foundation Launch $200M Partnership for Global Health, Education, and Agriculture AI</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic is committing $200M in grants, Claude API credits, and technical support over four years to programs targeting the 4.6 billion people who lack access to essential medical services. The partnership will accelerate vaccine and therapy development, help governments make faster health-data decisions, build shared infrastructure for AI-assisted teaching, and deliver localized agricultural guidance to farmers in local languages. This is Anthropic's largest social-impact commitment to date and signals a strategic expansion beyond enterprise and developer markets into public-sector and NGO channels — potentially opening a new distribution vector for Claude.</p>
+            <div class="key-takeaway">Developers building health, education, or agricultural tools for underserved markets may soon gain access to subsidized Claude API credits and shared infrastructure through this partnership's public-goods programs.</div>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-13T13:00:00Z" data-searchable="Anthropic OpenAI enterprise adoption Ramp AI Index 34.4% 32.3% Claude Code business customers Q2 2026 fastest growing product budget API spending developer tools workplace AI agentic coding">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" target="_blank">Anthropic Overtakes OpenAI in Enterprise Adoption — Ramp Index Shows 34.4% vs 32.3% of U.S. Businesses</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The May 2026 Ramp AI Index — tracking spend across 50,000+ U.S. businesses — shows Anthropic adoption at 34.4%, surpassing OpenAI's 32.3% for the first time. The primary engine is Claude Code, which Ramp calls the fastest-growing product in Anthropic's history. Anthropic quadrupled its business adoption over the past year while OpenAI grew just 0.3%. The catch: Ramp flags that Anthropic's model-pricing incentives may create enterprise budget tension, as the company is structurally incentivized to push customers toward more expensive tiers even when cheaper models suffice.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch / Ramp</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══ APPLE ═══ -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🍎 Apple &amp; iOS</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T20:00:00Z" data-searchable="OpenAI Apple legal action Siri ChatGPT integration strained partnership subscribers placement advertising Sam Altman Tim Cook iOS AI Siri 2.0 Gemini Google contract deal expectations unmet lawsuit threat">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" target="_blank">OpenAI Reportedly Preparing Legal Action Against Apple Over Strained Siri Partnership</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">TechCrunch reports OpenAI is exploring legal action against Apple over a ChatGPT-Siri integration that failed to deliver expected subscribers and prominence. OpenAI executives believe Apple hasn't sufficiently promoted the integration across apps or in advertising, resulting in lower adoption than projected. The timing is charged: Apple just partnered with Google to use Gemini models for the next-generation Siri in iOS 27, effectively sidelining OpenAI's role. For iOS developers, this signals a potential fracture in Apple's AI partnership strategy — and reinforces that Gemini, not GPT, is Apple's primary AI bet going forward.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch / MacRumors</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══ BUSINESS ═══ -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>💼 Business &amp; Startups</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-13T10:00:00Z" data-searchable="Recursive Superintelligence $650M funding $4.65B valuation Richard Socher NVIDIA GV Greycroft AMD Ventures stealth self-improving AI UK London San Francisco Google DeepMind Meta FAIR Yuandong Tian AGI research lab autonomous training">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/13/google-deepmind-alumni-startup-partners-nvidia-superintelligence.html" target="_blank">Recursive Superintelligence Exits Stealth With $650M at $4.65B — Self-Improving AI Backed by NVIDIA and GV</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Richard Socher (ex-Salesforce AI chief) and Yuandong Tian (ex-Meta FAIR director) emerged from stealth with $650M at a $4.65B valuation, backed by NVIDIA, GV, Greycroft, and AMD Ventures. Their thesis: build AI systems that autonomously improve their own training processes — starting with a "Level 1" system capable of running training loops equivalent to "50,000 doctors" of research capacity. The public launch is targeted for mid-2026. If the approach works, it could compress the AI research cycle from months to hours, but it also raises alignment questions about systems designed to modify their own optimization objectives.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T21:00:00Z" data-searchable="Cisco layoffs 4000 jobs 5% workforce AI investment pivot record quarterly revenue cybersecurity network enterprise restructuring automation headcount reduction Q3 2026 earnings">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/14/cisco-cuts-nearly-4000-jobs-to-spend-more-on-ai-reports-record-quarterly-revenue/" target="_blank">Cisco Cuts Nearly 4,000 Jobs to Fund AI Push — Reports Record Quarterly Revenue</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Cisco is cutting approximately 4,000 positions (~5% of its workforce) while simultaneously reporting record quarterly revenue — the latest example of the "profitable layoff" pattern where companies shed roles to redirect spending toward AI infrastructure and R&amp;D. The restructuring follows similar moves by Cloudflare (20%), PayPal (20% over 3 years), and Coinbase (14%) earlier this month. For enterprise developers, Cisco's AI pivot likely means accelerated rollouts of AI-native networking, observability, and security products — but also potential disruption to existing support and integration relationships.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══ OPEN SOURCE ═══ -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>📦 Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-15T08:00:00Z" data-searchable="Warp terminal open source AGPL-3.0 Rust WarpUI agentic development environment 37K GitHub stars agent-first contribution model Oz orchestration Hacker News blocks IDE alternative coding agent trending #2">
+            <div class="story-header">
+              <h4><a href="https://thenewstack.io/how-warp-went-from-terminal-to-agentic-development-environment/" target="_blank">Warp Goes Open Source Under AGPL-3.0 — Rust Terminal Hits 37K Stars With Agent-First Contribution Model</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Warp released its full Rust client codebase under AGPL-3.0, rebranding from "better terminal" to "agentic development environment" and hitting 37K GitHub stars within days (#2 trending this week). The most interesting aspect isn't the code but the contribution model: humans propose ideas and validate behavior; AI agents via Warp's Oz platform do the implementation and review. It's a live experiment in whether agent-first open source can work at scale, and the custom block-based UI framework (WarpUI) makes it genuinely different from traditional terminal emulators.</p>
+            <div class="story-meta"><span class="tag tag-source">The New Stack</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
     <!-- DAY_SECTIONS_END -->
   </div>
