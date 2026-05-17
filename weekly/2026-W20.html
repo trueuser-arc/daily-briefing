@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 11 – May 17, 2026</div>
-    <div class="meta">Last updated: 2026-05-16T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-05-17T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1429,6 +1429,12 @@
             <p class="story-analysis">A perfect-10 CVSS authentication bypass in Cisco Catalyst SD-WAN Controller lets unauthenticated attackers masquerade as a vHub peer and gain high-privilege access without certificate verification. Talos clusters the exploitation under UAT-8616, a "highly sophisticated" threat actor that began exploiting the flaw within hours of disclosure. CISA added it to the KEV catalog with a May 17 federal remediation deadline — making this weekend a critical patching window. The bug affects the vdaemon service on DTLS (UDP 12346), the same attack surface as the earlier CVE-2026-20127 but exploiting a different code path.</p>
             <div class="key-takeaway">If you run Cisco SD-WAN infrastructure, this is a drop-everything patch. The CISA deadline is Saturday May 17 and exploitation is already happening in the wild by a sophisticated actor.</div>
             <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Sunday, May 17</div>
+                <p class="update-text">CISA's Emergency Directive 26-03 remediation deadline is today. All FCEB agencies must have patches deployed. UAT-8616 exploitation remains active and indiscriminate — private-sector orgs should treat this as equally urgent. <a href="https://www.tenable.com/blog/faq-about-the-continued-exploitation-of-cisco-catalyst-sd-wan-vulnerabilities-uat-8616">Tenable FAQ</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="high" data-published="2026-05-13T14:00:00Z" data-searchable="NGINX Rift CVE-2026-42945 CVSS 9.2 heap buffer overflow ngx_http_rewrite_module 18 years 2008 PCRE capture named unnamed ASLR RCE DoS nginx Open Source 0.6.27 1.30.0 Plus R32 R36 AI depthfirst discovery web server critical patch">
@@ -1758,6 +1764,221 @@
             </div>
             <p class="story-analysis">GitHub's static analysis engine ships Swift 6.3 language support and five new default C/C++ queries focused on memory safety. The release also improves accuracy across Python, Java/Kotlin, JavaScript, C#, and GitHub Actions analysis with fewer false positives. For Swift developers, this means better automated security scanning in GitHub-hosted CI pipelines without additional configuration.</p>
             <div class="story-meta"><span class="tag tag-source">GitHub Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="day-section" data-date="2026-05-17">
+      <div class="day-header">
+        <h2>Sunday, May 17</h2>
+        <span class="day-story-count">14 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Google I/O Eve Preview</span>
+        <span class="highlight-pill">Anthropic Eyes $950B Valuation</span>
+        <span class="highlight-pill">NASA 500x Space Chip</span>
+        <span class="highlight-pill">Azure SDK for Rust GA</span>
+      </div>
+
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🔒 Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="Dirty Frag CVE-2026-43284 CVE-2026-43500 Linux kernel patch rollout Red Hat RHEL Ubuntu AlmaLinux CloudLinux KernelCare live patch status EL8 EL9 privilege escalation networking">
+            <div class="story-header">
+              <h4><a href="https://tuxcare.com/blog/dirty-frag-cve-2026-43284-cve-2026-43500-kernelcare-live-patches-released/" target="_blank">Dirty Frag Patch Rollout Nears Completion — KernelCare Ships Live Patches Ahead of Vendor Erratas</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Ten days after public disclosure, the Dirty Frag LPE chain (CVE-2026-43284 + CVE-2026-43500) now has patches available across all major distributions. KernelCare notably shipped live patches for EL8 within 24 hours of disclosure, beating Red Hat's official erratas. Ubuntu, SUSE, Debian, and Amazon Linux all have fixes in production repos. The vulnerability chain exploits ESP/IPsec and RxRPC fragmentation to escalate to root with a single command — if you haven't patched yet, the exploit is public and trivial.</p>
+            <div class="story-meta"><span class="tag tag-source">TuxCare</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="Musk v Altman OpenAI trial jury deliberation closing arguments verdict May 19 Sam Altman Elon Musk $150 billion damages nonprofit mission AI governance Judge Gonzalez Rogers">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/14/closing-arguments-jury-openai-musk-altman.html" target="_blank">Musk v. Altman Jury Begins Deliberation Monday — Verdict Could Reshape OpenAI's Corporate Structure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Closing arguments wrapped Wednesday with Musk's team painting OpenAI's for-profit pivot as a betrayal of the $38M he donated, while OpenAI argued the donations had no contractual strings. The jury is advisory — Judge Gonzalez Rogers makes the final call — but a finding of fiduciary breach could force structural changes to OpenAI's governance. A verdict is expected as early as next week, and the outcome may set precedent for how nonprofit-to-commercial AI lab transitions are legally scrutinized.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-17T00:00:00Z" data-searchable="NGINX Rift CVE-2026-42945 patch adoption status 18 year old vulnerability web server heap overflow PCRE capture update mitigation">
+            <div class="story-header">
+              <h4><a href="https://securityaffairs.com/192132/hacking/nginx-rift-an-18-year-old-flaw-in-the-worlds-most-deployed-web-server-just-came-to-light.html" target="_blank">NGINX Rift Patching Lags — Many Deployments Still Running Vulnerable Versions One Week After Disclosure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">One week after NGINX Rift (CVE-2026-42945) went public, adoption of NGINX 1.30.0 and Plus R36 remains sluggish given the web server's ubiquity. The 18-year-old heap overflow in ngx_http_rewrite_module requires named PCRE captures to trigger, which limits some attack surfaces, but any configuration using regex rewrites with named groups is exploitable. Admins should audit rewrite rules and prioritize the upgrade.</p>
+            <div class="story-meta"><span class="tag tag-source">Security Affairs</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🤖 AI &amp; ML</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-17T00:00:00Z" data-searchable="Google I/O 2026 May 19 keynote Gemini 4.0 Android 17 Googlebook agentic AI Android XR glasses developer conference Shoreline Amphitheatre preview schedule sessions">
+            <div class="story-header">
+              <h4><a href="https://www.tomsguide.com/phones/google-pixel-phones/google-i-o-2026-date-time-potential-announcements-and-everything-else-you-need-to-know" target="_blank">Google I/O 2026 Kicks Off Tomorrow — Gemini 4.0, Android 17, and Agentic AI Expected to Dominate Keynote</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google's developer conference opens Monday at 10 AM PT with a keynote expected to center on Gemini 4.0, Android 17's final API set, and the expansion of "Gemini Intelligence" as the reasoning layer beneath Android itself. Agentic AI — multi-step task completion without user handholding — will likely get dedicated sessions. For iOS developers watching the competitive landscape: Google is shipping AI-first OS features now while Apple's equivalent response won't land until WWDC in three weeks. The Googlebook laptop category (replacing Chromebooks) may also get hardware specs and pricing.</p>
+            <div class="key-takeaway">Watch the keynote at 10 AM PT Monday. Android's agentic AI features shipping this summer will set user expectations that iOS 27 needs to match at WWDC.</div>
+            <div class="story-meta"><span class="tag tag-source">Tom's Guide</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="Anthropic valuation $950 billion funding round $30B $50B raise OpenAI surpass Series H Dario Amodei revenue $30 billion run rate AI arms race capital">
+            <div class="story-header">
+              <h4><a href="https://sherwood.news/tech/anthropic-in-talks-for-funding-at-a-valuation-as-high-as-950-billion-which-would-make-it-bigger-than-openai/" target="_blank">Anthropic Seeks Up to $950B Valuation in New Round — Would Eclipse OpenAI for First Time</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic is in talks to raise $30–50B at a valuation as high as $950B, which would make it more valuable than OpenAI ($825B) for the first time. The jump from its February round ($380B) reflects Anthropic's revenue trajectory — now above $30B annualized run rate, up from $9B at end of 2025. The sheer scale of these numbers reflects how the AI infrastructure race has become a capital-intensity competition where access to compute (see: the 3.5GW Google/Broadcom TPU deal) matters as much as model quality.</p>
+            <div class="story-meta"><span class="tag tag-source">Sherwood News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="SubQ Subquadratic 12 million token context window sparse attention SSA architecture long-context retrieval SWE-Bench coding $29M seed $500M valuation API launch SubQ Code SubQ Search">
+            <div class="story-header">
+              <h4><a href="https://thenewstack.io/subquadratic-12-million-context-window/" target="_blank">SubQ Ships 12-Million-Token Context Window — Subquadratic Attention Architecture Beats Frontier Models on Retrieval</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Subquadratic's debut model offers a 12M-token context window built on Selective Sparse Attention that scales linearly rather than quadratically. On RULER 128K it scores 97% (Opus 4.6: 94%), and on multi-needle retrieval it outperforms all frontier models at a fraction of the cost — $8 vs. ~$2,600 for equivalent context on traditional architectures. The SWE-Bench score of 82.4% suggests this isn't a retrieval-only trick; the model holds its own on coding tasks. For developers working with large codebases or long documents, SubQ's API could be a game-changer if the benchmarks hold in production.</p>
+            <div class="story-meta"><span class="tag tag-source">The New Stack</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-17T00:00:00Z" data-searchable="Cerebras CBRS stock IPO second day trading pullback $279 $185 IPO price NVIDIA challenger AI chip wafer-scale valuation $67 billion post-IPO volatility">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/15/cerebras-stock-ipo-debut-ai.html" target="_blank">Cerebras Slides 10% on Day Two but Still 51% Above IPO Price — Market Digests $67B AI Chip Valuation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">After Wednesday's 68% pop to $311, Cerebras (CBRS) pulled back to ~$280 on Friday as initial euphoria cooled. The stock still sits well above its $185 IPO price, giving the wafer-scale chip company a ~$60B market cap. The real test comes this week when analysts initiate coverage and the market evaluates whether Cerebras's inference throughput advantages can translate into sustained revenue against NVIDIA's ecosystem moat.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🛠️ Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-14T00:00:00Z" data-searchable="Azure SDK Rust stable GA Microsoft production ready semver Key Vault Storage Identity Blob Queue Pager Poller ManagedIdentityCredential DeveloperToolsCredential Tokio async containers edge cold start">
+            <div class="story-header">
+              <h4><a href="https://devblogs.microsoft.com/azure-sdk/from-beta-to-stable-announcing-the-azure-sdk-for-rust-ga/" target="_blank">Azure SDK for Rust Hits GA — Microsoft Ships Production-Ready Libraries for Identity, Key Vault, and Storage</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">After a year in beta, the Azure SDK for Rust is now stable with semver guarantees. The GA covers Core, Identity (including ManagedIdentityCredential), Key Vault (Secrets, Keys, Certificates), and Storage (Blobs, Queues). The redesigned Pager and Poller APIs handle long-running operations idiomatically. For teams running Rust in containers or at the edge, this eliminates the last major blocker for Azure-native services — no more wrapping REST APIs manually or relying on community crates with uncertain maintenance.</p>
+            <div class="key-takeaway">If you've been waiting on official Azure support to adopt Rust for cloud services, the wait is over. Cosmos DB and Event Hubs are next in the pipeline.</div>
+            <div class="story-meta"><span class="tag tag-source">Microsoft Azure SDK Blog</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="WWDC 2026 June 8 developer registration labs sessions Apple Park keynote iOS 27 macOS 27 Siri revamp Swift developer tools frameworks in-person special event free conference">
+            <div class="story-header">
+              <h4><a href="https://developer.apple.com/wwdc26/" target="_blank">WWDC 2026 Developer Lab Booking Opens Next Week — Three Weeks Until iOS 27, Siri Overhaul, and New Frameworks</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With WWDC three weeks out (June 8–12), Apple's lab booking system typically opens the week before the conference. This year's event is expected to debut a standalone Siri chatbot app, third-party AI extensions, and major SwiftUI/SwiftData updates. The in-person Apple Park event on June 8 has already closed applications. Developers should prepare test projects now — session videos will likely focus on AI integration APIs that need immediate adoption for fall ship deadlines.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🔧 Hardware &amp; Infrastructure</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-15T00:00:00Z" data-searchable="NASA HPSC High Performance Spaceflight Computing processor 500x faster radiation hardened AI chip JPL Microchip Technology spacecraft autonomous deep space Moon Mars onboard inference edge">
+            <div class="story-header">
+              <h4><a href="https://www.nasa.gov/technology/hello-universe-nasas-next-gen-space-processor-undergoes-testing/" target="_blank">NASA's HPSC Processor Delivers 500x Current Space Chips — Enables Onboard AI for Deep Space Missions</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">NASA and Microchip Technology's High Performance Spaceflight Computing (HPSC) SoC has entered radiation and thermal testing, showing 500x the performance of current radiation-hardened flight processors. The chip integrates CPUs, accelerators, networking, and memory on a single die designed to survive deep-space radiation. The practical impact: spacecraft could run AI inference locally to respond to unexpected situations in real time, rather than waiting 20+ minutes for Earth commands during Mars missions. This is edge computing taken to its literal extreme.</p>
+            <div class="story-meta"><span class="tag tag-source">NASA JPL</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-17T00:00:00Z" data-searchable="Anthropic Google Broadcom TPU 3.5GW compute partnership 2027 $30 billion revenue infrastructure training capacity next-generation custom silicon deal ASIC">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank">Anthropic's 3.5GW Google/Broadcom TPU Deal Enters Build Phase — Next-Gen Capacity Coming Online 2027</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The expanded infrastructure deal announced in April — 3.5GW of next-generation TPU capacity manufactured by Broadcom on Google's architecture — is now in active build phase with first availability in 2027. This dwarfs the original 1GW/1M-TPU deal from October 2025 and locks Anthropic into Google's silicon ecosystem through 2031. The deal is context for the $950B valuation talks: investors are betting Anthropic can convert unprecedented compute access into sustained model leadership.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>🍎 Apple</h3>
+          <div><span class="count">1 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="Googlebook laptop Android ChromeOS replacement AI-native Magic Pointer Gemini Acer ASUS Dell HP Lenovo fall 2026 I/O specs pricing Apple MacBook competitor premium">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/12/google-unveils-googlebooks-a-new-line-of-ai-native-laptops/" target="_blank">Googlebook Specs Expected at I/O Monday — Apple's MacBook Gets Its First AI-Native Laptop Competitor</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google's Googlebook category — announced at the Android Show — merges the Android app ecosystem with ChromeOS productivity into an "intelligence-first" laptop OS. Five OEMs (Acer, ASUS, Dell, HP, Lenovo) are onboard, with Intel, Qualcomm, and MediaTek confirmed as chip partners. The "Magic Pointer" AI cursor that surfaces contextual Gemini suggestions is a direct UX challenge to Apple Intelligence on Mac. Full hardware specs and pricing are expected during Monday's I/O keynote, with devices shipping fall 2026.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>⚖️ Policy &amp; Regulation</h3>
+          <div><span class="count">1 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-17T00:00:00Z" data-searchable="EU AI Act August 2 2026 full applicability compliance enforcement high-risk systems omnibus simplification regulatory sandbox developer deployer obligations GPAI general purpose AI">
+            <div class="story-header">
+              <h4><a href="https://www.wsgr.com/en/insights/2026-year-in-preview-ai-regulatory-developments-for-companies-to-watch-out-for.html" target="_blank">EU AI Act Full Applicability in 77 Days — Developer Compliance Obligations Now Unavoidable</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With the EU AI Act becoming fully applicable on August 2, 2026, the compliance clock is ticking for any team shipping AI features to European users. The May 7 Omnibus agreement adds some relief — extended sandbox access, simplified requirements for SMEs — but core obligations remain: risk classification, transparency documentation, and human oversight for high-risk systems. The open question is whether the Omnibus gets formally adopted before August 2; if it doesn't, the stricter original timelines apply.</p>
+            <div class="story-meta"><span class="tag tag-source">Wilson Sonsini</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>💼 Business</h3>
+          <div><span class="count">1 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-15T00:00:00Z" data-searchable="Gemini crypto exchange Winklevoss Capital $100 million investment Bitcoin CFTC DCO license derivatives Class A shares GEMI stock surge trading platform expansion">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html" target="_blank">Winklevoss Capital Injects $100M in Bitcoin Into Gemini Exchange — Shares Surge 17%</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Winklevoss twins transferred ~1,258 BTC ($100M) for Class A shares at $14 — more than 2.5x the market price — signaling deep confidence in Gemini's pivot from crypto exchange to full-spectrum markets platform. The DCO license from CFTC (April 29) makes Gemini one of few crypto-native platforms with both DCM and DCO clearance. The bullish insider bet comes despite an active securities fraud class action, which the market largely shrugged off.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
           </div>
 
         </div>
