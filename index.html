@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 18 – May 24, 2026</div>
-    <div class="meta">Last updated: May 19, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 20, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -736,6 +736,10 @@
               <div class="update-entry">
                 <div class="update-date">UPDATE — Tuesday, May 19</div>
                 <p class="update-text">Keynote confirmed at 10am PT today. Key announcements: Gemini Intelligence deeply embedded in Android 17 with cross-app agentic actions (locating a syllabus in Gmail and auto-adding required textbooks to a shopping cart), Googlebook AI-native laptops from five OEMs replacing the Chromebook brand, and Android XR smart glasses with Gemini 2.5 Pro powering real-time translation and navigation. <a href="https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news">Android Central</a></p>
+              </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Wednesday, May 20</div>
+                <p class="update-text">Full keynote details now available. Gemini 3.5 Flash launched globally — Google says it matches frontier model quality at 4x the token rate. Gemini Spark, a personal AI agent that takes actions across Google apps on your behalf, enters beta for AI Ultra subscribers next week. Google restructured AI Ultra from $250 to $200/mo and introduced a new $100/mo entry tier with 5x usage limits over AI Pro, 20TB storage, and YouTube Premium. Gemini 3.5 Pro is being used internally but won't ship until next month. <a href="https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html">CNBC</a></p>
               </div>
             </div>
           </div>
@@ -1050,6 +1054,176 @@
             </div>
             <p class="story-analysis">The everything-claude-code repository jumped from #14 to #4 on GitHub's weekly trending chart, accumulating 128K stars for its library of 136 reusable skills and 30 agents that work across Claude Code, Codex, Cursor, OpenCode, and Gemini. Born at the Cerebral Valley x Anthropic hackathon in February, the project also ships AgentShield — a tool that scans AI coding configurations for vulnerabilities, misconfigurations, and injection risks. The surge reflects a broader trend: Claude Code ecosystem projects now represent 15% of all GitHub trending entries, with AI agent skills frameworks dominating at 25%.</p>
             <div class="story-meta"><span class="tag tag-source">GitHub Trending</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-05-20">
+      <div class="day-header">
+        <h2>Wednesday, May 20</h2>
+        <span class="day-story-count">11 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">CISA GovCloud Keys Leaked</span>
+        <span class="highlight-pill">ChromaDB Pre-Auth RCE</span>
+        <span class="highlight-pill">Anthropic #1 Disruptor, $30B Revenue</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-19T14:00:00Z" data-searchable="CISA GitHub leak AWS GovCloud credentials Nightwing contractor Private-CISA repository plaintext passwords SAML signing certificates SSH keys GitGuardian secret scanning LZ-DSO DevSecOps government cybersecurity agency data exposure six months November 2025 844MB credential revocation failure Philippe Caturegli Seralys worst leak">
+            <div class="story-header">
+              <h4><a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" target="_blank">CISA Contractor Leaked AWS GovCloud Admin Keys on Public GitHub for Six Months</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A Nightwing contractor maintained a public GitHub repository called "Private-CISA" from November 2025 through mid-May 2026, exposing 844 MB of highly sensitive data including administrative credentials for three AWS GovCloud environments, plaintext passwords for dozens of internal CISA systems, SAML signing certificates, and SSH keys. GitGuardian flagged the repo on May 14 after the account owner had disabled GitHub's secret scanning protections; researcher Guillaume Valadon escalated on May 15 when automated alerts went unanswered. The exposed AWS keys remained valid for another 48 hours after the repository was taken offline. Security consultant Philippe Caturegli, who independently confirmed the keys were live, called it "the worst leak that I've witnessed in my career."</p>
+            <div class="key-takeaway">The U.S. government's own cybersecurity agency had its secrets exposed because a contractor disabled secret scanning and pushed credentials to a public repo for six months. If CISA can't enforce credential hygiene internally, expect renewed pressure on automated secret-detection tooling across all government contracts.</div>
+            <div class="story-meta"><span class="tag tag-source">Krebs on Security</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-05-19T10:00:00Z" data-searchable="ChromaDB CVE-2026-45829 CVSS 10 max severity pre-authentication RCE remote code execution Python FastAPI vector database AI RAG HuggingFace model reference embedding function unauthenticated server hijack Hadrian unpatched 1.5.8 73 percent internet exposed Rust frontend reverse proxy mitigation API keys environment variables secrets">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/max-severity-flaw-in-chromadb-for-ai-apps-allows-server-hijacking/" target="_blank">ChromaDB Pre-Auth RCE (CVE-2026-45829) — Max-Severity Flaw Threatens AI App Infrastructure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A max-severity vulnerability in ChromaDB's Python FastAPI server lets unauthenticated attackers execute arbitrary code by supplying a malicious HuggingFace model reference as an embedding function. The root cause is two independent failures: the server trusts client-supplied model identifiers without restriction and acts on that trust before authenticating the request. Introduced in version 1.0.0 and still unpatched as of 1.5.8, the flaw can leak API keys, environment variables, mounted secrets, and all files on disk. Of internet-exposed ChromaDB instances, 73% are running vulnerable versions — and ChromaDB is the most popular open-source vector database for RAG and AI agent workflows.</p>
+            <div class="key-takeaway">If you run ChromaDB's Python server, switch to the Rust frontend immediately or ensure all traffic passes through an authenticating reverse proxy. Never expose the Python FastAPI server directly to the internet — the pre-auth RCE means there's no safe configuration until a patch ships.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-18T16:00:00Z" data-searchable="Drupal core security release PSA-2026-05-18 highly critical severity 20 out of 25 emergency patch May 20 2026 CMS content management system all supported branches 10.5 10.6 11.2 11.3 exploit hours days unauthenticated no authentication access complexity none web application">
+            <div class="story-header">
+              <h4><a href="https://www.drupal.org/psa-2026-05-18" target="_blank">Drupal Warns of "Highly Critical" Core Patch Today — Exploits Expected Within Hours</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Drupal's security team issued advance advisory PSA-2026-05-18 warning of a "highly critical" core vulnerability (severity 20/25) requiring no authentication and no special access complexity to exploit. Emergency patches for all supported branches — Drupal 11.3.x, 11.2.x, 10.6.x, and 10.5.x — are scheduled for release today between 17:00 and 21:00 UTC, with the team explicitly warning that "exploits might be developed within hours or days." Technical details are being withheld until patches ship, but the access-complexity and authentication ratings suggest a remotely exploitable flaw with a wide blast radius across Drupal's estimated 1.7 million active sites.</p>
+            <div class="story-meta"><span class="tag tag-source">Drupal.org</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-12T18:00:00Z" data-searchable="Exim CVE-2026-45185 Dead.Letter CVSS 9.8 critical use-after-free UAF BDAT GnuTLS STARTTLS CHUNKING unauthenticated RCE remote code execution mail transfer agent MTA XBOW 4.97 4.99.2 4.99.3 patch email server one-byte heap corruption allocator metadata Debian Ubuntu Linux SMTP">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution/" target="_blank">Exim "Dead.Letter" RCE (CVE-2026-45185) — CVSS 9.8 Unauthenticated Mail Server Takeover</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A critical use-after-free vulnerability dubbed "Dead.Letter" in Exim's BDAT parsing over GnuTLS lets unauthenticated attackers achieve remote code execution on mail servers. During TLS shutdown, Exim frees its transfer buffer but a nested BDAT receive wrapper still writes a single character into the freed region — corrupting the allocator's internal metadata. Discovered by XBOW and disclosed May 12, the bug affects Exim 4.97 through 4.99.2 on GnuTLS builds with STARTTLS and CHUNKING advertised. OpenSSL builds are not affected. With Exim handling roughly 30% of the internet's email traffic, the blast radius is substantial — patch to 4.99.3 immediately or disable CHUNKING as a stopgap.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-19T17:00:00Z" data-searchable="Google Gemini Omni video model I/O 2026 multimodal generation Veo Nano Banana Genie DeepMind Demis Hassabis cinematic video text image audio prompt Flash Pro 10 seconds clips Google Flow YouTube Shorts editing conversation consistent characters backgrounds AI Ultra subscribers">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/19/googles-gemini-omni-turns-images-audio-and-text-into-video-and-thats-just-the-start/" target="_blank">Google Launches Gemini Omni — Multimodal Video Model Combines Gemini, Veo, and Genie Into One System</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google introduced Gemini Omni at I/O 2026, a multimodal model that generates and edits video from combined text, image, audio, and video inputs — moving generative video out of the standalone Veo line and into the core Gemini system. DeepMind CEO Demis Hassabis said Omni merges Gemini with Veo, Nano Banana, and Genie into a unified architecture that reasons across all input types rather than stitching them together. The initial Omni Flash variant ships immediately to AI Plus, Pro, and Ultra subscribers with 10-second clips through the Gemini app, Google Flow, and YouTube Shorts. A higher-end Omni Pro model is planned but has no release date.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-19T12:00:00Z" data-searchable="Anthropic CNBC Disruptor 50 number one ranking revenue $30 billion run rate 80x growth Claude Code fastest growing product OpenAI number two $900 billion valuation Greenoaks Sequoia Altimeter Dragoneer $30B funding round Daniela Amodei enterprise software AI race private company">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/19/anthropic-cnbc-disruptor-50-ranking.html" target="_blank">Anthropic Tops CNBC Disruptor 50 at #1 — Revenue Surges 80x to $30B Run Rate as $900B Round Nears Close</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic has leapfrogged OpenAI to claim the #1 spot on CNBC's 2026 Disruptor 50 list, propelled by an annualized revenue run rate exceeding $30 billion — up from $9 billion at the end of 2025. Co-founder Daniela Amodei said internal planning for 10-fold growth "was far off the mark" as revenue increased 80-fold in Q1 on an annualized basis, with Claude Code cited as the fastest-growing product in the company's history. Simultaneously, a $30 billion funding round led by Greenoaks, Sequoia, Altimeter, and Dragoneer at a $900 billion valuation is expected to close by month's end — which would make Anthropic more valuable than OpenAI's $852 billion March valuation and one of the most valuable private companies in history.</p>
+            <div class="key-takeaway">Anthropic's 80x revenue growth and $900B pending valuation mark the fastest value creation in enterprise software history. For developers, the competitive dynamic is clear: Anthropic is winning on developer adoption (Claude Code) while OpenAI leads in consumer scale — bet accordingly.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-18T14:00:00Z" data-searchable="Decart AI $300 million funding $4 billion valuation Radical Ventures NVIDIA Adobe Ventures Toyota Ventures Sequoia Benchmark Andrej Karpathy world model DOS 2.0 1600 tokens per second agentic inference 100 FPS video Lucy Oasis AWS Trainium Amazon partnership Tel Aviv Israeli AI optimization">
+            <div class="story-header">
+              <h4><a href="https://siliconangle.com/2026/05/18/decart-raises-300m-ai-optimization-software-world-models/" target="_blank">Decart Raises $300M at $4B for Real-Time World Models — DOS 2.0 Hits 1,600 Tokens/Sec for Agentic Inference</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Tel Aviv-based Decart closed a $300 million round at a $4 billion valuation led by Radical Ventures, with NVIDIA, Adobe Ventures, Toyota Ventures, Sequoia, and Benchmark participating alongside angel investors including OpenAI co-founder Andrej Karpathy. The company shipped DOS 2.0, its inference and training optimization stack, delivering 1,600 tokens per second for agentic workloads (vs. an industry average of ~200) and full-HD video inference at up to 100 FPS. Decart also announced a strategic partnership with AWS to deploy its real-time world models on Amazon's Trainium chips — one of the first companies to run models of this class at scale on custom silicon outside NVIDIA's ecosystem.</p>
+            <div class="story-meta"><span class="tag tag-source">SiliconANGLE</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-19T16:00:00Z" data-searchable="Google AI Ultra $100 per month price cut $200 tier Gemini Spark personal agent beta AI Pro 5x usage 20TB storage YouTube Premium I/O 2026 subscription restructuring developer knowledge worker advanced creator Google One">
+            <div class="story-header">
+              <h4><a href="https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/" target="_blank">Google Introduces $100/mo AI Ultra Tier and Gemini Spark Personal Agent at I/O 2026</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google restructured its AI subscription tiers at I/O 2026, introducing a $100/month AI Ultra plan that includes 5x the Gemini usage limits of the $20 AI Pro tier, 20TB of cloud storage, YouTube Premium, and — starting next week — beta access to Gemini Spark, a personal AI agent that takes actions across Google apps on your behalf. The existing $250 top tier dropped to $200 with identical features. The price cut and new agent-first tier signal Google is competing aggressively on price to lock developers and power users into its ecosystem before Spark's third-party integrations launch later this year.</p>
+            <div class="story-meta"><span class="tag tag-source">Google Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-19T15:00:00Z" data-searchable="Google Jules Tools CLI API async coding agent GA general availability Gemini 2.5 agentic coding command line interface CI/CD pipeline Slack Linear GitHub integration free tier 15 tasks daily AI Pro Ultra subscription scriptable automation bug fixing code review test writing">
+            <div class="story-header">
+              <h4><a href="https://developers.googleblog.com/en/meet-jules-tools-a-command-line-companion-for-googles-async-coding-agent/" target="_blank">Google Ships Jules Tools CLI and API — Async Coding Agent Exits Beta With Free Tier</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google launched Jules Tools alongside a public API at I/O 2026, taking its asynchronous coding agent from beta to general availability. The CLI lets developers spin up tasks, inspect agent progress, and compose Jules with other terminal tools in scriptable workflows. The API (alpha) enables programmatic integration — triggering Jules tasks from Slack, Linear, or GitHub events and embedding it into CI/CD pipelines. A free tier offers 15 daily tasks with three concurrent sessions; higher limits are available through AI Pro ($20/mo) and AI Ultra ($100+/mo). By June, developers will have four serious agentic coding options: Claude Code, GitHub Copilot Workspace, OpenAI Codex, and Jules.</p>
+            <div class="story-meta"><span class="tag tag-source">Google Developers Blog</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-16T12:00:00Z" data-searchable="Windows 11 KB5089549 update fails error 0x800f0922 EFI System Partition ESP insufficient space May Patch Tuesday cumulative security update 25H2 24H2 reboot failure 35 percent Known Issue Rollback KIR Microsoft emergency fix install error">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5089549-windows-11-security-update-install-issues/" target="_blank">Windows 11 May Security Update Fails on PCs With Small EFI Partitions — Microsoft Confirms 0x800f0922 Bug</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Microsoft confirmed that the May Patch Tuesday cumulative update KB5089549 for Windows 11 25H2 and 24H2 fails to install with error 0x800f0922 on devices with 10 MB or less free space on the EFI System Partition. The installation proceeds through initial phases but fails at approximately 35% during the reboot phase, rolling back automatically. Microsoft added the known issue to the changelog on May 15 and deployed a Known Issue Rollback (KIR) fix that propagates automatically to consumer and unmanaged business devices. Enterprises using Group Policy must apply the KIR policy manually — a permanent fix is pending in a future update.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-19T18:00:00Z" data-searchable="Android XR smart glasses Samsung Qualcomm Google I/O 2026 fall shipping two tiers audio only in-lens display Warby Parker Gentle Monster Gemini 2.5 Pro real-time translation navigation wearable AR augmented reality eyewear camera microphone speaker all-day wear">
+            <div class="story-header">
+              <h4><a href="https://www.tomsguide.com/news/live/google-io-2026-live-news-updates" target="_blank">Android XR Smart Glasses Confirmed for Fall 2026 — Samsung-Built, Two Tiers, Warby Parker Frames</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google confirmed at I/O 2026 that the first Android XR smart glasses will ship in fall 2026 in two tiers: audio-only glasses with cameras, microphones, and speakers for all-day wear, and an optional in-lens display variant for private contextual information. The initial hardware is engineered by Samsung and Qualcomm with eyewear frames designed by Gentle Monster and Warby Parker. Gemini 2.5 Pro powers real-time translation, navigation, and contextual awareness. The two-tier approach mirrors Apple's rumored strategy of easing consumers into AR through audio-first devices before pushing full displays — suggesting both companies see the same adoption curve for wearable AI.</p>
+            <div class="story-meta"><span class="tag tag-source">Tom's Guide</span></div>
           </div>
 
         </div>
