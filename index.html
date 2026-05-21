@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 18 – May 24, 2026</div>
-    <div class="meta">Last updated: May 20, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 21, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -937,7 +937,13 @@
             </div>
             <p class="story-analysis">A compromised version of the Nx Console VS Code extension (v18.95.0) was published on May 18 after attackers scraped a contributor's GitHub token. The obfuscated payload, hidden in an orphan commit in the official nrwl/nx repository, harvested tokens from GitHub, npm, AWS, HashiCorp Vault, Kubernetes, and 1Password — exfiltrating via HTTPS, the GitHub API, and DNS tunneling simultaneously. The malicious build was live for just 11 minutes before removal, but with 2.2 million total installations and auto-updates enabled, the blast radius is significant.</p>
             <div class="key-takeaway">If you ran Nx Console v18.95.0, assume all reachable secrets are compromised — rotate GitHub tokens, npm publish keys, AWS credentials, 1Password vaults, and any CI/CD secrets immediately. Update to v18.100.0+.</div>
-            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span> <span class="tag tag-update">FOLLOW-UP</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Thursday, May 21</div>
+                <p class="update-text">The blast radius continues to expand. GitHub confirmed that the TanStack npm supply chain attack — which spawned the malicious Nx Console v18.95.0 — cascaded into 3,800 internal GitHub repositories after an employee device was compromised. OpenAI, Mistral AI, and Grafana Labs are also confirmed victims of the same TanStack compromise, attributed to the threat group TeamPCP. The attack is the first documented case of a malicious npm package carrying valid SLSA provenance, undermining a key supply-chain verification mechanism. <a href="https://www.bleepingcomputer.com/news/security/github-links-repo-breach-to-tanstack-npm-supply-chain-attack/">BleepingComputer</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-05-17T12:00:00Z" data-searchable="OpenClaw Claw Chain CVE-2026-44112 CVE-2026-44113 CVE-2026-44115 CVE-2026-44118 CVSS 9.6 sandbox escape TOCTOU data theft privilege escalation backdoor persistence MCP loopback AI agent security Cyera 245000 instances Shodan Zoomeye patch 2026.4.22 Vladimir Tokarev">
@@ -1106,7 +1112,13 @@
               <span class="story-time"></span>
             </div>
             <p class="story-analysis">Drupal's security team issued advance advisory PSA-2026-05-18 warning of a "highly critical" core vulnerability (severity 20/25) requiring no authentication and no special access complexity to exploit. Emergency patches for all supported branches — Drupal 11.3.x, 11.2.x, 10.6.x, and 10.5.x — are scheduled for release today between 17:00 and 21:00 UTC, with the team explicitly warning that "exploits might be developed within hours or days." Technical details are being withheld until patches ship, but the access-complexity and authentication ratings suggest a remotely exploitable flaw with a wide blast radius across Drupal's estimated 1.7 million active sites.</p>
-            <div class="story-meta"><span class="tag tag-source">Drupal.org</span></div>
+            <div class="story-meta"><span class="tag tag-source">Drupal.org</span> <span class="tag tag-update">FOLLOW-UP</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Thursday, May 21</div>
+                <p class="update-text">Patches shipped on schedule. The vulnerability is CVE-2026-9082 (SA-CORE-2026-004) — a SQL injection in Drupal core's database abstraction API that lets anonymous attackers execute arbitrary SQL on PostgreSQL-backed sites, leading to information disclosure, privilege escalation, or full RCE. All supported branches (11.3, 11.2, 10.6, 10.5) are patched, plus emergency patches for end-of-life branches (11.1, 10.4, 9.5, 8.9). Drupal 7 and MySQL/MariaDB sites are not affected. Update immediately. <a href="https://www.drupal.org/sa-core-2026-004">Drupal.org</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-05-12T18:00:00Z" data-searchable="Exim CVE-2026-45185 Dead.Letter CVSS 9.8 critical use-after-free UAF BDAT GnuTLS STARTTLS CHUNKING unauthenticated RCE remote code execution mail transfer agent MTA XBOW 4.97 4.99.2 4.99.3 patch email server one-byte heap corruption allocator metadata Debian Ubuntu Linux SMTP">
@@ -1224,6 +1236,168 @@
             </div>
             <p class="story-analysis">Google confirmed at I/O 2026 that the first Android XR smart glasses will ship in fall 2026 in two tiers: audio-only glasses with cameras, microphones, and speakers for all-day wear, and an optional in-lens display variant for private contextual information. The initial hardware is engineered by Samsung and Qualcomm with eyewear frames designed by Gentle Monster and Warby Parker. Gemini 2.5 Pro powers real-time translation, navigation, and contextual awareness. The two-tier approach mirrors Apple's rumored strategy of easing consumers into AR through audio-first devices before pushing full displays — suggesting both companies see the same adoption curve for wearable AI.</p>
             <div class="story-meta"><span class="tag tag-source">Tom's Guide</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-05-21">
+      <div class="day-header">
+        <h2>Thursday, May 21</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Samsung Chip Strike Averted</span>
+        <span class="highlight-pill">SpaceX Record $75B IPO</span>
+        <span class="highlight-pill">Colorado AI Act Replaced</span>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-21T00:00:00Z" data-searchable="Samsung Electronics labor strike averted 47000 workers chip factory HBM memory AI supply chain $700 million per day last-minute deal semiconductor NSEU union bonus cap operating profit JPMorgan tentative agreement HBM3E DRAM production South Korea">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-05-20/samsung-faces-risk-of-chip-disruption-after-labor-talks-collapse" target="_blank">Samsung Averts Record $700M/Day Chip Factory Strike With Last-Minute Deal — 47,000 Workers Stood Down</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Samsung Electronics and its largest union reached a tentative agreement late May 20, averting what would have been the biggest labor stoppage in semiconductor history. Approximately 47,000 workers — 40% of Samsung's South Korean workforce — were set to begin an 18-day strike on May 21 over demands to abolish the 50% bonus cap and allocate 15% of annual operating profit to worker bonuses. JPMorgan estimated the strike could have cost Samsung $14–20 billion in total operating profit and disrupted global HBM and DRAM supply chains critical to AI infrastructure buildout.</p>
+            <div class="key-takeaway">The strike was hours away from disrupting Samsung's HBM3E production lines — the memory chips inside NVIDIA's H100 and H200 GPUs. If labor tensions resurface, AI hardware timelines across the industry could slip.</div>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-19T20:00:00Z" data-searchable="SpaceX IPO Goldman Sachs lead record-breaking $75 billion $1.25 trillion valuation Morgan Stanley Bank of America Citigroup JPMorgan Elon Musk Starlink Starship satellite $500 million underwriting fees Saudi Aramco largest public offering history">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/20/what-goldmans-lead-role-in-spacexs-ipo-means-for-investors.html" target="_blank">SpaceX Picks Goldman Sachs to Lead Record-Breaking ~$75B IPO at $1.25T Valuation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SpaceX selected Goldman Sachs for the coveted "lead left" position on what's expected to be the largest IPO in history, surpassing Saudi Aramco's $29.4 billion 2019 offering by more than double. The company aims to raise approximately $75 billion at a $1.25 trillion valuation, with Morgan Stanley, Bank of America, Citigroup, and JPMorgan rounding out the underwriting syndicate. Goldman will drive share allocation, pricing, and valuation — and the deal could generate over $500 million in combined underwriting fees.</p>
+            <div class="key-takeaway">A $75B raise at $1.25T would make SpaceX the most valuable company to ever IPO. For developers building on Starlink APIs or satellite connectivity, this signals long-term infrastructure commitment and likely new developer platform investment post-IPO.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-20T16:00:00Z" data-searchable="Airbnb hotel booking car rental grocery delivery expansion Amazon for services Brian Chesky Instacart Welcome Pickups Bounce luggage storage 20 cities boutique hotels platform strategy travel super-app everything app AI chatbot review summaries">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/20/airbnb-hotels-car-rentals-ai-rentals.html" target="_blank">Airbnb Expands Into Hotels, Car Rentals, and Grocery Delivery — Chesky Envisions "Amazon for Services"</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Airbnb unveiled its biggest platform expansion on May 20, adding boutique hotel bookings in 20 cities, car rentals, Instacart-powered grocery delivery in 25+ cities, airport pickups via Welcome Pickups in 160+ cities, and luggage storage through Bounce at 15,000 locations. CEO Brian Chesky told CNBC he envisions "dozens, possibly even hundreds of categories, just like Amazon" — signaling that the super-app playbook is alive and well in the West, not just Asian markets. The company also announced AI-powered review summaries and plans for a voice-enabled chatbot later this year.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-20T14:00:00Z" data-searchable="Microsoft Digital Crimes Unit DCU Fox Tempest malware-signing-as-a-service MSaaS code-signing certificate abuse Rhysida Akira INC Qilin BlackByte ransomware Oyster Lumma Stealer Vidar SmartScreen bypass takedown disruption cybercrime">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/" target="_blank">Microsoft Disrupts Fox Tempest Malware-Signing Service Used by Six Ransomware Operations</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Microsoft's Digital Crimes Unit shut down a malware-signing-as-a-service (MSaaS) operation run by the threat group Fox Tempest, which had been abusing Microsoft's code-signing infrastructure to provide cryptographically signed binaries to paying customers. The service was linked to campaigns deploying Oyster, Lumma Stealer, and Vidar info-stealers, as well as the Rhysida, Akira, INC, Qilin, and BlackByte ransomware families. Signed malware bypasses Windows SmartScreen and most antivirus heuristics, making this service a force multiplier for ransomware operators who lacked their own signing infrastructure.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-13T14:00:00Z" data-searchable="Anthropic Claude Code weekly limits 50 percent increase July 13 SpaceX Colossus 1 compute deal 220000 NVIDIA GPUs 300 megawatts capacity Pro Max Team Enterprise Codex competition rate limits OpenAI third boost five weeks">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank">Anthropic Raises Claude Code Weekly Limits 50% Through July — SpaceX Compute Deal Powers Third Boost in Five Weeks</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic raised Claude Code weekly usage limits by 50% for Pro, Max, Team, and Enterprise plans through July 13, marking the company's third consecutive capacity increase in five weeks. The expansion is powered by a new compute partnership with SpaceX, giving Anthropic access to all capacity at the Colossus 1 data center in Memphis — over 220,000 NVIDIA GPUs and 300+ megawatts. The timing is explicitly competitive: OpenAI had been offering free Codex access to developers actively using Claude Code, and the 50% weekly bump brings Claude Code's limits roughly to parity.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-19T18:00:00Z" data-searchable="Google WebMCP Model Context Protocol open web standard Chrome 149 origin trial structured tools browser API MCP server web platform AI agents Google I/O 2026 developer keynote tool exposure interoperability machine-readable">
+            <div class="story-header">
+              <h4><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank">Google Proposes WebMCP — Open Standard for Exposing Structured Tools to AI Agents in the Browser</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">At the I/O 2026 developer keynote, Google proposed WebMCP as an open web standard that lets websites expose structured tools — essentially MCP servers — directly in the browser, discoverable by AI agents without custom integrations. An experimental origin trial begins in Chrome 149, allowing developers to annotate their sites with machine-readable tool definitions that agents can invoke through standardized browser APIs. If adopted broadly, WebMCP could make any web application agent-accessible by default, eliminating the per-site MCP server implementations that currently gate agent interoperability.</p>
+            <div class="story-meta"><span class="tag tag-source">Google Developers Blog</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-20T12:00:00Z" data-searchable="Claude Code changelog update context compression summarize rewind /resume background sessions bg model picker session management reliability HTTPS plugin /feedback diagnostic sessions recent">
+            <div class="story-header">
+              <h4><a href="https://github.com/anthropics/claude-code/releases" target="_blank">Claude Code Ships Context Compression and Background Session /resume in Latest Updates</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Claude Code's latest updates add two workflow features for long coding sessions. "Summarize up to here" in the rewind menu compresses earlier conversation context while preserving recent turns — useful for staying productive without hitting context limits. Background sessions started via --bg or Agent View now support /resume, letting you pick up backgrounded tasks seamlessly. Other additions include session-scoped /model switching, HTTPS-preferred plugin cloning, and /feedback that bundles recent sessions for diagnostic reporting.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI / ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T10:00:00Z" data-searchable="Google AI war strategy speed distribution benchmark Anthropic OpenAI Sundar Pichai Gemini 3.5 Flash cheap fast frontier neck-and-neck Axios competitive positioning scale platform advantage inference cost">
+            <div class="story-header">
+              <h4><a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" target="_blank">Google's AI War Strategy: Prioritize Speed and Distribution Over Benchmark Supremacy</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">An Axios analysis published today argues Google's post-I/O strategy is deliberately not chasing benchmark leadership. By debuting Gemini 3.5 Flash — cheaper and 4x faster than comparable frontier models — instead of a heavyweight, Google is betting that pairing good-enough AI with unmatched distribution (Search, YouTube, Android, Workspace) matters more than raw model performance. CEO Sundar Pichai acknowledged "the competition is fierce" but emphasized Google's advantages in scale and cash flow. All three frontier labs now describe the race as neck-and-neck, making different tradeoffs on cost, speed, and compute.</p>
+            <div class="story-meta"><span class="tag tag-source">Axios</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T18:00:00Z" data-searchable="Colorado SB 189 AI Act replaced Governor Polis signed algorithmic discrimination risk assessment impact assessment notice transparency automated decision-making ADMT developer deployer January 2027 effective consumer rights adverse decision data correction">
+            <div class="story-header">
+              <h4><a href="https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189" target="_blank">Colorado Replaces Landmark AI Act With Narrower SB 189 — Risk Assessments Dropped, Notice Rules Remain</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Governor Polis signed SB 189 on May 14, repealing Colorado's original AI Act just weeks before its June 30 enforcement date and replacing it with a significantly lighter notice-and-transparency model effective January 1, 2027. The new law eliminates risk management programs, annual impact assessments, and the duty to use "reasonable care" to prevent algorithmic discrimination — the provisions that drew the most industry opposition. What remains: consumers must be notified before AI-assisted consequential decisions, receive disclosure after adverse outcomes with appeal rights, and developers must provide deployers with documentation on intended uses, known limitations, and training data categories.</p>
+            <div class="story-meta"><span class="tag tag-source">Holland &amp; Knight</span></div>
           </div>
 
         </div>
