@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 18 – May 24, 2026</div>
-    <div class="meta">Last updated: May 22, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 24, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1118,6 +1118,10 @@
                 <div class="update-date">UPDATE — Thursday, May 21</div>
                 <p class="update-text">Patches shipped on schedule. The vulnerability is CVE-2026-9082 (SA-CORE-2026-004) — a SQL injection in Drupal core's database abstraction API that lets anonymous attackers execute arbitrary SQL on PostgreSQL-backed sites, leading to information disclosure, privilege escalation, or full RCE. All supported branches (11.3, 11.2, 10.6, 10.5) are patched, plus emergency patches for end-of-life branches (11.1, 10.4, 9.5, 8.9). Drupal 7 and MySQL/MariaDB sites are not affected. Update immediately. <a href="https://www.drupal.org/sa-core-2026-004">Drupal.org</a></p>
               </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Sunday, May 24</div>
+                <p class="update-text">Active exploitation of CVE-2026-9082 is now confirmed at scale. Security firms report attacks against thousands of Drupal sites attempting SQL injection via the database abstraction API. CISA added the flaw to its Known Exploited Vulnerabilities catalog. If you run Drupal on PostgreSQL and haven't patched yet, assume you're being targeted. <a href="https://www.securityweek.com/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft-as-top-breach-vector/">SecurityWeek</a></p>
+              </div>
             </div>
           </div>
 
@@ -1569,6 +1573,207 @@
             </div>
             <p class="story-analysis">Apple revealed 36 finalists for the 2026 Apple Design Awards across six categories: Delight and Fun, Inclusivity, Innovation, Interaction, Social Impact, and Visuals and Graphics. Notable finalists include triple-A titles Cyberpunk 2077 and Civilization VII alongside indie projects like TR-49 and Sago Mini Jinja's Garden (both finalists in two categories), plus Indian-developed apps Guitar Wiz and Katha Room in the inclusivity and social impact categories. Winners — one app and one game per category — will be announced during WWDC on June 8 and receive hardware to continue development.</p>
             <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-05-24">
+      <div class="day-header">
+        <h2>Sunday, May 24</h2>
+        <span class="day-story-count">12 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Laravel-Lang Composer Hijacked</span>
+        <span class="highlight-pill">OpenAI Disproves 80-Year Conjecture</span>
+        <span class="highlight-pill">White House AI Order Scrapped</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-23T10:00:00Z" data-searchable="Laravel-Lang PHP Composer supply chain attack credential stealer laravel-lang/lang laravel-lang/http-statuses laravel-lang/attributes 233 versions 700 tags Aikido Socket Packagist Snyk autoload helpers.php flipboxstudio cloud keys Kubernetes Vault SSH CI/CD crypto wallets browser data password manager cross-platform malicious fork git tag rewriting">
+            <div class="story-header">
+              <h4><a href="https://www.aikido.dev/blog/supply-chain-attack-targets-laravel-lang-packages-with-credential-stealer" target="_blank">Laravel-Lang Composer Packages Hijacked — Cross-Platform Credential Stealer Deployed via 233 Malicious Versions</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Attackers compromised three widely used Laravel-Lang PHP packages on May 22–23 by rewriting git tags to point at commits in a malicious fork they controlled — without ever modifying the official repositories. The injected helpers.php file, wired into Composer's autoload, runs on every PHP request and downloads a cross-platform credential stealer that scrapes cloud keys, Kubernetes secrets, CI/CD tokens, SSH material, browser data, password manager vaults, and crypto wallets. Aikido and Socket detected 233 compromised versions across three repos, with up to 700 historical tags potentially tainted. Packagist pulled the malicious versions within hours.</p>
+            <div class="key-takeaway">If you installed laravel-lang/lang, laravel-lang/http-statuses, or laravel-lang/attributes between May 22–23, audit your Composer lock file immediately and rotate all credentials accessible from the affected environment. This attack exploited git tag references rather than source commits — a vector that bypasses most code review workflows.</div>
+            <div class="story-meta"><span class="tag tag-source">Aikido</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-22T14:00:00Z" data-searchable="Netherlands FIOD Stark Industries WorkTitans 800 servers seized Russia sanctions EU bulletproof hosting cyberattacks disinformation Almere Dronten Schiphol Rijk data centers DDoS ransomware infrastructure espionage Belarus two arrests director 57 39 internet connectivity">
+            <div class="story-header">
+              <h4><a href="https://nltimes.nl/2026/05/22/two-arrested-facilitating-pro-russia-cyberattacks-violating-eu-sanctions" target="_blank">Netherlands Dismantles Stark Industries Hosting Network — 800 Servers Seized, Two Arrested for Violating EU Sanctions</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Dutch financial crime investigators (FIOD) raided data centers in Dronten and Schiphol Rijk on May 22, seizing 800 servers, laptops, and phones from a hosting network linked to EU-sanctioned bulletproof host Stark Industries Solutions. Two men — the 57-year-old company director and a 39-year-old connectivity provider — were arrested on charges of indirectly funneling economic resources to sanctioned Russian and Belarusian entities. Stark Industries was sanctioned in May 2025 for enabling state-sponsored cyberattacks and disinformation campaigns, but preemptively transferred infrastructure to a Dutch front company called WorkTitans B.V. before the designation took effect.</p>
+            <div class="story-meta"><span class="tag tag-source">NL Times</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T08:00:00Z" data-searchable="Operation Saffron First VPN dismantled ransomware 25 groups France Netherlands Ukraine Europol 33 servers takedown anonymous payments criminal VPN cybercrime DDoS data theft fraud 506 users 83 intelligence packages law enforcement global">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/21/law-enforcement-shuts-down-vpn-service-used-by-two-dozen-ransomware-gangs/" target="_blank">Operation Saffron Takes Down "First VPN" — Criminal VPN Service Used by 25 Ransomware Groups Dismantled</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A joint operation led by France and the Netherlands dismantled First VPN, a criminal virtual private network service purpose-built for cybercrime, between May 19–20. At least 25 ransomware gangs used the service to anonymize attacks, alongside operators running large-scale fraud, DDoS campaigns, and data theft. Authorities seized 33 servers, interviewed the administrator, and conducted a house search in Ukraine. The operation generated 83 intelligence packages on 506 users that have been shared with partner countries — effectively burning the operational security of thousands of cybercriminals who relied on the service.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-20T12:00:00Z" data-searchable="Verizon DBIR 2026 Data Breach Investigations Report vulnerability exploitation credential theft initial access vector 31 percent unpatched 43 days median patch time supply chain breaches 60 percent increase AI acceleration third-party 48 percent KEV 26 percent patched only">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft-as-top-breach-vector/" target="_blank">Verizon DBIR 2026: Vulnerability Exploitation Overtakes Credentials as #1 Breach Vector for First Time</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Verizon's 19th annual Data Breach Investigations Report reveals a historic shift: unpatched vulnerability exploitation now accounts for 31% of initial access — overtaking credential theft (13%) as the top breach vector for the first time. Third-party supply chain breaches jumped 60%, now representing 48% of all incidents. The most alarming stat: organizations patched only 26% of CISA KEV vulnerabilities last year, down from 38% in 2024, while median patch time increased from 32 to 43 days. The report explicitly flags AI-accelerated exploitation as shrinking the defender window from months to hours.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI / ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-20T16:00:00Z" data-searchable="OpenAI reasoning model disproves Erdős conjecture 80 years discrete geometry unit distance problem Paul Erdős 1946 algebraic number theory Princeton Noga Alon Melanie Wood Thomas Bloom verified proof counterexample infinite family polynomial improvement mathematics AI research autonomous discovery Fields medalist Tim Gowers milestone">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" target="_blank">OpenAI Reasoning Model Autonomously Disproves 80-Year Erdős Geometry Conjecture</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">An internal OpenAI reasoning model autonomously disproved a central conjecture in discrete geometry that Paul Erdős posed in 1946. The unit distance problem asks for the maximum number of unit-distance pairs among n points on a plane — and for 80 years, mathematicians believed square-grid constructions were essentially optimal. The model found an infinite family of counterexamples yielding a polynomial improvement, connecting the geometry problem to algebraic number theory in a way no human had attempted. Princeton's Noga Alon, Melanie Wood, and Thomas Bloom independently verified the proof. Fields medalist Tim Gowers called it "a milestone in AI mathematics."</p>
+            <div class="key-takeaway">This is the first verified case of a general-purpose AI model making an original mathematical discovery — not a purpose-built math solver, but a reasoning model that autonomously connected two unrelated fields. The implications for AI-assisted scientific research are profound.</div>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-21T18:00:00Z" data-searchable="White House AI executive order scrapped Trump David Sacks frontier models 90-day pre-launch review NSA CISA classified benchmarking voluntary agreement China competition Anthropic Mythos cyber model postponed signing ceremony national security Sam Altman Dario Amodei">
+            <div class="story-header">
+              <h4><a href="https://www.nbcnews.com/tech/tech-news/trump-scraps-signing-landmark-executive-order-regulating-ai-rcna346288" target="_blank">White House Scraps AI Executive Order Hours Before Signing — Sacks Warned It Could "Hand China an Edge"</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">President Trump abruptly canceled signing an AI executive order on May 21, hours before the scheduled ceremony. The order would have established a voluntary 90-day pre-launch review framework for frontier models, with the NSA and CISA jointly creating a classified benchmarking process for advanced cyber capabilities. White House AI adviser David Sacks called Trump directly to warn that even a voluntary review process could slow U.S. labs relative to China. The order's collapse leaves the U.S. without any federal framework — voluntary or mandatory — for pre-release AI safety evaluation, and effectively kills the only post-Biden attempt to create structured government oversight of frontier model development.</p>
+            <div class="key-takeaway">The most permissive possible AI oversight — a voluntary, industry-friendly review process — couldn't survive the "China competition" argument. For developers and AI companies, this means no federal pre-release requirements are coming anytime soon. State-level regulation remains the only active compliance surface in the U.S.</div>
+            <div class="story-meta"><span class="tag tag-source">NBC News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-22T16:00:00Z" data-searchable="Meta Forum app standalone Facebook Groups Reddit competitor iOS App Store anonymized usernames AI Ask chatbot group moderator assistant RDDT stock drop 6 percent threaded discussions community Matt Navarra stealth launch Mark Zuckerberg social media">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/22/reddit-stock-drops-after-meta-launches-forum-app.html" target="_blank">Meta Quietly Launches "Forum" — Standalone Facebook Groups App Sends Reddit Stock Down 6%</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Meta released "Forum" on the iOS App Store on May 22 with no formal announcement — a standalone app that strips Facebook down to its Groups feature with Reddit-style anonymized usernames and threaded discussions. The app includes two AI features: "Ask," a chatbot that compiles answers from across your groups, and an AI-powered admin assistant for moderators. Reddit stock dropped nearly 6% on the news, reflecting investor concern that Meta's 3-billion-user base could erode Reddit's decade-long dominance in niche community discussions. Meta described the launch as "testing new products publicly to see what works," but the timing — one week before Reddit's Q2 earnings — feels deliberate.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-22T10:00:00Z" data-searchable="Lenovo FY2026 record earnings $83 billion revenue AI revenue doubles 105 percent growth Q4 $21.6 billion 27 percent YoY stock surge 20 percent 26-year high Hang Seng Hong Kong PC infrastructure server AI device hardware">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/22/lenovo-shares-jump-15percent-on-record-earnings-as-ai-revenue-nearly-doubles.html" target="_blank">Lenovo Posts Record $83B Revenue as AI Sales Double — Stock Hits 26-Year High</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Lenovo reported record fiscal year 2026 results on May 22, with group revenue reaching $83.1 billion and Q4 revenue of $21.6 billion (up 27% YoY). AI-related revenue grew 105% for the full year and 84% in Q4, now accounting for 38% of group revenue. Shares surged nearly 20% in Hong Kong to a 26-year high, making Lenovo the best performer on the Hang Seng China Enterprises Index this year. The results signal that the AI infrastructure buildout is now flowing through to traditional hardware OEMs, not just chipmakers — Lenovo's AI server and infrastructure segment is growing faster than its legacy PC business.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-23T12:00:00Z" data-searchable="Qualcomm QCOM stock surge 75 percent one month AI devices edge compute data center chips AI200 AI250 custom accelerator Stellantis automotive Snapdragon OpenAI partnership smartphone NPU wearable robot connected devices rack-scale $255 billion market cap">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/22/qualcomms-stock-pop-shows-investors-waking-up-to-boom-in-ai-devices.html" target="_blank">Qualcomm Surges 75% in One Month as Investors "Wake Up" to AI Device and Data Center Opportunity</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Qualcomm shares have risen 75% over the past month to a $255 billion market cap, driven by a convergence of catalysts: a new Stellantis deal for AI-powered vehicle compute, a reported partnership with OpenAI on a dedicated AI agent chip, and investor excitement around the AI200/AI250 custom data center accelerators launching later this year. While Qualcomm has lagged NVIDIA in cloud AI training, its dominance in smartphones, wearables, automotive, and edge devices positions it as the picks-and-shovels play for the AI device wave. The stock surge reflects a market thesis that AI inference on edge devices — not just cloud GPUs — will be the next trillion-dollar hardware market.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple / iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple / iOS</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-22T08:00:00Z" data-searchable="WWDC 2026 WWDC26 June 8 keynote iOS 27 iPadOS 27 macOS 27 watchOS 27 tvOS 27 visionOS 27 Siri chatbot redesign Apple Intelligence ChatGPT Claude Gemini competitor AI assistant 1000 developers Apple Park Platforms State of the Union 100 sessions Group Labs">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/05/22/the-macrumors-show-wwdc26-promises-siri-upgrades/" target="_blank">WWDC 2026 Two Weeks Out — iOS 27 Siri Redesign to Challenge ChatGPT and Claude Directly</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With WWDC 2026 now two weeks away (June 8 keynote at 10 AM PT), the picture of Apple's AI strategy is crystallizing. iOS 27's headline feature will be a sweeping Siri redesign that transforms the assistant into a full conversational chatbot designed to compete directly with ChatGPT, Claude, and Gemini — not just handle system commands. Apple will welcome 1,000+ developers to Apple Park for the keynote, with 100+ video sessions, Group Labs, and developer betas for all six platforms expected immediately after. For iOS developers, this is the annual signal to start planning adoption timelines for new APIs and design patterns.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-12T10:00:00Z" data-searchable="macOS 27 Rosetta 2 final release Intel apps Apple silicon transition compatibility layer end of life macOS 28 games only developers SDK migration binary translation x86_64 ARM native fat binary universal">
+            <div class="story-header">
+              <h4><a href="https://appleinsider.com/articles/25/06/10/macos-27-will-be-the-last-operating-system-to-fully-support-rosetta-2" target="_blank">macOS 27 Confirmed as Final Release With Full Rosetta 2 — Intel-Only Apps Face Sunset After macOS 28</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple has confirmed that macOS 27 — expected to debut at WWDC on June 8 — will be the last macOS release with full Rosetta 2 support. Starting with macOS 28, Rosetta will only handle certain older games that rely on Intel-specific frameworks. macOS Tahoe 26.4 already displays warnings for apps that won't work once Rosetta support ends. For developers shipping Mac software, the migration deadline is now concrete: if your app or any of its dependencies still contain x86_64-only binaries, you have roughly 18 months before they stop working on new macOS versions.</p>
+            <div class="story-meta"><span class="tag tag-source">AppleInsider</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128268; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-20T10:00:00Z" data-searchable="SubQ Subquadratic LLM 12 million token context window SSA subquadratic selective attention $29M seed $500M valuation Justin Dangel Alex Whedon Meta 52x faster FlashAttention linear scaling GPT-5.5 retrieval benchmark API CLI agent Miami not transformer architecture Q4 50M tokens">
+            <div class="story-header">
+              <h4><a href="https://thenewstack.io/subquadratic-12-million-context-window/" target="_blank">SubQ Ships First Commercial Subquadratic LLM — 12M Token Context at 1/5th the Cost of Frontier Models</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Miami-based Subquadratic emerged from stealth on May 5 with $29M in seed funding and SubQ, the first commercial LLM built entirely on subquadratic selective attention (SSA) rather than transformer architecture. SSA scales linearly with context length, enabling a 12-million-token context window that runs 52x faster than FlashAttention at 1M tokens at roughly 1/5th the cost of frontier models. The company claims SubQ outperforms GPT-5.5 on long-context retrieval benchmarks. A 50-million-token window is targeted for Q4 — if the architecture holds at that scale, it could fundamentally change the economics of context-heavy AI applications like codebase analysis and legal document review.</p>
+            <div class="story-meta"><span class="tag tag-source">The New Stack</span></div>
           </div>
 
         </div>
