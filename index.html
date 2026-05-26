@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 25 – May 31, 2026</div>
-    <div class="meta">Last updated: May 25, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 26, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -832,6 +832,167 @@
             </div>
             <p class="story-analysis">The EU Council and Parliament reached a provisional agreement on May 7 to streamline the AI Act as part of the "Omnibus VII" simplification package, with detailed analysis emerging through May 21. The most impactful change: standalone high-risk AI systems now have until December 2027 to comply (previously August 2026), and product-embedded high-risk AI gets until August 2028. The deal also adds a new outright prohibition on AI-generated non-consensual intimate imagery and CSAM, tightens the AI Office's supervisory authority over general-purpose AI models, and extends simplified requirements to small and mid-cap companies. For developers shipping AI features into EU markets, this buys roughly 18 extra months of compliance runway.</p>
             <div class="story-meta"><span class="tag tag-source">Euronews</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-05-26">
+      <div class="day-header">
+        <h2>Tuesday, May 26</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">xAI Grok Build CLI Beta</span>
+        <span class="highlight-pill">Linux 9-Year Root Flaw Exposed</span>
+        <span class="highlight-pill">Megalodon Hits 5,500 GitHub Repos</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-25T16:00:00Z" data-searchable="Linux kernel CVE-2026-46333 CVSS 5.5 privilege escalation root ptrace __ptrace_may_access 9 year old Qualys Debian Ubuntu Fedora PoC proof of concept ssh-keysign-pwn chage pkexec accounts-daemon etc shadow SSH host keys kernel.yama.ptrace_scope privilege management local unprivileged user">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/9-year-old-linux-kernel-flaw-enables.html" target="_blank">9-Year Linux Kernel Flaw CVE-2026-46333 Enables Root on Debian, Ubuntu, and Fedora — PoC Released</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Qualys discovered CVE-2026-46333 (CVSS 5.5), a privilege management flaw in the kernel's __ptrace_may_access() function that was introduced in November 2016 and went undetected for nine years. An unprivileged local user can exploit it via four different attack paths — chage, ssh-keysign, pkexec, and accounts-daemon — to read /etc/shadow, extract SSH host keys under /etc/ssh/*_key, and execute arbitrary commands as root on default installations of Debian, Ubuntu, and Fedora. A proof-of-concept exploit dropped alongside the public kernel commit last week, making exploitation trivial for anyone with local access.</p>
+            <div class="key-takeaway">Update your kernel immediately on all Linux servers and workstations. If patching isn't possible now, set kernel.yama.ptrace_scope to 2 as a temporary workaround — this blocks the ptrace-based attack path entirely.</div>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-25T12:00:00Z" data-searchable="Megalodon GitHub Actions attack 5718 malicious commits 5561 repositories CI/CD secrets cloud credentials SSH keys OIDC tokens base64 encoded bash payload exfiltration C2 server automated campaign supply chain six hours CI pipeline workflow injection">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html" target="_blank">"Megalodon" Campaign Injects 5,718 Malicious Commits Into 5,561 GitHub Repos in Six Hours</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Researchers disclosed a new automated attack campaign called "Megalodon" that pushed 5,718 malicious commits to 5,561 GitHub repositories within a six-hour window. The attacker injected GitHub Actions workflows containing base64-encoded bash payloads that exfiltrate CI secrets, cloud credentials, SSH keys, OIDC tokens, and source code secrets to an attacker-controlled C2 server. The campaign specifically targeted repos with permissive contributor policies — no fork restrictions, no required reviews — highlighting how repositories that prioritize open collaboration over access controls create a massive attack surface for automated supply-chain exploitation at scale.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-25T10:00:00Z" data-searchable="Lazarus Group RemotePE memory-only RAT remote access tool DPAPILoader RemotePELoader North Korea DPRK cryptocurrency DeFi financial organizations Telegram social engineering Calendly Picktime EDR evasion forensic no disk artifacts environmental keying long-term observation campaigns">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/lazarus-deploys-remotepe-memory-only.html" target="_blank">Lazarus Group Deploys RemotePE — Memory-Only RAT Leaves Zero Disk Artifacts in Crypto Firm Attacks</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">North Korea's Lazarus Group is targeting financial and cryptocurrency organizations with RemotePE, a remote access tool that executes entirely in memory and never touches disk — leaving no filesystem artifacts for forensic teams or EDR tools to detect. The multi-stage attack chain begins with social engineering on Telegram (fake meeting invites via spoofed Calendly and Picktime domains), deploys DPAPILoader and RemotePELoader as intermediary stages, then beacons to a C2 server for the final RemotePE payload. The toolset's environmental keying, memory-only execution, and EDR evasion suggest purpose-built tooling for long-term observation campaigns against high-value financial targets.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-25T08:00:00Z" data-searchable="China APT state-sponsored hackers Asian governments NATO member state journalists activists civil society spear-phishing backdoor persistent access multi-stage attack geopolitical cyber espionage nation-state threat intelligence">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/china-linked-hackers-target-asian.html" target="_blank">China-Linked APT Targets Asian Governments, NATO State, Journalists, and Activists</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Researchers disclosed a campaign by a China-linked APT group targeting government agencies across multiple Asian countries, at least one NATO member state, journalists, and civil society activists. The group leveraged spear-phishing emails with weaponized documents to deploy a multi-stage backdoor chain that establishes persistent network access. The campaign is notable for its expansion beyond traditional government targets into media and activist communities — a broadening of scope that aligns with a pattern of state-sponsored groups increasingly targeting individuals who shape public discourse on sensitive geopolitical topics.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-25T06:00:00Z" data-searchable="Covenant Health data breach 478000 individuals Qilin ransomware East Tennessee 16 hospitals patient data SSN medical records financial information healthcare HIPAA PHI protected health information disclosure notification">
+            <div class="story-header">
+              <h4><a href="https://therecord.media/covenant-health-breach-qilin" target="_blank">Covenant Health Data Breach Impacts 478,000 Individuals — Qilin Ransomware Suspected</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Covenant Health, which operates 16 hospitals across East Tennessee, disclosed a data breach impacting approximately 478,000 individuals, with the Qilin ransomware group suspected as the threat actor. Exposed data includes patient names, Social Security numbers, medical records, and financial information. The breach adds to an accelerating trend of healthcare-sector targeting by ransomware operators — Qilin alone has claimed multiple hospital systems this year, exploiting the sector's low tolerance for downtime and high-value patient data.</p>
+            <div class="story-meta"><span class="tag tag-source">The Record</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-25T14:00:00Z" data-searchable="xAI Grok Build agentic coding CLI terminal command line beta SuperGrok X Premium Plus subagents parallel worktree plan mode diff headless CI/CD automation grok-build-0.1 API ACP bots agent orchestration Claude Code Codex competitor $99 month SuperHeavy coding agent developer tools">
+            <div class="story-header">
+              <h4><a href="https://x.ai/news/grok-build-cli" target="_blank">xAI Launches Grok Build — Agentic Coding CLI Enters Open Beta With Subagents, Plan Mode, and Worktree Isolation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">xAI launched Grok Build in open beta on May 25, a terminal-based agentic coding tool available to all SuperGrok and X Premium Plus subscribers. The CLI supports plan mode for reviewing and approving multi-step changes as clean diffs before execution, parallel subagents that work in isolated git worktrees for complex tasks, and a headless mode (-p) for scripting and CI/CD automation. The underlying grok-build-0.1 model is also available via the xAI API with full ACP support for custom agent orchestration. This positions xAI as a late but full-featured entrant in the AI coding agent market — the SuperHeavy tier's introductory pricing of $99/month (regular $299/month) targets developers willing to evaluate a Grok-native workflow alongside established tools.</p>
+            <div class="key-takeaway">Grok Build's worktree-based subagent isolation and headless CI mode differentiate it from competitors. The introductory $99/month pricing makes it low-risk to trial alongside your existing Claude Code or Codex setup — install with a single curl command and sign in with your X account.</div>
+            <div class="story-meta"><span class="tag tag-source">xAI</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-18T15:00:00Z" data-searchable="xAI Grok Skills persistent agent expertise slash command reusable instruction sets cross-session memory workflow automation documents spreadsheets PDFs Vercel Canva Gamma S&P Global connectors productivity platform iOS Android web chatbot SKILL.md Claude Code pattern">
+            <div class="story-header">
+              <h4><a href="https://www.infoq.com/news/2026/05/xai-grok-skills/" target="_blank">xAI Ships Grok Skills — Persistent Slash-Command Agent Expertise That Survives Across Sessions</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">xAI introduced Grok Skills on May 18, enabling users to create persistent, reusable instruction sets that Grok retains across all conversations without reprompting. Each skill is created via natural language description or file upload and invoked with a slash command — echoing the SKILL.md pattern that emerged in Claude Code's ecosystem. Skills include built-in tools for documents, spreadsheets, PDFs, and workflow automation across web, iOS, and Android. Combined with new platform connectors for Vercel, Canva, Gamma, and S&P Global, this marks xAI's clearest move to position Grok as a full productivity platform rather than a standalone chatbot — the Skills + Grok Build + Responses API stack now constitutes a genuine developer ecosystem play.</p>
+            <div class="story-meta"><span class="tag tag-source">InfoQ</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple / iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple / iOS</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T10:00:00Z" data-searchable="iOS 27 drops support iPhone 11 iPhone 11 Pro iPhone 11 Pro Max iPhone SE second generation A14 Bionic chip minimum iPhone 12 WWDC 2026 June 8 Apple Intelligence compute requirements deployment target compatibility leaker device support matrix">
+            <div class="story-header">
+              <h4><a href="https://9to5mac.com/2026/05/21/ios-27-will-drop-support-for-four-iphone-models-says-leaker/" target="_blank">iOS 27 to Require iPhone 12 Minimum — iPhone 11, iPhone SE 2, and Two More Models Dropped</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">According to a reliable leaker, iOS 27 will require an iPhone 12 or later, dropping support for the iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, and second-generation iPhone SE — four models that currently run iOS 26. This marks the first iOS release to require an A14 Bionic chip as the minimum, almost certainly driven by the compute demands of Apple Intelligence features that debuted in iOS 26. For developers, the practical impact is significant: apps targeting the broadest possible audience will need to maintain iOS 26 as a minimum deployment target for at least another year, while Apple Intelligence-dependent features can safely gate on iOS 27 exclusively.</p>
+            <div class="story-meta"><span class="tag tag-source">9to5Mac</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-24T12:00:00Z" data-searchable="watchOS 27 heart rate tracking improved Mulberry AI health coach delayed Apple Watch Modular Ultra face WWDC 2026 stability performance refinements Apple Intelligence Series 12 Gurman Bloomberg wearable fitness wellness">
+            <div class="story-header">
+              <h4><a href="https://9to5mac.com/2026/05/24/apple-improving-heart-rate-tracking-in-watchos-27-mulberry-health-coach-delays/" target="_blank">watchOS 27 to Improve Heart-Rate Tracking — "Mulberry" AI Health Coach May Miss Launch</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Bloomberg's Mark Gurman reports that watchOS 27 will include improved heart-rate tracking algorithms and bring the Modular Ultra watch face — currently exclusive to Apple Watch Ultra — to the full lineup. However, Apple's anticipated "Mulberry" AI health coaching feature, which would use Apple Intelligence to provide personalized fitness and wellness recommendations, may not ship at launch and could slip to a later watchOS 27.x update. The overall theme for watchOS this year appears to be stability and performance refinements rather than headline features, suggesting Apple is prioritizing the quality of its existing health stack over rushing new AI capabilities to the wrist.</p>
+            <div class="story-meta"><span class="tag tag-source">9to5Mac</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T14:00:00Z" data-searchable="Modal Labs $355 million Series C $4.65 billion valuation General Catalyst Redpoint Ventures Menlo Bain Capital Accel serverless AI infrastructure $300 million ARR revenue 5x growth sandboxes elastic inference RL training agent runtimes Erik Bernhardsson AI-assisted coding New York Stockholm">
+            <div class="story-header">
+              <h4><a href="https://siliconangle.com/2026/05/21/serverless-ai-infrastructure-startup-modal-labs-seals-355m-funding-round/" target="_blank">Modal Raises $355M at $4.65B — Serverless AI Infrastructure Revenue Surges 5x in Eight Months</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Modal Labs closed a $355 million Series C led by General Catalyst and Redpoint Ventures, valuing the company at $4.65 billion — nearly double the earlier tranche at $2.5 billion. Annualized revenue surged to $300 million from $60 million in September, a 5x increase in eight months that CEO Erik Bernhardsson credits to the explosion in AI-assisted coding driving demand for serverless compute. Sandboxes already generate more than a third of Modal's revenue, with the company expanding into elastic inference, RL training loops, and parallel agent sandbox infrastructure. For developers building AI applications, Modal's trajectory validates serverless GPU compute as a standalone infrastructure category — one driven as much by the agent-runtime workload pattern as by traditional model training.</p>
+            <div class="story-meta"><span class="tag tag-source">SiliconANGLE</span></div>
           </div>
 
         </div>
