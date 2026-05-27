@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 25 – May 31, 2026</div>
-    <div class="meta">Last updated: May 26, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 27, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -993,6 +993,205 @@
             </div>
             <p class="story-analysis">Modal Labs closed a $355 million Series C led by General Catalyst and Redpoint Ventures, valuing the company at $4.65 billion — nearly double the earlier tranche at $2.5 billion. Annualized revenue surged to $300 million from $60 million in September, a 5x increase in eight months that CEO Erik Bernhardsson credits to the explosion in AI-assisted coding driving demand for serverless compute. Sandboxes already generate more than a third of Modal's revenue, with the company expanding into elastic inference, RL training loops, and parallel agent sandbox infrastructure. For developers building AI applications, Modal's trajectory validates serverless GPU compute as a standalone infrastructure category — one driven as much by the agent-runtime workload pattern as by traditional model training.</p>
             <div class="story-meta"><span class="tag tag-source">SiliconANGLE</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-05-27">
+      <div class="day-header">
+        <h2>Wednesday, May 27</h2>
+        <span class="day-story-count">13 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Mythos Finds 10K Critical Bugs</span>
+        <span class="highlight-pill">Ollama Memory Leak Hits 300K Servers</span>
+        <span class="highlight-pill">Canvas $10M Ransom Paid</span>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-22T14:00:00Z" data-searchable="Anthropic Project Glasswing Mythos Preview Claude cybersecurity vulnerability scanning 10000 bugs critical severity Cloudflare 2000 bugs Mozilla Firefox 271 vulnerabilities open source 1000 projects 6202 flaws 90.6% true positive rate defensive AI security testing partner program Verizon government">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/research/glasswing-initial-update" target="_blank">Anthropic's Project Glasswing: Mythos Preview Finds 10,000+ Critical Bugs in First Month of Defensive AI Testing</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic published the first results from Project Glasswing, its controlled cybersecurity initiative pairing the unreleased Claude Mythos Preview model with vetted partners for defensive vulnerability scanning. The numbers are striking: Cloudflare uncovered roughly 2,000 bugs including 400 high or critical severity with fewer false positives than human-led testing, Mozilla identified and fixed 271 vulnerabilities in Firefox 150, and Anthropic's own scan of 1,000+ widely used open-source projects flagged 6,202 high-or-critical flaws at a 90.6% independently confirmed true-positive rate. The initiative — now expanding to additional partners including Verizon and allied governments — represents a concrete proof point for the "AI for defense" thesis: purpose-built frontier models can find real bugs at scale, not just generate theoretical CVE descriptions.</p>
+            <div class="key-takeaway">If you maintain open-source projects, expect inbound vulnerability reports sourced from Glasswing partners. The 90.6% true-positive rate means the overwhelming majority of these findings will be real — treat them seriously and patch quickly.</div>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-26T10:00:00Z" data-searchable="Ollama CVE-2026-7482 CVSS 9.3 Bleeding Llama out-of-bounds read GGUF model loader heap memory leak API keys tokens secrets 300000 servers unauthenticated remote process memory exfiltration LLM inference self-hosted AI local model 0.17.1 patch">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html" target="_blank">"Bleeding Llama" — Ollama CVE-2026-7482 Leaks Process Memory Including API Keys From 300K+ Servers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A critical out-of-bounds read vulnerability dubbed "Bleeding Llama" (CVE-2026-7482, CVSS 9.3) in Ollama's GGUF model loader lets a remote, unauthenticated attacker leak the entire process heap — including prompts, conversation history, API keys, tokens, and environment secrets — from any exposed Ollama instance. The attack requires just three unauthenticated API calls: upload a malicious GGUF file with an oversized tensor declaration, trigger the read, then use Ollama's built-in model push feature to exfiltrate the stolen memory to an attacker-controlled server. With over 300,000 Ollama instances publicly exposed according to Shodan, and many running without authentication in development and production environments, the blast radius is enormous.</p>
+            <div class="key-takeaway">Update Ollama to 0.17.1 immediately. If you can't patch now, ensure your Ollama instance is not exposed to the internet — bind it to localhost or put it behind authentication. Assume any secrets in the process environment of exposed instances may already be compromised.</div>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-27T08:00:00Z" data-searchable="Instructure Canvas ShinyHunters ransom agreement 3.65TB data theft 275 million students teachers 9000 schools education LMS learning management system Free-For-Teacher exploit extortion $10 million payment data destruction shred logs NPR Krebs higher education K-12 finals disruption">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/instructure-reaches-ransom-agreement.html" target="_blank">Instructure Pays Ransom to ShinyHunters After 3.65TB Canvas Breach Disrupts 9,000 Schools Worldwide</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Instructure, parent company of the Canvas LMS used by schools and universities worldwide, confirmed it reached a ransom agreement with ShinyHunters after the extortion group stole 3.65TB of data affecting approximately 275 million students, teachers, and staff across 9,000 institutions. The attackers exploited a vulnerability in Canvas's Free-For-Teacher account program to gain initial access around April 25, then defaced login portals at 330 institutions on May 7 with ransom deadlines. Instructure says it received "digital confirmation of data destruction" (shred logs), though unconfirmed reports put the payment at roughly $10 million. The stolen data included usernames, email addresses, student IDs, course enrollments, and private messages between students and teachers — a deeply sensitive dataset with no realistic way to verify it was actually deleted.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-26T12:00:00Z" data-searchable="DAEMON Tools supply chain attack trojanized installers backdoor DTHelper DiscSoftBusServiceLite DTShellHlp government scientific organizations Russia Belarus Thailand April 8 2026 digitally signed compromised official website disc-soft download 100 countries 12.5.0 versions targeted second-stage payloads retail manufacturing">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/daemon-tools-trojanized-in-supply-chain-attack-to-deploy-backdoor/" target="_blank">DAEMON Tools Supply Chain Attack — Trojanized Installers on Official Site Delivered Backdoors to Thousands Since April</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Researchers disclosed that official DAEMON Tools Lite installers on the vendor's website were trojanized from April 8 through early May, delivering a backdoor to thousands of systems across 100+ countries. Versions 12.5.0.2421 through 12.5.0.2434 contained compromised binaries (DTHelper.exe, DiscSoftBusServiceLite.exe, DTShellHlp.exe) that established persistence and activated a backdoor on startup. The most concerning detail: second-stage payloads were deployed only to a dozen high-value targets — government, scientific, retail, and manufacturing organizations in Russia, Belarus, and Thailand — suggesting a nation-state actor using a popular consumer tool as a distribution vector for targeted espionage.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-27T06:00:00Z" data-searchable="Drupal CVE-2026-9082 SQL injection PostgreSQL active exploitation 15000 attacks 6000 sites CISA KEV Known Exploited Vulnerabilities highly critical unauthenticated RCE remote code execution May 27 deadline FCEB gaming financial services Imperva Google Mandiant patch CMS web">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-drupal-vulnerability/" target="_blank">Drupal SQL Injection CVE-2026-9082 Under Active Mass Exploitation — 15K+ Attacks Detected, CISA Deadline Today</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The "highly critical" Drupal SQL injection flaw CVE-2026-9082 is now under active mass exploitation, with Imperva detecting over 15,000 attack attempts targeting nearly 6,000 sites across 65 countries since patches dropped. The unauthenticated bug in Drupal's database abstraction API — discovered by Google/Mandiant researcher Michael Maturi — affects PostgreSQL-powered installations and can chain to remote code execution. CISA added it to the KEV catalog and set a federal patch deadline of today, May 27. While Drupal estimates less than 5% of sites use PostgreSQL, the 15,000+ observed attacks show attackers aren't waiting to determine backend databases before spraying exploits at every Drupal instance they can find.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-update">FOLLOW-UP</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-26T14:00:00Z" data-searchable="7-Eleven ShinyHunters data breach 185000 franchise applicants SSN Social Security driver license Salesforce 600000 records extortion $9.4GB archive April 2026 convenience store retail credit monitoring identity protection ransom refused seven eleven 7/11">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/7-eleven-confirms-data-breach-claimed-by-the-shinyhunters-gang/" target="_blank">7-Eleven Confirms ShinyHunters Breach — 185K Franchise Applicants' SSNs and Driver's Licenses Exposed</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">7-Eleven confirmed a data breach after ShinyHunters claimed to have stolen 600,000+ Salesforce records from the convenience store giant in April. Filings with attorneys general revealed that approximately 185,000 current, former, and prospective franchise applicants had personally identifiable information exposed — including Social Security numbers, driver's licenses, dates of birth, and addresses. When 7-Eleven refused to pay the ransom by the April 21 deadline, ShinyHunters published a 9.4GB archive of the stolen files. Affected individuals are being offered credit monitoring, but the damage from leaked SSNs and government IDs is effectively permanent.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple / iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple / iOS</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-23T12:00:00Z" data-searchable="Apple Gen AI website subdomain WWDC 2026 iOS 27 Apple Intelligence messaging branding shift artificial intelligence generative AI marketing consumer positioning June 8 keynote developer conference">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/05/23/apple-gen-ai-subdomain/" target="_blank">Apple Preparing New "Gen AI" Website Ahead of WWDC — Signals Major Branding Shift for Apple Intelligence</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">MacRumors discovered that Apple has registered a new "Gen AI" subdomain on apple.com, interpreted as a signal that Apple will rebrand or expand its "Apple Intelligence" marketing for the iOS 27 cycle. The timing — two weeks before the June 8 WWDC keynote — suggests Apple is preparing a dedicated consumer-facing portal for its AI features, potentially positioning them more prominently than the current Settings-buried approach. For developers, this matters because it signals Apple is ready to market AI capabilities aggressively to end users, which means apps that integrate Apple Intelligence APIs will get more organic discovery and user expectation of AI-powered features will increase significantly.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-26T18:00:00Z" data-searchable="Apple iOS 26.6 iPadOS 26.6 watchOS 26.6 tvOS 26.6 beta 1 developer release bug fixes maintenance WWDC countdown June 8 blocked contacts limit minor update SDK">
+            <div class="story-header">
+              <h4><a href="https://9to5mac.com/2026/05/26/apple-releases-first-ios-26-6-beta-for-iphone/" target="_blank">Apple Seeds iOS 26.6 Beta 1 Across All Platforms — Maintenance Release as WWDC Countdown Enters Final 12 Days</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple released first betas of iOS 26.6, iPadOS 26.6, watchOS 26.6, and tvOS 26.6 to developers on May 26, two weeks after the iOS 26.5 public release that brought end-to-end encrypted RCS. The 26.6 update appears to be a housekeeping release focused on bug fixes, with the only notable user-facing change being new blocked-contacts limit warnings. With WWDC 12 days away and iOS 27 set for its keynote debut on June 8, this is almost certainly the final dot release of the iOS 26 cycle — developers should use the remaining window to ensure their apps are fully compatible before attention shifts to the iOS 27 beta.</p>
+            <div class="story-meta"><span class="tag tag-source">9to5Mac</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-12T14:00:00Z" data-searchable=".NET 10 Visual Studio 2026 LTS long term support C# 14 post-quantum cryptography ML-DSA HashML-DSA ASP.NET Core 10 Blazor passkey Microsoft Agent Framework Semantic Kernel AutoGen AI multi-agent x64 Arm64 JIT performance SDK 10.0.300 developer tools release">
+            <div class="story-header">
+              <h4><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/" target="_blank">.NET 10 Ships as LTS With C# 14, Post-Quantum Crypto, and Unified AI Agent Framework</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Microsoft shipped .NET 10 as a Long Term Support release (supported through November 2028), bundled with Visual Studio 2026. The headline additions for developers: C# 14 with refined extension methods for cleaner fluent APIs, post-quantum cryptography support via ML-DSA and HashML-DSA signature algorithms, and a new Microsoft Agent Framework that merges Semantic Kernel and AutoGen into a single multi-agent orchestration layer. ASP.NET Core 10 brings Blazor WebAssembly preloading, passkey support for Identity, and OpenAPI improvements. Under the hood, JIT throughput improvements on x64 and Arm64 reduce tail latency in web APIs without code changes. The post-quantum crypto addition is particularly forward-looking — it positions .NET apps for the "harvest now, decrypt later" threat model that security teams are increasingly planning for.</p>
+            <div class="story-meta"><span class="tag tag-source">Microsoft .NET Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-27T12:00:00Z" data-searchable="Fireworks AI $15 billion valuation funding round Index Ventures AI inference infrastructure model serving enterprise optimization $4 billion previous valuation October 2025 $250M Series C startup unicorn decacorn cloud GPU compute developer platform API">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation" target="_blank">Fireworks AI in Talks at $15B Valuation — AI Inference Startup Nearly 4x's Value in Seven Months</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Bloomberg reported today that Fireworks AI, the enterprise AI inference platform, is in talks to raise a new round at a $15 billion valuation — nearly quadrupling its $4 billion Series C valuation from October 2025. Index Ventures is set to co-lead the round. Fireworks helps companies deploy and serve AI models with optimized inference infrastructure, and the valuation jump reflects the broader market conviction that inference — not training — is where the bulk of AI compute spend is shifting. The $15B figure would make Fireworks one of the most valuable pure-play inference companies globally, trailing only the hyperscalers' internal inference platforms.</p>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-26T10:00:00Z" data-searchable="Socket $60 million Series C $1 billion valuation Thrive Capital Andreessen Horowitz a16z Capital One Ventures supply chain security open source packages malware npm PyPI browser extensions MCP servers AI skills marketplace 27000 organizations 300% revenue growth 1000 attacks weekly developer security">
+            <div class="story-header">
+              <h4><a href="https://socket.dev/blog/socket-raises-60m-series-c-press-release" target="_blank">Socket Raises $60M Series C at $1B to Expand Supply Chain Defense to MCP Servers and AI Skills Marketplaces</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Supply chain security startup Socket closed a $60 million Series C led by Thrive Capital with participation from Andreessen Horowitz and Capital One Ventures, reaching a $1 billion valuation and bringing total funding to $125 million. Socket's platform blocks over 1,000 malicious packages weekly across npm, PyPI, and other registries — a capability that has become urgently relevant given the node-ipc, Nx Console, TanStack, and Laravel-Lang supply chain attacks dominating this month's security news. The funding will expand Socket's scanning beyond traditional package managers into browser extensions, editor plug-ins, MCP servers, and AI skills marketplaces — precisely the new vectors where the 2026 supply chain threat landscape is shifting fastest.</p>
+            <div class="story-meta"><span class="tag tag-source">Socket Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-27T08:00:00Z" data-searchable="Computex 2026 NVIDIA N1X ARM processor laptop SoC RTX 5070 GPU 128GB LPDDR5X Vera CPU x86 rival Intel AMD 1.5x performance Apple M4 Ultra competitor Taipei June 2 PC gaming AI chip semiconductor Jensen Huang keynote Arm desktop">
+            <div class="story-header">
+              <h4><a href="https://www.tomsguide.com/computing/what-to-expect-at-computex-2026-nvidia-n1x-intels-next-gen-gaming-handhelds-and-an-industrys-fightback-against-ramageddon" target="_blank">Computex 2026 Preview: NVIDIA N1X ARM Chip Combines 20-Core CPU With RTX 5070 GPU to Challenge Apple Silicon</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Computex 2026 (June 2–5 in Taipei) is shaping up as a pivotal hardware event, with NVIDIA expected to unveil the N1X — a complete ARM-based laptop processor pairing a 20-core CPU with RTX 5070-class graphics and up to 128GB of LPDDR5X, directly challenging Apple's M4 Ultra on the high-end. NVIDIA is also expected to demonstrate its Vera desktop CPUs, which analysts predict will outperform Intel and AMD x86 chips by 1.5x. For developers building compute-intensive applications, NVIDIA's entry into ARM laptop silicon could finally bring CUDA-native GPU performance to a power-efficient form factor — something macOS developers with Metal-only GPUs have been asking for.</p>
+            <div class="story-meta"><span class="tag tag-source">Tom's Guide</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-21T10:00:00Z" data-searchable="Realtek RTD2811 Computex 2026 Best Choice Award edge AI chip NPU 20 TOPS neural processing unit AI notebook smart display LLM on-device real-time translation multimodal generative AI semiconductor Taiwan award winning">
+            <div class="story-header">
+              <h4><a href="https://www.thelec.net/news/articleView.html?idxno=10746" target="_blank">Realtek Wins Three Computex 2026 Awards — RTD2811 Edge AI Chip Delivers 20 TOPS for On-Device LLMs</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Realtek Semiconductor's RTD2811 processor won a Computex 2026 Best Choice Award for its edge AI capabilities, delivering 20 TOPS of NPU performance for AI notebooks and smart displays. The chip can run real-time translation, local LLM inference, AI agents, and multimodal generative AI applications entirely on-device. Alongside two additional Computex awards for automotive and PC products, the recognition highlights the rapid commoditization of AI inference hardware — mid-tier silicon vendors are now shipping NPU performance that would have been frontier-class just 18 months ago.</p>
+            <div class="story-meta"><span class="tag tag-source">The Elec</span></div>
           </div>
 
         </div>
