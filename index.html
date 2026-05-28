@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 25 – May 31, 2026</div>
-    <div class="meta">Last updated: May 27, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 28, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -734,6 +734,12 @@
             </div>
             <p class="story-analysis">Bloomberg's Mark Gurman used his May 24 Power On newsletter to reveal four additional iOS 27 features two weeks before the June 8 WWDC keynote. The most developer-relevant: a completely redesigned AirPods settings menu that's "more functional, better organized, and more streamlined," a new Siri interface with a dark color scheme matching Apple's WWDC graphics, improved Genmoji and Image Playground output quality, and — potentially EU-only — the ability to set AirPlay alternatives like Google Cast as the default streaming protocol. The Google Cast detail is notable for developers building media apps, as it may require supporting Cast as a first-class output target in EU markets.</p>
             <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Thursday, May 28</div>
+                <p class="update-text">The Siri overhaul is more radical than initially reported. Apple is building a standalone Siri app — a dedicated chatbot interface with Messages-style conversation threads, persistent chat history, multi-step reasoning, and back-and-forth dialogue. The dark-only UI uses Liquid Glass translucency with a blinking cursor in Apple's signature WWDC color palette. This effectively positions Siri as Apple's answer to ChatGPT and Gemini, not just a voice assistant upgrade. <a href="https://www.macrumors.com/2026/05/26/ios-27-siri-dark-colors/">MacRumors</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-05-22T10:00:00Z" data-searchable="Apple App Store age rating Australia Vietnam June 18 2026 15+ removed 16+ Decree 147 parental controls online safety minors developer action age verification App Store Connect questionnaire regional ratings">
@@ -1192,6 +1198,197 @@
             </div>
             <p class="story-analysis">Realtek Semiconductor's RTD2811 processor won a Computex 2026 Best Choice Award for its edge AI capabilities, delivering 20 TOPS of NPU performance for AI notebooks and smart displays. The chip can run real-time translation, local LLM inference, AI agents, and multimodal generative AI applications entirely on-device. Alongside two additional Computex awards for automotive and PC products, the recognition highlights the rapid commoditization of AI inference hardware — mid-tier silicon vendors are now shipping NPU performance that would have been frontier-class just 18 months ago.</p>
             <div class="story-meta"><span class="tag tag-source">The Elec</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-05-28">
+      <div class="day-header">
+        <h2>Thursday, May 28</h2>
+        <span class="day-story-count">12 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Glassworm Botnet Takedown</span>
+        <span class="highlight-pill">FBI: In-Person Law Firm Attacks</span>
+        <span class="highlight-pill">LiteSpeed CVSS 10.0 Root Exploit</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-27T14:00:00Z" data-searchable="Glassworm botnet CrowdStrike Google Shadowserver takedown disrupted developer supply chain Solana blockchain BitTorrent DHT Google Calendar C2 command control GlasswormRAT npm PyPI CI/CD pipeline source code package registry credential theft malicious packages open source 2025 coordinated four channels">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/27/crowdstrike-and-google-take-down-botnet-used-by-hackers-to-target-software-developers-in-supply-chain-attacks/" target="_blank">CrowdStrike &amp; Google Disrupt Glassworm Botnet — Developer-Targeting Supply Chain Threat Neutralized</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CrowdStrike's Counter Adversary Operations team, in coordination with Google and the Shadowserver Foundation, executed a simultaneous takedown of all four of the Glassworm botnet's command-and-control channels on May 26 at 14:00 UTC. The botnet — which had systematically targeted software developers since early 2025 for their access to source code, CI/CD pipelines, and package registries — used an unusually resilient C2 architecture: Solana blockchain memo fields as immutable dead-drops, BitTorrent DHT for decentralized configuration, Google Calendar event titles for Base64-encoded paths, and traditional VPS servers for final payload delivery. By severing all four channels simultaneously, the operation cut operators off from infected machines and blocked new payload delivery entirely.</p>
+            <div class="key-takeaway">If you develop open-source software, audit your CI/CD pipelines and package publishing credentials. The Glassworm takedown severs the C2, but previously compromised developer machines may still harbor dormant payloads — run a full credential rotation if you interacted with any flagged packages.</div>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-05-27T10:00:00Z" data-searchable="FBI FLASH alert Silent Ransom Group SRG Luna Moth Chatty Spider law firms physical in-person data theft USB drive social engineering IT support impersonation 38 firms leaked 100 attacks Russia extortion no malware no ransomware Orrick Herrington Sutcliffe vishing phone call remote desktop">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-of-silent-ransom-group-in-person-data-theft-attacks/" target="_blank">FBI Warns Silent Ransom Group Sending Operatives Into Law Firm Offices — 38+ Firms Already Leaked</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The FBI issued a FLASH alert on May 26 warning that the Russia-linked Silent Ransom Group (also tracked as Luna Moth and Chatty Spider) has escalated from remote social engineering to physically walking operatives into law firm offices posing as IT support staff. The attack chain starts with a phone call impersonating the firm's IT department, directing employees to open a remote desktop session; when that fails, SRG dispatches a person to the office who plugs a USB storage device directly into a victim's computer. Over 100 attacks have been documented in 2026, with data from 38+ firms already published on SRG's public leak site. The group deploys no ransomware, no encryption, and no malware — systems continue functioning normally until a ransom email arrives threatening to publish stolen data.</p>
+            <div class="key-takeaway">Law firms and professional services firms should implement strict physical access controls for IT interactions — verify every "IT support" visit through a separate channel. SRG's no-malware approach means endpoint detection tools won't catch this; only physical security and employee awareness training will.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-05-27T08:00:00Z" data-searchable="LiteSpeed cPanel plugin CVE-2026-48172 CVSS 10.0 root privilege escalation lsws redisAble arbitrary script execution CISA KEV Known Exploited Vulnerabilities active exploitation versions 2.3 2.4.4 patch 2.4.5 web hosting shared hosting May 29 deadline four days federal agencies BOD 22-01">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html" target="_blank">LiteSpeed cPanel Plugin CVE-2026-48172 Actively Exploited — CVSS 10.0 Flaw Lets Any User Run Scripts as Root</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA added CVE-2026-48172 to its Known Exploited Vulnerabilities catalog on May 26, giving federal agencies just four days to patch. The maximum-severity (CVSS 10.0) incorrect privilege assignment flaw in the LiteSpeed Web Server cPanel plugin allows any cPanel user — including an attacker with a compromised low-privilege account — to exploit the lsws.redisAble function to execute arbitrary scripts as root. All plugin versions between 2.3 and 2.4.4 are affected, and LiteSpeed confirmed active exploitation in the wild without sharing additional details. Given LiteSpeed's widespread deployment across shared hosting providers, a single compromised cPanel account on a shared server can escalate to root control over every site on that machine.</p>
+            <div class="key-takeaway">If you host on cPanel with LiteSpeed, verify your hosting provider has updated the LiteSpeed plugin to version 2.4.5 immediately. On shared hosting, you're only as secure as the weakest account on the server — this flaw turns any compromised cPanel user into root.</div>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T12:00:00Z" data-searchable="Microsoft Exchange Server CVE-2026-42897 zero-day CVSS 8.1 XSS cross-site scripting Outlook Web Access OWA on-premises Exchange 2016 2019 Subscription Edition no patch unpatched CISA KEV May 29 deadline EM Service mitigation JavaScript email crafted active exploitation calendar printing broken">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild/" target="_blank">Microsoft Exchange CVE-2026-42897 Still Unpatched Two Weeks After Disclosure — CISA Deadline Is Tomorrow</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Two weeks after Microsoft disclosed CVE-2026-42897, a CVSS 8.1 cross-site scripting zero-day in Exchange Server's Outlook Web Access component, there is still no permanent patch — only an auto-mitigation deployed through the Exchange Emergency Mitigation Service that breaks calendar printing, inline image display, and OWA Light mode. The flaw affects on-premises Exchange 2016, 2019, and Subscription Edition at any update level; Exchange Online is not vulnerable. An attacker sends a crafted email that, when opened in OWA under certain interaction conditions, executes arbitrary JavaScript in the victim's browser context. CISA's federal remediation deadline under BOD 22-01 is tomorrow, May 29 — putting agencies in the awkward position of needing to "remediate" a vulnerability for which the vendor has not shipped a fix.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-27T12:00:00Z" data-searchable="Simon Willison Anthropic OpenAI product market fit coding agents Claude Code Codex GPT-5.5 Opus 4.7 API price increase revenue enterprise software engineers $30 billion run rate $1 billion ARR six months agentic development professional developers">
+            <div class="story-header">
+              <h4><a href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank">Willison: Anthropic and OpenAI Have Found Product-Market Fit — Coding Agents Are the Revenue Engine</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Developer and AI commentator Simon Willison published a closely watched analysis arguing that both Anthropic and OpenAI have definitively found product-market fit with coding agent products — Claude Code/Cowork and Codex respectively. The evidence: both companies released new frontier models in April with significantly higher API prices (GPT-5.5 at 2x the cost of GPT-5.4, Opus 4.7 at ~1.4x of Opus 4.6), and enterprises are paying without flinching. Anthropic's run rate has surged to $30 billion — up from $9 billion at end of 2025 — with Claude Code alone hitting $1 billion ARR within six months of launch. Willison identifies November 2025 as the inflection point when models became reliable enough for autonomous coding, and April 2026 as when the revenue followed. The thesis: professional software engineers, among the best-compensated knowledge workers, have both budget and incentive to pay for tools that genuinely accelerate output.</p>
+            <div class="story-meta"><span class="tag tag-source">Simon Willison</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-26T14:00:00Z" data-searchable="Claude Code v2.1.152 code-review fix simplify skills frontmatter disallowed-tools reload-skills SessionStart hooks session title MCP bug fixes Anthropic CLI agentic development review findings working tree">
+            <div class="story-header">
+              <h4><a href="https://github.com/anthropics/claude-code/releases" target="_blank">Claude Code v2.1.152 Ships /code-review --fix, Skills Frontmatter Controls, and /reload-skills</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic released Claude Code v2.1.152 on May 26 with 33 changes, headlined by a practical new workflow: /code-review --fix now auto-applies review findings (reuse opportunities, simplifications, efficiency improvements) directly to your working tree instead of just reporting them. The /simplify slash command is now an alias for the same operation. For skill authors, frontmatter can now declare disallowed-tools to remove specific tools from the model while a skill is active — useful for constraining agent behavior in specialized workflows. A new /reload-skills command lets you re-scan skill directories without restarting the session, and SessionStart hooks gained the ability to set session titles and trigger skill reloads on startup.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-13T14:00:00Z" data-searchable="LangSmith LLM Gateway LangChain private beta runtime governance AI agent PII redaction spend limits policy violations trace base_url one-line integration cost control data security enterprise observability">
+            <div class="story-header">
+              <h4><a href="https://www.langchain.com/blog/introducing-llm-gateway" target="_blank">LangSmith LLM Gateway Enters Private Beta — Runtime AI Agent Governance in a Single Line Change</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">LangChain launched the LangSmith LLM Gateway in private beta, a runtime governance layer that sits between your AI agents and LLM providers to enforce spend limits and redact PII before requests ever reach the model. Unlike post-hoc logging approaches, the Gateway blocks problems at the source — policy violations surface as traceable events inside LangSmith, letting you go from a blocked request to the triggering trace to a fix without switching tools. Setup is a one-line change: swap your base_url to the LangSmith Gateway endpoint, add provider keys to workspace secrets, and configure policies in the UI. No separate infrastructure required. For teams shipping agents to production, this fills a critical gap between "we built an agent" and "we can govern it at scale."</p>
+            <div class="story-meta"><span class="tag tag-source">LangChain Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-26T10:00:00Z" data-searchable="KPMG Anthropic Claude Digital Gateway global alliance Big Four consulting 276000 professionals 138 countries tax private equity KPMG Blaze Claude Code IT modernization Microsoft Azure first Big Four frontier AI delivery platform enterprise">
+            <div class="story-header">
+              <h4><a href="https://fortune.com/2026/05/26/kpmg-anthropic-claude-partnership-big-four-ai/" target="_blank">KPMG &amp; Anthropic Launch Digital Gateway Powered by Claude — First Big Four Firm to Embed Frontier AI in Client Delivery Platform</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">KPMG and Anthropic formalized a global alliance that embeds Claude directly into KPMG's Digital Gateway — the Azure-based platform its 276,000 professionals across 138 countries use daily for client delivery work. This makes KPMG the first Big Four firm to integrate a frontier AI model into its primary working environment rather than offering it as a separate chatbot tool. The initial rollout targets tax clients and private equity firms, with KPMG Blaze — a product for PE portfolio companies — embedding Claude Code to accelerate IT modernization and shorten development cycles. The structural significance: Anthropic is now selling Claude not just as an API or consumer product, but as embedded infrastructure inside the world's largest professional services firms.</p>
+            <div class="story-meta"><span class="tag tag-source">Fortune</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T14:00:00Z" data-searchable="Hark $700 million Series A $6 billion valuation Brett Adcock Figure AI Archer Aviation AI hardware models universal interface NVIDIA Intel Capital AMD Ventures Qualcomm Ventures Parkway Venture Capital ARK Invest Salesforce Ventures B200 data center custom devices personal assistant">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" target="_blank">Hark Raises $700M Series A at $6B — All Four Chip Giants Back Brett Adcock's AI Hardware Lab</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Hark, the AI lab founded by serial entrepreneur Brett Adcock (Figure.AI, Archer Aviation), closed a $700 million Series A at a $6 billion post-money valuation — one of the largest Series A rounds in history. What's remarkable about the cap table: NVIDIA, Intel Capital, AMD Ventures, and Qualcomm Ventures all invested alongside Parkway Venture Capital, ARK Invest, and Salesforce Ventures. Having all four major chip companies invest in a single startup is unprecedented and suggests Hark's "universal AI interface" — combining proprietary foundation models with custom hardware devices — has demonstrated something compelling behind closed doors. The company has secured an NVIDIA B200 data center for model training and plans to ship its first AI models later this summer, with custom hardware to follow.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-14T12:00:00Z" data-searchable="Colorado AI Act SB 26-189 repeal replace Governor Polis signed algorithmic discrimination duty removed risk management impact assessment AG self-reporting transparency disclosure January 2027 effective date xAI preliminary injunction developer deployer obligations narrowed NIST AI RMF ISO 42001">
+            <div class="story-header">
+              <h4><a href="https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189" target="_blank">Colorado Repeals &amp; Replaces AI Act — SB 26-189 Strips Algorithmic Discrimination Duty, Delays Enforcement to 2027</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Governor Polis signed SB 26-189 on May 14, fully repealing and replacing the original 2024 Colorado AI Act that had been the nation's most aggressive state-level AI law. The new version, effective January 1, 2027, removes the most burdensome requirements for developers: no more mandatory risk management programs aligned to NIST AI RMF or ISO 42001, no annual impact assessments within 90 days of deployment, and no duty to self-report algorithmic discrimination harms to the Attorney General. What remains are targeted transparency obligations — advance notice and post-decision disclosures for consequential automated decisions. The AG has stated he won't enforce even the new law until rulemaking concludes. Meanwhile, xAI has filed a motion for preliminary injunction (due June 11), adding another layer of uncertainty about what actually takes effect and when.</p>
+            <div class="story-meta"><span class="tag tag-source">Holland &amp; Knight</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-15T14:00:00Z" data-searchable="FTC antitrust probe Arm Holdings chip licensing semiconductor monopoly CPU blueprint architecture NVIDIA Apple Qualcomm royalty investigate refuse downgrade licenses own chips South Korea investigation ARM design Apple Silicon iPhone iPad Mac">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-05-15/arm-holdings-said-to-face-us-antitrust-probe-over-chip-tech" target="_blank">FTC Opens Antitrust Probe Into Arm Holdings — Chip Licensing Practices Under Scrutiny</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Federal Trade Commission has opened an antitrust investigation into Arm Holdings' semiconductor licensing practices, according to Bloomberg. The FTC is examining whether Arm — whose architecture powers virtually every smartphone, tablet, and an increasing share of laptops and servers — may be illegally monopolizing parts of the semiconductor market by threatening to refuse or downgrade CPU blueprint licenses to customers while simultaneously developing competing chips of its own. This matters directly to Apple developers: Apple Silicon (every chip in iPhone, iPad, Mac, and Apple Watch) is built on Arm's architecture. Any disruption to Arm's licensing model could ripple through Apple's silicon roadmap, pricing, and the broader ARM ecosystem that NVIDIA, Qualcomm, and Samsung also depend on. South Korea's antitrust regulator is running a parallel investigation.</p>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128268; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-21T14:00:00Z" data-searchable="GitHub Copilot Eclipse IDE open source MIT license microsoft copilot-for-eclipse chat completion agent prompt integration layers inspect modify community Java developer tools Visual Studio Code JetBrains AI coding IDE front-end transparency">
+            <div class="story-header">
+              <h4><a href="https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source/" target="_blank">GitHub Copilot for Eclipse Goes Open Source Under MIT — First Copilot IDE Front-End You Can Inspect and Modify</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">GitHub open-sourced the Copilot for Eclipse plugin under the MIT license on May 21, making it the first Copilot IDE front-end whose chat, completion, agent, prompt construction, and integration layers can be publicly inspected and modified. To be clear: Copilot's model and backend remain closed — this is the IDE-side client code only. But for the Eclipse community and enterprise Java shops that have resisted AI coding tools due to opacity concerns, having the full integration layer visible is a meaningful transparency step. The plugin is available at github.com/microsoft/copilot-for-eclipse, and the open-source model could set a precedent for other IDE integrations if the community contributes meaningfully.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub Changelog</span></div>
           </div>
 
         </div>
