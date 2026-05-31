@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">May 25 – May 31, 2026</div>
-    <div class="meta">Last updated: May 30, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: May 31, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1781,6 +1781,179 @@
       </div>
 
     </div>
+    <!-- ══════════════ Sunday, May 31 ══════════════ -->
+    <div class="day-section" data-date="2026-05-31">
+      <div class="day-header">
+        <h2>Sunday, May 31</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">FortiClient EKZ Stealer Campaign</span>
+        <span class="highlight-pill">CIFSwitch: Linux Root Exploit</span>
+        <span class="highlight-pill">NVIDIA 'New Era of PC' Keynote</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-05-30T18:00:00Z" data-searchable="FortiClient EMS CVE-2026-35616 CVSS 9.1 authentication bypass EKZ infostealer Fortinet Django mod_ssl X-SSL-CLIENT-VERIFY certificate forgery Chrome Firefox credential theft FortiEndpoint_Patch.exe endpoint management">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-forticlient-ems-flaw-to-push-infostealer-malware/" target="_blank">FortiClient EMS Auth Bypass (CVE-2026-35616) Exploited to Deploy EKZ Infostealer</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A critical CVSS 9.1 authentication bypass in FortiClient Enterprise Management Server has been actively exploited since March 31, 2026. The flaw lets attackers forge HTTP headers (X-SSL-CLIENT-VERIFY, X-SSL-CLIENT-CERT) that the Django application trusts as mod_ssl WSGI variables, bypassing certificate-based authentication with only string matching on the certificate chain. Once inside, threat actors deploy EKZ infostealer malware disguised as FortiEndpoint_Patch.exe, which harvests stored credentials from Chrome and Firefox browsers. Fortinet released patches on May 15 but did not publicly disclose active exploitation until May 29. Organizations running FortiClient EMS should patch immediately and audit logs for suspicious certificate header values and unexpected endpoint agent downloads.</p>
+            <div class="key-takeaway">Patch FortiClient EMS immediately — CVE-2026-35616 is trivially exploitable via forged HTTP headers and is being used in the wild to deploy credential-stealing malware. Check for FortiEndpoint_Patch.exe artifacts on managed endpoints.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-05-30T14:00:00Z" data-searchable="CIFSwitch Linux kernel privilege escalation root CIFS client cifs-utils cifs.spnego key mount namespace libnss CentOS Rocky Linux SLES Ubuntu Debian AI-assisted vulnerability discovery Asim Manizada">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-cifswitch-linux-flaw-gives-root-on-multiple-distributions/" target="_blank">CIFSwitch: New Linux Privilege Escalation Gives Root on Multiple Distributions</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Security researcher Asim Manizada, using AI-assisted multi-hop semantic graph reasoning, discovered a logic flaw between the Linux CIFS client and cifs-utils package that grants instant root access. The vulnerability stems from improper key description validation in the cifs.spnego key type, allowing an unprivileged user to exploit a rogue mount namespace combined with a malicious libnss_*.so.2 library to achieve root in a single command — no race condition required. Affected distributions include CentOS Stream 9, Rocky Linux 9, Linux Mint, and SLES; Ubuntu and Debian are vulnerable if cifs-utils is installed. Disclosed May 28 with embargo lifted May 27, patches are now available from major distribution maintainers. The AI-assisted discovery method is notable as an early example of ML-guided vulnerability research producing a critical, real-world exploit.</p>
+            <div class="key-takeaway">If your Linux servers use CIFS/SMB mounts, patch cifs-utils immediately — this exploit gives unprivileged users instant root with no race condition. Check CentOS, Rocky, Mint, and SLES systems first.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T10:00:00Z" data-searchable="Carnival Corporation cruise data breach ShinyHunters 6 million 5995277 social engineering employee account government IDs PII TransUnion credit monitoring Canvas 7-Eleven extortion">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/carnival-data-breach-exposed-6-million-people/" target="_blank">Carnival Cruise Breach: ShinyHunters Expose 6 Million Customer Records</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Carnival Corporation disclosed that 5,995,277 individuals were affected by a data breach attributed to the ShinyHunters group, who gained access through social engineering of an employee account on April 14, 2026. Exposed data includes names, addresses, dates of birth, and government-issued IDs. Notification letters began going out May 27, with affected customers receiving two years of credit monitoring through TransUnion. This is the latest in a string of ShinyHunters attacks this week — joining Canvas LMS and 7-Eleven breaches — and marks Carnival's third major breach since 2020, raising questions about the cruise line's security posture and whether accumulated fines may follow from regulators.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#63743; Apple</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T08:00:00Z" data-searchable="Apple WWDC 2026 on-device AI custom silicon local inference Google Gemini distillation privacy M-series A-series neural engine machine learning edge computing">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/05/28/apple-to-make-on-device-ai-key-focus/" target="_blank">Apple Bets on On-Device AI as WWDC 2026 Centerpiece</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple plans to make on-device AI processing the central theme of WWDC 2026, leveraging 15 years of custom silicon investment as a competitive moat for local inference. Reports indicate Apple has secured a distillation deal with Google for smaller Gemini-derived models optimized for on-device execution, enabling privacy-preserving AI features without requiring cloud round-trips. The strategy simultaneously addresses user privacy concerns, reduces Apple's ongoing inference costs, and differentiates from competitors who rely heavily on server-side processing. With WWDC keynote just over a week away on June 9, this positions Apple's M-series and A-series chips as purpose-built AI inference engines rather than general-purpose processors.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-05-30T06:00:00Z" data-searchable="Apple WWDC Mac Studio M5 Max Ultra Mac mini M5 Pro iMac refresh RAM shortage DRAM hardware launch silicon">
+            <div class="story-header">
+              <h4><a href="https://9to5mac.com/2026/05/29/apple-has-five-new-products-coming-that-could-launch-at-wwdc/" target="_blank">Five Mac Products Could Launch at WWDC: Mac Studio, Mac Mini, iMac</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple may unveil up to five new Mac products at WWDC 2026: Mac Studio with M5 Max and M5 Ultra options, Mac mini with M5 and M5 Pro, and an iMac with M5. However, industry sources warn that ongoing RAM shortages from DRAM suppliers could delay some models past the announcement date. If all five launch, it would represent Apple's most aggressive Mac refresh at a WWDC event, typically reserved for software announcements. The timing aligns with Apple's push to position its silicon as AI-first hardware ahead of expected on-device AI features in macOS and iOS.</p>
+            <div class="story-meta"><span class="tag tag-source">9to5Mac</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128421; Hardware</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T16:00:00Z" data-searchable="Qualcomm Snapdragon C budget Windows on Arm laptop $299 $300 Kryo CPU Acer Aspire Go 15 HP Lenovo NPU Copilot+ MacBook Neo ARM chip">
+            <div class="story-header">
+              <h4><a href="https://www.tomshardware.com/laptops/qualcomm-announces-snapdragon-c-platform-for-usd300-and-up-laptops-windows-on-arm-and-npus-for-the-budget-market" target="_blank">Qualcomm Snapdragon C Brings Windows on Arm to $300 Laptops</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Qualcomm announced the Snapdragon C platform targeting budget Windows laptops starting at $299, using phone-grade Kryo CPU cores rather than the Oryon cores found in its premium Snapdragon X series. Critically, Snapdragon C devices are not Copilot+ compatible, lacking the NPU performance threshold Microsoft requires. Acer's Aspire Go 15 is the first confirmed device, with HP and Lenovo also signed on as launch partners. The chip directly targets Apple's rumored MacBook Neo price point, attempting to establish Windows on Arm as viable across all price segments rather than just premium ultrabooks — though the use of phone-derived cores raises questions about sustained performance under desktop workloads.</p>
+            <div class="story-meta"><span class="tag tag-source">Tom's Hardware</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-31T03:00:00Z" data-searchable="NVIDIA N1X chip MediaTek TSMC 3nm Blackwell GPU 6144 CUDA cores ARM CPU Cortex-X925 A725 NVLink C2C 128GB LPDDR5X Jensen Huang GTC Taipei Microsoft Arm Dell Lenovo Asus MSI Windows PC laptop">
+            <div class="story-header">
+              <h4><a href="https://www.windowscentral.com/hardware/surface/a-new-era-of-pc-microsoft-and-nvidia-tease-major-announcement-experts-predict-to-be-the-fabled-n1x-chip" target="_blank">NVIDIA, Microsoft, Arm Declare "A New Era of PC" — N1X Specs Surface</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Coordinated social media posts from NVIDIA, Microsoft, and Arm — GPS-tagged to Taipei Music Center — tease a major announcement ahead of Jensen Huang's GTC Taipei keynote on June 1 (May 31 8 PM PT). Leaked specifications for the NVIDIA N1X chip reveal a MediaTek co-developed, TSMC 3nm design featuring a Blackwell-derived GPU with 6,144 CUDA cores, a 20-core ARM CPU (10× Cortex-X925 performance + 10× Cortex-A725 efficiency), NVLink C2C interconnect at 300 GB/s, and support for up to 128 GB LPDDR5X memory. Dell, Lenovo, Asus, and MSI are confirmed OEM partners with devices targeting holiday 2026. A "surprise new product" for H2 2026 has also been teased, fueling speculation about an NVIDIA-powered handheld gaming device or AI workstation form factor.</p>
+            <div class="story-meta"><span class="tag tag-source">Windows Central</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy & Regulation ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T20:00:00Z" data-searchable="EU European Commission digital sovereignty US platforms Chinese semiconductors trade restrictions China retaliation cloud AI services tech regulation import restrictions">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-05-30/china-pledges-to-retaliate-if-eu-imposes-trade-restrictions" target="_blank">EU Drafts Digital Sovereignty Push to Replace US Platforms and Chinese Chips</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The European Commission is drafting measures aimed at reducing dependence on both US digital platforms and Chinese semiconductors as part of a broader digital sovereignty initiative. The proposals would incentivize European alternatives to dominant American cloud and AI services while simultaneously restricting Chinese chip imports deemed security risks. China has responded with warnings of "resolute" retaliation if restrictions are imposed, echoing the escalatory pattern seen in US-China tech tensions. The dual-front approach marks a significant shift from the EU's previous strategy of primarily regulating foreign tech companies to actively attempting to replace them — though critics question whether European alternatives can scale quickly enough to fill the gap.</p>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T22:00:00Z" data-searchable="SpaceX IPO SEC review retail allocation 30% Robinhood Fidelity Schwab Nasdaq June 12 Goldman Sachs Morgan Stanley $350B listing Elon Musk investor access">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html" target="_blank">SpaceX IPO: SEC Fast-Tracks Review, 30% Retail Allocation Confirmed</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SpaceX's IPO timeline has accelerated after the SEC completed its review faster than expected. The updated schedule sets marketing for June 4, pricing on June 11, and a Nasdaq debut on June 12. Most notably, SpaceX has confirmed a 30% retail allocation through Robinhood, Fidelity, and Schwab — the largest retail carve-out ever for a mega-IPO of this scale. The move democratizes access to what's expected to be a $350B+ listing, breaking from the traditional practice of reserving nearly all shares for institutional investors. With Goldman Sachs and Morgan Stanley leading the book, the retail allocation signals both SpaceX's populist brand positioning and confidence in strong demand across investor classes.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128187; Dev Tools</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-05-30T12:00:00Z" data-searchable="Claude Code auto mode autonomous execution AWS Bedrock Google Vertex AI Microsoft Azure Foundry Anthropic Opus 4.7 4.8 enterprise cloud provider CLI agent">
+            <div class="story-header">
+              <h4><a href="https://github.com/anthropics/claude-code/releases" target="_blank">Claude Code Auto Mode Now Available on Bedrock, Vertex, and Foundry</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic expanded Claude Code's autonomous execution mode (auto mode) to work on AWS Bedrock, Google Cloud Vertex AI, and Microsoft Azure Foundry, ending the previous restriction that limited the feature to Anthropic's first-party API. Auto mode allows Claude Code to execute multi-step tasks — file edits, shell commands, test runs — without per-step approval, and is available for Opus 4.7 and 4.8 models. The expansion is significant for enterprise teams that must route AI traffic through their cloud provider for compliance, billing, or data residency reasons, removing a friction point that previously forced a choice between autonomous workflows and cloud provider integration.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub / Anthropic</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
     <!-- DAY_SECTIONS_END -->
   </div>
 
