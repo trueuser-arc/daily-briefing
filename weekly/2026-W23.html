@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 1 – June 7, 2026</div>
-    <div class="meta">Last updated: June 2, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: June 3, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -848,6 +848,10 @@
                 <div class="update-date">UPDATE — Tuesday, June 2</div>
                 <p class="update-text">Apple teased WWDC 2026 with "All Systems Glow" branding — a play on "all systems go" that likely references the new glowing Siri interface leaked last week. YouTube livestream link is live. Six days until keynote. <a href="https://www.macrumors.com/2026/06/01/apple-wwdc-2026-all-systems-glow/">MacRumors</a></p>
               </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Wednesday, June 3</div>
+                <p class="update-text">Apple confirmed macOS 27 will drop all Intel Mac support — Apple Silicon is now mandatory. The last four Intel Macs compatible with macOS Tahoe (MacBook Pro 16" 2019, iMac 27" 2020, MacBook Pro 13" 2020, Mac Pro 2019) will not receive macOS 27. Apple will continue Tahoe security updates. Separately, the new Siri standalone app will reportedly use a custom model built with Google's Gemini team, positioning it as Apple's answer to ChatGPT. <a href="https://www.macrumors.com/2026/04/18/macos-27-compatibility-change/">MacRumors</a></p>
+              </div>
             </div>
           </div>
 
@@ -1030,6 +1034,178 @@
             </div>
             <p class="story-analysis">CodeGraph, an open-source tool that builds a pre-indexed semantic knowledge graph of your codebase, is trending on GitHub. It works with Claude Code, Codex, Gemini, Cursor, and other AI coding agents — when an agent needs to explore a codebase, it queries the graph instead of scanning files with grep and Read calls. A/B testing across seven repositories showed median savings of 35% cost, 57% token reduction, 46% time savings, and 71% fewer tool calls. Everything runs 100% locally, keeping source code private. For developers spending significant amounts on AI coding agents, this is worth evaluating as an optimization layer.</p>
             <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-06-03">
+      <div class="day-header">
+        <h2>Wednesday, June 3</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Exchange OWA Zero-Day Exploited</span>
+        <span class="highlight-pill">Netlogon RCE Mass Exploitation</span>
+        <span class="highlight-pill">Glasswing Scales to 150 Orgs</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-02T16:00:00Z" data-searchable="Microsoft Exchange OWA zero-day CVE-2026-42897 CVSS 8.1 spoofing XSS cross-site scripting Outlook Web Access on-premises Exchange 2016 2019 Subscription Edition crafted email JavaScript browser context no permanent patch auto mitigation EM Service EEMS calendar print inline images known issues">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/" target="_blank">Microsoft Exchange OWA Zero-Day CVE-2026-42897 Exploited in the Wild — No Permanent Patch Available</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Microsoft confirmed active exploitation of CVE-2026-42897, a CVSS 8.1 cross-site scripting vulnerability in Outlook Web Access that lets attackers execute arbitrary JavaScript in a victim's browser by sending a specially crafted email. The flaw affects all on-premises Exchange Server deployments — 2016, 2019, and Subscription Edition — but not Exchange Online. No permanent patch exists yet; Microsoft deployed an automatic mitigation via the Exchange Emergency Mitigation Service, but it breaks OWA calendar printing and inline image rendering. Exchange 2016 and 2019 will only receive the eventual fix through the Extended Security Update program, adding urgency for organizations still on legacy Exchange.</p>
+            <div class="key-takeaway">Verify that the EM Service mitigation is active on your Exchange servers. If you run Exchange 2016 or 2019 without an ESU agreement, start planning your migration — you're now dependent on emergency mitigations with no guaranteed patch timeline.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-06-01T14:00:00Z" data-searchable="Windows Netlogon RCE CVE-2026-41089 CVSS 9.8 critical stack buffer overflow domain controller unauthenticated remote code execution Belgium CCB Centre Cybersecurity mass exploitation May Patch Tuesday Active Directory Zerologon-level DC network request crafted packet all Windows Server versions 2025 2022 2019">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/microsoft/critical-windows-netlogon-remote-code-execution-flaw-now-exploited-in-attacks/" target="_blank">Windows Netlogon RCE CVE-2026-41089 Under Mass Exploitation — Belgium CERT Warns Domain Controllers at Risk</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Belgium's Centre for Cybersecurity (CCB) issued an urgent warning that CVE-2026-41089, a CVSS 9.8 stack-based buffer overflow in Windows Netlogon, is now being mass-exploited in the wild. The flaw allows unauthenticated attackers to achieve remote code execution on domain controllers by sending a single crafted network request — no credentials, no user interaction required. It affects every supported Windows Server version through Server 2025. Microsoft patched it in the May 2026 Patch Tuesday, but the CCB's warning indicates many organizations haven't applied the fix. Security researchers are comparing it to Zerologon-level severity given that a single unpatched DC compromises the entire Active Directory forest.</p>
+            <div class="key-takeaway">Patch all domain controllers immediately — partial patching creates an indefensible state where attackers simply pivot to the remaining unpatched DCs. If you can't patch today, consider network-level isolation of DC management interfaces as a temporary measure.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-02T10:00:00Z" data-searchable="Google Android June 2026 security update CVE-2025-48595 CVSS 8.4 integer overflow privilege escalation zero-day Framework 124 vulnerabilities 18 critical Android 14 15 16 QPR2 targeted exploitation spyware nation-state patch level 2026-06-01 2026-06-05 Qualcomm MediaTek kernel">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/google-fixes-one-actively-exploited-android-zero-day-124-flaws/" target="_blank">Google's June 2026 Android Update Patches 124 Flaws Including Actively Exploited Zero-Day CVE-2025-48595</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google released the June 2026 Android security update, addressing 124 vulnerabilities across two patch levels — 18 of them rated critical. The standout is CVE-2025-48595 (CVSS 8.4), an integer overflow in the Android Framework that enables local privilege escalation without user interaction on devices running Android 14 through 16 QPR2. Google confirmed it is "under limited, targeted exploitation," language typically associated with commercial spyware vendors or nation-state actors targeting journalists and dissidents. The second patch level (2026-06-05) adds fixes for kernel subcomponents and chipset drivers from Qualcomm and MediaTek.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-02T15:00:00Z" data-searchable="Anthropic Project Glasswing expansion Claude Mythos critical infrastructure vulnerability detection 150 organizations 15 countries power water healthcare communications hardware 10000 zero-day vulnerabilities cybersecurity AI national security codebase 100 million people IPO">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank">Anthropic Expands Project Glasswing to 150 Critical Infrastructure Organizations Across 15+ Countries</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic announced a major expansion of Project Glasswing, its initiative to find and fix critical software vulnerabilities using AI, adding approximately 150 new organizations across more than 15 countries spanning power, water, healthcare, communications, and hardware sectors. The restricted Claude Mythos Preview model — described as Anthropic's most powerful yet — has already surfaced over 10,000 high- or critical-severity vulnerabilities since the program launched in April. For most partners, a major attack on their codebase could affect more than 100 million people. Anthropic expects other AI companies to have Mythos-class models within 6-12 months, framing this as a race to find vulnerabilities before adversaries can exploit them.</p>
+            <div class="key-takeaway">Glasswing signals that AI-powered vulnerability discovery is moving from research novelty to critical infrastructure defense at scale. If you're in a sector touched by this expansion, expect your upstream dependencies to start disclosing AI-discovered CVEs — plan your patch cycles accordingly.</div>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-02T18:00:00Z" data-searchable="Microsoft MAI-Code-1-Flash MAI-Thinking-1 in-house AI models Build 2026 5B parameter coding model GitHub Copilot outperforms Claude Haiku 4.5 60 percent fewer tokens reasoning first-party model Maia accelerator Azure OpenAI dependency reduce costs developer">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank">Microsoft Launches MAI-Code-1-Flash and MAI-Thinking-1 — First In-House Models to Reduce OpenAI Dependency</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">At Build 2026, Microsoft unveiled its MAI model family — in-house AI models built end-to-end without OpenAI data or architecture. MAI-Code-1-Flash is a 5-billion-parameter coding model trained directly in GitHub Copilot's production harness, enabling it to solve coding tasks with up to 60% fewer tokens than Claude Haiku 4.5 while outperforming it on adjusted accuracy benchmarks. It's rolling out to all Copilot tiers immediately. Separately, MAI-Thinking-1 is Microsoft's first reasoning model, targeting complex multi-step problem-solving. Together, these models mark Microsoft's strategic pivot toward first-party AI — reducing per-inference costs on custom Maia accelerators while building leverage in its increasingly complex OpenAI relationship.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-28T12:00:00Z" data-searchable="JetBrains Koog 1.0 AI agent framework Kotlin Java KotlinConf 2026 Munich open source multiplatform JVM JS WasmJS Android iOS type-safe workflow DSL Spring AI Ktor OpenTelemetry observability persistence recovery tools integrations OpenAI Anthropic Google Bedrock LiteRT">
+            <div class="story-header">
+              <h4><a href="https://blog.jetbrains.com/ai/2026/05/koog-1-0-is-out-stable-core-better-interop-and-multiplatform-observability/" target="_blank">JetBrains Ships Koog 1.0 — Production-Ready AI Agent Framework for Kotlin and Java</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">JetBrains released Koog 1.0, an open-source framework for building AI agents in Kotlin and Java, announced at KotlinConf 2026 in Munich. Koog provides type-safe workflow DSLs, persistence and recovery for long-running agents, and deep integration with Spring AI, Ktor, and OpenTelemetry. The standout feature is Kotlin Multiplatform deployment: a single agent codebase can target JVM, JS, WasmJS, Android, and iOS, with local on-device inference via LiteRT on Android. Provider support includes OpenAI, Anthropic, Google, and AWS Bedrock. JetBrains guarantees no breaking changes for stable modules for at least one year — a stability commitment notably absent from most agent frameworks in 2026.</p>
+            <div class="story-meta"><span class="tag tag-source">JetBrains Blog</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-02T19:00:00Z" data-searchable="Microsoft Coreutils Windows 75 Linux commands native ls grep cat cp rm find pwd Rust uutils Build 2026 WSL containers cross-platform developer workflow general availability NTFS hardlinks command line utilities">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/" target="_blank">Microsoft Coreutils Ships GA — 75+ Native Linux Commands Now Available on Windows</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Microsoft shipped Coreutils for Windows as generally available at Build 2026 — more than 75 Unix command-line utilities (ls, grep, cat, cp, rm, find, and more) running natively on Windows without WSL. Built from the uutils open-source project (a Rust reimplementation of GNU coreutils), each command is an NTFS hardlink to a single coreutils.exe binary. This eliminates a persistent friction point for developers switching between macOS/Linux and Windows. Alongside Coreutils, Microsoft previewed WSL containers — running Linux containers directly through WSL without third-party Docker tooling.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-02T12:00:00Z" data-searchable="defense tech venture capital VC funding record $14.6 billion 2026 Anduril Industries $5 billion Series H $61 billion valuation Thrive Capital Andreessen Horowitz a16z autonomous drones missiles Lattice military national security startup Pentagon hardware manufacturing">
+            <div class="story-header">
+              <h4><a href="https://news.crunchbase.com/defense-tech/startup-venture-funding-all-time-record-ai-anduril/" target="_blank">Defense Tech VC Funding Smashes All-Time Record — $14.6B+ in 2026 Already Exceeds Full-Year 2025</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Defense tech startup funding has already surpassed 2025's full-year record of $9.6 billion with more than $14.6 billion invested through early June 2026, according to Crunchbase. Q1 alone saw $19.8 billion in deals — the largest single quarter ever for the sector, with late-stage rounds capturing 88% of that total. The standout deal: Anduril Industries' $5 billion Series H led by Thrive Capital and Andreessen Horowitz, valuing the autonomous weapons and defense AI company at $61 billion — doubled from its $30.5 billion valuation less than a year ago. The surge reflects institutional capital recognizing defense tech as a permanent category, not a cyclical interest, driven by the 2026 National Defense Strategy's emphasis on autonomous systems and reindustrialization.</p>
+            <div class="story-meta"><span class="tag tag-source">Crunchbase News</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128268; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-02T14:00:00Z" data-searchable="Open Design 57400 GitHub stars open source Claude Design alternative v0.9.0 local-first BYOK model agnostic 259 skills 142 design systems web desktop mobile prototypes slides images videos HyperFrames HTML PDF PPTX MP4 export nexu-io Apache 2.0 310 contributors">
+            <div class="story-header">
+              <h4><a href="https://github.com/nexu-io/open-design" target="_blank">Open Design Hits 57K GitHub Stars — Open-Source Claude Design Alternative Reaches v0.9.0</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Open Design, the open-source alternative to Anthropic's Claude Design, reached v0.9.0 on June 2 and passed 57,400 GitHub stars with 310 contributors. The project launched in April after Claude Design went viral but stayed closed-source, paid-only, and model-locked. Open Design is local-first under Apache 2.0 with bring-your-own-key support for Claude Code, Codex, Cursor, Gemini, and 17+ other CLI agents. It ships 259+ skills and 142+ design systems for generating web, desktop, and mobile prototypes, slides, images, and videos — with sandboxed preview and HTML/PDF/PPTX/MP4 export. No vendor server involved; artifacts land as files in your project directory.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-30T12:00:00Z" data-searchable="Colorado AI Act SB 189 repeal replace algorithmic discrimination duty of care risk management impact assessment disclosure framework Governor Polis signed January 2027 effective date consequential decisions employment lending healthcare AI regulation state law deregulation">
+            <div class="story-header">
+              <h4><a href="https://www.troutmanprivacy.com/2026/05/colorado-legislature-passes-bill-to-repeal-and-replace-colorado-ai-act/" target="_blank">Colorado Guts Its Landmark AI Act — SB 189 Replaces Duty-of-Care Framework with Disclosure-Only Rules</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Colorado's legislature passed SB 189, repealing and replacing the state's original AI Act (SB 24-205) — widely considered the most ambitious U.S. state AI regulation when signed in 2024. The original law required developers and deployers to exercise reasonable care to prevent algorithmic discrimination, conduct impact assessments, and implement risk management programs. SB 189 strips all of that: no duty of care, no algorithmic discrimination provisions, no impact assessments, no risk management mandates. In their place is a disclosure-based framework with limited consumer rights in narrow circumstances, effective January 1, 2027. The retreat mirrors the broader federal push toward deregulation under the current administration's National AI Policy Framework.</p>
+            <div class="story-meta"><span class="tag tag-source">Troutman Pepper</span></div>
           </div>
 
         </div>
