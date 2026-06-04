@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 1 – June 7, 2026</div>
-    <div class="meta">Last updated: June 3, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: June 4, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -675,6 +675,12 @@
             <p class="story-analysis">Jensen Huang used his June 1 GTC Taipei keynote to launch Nemotron 3 Ultra, a 500–550 billion parameter mixture-of-experts model purpose-built for long-running autonomous agents. NVIDIA claims it delivers 300+ output tokens per second with 5x faster inference and 30% lower cost than leading alternatives, scoring 48 on the U.S. Intelligence Index for open-weights models. The Ultra crowns a three-tier Nemotron 3 family — Nano for edge, Super (120B, launched March) for mid-range enterprise, and Ultra for full agentic orchestration — all with open weights, open training data, and published technical reports. It launches June 4 as an NIM microservice on Hugging Face, ModelScope, OpenRouter, and NVIDIA Build.</p>
             <div class="key-takeaway">If you're building AI agents or evaluating open models for production, Nemotron 3 Ultra offers a compelling alternative to proprietary frontier models — open weights with competitive reasoning benchmarks and no licensing restrictions. Available June 4.</div>
             <div class="story-meta"><span class="tag tag-source">NVIDIA Newsroom</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Thursday, June 4</div>
+                <p class="update-text">Nemotron 3 Ultra open weights are now live on Hugging Face, ModelScope, OpenRouter, and build.nvidia.com as an NIM microservice. Artificial Analysis scores it 48 on the Intelligence Index — the strongest US open-weights model, ahead of Gemma 4 31B (39) and gpt-oss-120b (33). However, China's Kimi K2.6 (54) and DeepSeek V4 Pro maintain a clear lead. At DeepInfra, Ultra delivers 300+ tokens/sec — 3–6x faster than comparable Chinese models. <a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-launch-announced">Artificial Analysis</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-06-01T04:00:00Z" data-searchable="NVIDIA NemoClaw open agent framework agentic orchestration Agent Toolkit Cosmos 3 world foundation model autonomous workers GTC Taipei developer tools NIM microservice simulation robotics physical AI open source">
@@ -1206,6 +1212,158 @@
             </div>
             <p class="story-analysis">Colorado's legislature passed SB 189, repealing and replacing the state's original AI Act (SB 24-205) — widely considered the most ambitious U.S. state AI regulation when signed in 2024. The original law required developers and deployers to exercise reasonable care to prevent algorithmic discrimination, conduct impact assessments, and implement risk management programs. SB 189 strips all of that: no duty of care, no algorithmic discrimination provisions, no impact assessments, no risk management mandates. In their place is a disclosure-based framework with limited consumer rights in narrow circumstances, effective January 1, 2027. The retreat mirrors the broader federal push toward deregulation under the current administration's National AI Policy Framework.</p>
             <div class="story-meta"><span class="tag tag-source">Troutman Pepper</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-06-04">
+      <div class="day-header">
+        <h2>Thursday, June 4</h2>
+        <span class="day-story-count">9 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Red Hat npm Supply Chain Hit</span>
+        <span class="highlight-pill">Kirki Plugin 500K Sites Exposed</span>
+        <span class="highlight-pill">Alphabet's $85B Record AI Raise</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-01T12:00:00Z" data-searchable="Red Hat npm supply chain attack Miasma Shai-Hulud Wiz Research @redhat-cloud-services 32 packages 80000 weekly downloads credential stealer AI dev tools Claude Codex Gemini Copilot Kiro opencode VS Code kitty-monitor GitHub account compromised TeamPCP preinstall lifecycle hook AWS GCP Azure Kubernetes SSH Docker GPG env files RHSB-2026-006">
+            <div class="story-header">
+              <h4><a href="https://www.wiz.io/blog/miasma-supply-chain-attack-targeting-redhat-npm-packages" target="_blank">Red Hat npm Packages Hit by "Miasma" Supply Chain Attack — 32 Releases Compromised, AI Dev Tools Targeted</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Wiz Research identified a supply chain compromise affecting 32+ package releases under the @redhat-cloud-services npm namespace, with approximately 80,000 cumulative weekly downloads. A compromised Red Hat employee GitHub account was used to inject a 4.2 MB obfuscated JavaScript payload via preinstall hooks that executes a comprehensive credential sweep — harvesting GitHub Actions tokens, AWS/GCP/Azure keys, Kubernetes service accounts, SSH keys, Docker credentials, and all .env files. The malware also installs persistent monitoring services (kitty-monitor) on Linux and macOS, and injects hooks into AI developer tools including Claude Code, Codex, Gemini, Copilot, and Kiro to maintain persistence across coding sessions.</p>
+            <div class="key-takeaway">Run `npm ls @redhat-cloud-services` in every project immediately. If any compromised versions are present, rotate ALL credentials accessible from that environment — cloud keys, SSH keys, API tokens, everything. Check for kitty-monitor services on Linux/macOS and inspect VS Code folder-open tasks for re-execution payloads.</div>
+            <div class="story-meta"><span class="tag tag-source">Wiz Research</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-06-02T14:00:00Z" data-searchable="WordPress Kirki CVE-2026-8206 CVSS 9.8 critical privilege escalation unauthenticated admin account takeover handle_forgot_password REST API password reset 500000 websites Wordfence 222 exploit attempts Defiant Freeform Page Builder Customizer plugin version 6.0.7 patch CMS web developer">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/critical-kirki-flaw-exploited-to-hijack-wordpress-admin-accounts/" target="_blank">WordPress Kirki Plugin CVE-2026-8206 Under Active Exploitation — CVSS 9.8 Flaw Gives Attackers Admin on 500K+ Sites</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Attackers are actively exploiting CVE-2026-8206 (CVSS 9.8), a critical unauthenticated privilege escalation in the Kirki Freeform Page Builder plugin for WordPress, active on more than 500,000 sites. The flaw exposes a REST API endpoint (handle_forgot_password) that accepts a username and an attacker-controlled email address — a single HTTP request triggers a password reset to the attacker's inbox, enabling full admin account takeover with zero authentication or user interaction. Wordfence blocked over 222 exploit attempts in the first 24 hours after disclosure. The fix is in Kirki 6.0.7, but nearly 40% of the plugin's userbase remains on vulnerable versions 6.0.0–6.0.6.</p>
+            <div class="key-takeaway">If you run any WordPress site with Kirki, update to 6.0.7 immediately. If you can't patch right now, disable the plugin entirely — the exploit is trivially simple and requires only a known username, which is often guessable or enumerable on WordPress installations.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-22T10:00:00Z" data-searchable="Exim Dead Letter CVE-2026-45185 CVSS 9.8 critical remote code execution unauthenticated use-after-free BDAT GnuTLS TLS mail transfer agent MTA SMTP CHUNKING STARTTLS XBOW Federico Kirschbaum 4.97 4.99.2 4.99.3 patch email server heap corruption AI-assisted vulnerability discovery Debian">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution/" target="_blank">Exim "Dead.Letter" CVE-2026-45185 — CVSS 9.8 Unauthenticated RCE Threatens Millions of GnuTLS-Based Mail Servers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CVE-2026-45185 ("Dead.Letter") is a critical use-after-free vulnerability in Exim versions 4.97 through 4.99.2 that enables unauthenticated remote code execution on GnuTLS-based builds. The flaw triggers when Exim frees its TLS transfer buffer during shutdown but continues using stale callback references during BDAT chunked SMTP delivery — an attacker can corrupt the heap by sending cleartext bytes after a TLS close_notify. Exploitation requires only a standard SMTP connection with CHUNKING enabled, which is the default. Exim is the world's most widely deployed MTA, and GnuTLS is the default TLS library on Debian-based systems — the overlap is massive. XBOW researcher Federico Kirschbaum discovered the flaw using AI-assisted security research tooling, making it one of the first major CVEs attributed to AI-aided vulnerability discovery. Exim 4.99.3 patches the issue.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T14:00:00Z" data-searchable="Anthropic Claude Partner Network Services Track Partner Hub three tiers Select Preferred Global Premier certified consultants 40000 firms 10000 certifications $100 million investment enterprise AI deployment integration consulting system integrator GSI tier requirements promotions January July October partner ecosystem">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/services-track-partner-hub" target="_blank">Anthropic Launches Claude Partner Network Services Track — Three Tiers, 40K+ Firms Competing for Enterprise AI Deployments</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic formalized its enterprise partner ecosystem on June 3 with the Services Track and Partner Hub of the Claude Partner Network. The three-tier structure — Select (10+ certified staff, 2+ deployed customers), Preferred (100+ certified, 15+ customers), and Global Premier (1,000+ certified, 100+ customers across 3+ regions) — directly ties partner status to demonstrated Claude deployment experience rather than revenue commitments. Since launching the $100 million partner program in March, over 40,000 firms have applied and 10,000+ consultants have earned Claude certification. Promotions run twice yearly (January 1 and July 1), with an extra review on October 1 in this inaugural year. The Partner Hub portal gives firms real-time visibility into their tier progress.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple / iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple / iOS</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T16:00:00Z" data-searchable="Apple Texas SB 2420 age assurance App Store June 4 2026 Fifth Circuit court ruling Family Sharing parental consent minors under 18 Declared Age Range API Significant Change API PermissionKit framework StoreKit age rating developer requirements downloads in-app purchases Tim Cook Greg Abbott age verification law">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/06/03/apple-app-store-texas-sb-2420/" target="_blank">Texas SB 2420 Age Assurance Takes Effect Today — Apple Requires Family Sharing for Minors, Developers Must Adopt New APIs</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Texas law SB 2420 takes effect June 4 after the Fifth Circuit temporarily stayed an injunction blocking enforcement. New Apple Accounts in Texas now require age confirmation: users under 18 must join a Family Sharing group, and parents must consent to all App Store downloads, in-app purchases, and significant app changes. Developers must adopt the Declared Age Range API to provide age categories for Texas users and implement the Significant Change API under the PermissionKit framework for any material changes requiring parental re-consent. Apple fought the law aggressively — CEO Tim Cook personally lobbied Governor Abbott to veto it — but lost. Legal proceedings continue, and the Fifth Circuit hasn't ruled on a permanent stay, so enforcement could be paused again.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T12:00:00Z" data-searchable="Apple Developer Center Berlin Europe first Mitte district fifth globally Cupertino Shanghai Bengaluru Singapore WWDC 2026 in-person sessions workshops labs Apple experts multiple languages iOS iPadOS macOS tvOS visionOS watchOS developer support EU Digital Markets Act ecosystem">
+            <div class="story-header">
+              <h4><a href="https://www.apple.com/uk/newsroom/2026/06/europes-first-apple-developer-center-to-open-in-berlin/" target="_blank">Apple Opens First European Developer Center in Berlin — Fifth Hub Globally, Timed for WWDC Week</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple announced its fifth Developer Center will open in Berlin's Mitte district later this year, making it the first in Europe. The center joins existing locations in Cupertino, Shanghai, Bengaluru, and Singapore, offering in-person sessions, workshops, one-on-one appointments, dedicated labs, and hands-on support from Apple engineers in multiple languages. The timing — five days before the June 8 WWDC keynote — signals Apple's deepening investment in the European developer ecosystem, particularly as the EU Digital Markets Act continues reshaping App Store economics across the continent. European developers will have a permanent local resource for optimizing apps across iOS, macOS, visionOS, and the rest of Apple's platform stack.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Newsroom</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-02T15:00:00Z" data-searchable="Apple Design Awards 2026 winners WWDC 12 apps games 6 categories Delight Fun Inclusivity Innovation Interaction Social Impact Visuals Graphics Blue Prince Cyberpunk 2077 Moonlitt Tide Guide Guitar Wiz NBA Live Grug Primary News Consume Me Pine Hearts developer recognition excellence">
+            <div class="story-header">
+              <h4><a href="https://www.apple.com/newsroom/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/" target="_blank">Apple Design Awards 2026: 12 Winners Announced Including Blue Prince, Cyberpunk 2077, and Moonlitt</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple named 12 winners across six categories for the 2026 Apple Design Awards, selected from 36 global finalists. Notable winners include Blue Prince (Innovation, Games), Cyberpunk 2077: Ultimate Edition (Visuals and Graphics, Games), Moonlitt: Moon Phase Tracker (Interaction, Apps), and Primary: News in Depth (Social Impact, Apps). The ceremony takes place during WWDC 2026, which begins June 8. For developers, the winning apps serve as reference implementations for Apple's current design priorities — particularly worth studying before the iOS 27 and macOS 27 betas drop immediately after the keynote.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Newsroom</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-03T09:00:00Z" data-searchable="Alphabet Google $85 billion equity offering record largest history AI infrastructure $190 billion capex 2026 Berkshire Hathaway Warren Buffett $10 billion private placement oversubscribed upsized $45 billion first tranche $40 billion ATM program Goldman Sachs GOOGL stock TPU data center cloud computing dilution institutional conviction">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-06-03/alphabet-upsizes-equity-offering-to-85-billion-for-ai-spending" target="_blank">Alphabet Raises Record $85B in Largest Equity Offering in History — Berkshire Hathaway Commits $10B for AI Infrastructure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Alphabet priced the largest equity offering in corporate history on June 2–3, raising approximately $85 billion to fund its AI compute buildout. The initial $40 billion first tranche was oversubscribed and upsized to $45 billion, supplemented by a $40 billion at-the-market program and a $10 billion private placement from Berkshire Hathaway — Warren Buffett's most significant tech investment since Apple. The capital will fund up to $190 billion in 2026 capex, primarily for TPU infrastructure supporting both Google Cloud's enterprise AI offerings and Anthropic's compute needs under their expanded partnership. GOOGL dipped 2.8% on dilution concerns, but the oversubscription signals deep institutional conviction that AI infrastructure spend will generate returns at scale.</p>
+            <div class="key-takeaway">Alphabet's $85B raise — with Berkshire Hathaway validation — signals that Big Tech's AI infrastructure arms race has entered a new phase of capital intensity. For developers on Google Cloud or Anthropic's platform, this translates to more compute capacity and potentially more aggressive pricing as Google competes with Azure and AWS for AI workloads.</div>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-04T08:00:00Z" data-searchable="EU AI Act August 2 2026 transparency obligations Article 50 high-risk systems compliance deadline 59 days disclosure synthetic content deepfake labeling AI interaction notification risk management data governance conformity assessment fines 35 million 7 percent turnover Omnibus extension December 2027 European Union regulation enforcement">
+            <div class="story-header">
+              <h4><a href="https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline" target="_blank">EU AI Act Enforcement Is 59 Days Away — Article 50 Transparency Rules and Prohibited Practices Take Effect August 2</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With 59 days until the EU AI Act's August 2 enforcement date, companies shipping AI features to European users face a concrete compliance wall. Article 50 transparency obligations — requiring disclosure when users interact with AI systems, labeling of synthetic content, and deepfake identification — become enforceable with fines up to €35 million or 7% of global turnover. While the recent Omnibus VII agreement pushed standalone high-risk AI system deadlines to December 2027, the general transparency rules and prohibited practices enforcement remain on the original August 2 schedule. Holland &amp; Knight notes that many US companies building AI features haven't yet assessed whether their products trigger transparency obligations under Article 50 — a gap that has 59 days to close.</p>
+            <div class="story-meta"><span class="tag tag-source">Holland &amp; Knight</span></div>
           </div>
 
         </div>
