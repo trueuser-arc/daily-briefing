@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 1 – June 7, 2026</div>
-    <div class="meta">Last updated: June 4, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: June 5, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -857,6 +857,10 @@
               <div class="update-entry">
                 <div class="update-date">UPDATE — Wednesday, June 3</div>
                 <p class="update-text">Apple confirmed macOS 27 will drop all Intel Mac support — Apple Silicon is now mandatory. The last four Intel Macs compatible with macOS Tahoe (MacBook Pro 16" 2019, iMac 27" 2020, MacBook Pro 13" 2020, Mac Pro 2019) will not receive macOS 27. Apple will continue Tahoe security updates. Separately, the new Siri standalone app will reportedly use a custom model built with Google's Gemini team, positioning it as Apple's answer to ChatGPT. <a href="https://www.macrumors.com/2026/04/18/macos-27-compatibility-change/">MacRumors</a></p>
+              </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Friday, June 5</div>
+                <p class="update-text">Bloomberg's Mark Gurman published the definitive WWDC preview three days before the keynote. Key new details: iOS 27 is positioned as a "Snow Leopard" stability release focused on removing old code and tuning Liquid Glass readability (including a transparency slider). The revamped Siri will live in a standalone chatbot app with Messages-style conversation threads, a pill-shaped Dynamic Island popup, and a new "Search or Ask" gesture that may replace Spotlight. Siri runs on a hybrid stack combining Apple's foundation models with Google Gemini. Additional iOS 27 features include keyboard improvements, Apple Maps satellite view, and Safari "Organize Tabs." Hardware lineup confirmed at 15+ products including iPhone Fold and MacBook Pro OLED with M6. <a href="https://www.bloomberg.com/news/articles/2026-06-05/wwdc-2026-preview-ios-27-siri-ai-features-macos-27-more-apple-will-announce">Bloomberg</a></p>
               </div>
             </div>
           </div>
@@ -1364,6 +1368,187 @@
             </div>
             <p class="story-analysis">With 59 days until the EU AI Act's August 2 enforcement date, companies shipping AI features to European users face a concrete compliance wall. Article 50 transparency obligations — requiring disclosure when users interact with AI systems, labeling of synthetic content, and deepfake identification — become enforceable with fines up to €35 million or 7% of global turnover. While the recent Omnibus VII agreement pushed standalone high-risk AI system deadlines to December 2027, the general transparency rules and prohibited practices enforcement remain on the original August 2 schedule. Holland &amp; Knight notes that many US companies building AI features haven't yet assessed whether their products trigger transparency obligations under Article 50 — a gap that has 59 days to close.</p>
             <div class="story-meta"><span class="tag tag-source">Holland &amp; Knight</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-06-05">
+      <div class="day-header">
+        <h2>Friday, June 5</h2>
+        <span class="day-story-count">11 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">VS Code Zero-Day Hits GitHub</span>
+        <span class="highlight-pill">AI-Built Ransomware Lab Found</span>
+        <span class="highlight-pill">Claude Agent Billing Split June 15</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-02T14:00:00Z" data-searchable="VS Code zero-day github.dev GitHub token theft OAuth one-click Jupyter notebook malicious extension webview message-passing sandboxed 3700 internal repositories breach CVE researcher disclosure Microsoft patch June 3 keystroke simulation private repos read write developer security supply chain">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/" target="_blank">VS Code Zero-Day Lets Attackers Steal GitHub Tokens in One Click — 3,700 Internal Repos Breached</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A security researcher disclosed a VS Code zero-day on June 2 that exploits the sandboxed webview message-passing system in github.dev — GitHub's browser-based VS Code instance. The attack is elegant in its simplicity: a specially crafted Jupyter notebook, when opened on github.dev, simulates keystrokes to silently install a malicious extension that exfiltrates the user's GitHub OAuth token — granting full read/write access to all repositories, including private ones. Before disclosure, attackers had already used the vulnerability to breach approximately 3,700 internal GitHub repositories. The researcher gave GitHub just one hour of advance notice before going public, citing frustration with Microsoft's disclosure process. Microsoft rolled out a fix on June 3, but the breach scope and the one-click attack surface underscore how browser-based development environments introduce novel trust boundaries that traditional security models don't cover.</p>
+            <div class="key-takeaway">Clear your cookies and local site data for github.dev immediately. If you opened any untrusted Jupyter notebooks on github.dev before June 3, assume your GitHub token was compromised — rotate your personal access tokens and review recent repository activity for unauthorized access.</div>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-06-02T12:00:00Z" data-searchable="Sophos AI ransomware toolkit Claude Opus Cursor IDE MCP Model Context Protocol EDR evasion endpoint detection response Active Directory discovery 80 modules payloads Rust Go Cobalt Strike Telegram C2 Cloudflare Worker CrowdStrike Microsoft Defender Ludus virtual lab malware testing automated threat actor AI-assisted offensive security">
+            <div class="story-header">
+              <h4><a href="https://www.sophos.com/en-us/blog/pointing-a-cursor-at-evading-detection" target="_blank">Sophos Uncovers AI-Powered Ransomware Lab — Claude Opus and Cursor Used to Build 80 EDR-Evasion Modules</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Sophos published research on June 2 revealing a threat actor who built a full malware development and testing laboratory using AI coding agents. A Claude Opus 4.5 agent served as the orchestrator, coordinating subsidiary agents for EDR testing, documentation, OPSEC hardening, and VM deployment — all connected via Model Context Protocol to Git repositories and the Cursor IDE. The setup produced nearly 80 modular payloads in Rust and Go, layered with encryption and evasion tactics, and systematically tested them against Sophos, CrowdStrike, and Microsoft Defender EDR products in Ludus-provisioned virtual environments. The toolkit included Cobalt Strike profiles for traffic disguise, a Telegram-based C2, shellcode injection tools, and a Cloudflare Worker to obscure infrastructure. Sophos linked the activity to active ransomware operations but withheld the group's identity due to ongoing investigations.</p>
+            <div class="key-takeaway">This is the clearest evidence yet that AI coding agents are accelerating offensive security tooling at industrial scale. The takeaway for defenders: your EDR vendor's detection signatures are being systematically tested and evaded using the same AI tools your developers use to write production code. Assume adversaries iterate faster now.</div>
+            <div class="story-meta"><span class="tag tag-source">Sophos</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T14:00:00Z" data-searchable="CISA FBI NSA DOE automatic tank gauge ATG fuel tank monitoring systems critical infrastructure energy chemical food agriculture transportation internet-exposed CVE authentication bypass hardcoded credentials SQL injection privilege escalation tank volumes pump controls denial-of-view joint advisory ICS OT operational technology">
+            <div class="story-header">
+              <h4><a href="https://www.cybersecuritydive.com/news/cisa-fbi-hackers-targeting-systems-monitor-industrial-fluits/821873/" target="_blank">CISA, FBI, NSA Issue Joint Advisory — Hackers Actively Targeting Fuel Tank Monitoring Systems Across Critical Infrastructure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA, the FBI, NSA, DOE, and partner agencies issued a joint advisory on June 3 warning that threat actors are actively exploiting internet-exposed automatic tank gauge (ATG) systems used to monitor fuel and liquid storage in Energy, Chemical, Food and Agriculture, and Transportation sectors. Attackers are chaining authentication bypass, hardcoded credentials, OS command execution, SQL injection, and privilege escalation vulnerabilities to modify tank volumes, product identifiers, network configurations, and pump controls. The potential impact ranges from denial-of-view conditions (operators can't monitor fuel levels) to physical consequences like overflows or shortages. The advisory recommends immediately disconnecting ATGs from the internet, segmenting OT networks, and implementing multi-factor authentication for all remote access to industrial control systems.</p>
+            <div class="story-meta"><span class="tag tag-source">Cybersecurity Dive</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T16:00:00Z" data-searchable="Cisco Unified Communications Manager CVE-2026-20230 CVSS 8.6 SSRF server-side request forgery root privilege escalation arbitrary file write unauthenticated remote HTTP request WebDialer PoC proof-of-concept exploit code Unified CM SME Session Management Edition patch critical security impact rating VoIP telephony enterprise">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html" target="_blank">Cisco Unified CM CVE-2026-20230 — SSRF to Root Escalation With Public PoC, CVSS 8.6</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Cisco patched CVE-2026-20230 on June 3, a CVSS 8.6 unauthenticated server-side request forgery in Unified Communications Manager and Unified CM Session Management Edition. Despite the 8.6 base score, Cisco assigned a Critical security impact rating because a successful exploit allows arbitrary file writes to the underlying OS — which chains directly to root privilege escalation. The attack requires only a crafted HTTP request sent to the target system, but exploitation depends on the WebDialer service being enabled (it's disabled by default). Working proof-of-concept code is publicly available, though no in-the-wild exploitation has been detected yet. Organizations running Cisco UCM with WebDialer should patch immediately or disable the service as a stopgap.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-04T10:00:00Z" data-searchable="Anthropic Claude subscription billing split June 15 2026 Agent SDK credit pool separate interactive programmatic autonomous claude -p GitHub Actions OpenClaw Conductor Zed Jean Pro $20 Max 5x $100 Max 20x $200 API rates non-rollover per-user dual-bucket metered pricing change developer impact coding agents">
+            <div class="story-header">
+              <h4><a href="https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html" target="_blank">Anthropic Splits Claude Subscriptions June 15 — Agent SDK and Programmatic Usage Move to Separate Credit Pool</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Starting June 15, Anthropic is splitting Claude subscription billing into two independent buckets. Interactive usage — Claude.ai chat, Claude Code in the terminal, and Claude Cowork — stays on the existing subscription. But the Agent SDK, claude -p headless mode, Claude Code GitHub Actions, and all third-party agent applications (OpenClaw, Conductor, Zed, Jean) move to a new "Agent SDK Credit Pool" billed at standard API rates. Credits are per-user and non-rolling: $20/month for Pro, $100 for Max 5x, $200 for Max 20x. The change follows months of tension — Anthropic banned third-party agents from subscriptions in April, briefly tested removing Claude Code from Pro, and analysis showed subscriptions subsidized agent usage by 15-30x versus API pricing. For developers running autonomous workflows, this means budgeting separately for agent compute or switching to direct API billing.</p>
+            <div class="key-takeaway">Audit your Claude agent usage before June 15. If you run claude -p in CI/CD, use the Agent SDK, or rely on third-party agents like OpenClaw or Zed's Claude integration, your costs will shift to the new credit pool. Pro users get $20/month at API rates — heavy agent users should evaluate whether the Max tier or direct API billing is more economical.</div>
+            <div class="story-meta"><span class="tag tag-source">InfoWorld</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-05-21T12:00:00Z" data-searchable="MCP Model Context Protocol 2026-07-28 release candidate stateless protocol extensions framework MCP Apps Tasks extension authorization hardening OAuth OpenID Connect deprecation policy Roots Sampling Logging JSON-RPC server-rendered UI sandboxed iframe SDK tier system ten-week validation window July 28 final specification breaking changes agent interoperability">
+            <div class="story-header">
+              <h4><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank">MCP 2026-07 Release Candidate Ships — Protocol Goes Stateless With Extensions Framework and MCP Apps</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Model Context Protocol released its 2026-07-28 specification release candidate on May 21, now in a ten-week validation window before the final spec ships July 28. The headline change is fundamental: MCP is now stateless at the protocol layer — no more Mcp-Session-Id, no initialize handshake, every request stands on its own. This means MCP servers can sit behind standard round-robin load balancers without sticky routing. The release also introduces the Extensions framework with formal governance and reverse-DNS identifiers, MCP Apps (server-rendered UIs in sandboxed iframes), Tasks graduated from core to extension with a redesigned stateless lifecycle, and six authorization hardening improvements aligned with OAuth 2.0 and OpenID Connect. Three features — Roots, Sampling, and Logging — enter a 12-month deprecation window. SDK maintainers and client implementers should begin validation now.</p>
+            <div class="story-meta"><span class="tag tag-source">MCP Blog</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-04T14:00:00Z" data-searchable="Ramp $750 million Series F $44 billion valuation Iconiq Capital GIC Ontario Teachers Pension Plan Goldman Sachs Morgan Stanley Founders Fund Khosla Ventures Sequoia Peter Thiel $3 billion total funding corporate spend management fintech AI finance expense automation interchange revenue cards">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/" target="_blank">Ramp Raises $750M Series F at $44B Valuation — AI-Driven Corporate Spend Platform Doubles Value in Seven Months</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Ramp closed a $750 million Series F led by Iconiq Capital, GIC, and the Ontario Teachers' Pension Plan, valuing the corporate spend management platform at $44 billion — up from $32 billion just seven months ago. Goldman Sachs Growth Equity, Morgan Stanley, and Founders Fund also participated, bringing total funding to $3 billion. The valuation leap is driven by Ramp's AI-powered expense automation, which has propelled the company past $700 million annualized revenue. The investor lineup — sovereign wealth funds alongside growth equity giants — signals that AI-native fintech has crossed from growth-stage to pre-IPO institutional conviction. For companies managing AI compute spend (a rapidly growing budget line), Ramp's platform is increasingly positioned as the default tool for tracking and optimizing those costs.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T18:00:00Z" data-searchable="SpaceX IPO roadshow fixed $135 price $1.75 trillion valuation SPCX Nasdaq June 12 debut retail investor access Fidelity $2000 minimum 30 percent allocation Elon Musk largest IPO history Starlink xAI revenue Goldman Sachs testing-the-waters institutional investors">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html" target="_blank">SpaceX IPO Roadshow Launches at Fixed $135 Price — Retail Access Via Fidelity, Shares Debut June 12</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SpaceX began its IPO roadshow on June 4, targeting a fixed $135-per-share price at a $1.75 trillion valuation — an unusual move, as issuers typically offer a price range to gauge demand. The fixed price came after testing-the-waters meetings showed overwhelming institutional interest, making a range unnecessary. SpaceX has reserved up to 30% of the offering for retail investors, and Fidelity announced it will make shares available to any customer with a $2,000+ brokerage account. Shares are expected to debut on Nasdaq under the SPCX ticker on June 12, which would make it the largest IPO in history — more than triple Alibaba's record. The timing puts the SpaceX debut on the same day as the WWDC keynote and three days before Anthropic's expected IPO timeline, creating a remarkable convergence of tech capital markets events.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-04T20:00:00Z" data-searchable="Broadcom AVGO stock plunge 15 percent earnings Q2 fiscal 2026 AI chip forecast $100 billion full year target unchanged Hock Tan AI semiconductor revenue $16 billion Q3 below estimates $17.2 billion Wall Street disappointment $10.8 billion Q2 doubled year-over-year chips only integrated systems dropped data center NVIDIA competitor">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html" target="_blank">Broadcom Plunges 15% After AI Chip Forecast Disappoints — $100B Full-Year Target Unchanged Despite Doubling Revenue</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Broadcom shares fell roughly 15% on June 5 after CEO Hock Tan declined to raise the company's full-year AI chip revenue target of $100 billion, despite AI semiconductor revenue doubling year-over-year to $10.8 billion in fiscal Q2. The Q3 forecast of $16 billion fell below analysts' consensus of $17.2 billion, and the company announced it would sell "chips only" rather than the complete integrated AI systems previously promised — a strategic retreat that investors interpreted as a competitive concession to NVIDIA's full-stack approach. The selloff dragged the broader semiconductor sector lower and added to bearish sentiment alongside CrowdStrike's post-earnings decline. For the AI infrastructure narrative, Broadcom's results suggest that custom silicon demand, while growing rapidly, may not be accelerating fast enough to justify current valuations across the chip sector.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128268; Open Source</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-06-01T10:00:00Z" data-searchable="Understand-Anything GitHub trending number one interactive knowledge graph code exploration search questions Claude Code Codex Cursor Copilot Gemini CLI 45000 stars 24000 weekly Lum1104 codebase visualization semantic AI coding agent tool open source developer productivity">
+            <div class="story-header">
+              <h4><a href="https://github.com/Lum1104/Understand-Anything" target="_blank">Understand-Anything Tops GitHub Trending — Turns Codebases Into Interactive Knowledge Graphs for AI Agents</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Understand-Anything jumped to #1 on GitHub's weekly trending chart with nearly 25,000 stars gained in a single week, reaching 45,000+ total. The project converts any codebase into an interactive knowledge graph that you can explore, search, and ask questions about — and it integrates with Claude Code, Codex, Cursor, Copilot, and Gemini CLI. Similar to CodeGraph (covered Tuesday), it addresses the core problem of AI coding agents spending excessive tokens on codebase exploration, but takes a different approach: rather than pre-indexing symbol relationships, it builds a navigable visual graph that both humans and agents can query. The explosive star growth reflects strong developer demand for tools that make large codebases more legible to AI agents.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-05T08:00:00Z" data-searchable="Computex 2026 recap hardware announcements NVIDIA Vera Rubin RTX Spark Intel Crescent Island AMD Ryzen 7700X3D ASUS Ascent QN10 Snapdragon X2 DGX Station Windows AI PC consumer enterprise GPU NPU summary week wrap-up Taipei">
+            <div class="story-header">
+              <h4><a href="https://www.tomshardware.com/pc-components/cpus/nvidia-unveils-dgx-sparrk-roadmap-for-laptops-and-desktop-pcs-at-computex-2026-three-generations-outlined-rubin-followed-by-rosa-feynman" target="_blank">Computex 2026 Wraps — The Hardware That Matters for Developers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Computex 2026 closed this week in Taipei after a hardware-heavy slate covered extensively in earlier briefings. The announcements that most impact developers: NVIDIA's RTX Spark consumer superchip ships October with 1 PFLOP of AI compute from Dell, HP, ASUS, Lenovo, MSI, and Microsoft; Intel's Crescent Island brings 480GB LPDDR5X for inference without HBM constraints (sampling H2, GA 2027); AMD extended AM5 platform support through 2029; and ASUS's Snapdragon X2 Elite mini PC packs 80 TOPS in 0.7 liters. The overarching theme: local AI inference hardware is commoditizing rapidly, with NPU-equipped devices becoming the default expectation rather than a premium differentiator.</p>
+            <div class="story-meta"><span class="tag tag-source">Tom's Hardware</span></div>
           </div>
 
         </div>
