@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 1 – June 7, 2026</div>
-    <div class="meta">Last updated: June 5, 2026 · Auto-generated daily</div>
+    <div class="meta">Last updated: June 6, 2026 · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1118,6 +1118,12 @@
             <p class="story-analysis">Anthropic announced a major expansion of Project Glasswing, its initiative to find and fix critical software vulnerabilities using AI, adding approximately 150 new organizations across more than 15 countries spanning power, water, healthcare, communications, and hardware sectors. The restricted Claude Mythos Preview model — described as Anthropic's most powerful yet — has already surfaced over 10,000 high- or critical-severity vulnerabilities since the program launched in April. For most partners, a major attack on their codebase could affect more than 100 million people. Anthropic expects other AI companies to have Mythos-class models within 6-12 months, framing this as a race to find vulnerabilities before adversaries can exploit them.</p>
             <div class="key-takeaway">Glasswing signals that AI-powered vulnerability discovery is moving from research novelty to critical infrastructure defense at scale. If you're in a sector touched by this expansion, expect your upstream dependencies to start disclosing AI-discovered CVEs — plan your patch cycles accordingly.</div>
             <div class="story-meta"><span class="tag tag-source">Anthropic</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Saturday, June 6</div>
+                <p class="update-text">Anthropic has opened Claude Mythos access to ENISA, the EU's cybersecurity agency — the first EU institution admitted to Project Glasswing. The decision ended a weeks-long standoff in which euro-area finance ministers, the ECB, and multiple member states demanded access after learning Mythos had found flaws in software European banks and critical infrastructure rely on. Separately, OpenAI extended its GPT-5.5-Cyber model to EU defenders under a new EU Cyber Action Plan, making both frontier AI cyber-defense tools now available to European institutions. <a href="https://www.bloomberg.com/news/articles/2026-06-01/anthropic-to-give-eu-s-cybersecurity-agency-access-to-mythos">Bloomberg</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-06-02T18:00:00Z" data-searchable="Microsoft MAI-Code-1-Flash MAI-Thinking-1 in-house AI models Build 2026 5B parameter coding model GitHub Copilot outperforms Claude Haiku 4.5 60 percent fewer tokens reasoning first-party model Maia accelerator Azure OpenAI dependency reduce costs developer">
@@ -1250,6 +1256,12 @@
             <p class="story-analysis">Wiz Research identified a supply chain compromise affecting 32+ package releases under the @redhat-cloud-services npm namespace, with approximately 80,000 cumulative weekly downloads. A compromised Red Hat employee GitHub account was used to inject a 4.2 MB obfuscated JavaScript payload via preinstall hooks that executes a comprehensive credential sweep — harvesting GitHub Actions tokens, AWS/GCP/Azure keys, Kubernetes service accounts, SSH keys, Docker credentials, and all .env files. The malware also installs persistent monitoring services (kitty-monitor) on Linux and macOS, and injects hooks into AI developer tools including Claude Code, Codex, Gemini, Copilot, and Kiro to maintain persistence across coding sessions.</p>
             <div class="key-takeaway">Run `npm ls @redhat-cloud-services` in every project immediately. If any compromised versions are present, rotate ALL credentials accessible from that environment — cloud keys, SSH keys, API tokens, everything. Check for kitty-monitor services on Linux/macOS and inspect VS Code folder-open tasks for re-execution payloads.</div>
             <div class="story-meta"><span class="tag tag-source">Wiz Research</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Saturday, June 6</div>
+                <p class="update-text">The Miasma worm has now spread to Microsoft's own GitHub infrastructure. A new variant hit 73 repositories across four Microsoft organizations — Azure, Azure-Samples, Microsoft, and MicrosoftDocs — before GitHub's automated enforcement disabled access in a 105-second sweep. The variant added new collectors for GCP and Azure cloud identities and can self-replicate by querying npm for other packages the compromised identity can publish. The worm is assessed to be derived from the Mini Shai-Hulud code that TeamPCP publicly released in mid-May. <a href="https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html">The Hacker News</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="high" data-published="2026-06-02T14:00:00Z" data-searchable="WordPress Kirki CVE-2026-8206 CVSS 9.8 critical privilege escalation unauthenticated admin account takeover handle_forgot_password REST API password reset 500000 websites Wordfence 222 exploit attempts Defiant Freeform Page Builder Customizer plugin version 6.0.7 patch CMS web developer">
@@ -1549,6 +1561,197 @@
             </div>
             <p class="story-analysis">Computex 2026 closed this week in Taipei after a hardware-heavy slate covered extensively in earlier briefings. The announcements that most impact developers: NVIDIA's RTX Spark consumer superchip ships October with 1 PFLOP of AI compute from Dell, HP, ASUS, Lenovo, MSI, and Microsoft; Intel's Crescent Island brings 480GB LPDDR5X for inference without HBM constraints (sampling H2, GA 2027); AMD extended AM5 platform support through 2029; and ASUS's Snapdragon X2 Elite mini PC packs 80 TOPS in 0.7 liters. The overarching theme: local AI inference hardware is commoditizing rapidly, with NPU-equipped devices becoming the default expectation rather than a premium differentiator.</p>
             <div class="story-meta"><span class="tag tag-source">Tom's Hardware</span></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="day-section" data-date="2026-06-06">
+      <div class="day-header">
+        <h2>Saturday, June 6</h2>
+        <span class="day-story-count">11 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Cisco SD-WAN 7th Zero-Day</span>
+        <span class="highlight-pill">Google-SpaceX $920M GPU Deal</span>
+        <span class="highlight-pill">IronWorm Hits npm Supply Chain</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-05T14:00:00Z" data-searchable="Cisco Catalyst SD-WAN Manager CVE-2026-20245 CVSS 7.8 zero-day seventh 2026 root command execution CLI authenticated netadmin crafted file upload command injection no patch no workaround all deployment types on-prem Cloud-Pro FedRAMP chain CVE-2026-20182 CVE-2026-20127 credential theft PSIRT actively exploited June 5">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/" target="_blank">Cisco SD-WAN Hit by Seventh Zero-Day of 2026 — CVE-2026-20245 Grants Root, No Patch Available</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Cisco disclosed CVE-2026-20245 on June 5, a CVSS 7.8 command injection in the Catalyst SD-WAN Manager CLI that lets an authenticated attacker with netadmin privileges upload a crafted file and execute arbitrary commands as root. While the authentication requirement sounds limiting, attackers can chain previously disclosed SD-WAN flaws like CVE-2026-20182 (the CVSS 10.0 auth bypass from May) or CVE-2026-20127 to obtain netadmin credentials first. Cisco PSIRT confirmed exploitation was already underway when the advisory was published, with incidents including unauthorized configuration pushes to edge devices. Critically, there is no patch and no workaround available — all deployment types are affected: on-premises, Cloud-Pro, Cisco Managed Cloud, and FedRAMP environments. This is Cisco's seventh actively exploited SD-WAN zero-day in 2026, raising serious questions about the architectural integrity of the entire SD-WAN platform.</p>
+            <div class="key-takeaway">With no patch and no workaround, mitigation comes down to hardening: restrict netadmin access to the smallest possible set of accounts, enforce MFA on all SD-WAN management interfaces, monitor for anomalous file uploads and config changes, and audit whether any of the previous six zero-days remain unpatched in your environment.</div>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-04T12:00:00Z" data-searchable="IronWorm npm supply chain attack 36 packages Rust eBPF rootkit Tor network infostealer credential stealer OpenAI AWS Anthropic npm credentials vault SSH keys Exodus cryptocurrency wallet self-propagating preinstall asteroiddao trusted publishing workflow BleepingComputer Dark Reading">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/" target="_blank">IronWorm: Rust-Based Self-Propagating Malware Infects 36 npm Packages — Targets AI and Cloud Credentials</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A new supply chain attack dubbed IronWorm has infected 36 npm packages with a Rust-based infostealer that hides behind an eBPF kernel rootkit and communicates over the Tor network. The malware targets 86 environment variables and 20 credential files that may contain OpenAI, AWS, Anthropic, and npm tokens, vault configs, SSH keys, and Exodus cryptocurrency wallet files. IronWorm self-propagates by using stolen npm credentials — including secrets from npm's Trusted Publishing workflow — to publish trojanized versions of packages owned by the victim, which then infect additional developers and CI systems. The attack originated from a compromised account named "asteroiddao" that injected Rust ELF binaries via preinstall hooks. The campaign was detected early and stopped before reaching high-download packages, but the self-replicating mechanism makes it a concerning new pattern distinct from the concurrent Miasma campaign.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-05T10:00:00Z" data-searchable="OpenAI GPT-5.5-Cyber EU Cyber Action Plan European Union defenders businesses governments ENISA cybersecurity agencies trusted access lower refusals red teaming penetration testing Advanced Account Security phishing resistant authentication June 1 2026 vetted approved classifier safeguards">
+            <div class="story-header">
+              <h4><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank">OpenAI Extends GPT-5.5-Cyber to EU Defenders — Lower Refusals for Vetted Security Teams Under New Cyber Action Plan</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">OpenAI announced it is extending GPT-5.5-Cyber access to European defenders under a newly established EU Cyber Action Plan, opening limited-preview access to vetted European businesses, governments, cybersecurity agencies, and EU institutions including the AI Office. GPT-5.5-Cyber is functionally identical to GPT-5.5 but with significantly lower automated refusals for authorized cybersecurity workflows — red teaming, penetration testing, and controlled validation. A hard floor of safeguards still blocks credential theft, persistence mechanisms, malware deployment, and exploitation of third-party systems. Starting June 1, all individual Trusted Access members must enable Advanced Account Security with phishing-resistant authentication. The EU rollout came days before Anthropic opened its own Mythos model to ENISA, signaling a competitive race to supply frontier AI tools to European cyber defenders.</p>
+            <div class="story-meta"><span class="tag tag-source">OpenAI</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI / ML</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-04T16:00:00Z" data-searchable="OpenAI ChatGPT Dreaming V3 memory architecture background synthesis personalization user profile freshness continuity relevance Plus Pro US rollout free tier 5x compute reduction persistent context conversation history user controls edit delete opt out temporary chats">
+            <div class="story-header">
+              <h4><a href="https://www.techtimes.com/articles/317840/20260605/chatgpt-memory-dreaming-update-openai-rewrites-personalization-engine-limits-audit-trail.htm" target="_blank">OpenAI Launches Dreaming V3 — ChatGPT Memory Gets Background Synthesis That Learns Without Being Asked</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">OpenAI rolled out Dreaming V3 on June 4, the most significant rethink of how ChatGPT stores and uses what it learns about users. The system replaces the manually curated saved-memories list with a background synthesis process that reads across years of past conversations and autonomously updates the user profile along three dimensions: freshness, continuity, and relevance. Rather than requiring explicit "remember this" commands, Dreaming V3 runs post-conversation synthesis to build and update user profiles automatically. The rollout began with Plus and Pro subscribers in the US, with free-tier access coming after a 5x compute optimization made the feature economically viable at scale. Users retain full controls: view, edit, or delete any memory, and temporary chats ensure nothing is stored from those sessions.</p>
+            <div class="story-meta"><span class="tag tag-source">TechTimes</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-02T14:00:00Z" data-searchable="OpenAI Codex business plugins Sites annotations sales data analytics creative production product design equity investing investment banking 62 apps 110 skills Snowflake Databricks Hex Tableau interactive website app enterprise workspace role-specific workflow agentic non-developer Business Enterprise teams">
+            <div class="story-header">
+              <h4><a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank">OpenAI Codex Expands Beyond Code — Six Business Plugins, Interactive Sites, and Inline Annotations</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">OpenAI shipped three major Codex features that push it well beyond its coding origins. Six role-specific plugins bundle 62 apps and 110 skills across sales, data analytics, creative production, product design, public equity investing, and investment banking — turning Codex into an agentic workspace for non-developers. The data analytics plugin connects to Snowflake, Databricks, Hex, and Tableau to let business teams explore data, explain metric changes, and generate dashboards through conversation. Annotations let users refine Codex output in place without regenerating from scratch — select a section, give feedback, and only that part updates. Sites, rolling out in preview for Business and Enterprise tiers, lets Codex generate interactive websites and apps from your work that can be shared via URL — positioning Codex as a lightweight internal tool builder alongside its coding capabilities.</p>
+            <div class="story-meta"><span class="tag tag-source">OpenAI</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="high" data-published="2026-06-05T18:00:00Z" data-searchable="Google SpaceX $920 million per month compute deal SEC filing 110000 NVIDIA GPUs October 2026 June 2029 bridge capacity Gemini Enterprise surging customer demand xAI data center Colossus Google Cloud CNBC TechCrunch Axe Compute AI infrastructure cloud computing lease">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/" target="_blank">Google Signs $920M/Month Deal With SpaceX for 110K GPUs — Bridge Capacity for Surging Gemini Demand</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">An SEC filing on June 5 revealed that Google has agreed to pay SpaceX $920 million per month from October 2026 through June 2029 for access to approximately 110,000 NVIDIA GPUs, CPUs, memory, and related infrastructure at xAI's data center facilities. The 33-month deal totals roughly $30 billion. A Google Cloud spokesperson told CNBC the agreement was made "to ensure we have bridge capacity to meet surging customer demand for our agent platform, Gemini Enterprise, which has been even higher than we expected." If SpaceX fails to deliver the committed GPU count by September 30, Google can terminate or accept a pro-rata reduction. After December 31, 2026, either party can exit on 90 days' notice. The deal underscores the extreme scarcity of GPU capacity — Google, one of the world's largest chip buyers, is now leasing compute from a company that isn't even primarily a cloud provider.</p>
+            <div class="key-takeaway">When Google — which designs its own TPUs, has a $190B capex budget, and just raised $85B — still needs to lease 110K GPUs from SpaceX to bridge demand, the AI compute crunch is more severe than public infrastructure announcements suggest. For developers relying on Google Cloud AI services, this investment signals capacity will expand but demand is outpacing even the largest buildouts.</div>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-03T12:00:00Z" data-searchable="AlphaSense $350 million funding $7.5 billion valuation $600 million ARR annual recurring revenue AI market intelligence workflow orchestration 7000 enterprises Vitruvian Partners Accenture Ventures JP Morgan Asset Management CapitalG Goldman Sachs Viking Global 500 million business documents Adobe Amazon Microsoft Nvidia Salesforce">
+            <div class="story-header">
+              <h4><a href="https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/" target="_blank">AlphaSense Raises $350M at $7.5B Valuation — AI Market Intelligence Platform Surpasses $600M ARR</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">AlphaSense closed a $350 million round led by Vitruvian Partners, Accenture Ventures, and JP Morgan Asset Management, nearly doubling its valuation from $4 billion to $7.5 billion. The company has surpassed $600 million in annual recurring revenue — up from $500 million just eight months ago — with more than 7,000 enterprise customers including Adobe, Amazon, Microsoft, Nvidia, and Salesforce. AlphaSense's AI-powered platform searches across 500+ million business documents to deliver market intelligence and workflow orchestration for financial services, consulting, and corporate strategy teams. The $350 million raise, bringing total funding above $1 billion, positions AlphaSense as one of the largest enterprise AI companies outside the foundation model providers.</p>
+            <div class="story-meta"><span class="tag tag-source">AlphaSense</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-01T14:00:00Z" data-searchable="Mach Industries $300 million Series C $1.8 billion valuation defense tech autonomous drones unmanned systems Ethan Thornton 22 year old CEO Infinite Capital Ribbit Capital Sequoia Khosla Ventures Viper Glide Stratos Dart Pike Forge manufacturing network quadrupled valuation Pentagon drone dominance">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/" target="_blank">Mach Industries Raises $300M at $1.8B — 22-Year-Old CEO's Defense Drone Startup Quadruples Valuation in One Year</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Mach Industries closed a $300 million Series C led by Infinite Capital and Ribbit Capital, quadrupling its valuation from $470 million to $1.8 billion in 12 months. The three-year-old company, run by 22-year-old CEO Ethan Thornton, develops advanced unmanned systems across five active vehicle programs: Viper (jet-powered VTOL strike), Glide (high-altitude strike glider), Stratos (airborne surveillance), Dart (counter-drone interceptor), and Pike (long-range strike munition). Sequoia Capital and Khosla Ventures also participated. The raise reflects the Pentagon's "drone dominance" strategy and the broader defense tech funding boom — the sector has already surpassed $14.6 billion in 2026, exceeding all of 2025.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Apple / iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple / iOS</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-06-06T08:00:00Z" data-searchable="WWDC 2026 June 8 keynote 10 AM PT two days final countdown iOS 27 developer beta Siri chatbot app Liquid Glass transparency slider iPhone Fold MacBook Pro OLED M6 Mac Studio M5 15 new products Apple Intelligence Gemini hybrid stack visionOS 27 Xcode 27 platform state union developer labs sessions">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/roundup/wwdc/" target="_blank">WWDC 2026: Two Days Out — What iOS Developers Should Have Ready for Monday's Keynote</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With Monday's 10 AM PT keynote 48 hours away, developers should be preparing for the largest simultaneous software-and-hardware announcement in Apple's history. The confirmed lineup: iOS 27, macOS 27, and four other OS updates drop as developer betas immediately after the keynote, alongside 15+ new hardware products including iPhone Fold, MacBook Pro OLED with M6, and Mac Studio M5. iOS 27 is positioned as a stability-focused "Snow Leopard" release with Liquid Glass readability improvements and a transparency slider, but the headline feature is the revamped Siri — a standalone chatbot app with Messages-style conversation threads, Dynamic Island integration, and a hybrid foundation model stack built with Google Gemini. Developers should have Xcode 26.5 installed, apps tested against current betas, and disk space cleared for the incoming Xcode 27 download. The Platforms State of the Union follows at 1 PM PT with technical deep-dives.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-05T12:00:00Z" data-searchable="Anthropic Claude Mythos ENISA EU cybersecurity agency Project Glasswing frontier AI cyber defense European Central Bank ECB euro-area finance ministers standoff weeks-long demand access OpenAI GPT-5.5-Cyber EU Cyber Action Plan competitive race AI model access geopolitical EU institutions sovereign digital defense Bloomberg">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-06-01/anthropic-to-give-eu-s-cybersecurity-agency-access-to-mythos" target="_blank">EU Wins Access to Frontier AI Cyber Tools — Anthropic Opens Mythos to ENISA, OpenAI Extends GPT-5.5-Cyber to Europe</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The EU has secured access to both major frontier AI cyber-defense models within the same week. Anthropic agreed to admit ENISA, the EU's cybersecurity agency, to Project Glasswing — making it the first EU institution with access to Claude Mythos, the restricted model that has already surfaced 10,000+ critical vulnerabilities in infrastructure software worldwide. The decision ended a weeks-long standoff in which euro-area finance ministers, the ECB, and multiple member states demanded access after learning Mythos had found flaws in software European banks rely on. Days later, OpenAI extended its GPT-5.5-Cyber model to EU defenders under a new EU Cyber Action Plan. The parallel moves establish a new pattern: frontier AI capabilities for cyber defense are becoming a geopolitical asset that nation-states and supranational bodies actively negotiate for, not just a commercial product.</p>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128268; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+
+          <div class="story-card" data-importance="low" data-published="2026-06-05T10:00:00Z" data-searchable="npm supply chain attacks 2026 Miasma IronWorm Red Hat Microsoft self-replicating worm preinstall hooks AI developer tools credential theft open source security ecosystem trust model npm Trusted Publishing CI/CD GitHub Actions package integrity software supply chain crisis">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html" target="_blank">npm's Week From Hell — Two Self-Replicating Supply Chain Worms Hit the Ecosystem Simultaneously</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The npm ecosystem faced two concurrent self-replicating supply chain attacks in a single week: the Miasma worm (which compromised Red Hat's @redhat-cloud-services packages and then spread to 73 Microsoft GitHub repos) and IronWorm (a separate Rust-based campaign targeting 36 packages). Both exploit the same fundamental weakness — preinstall hooks combined with stolen publishing credentials — to self-propagate through the dependency graph. The twin attacks have reignited debate about npm's trust model: Miasma specifically subverted npm's Trusted Publishing workflow, and IronWorm leveraged stolen npm tokens to publish trojanized versions of victims' own packages. For open-source maintainers, the lesson is stark: enable 2FA on all publishing accounts, audit preinstall hooks in your dependency tree, and treat any CI/CD credential as a potential propagation vector.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
           </div>
 
         </div>
