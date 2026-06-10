@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 8 – June 14, 2026</div>
-    <div class="meta">Last updated: 2026-06-09T11:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-10T11:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -731,6 +731,10 @@
               <div class="update-entry">
                 <div class="update-date">UPDATE — Tuesday, June 9</div>
                 <p class="update-text">June 2026 Patch Tuesday released. The permanent fix for Exchange OWA CVE-2026-42897 is included — the actively exploited XSS zero-day is no longer dependent on the EEMS temporary mitigation. Secure Boot certificate rollover packages are bundled; enterprises now have until June 26 to validate and deploy the new 2023 certificates across their fleet. The update addresses vulnerabilities across Windows, Office, Exchange, and .NET. Prioritize Exchange patching and begin Secure Boot certificate validation immediately. <a href="https://windowsforum.com/threads/windows-11-june-2026-patch-tuesday-june-9-secure-boot-key-new-features.423277/">Windows Forum</a></p>
+              </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Wednesday, June 10</div>
+                <p class="update-text">Full analysis confirms this as the largest Patch Tuesday in history: 198 CVEs with 32 rated critical and 54 remote code execution flaws. Most concerning: a cluster of Critical RCE vulnerabilities in Windows Hyper-V enables VM guest escape and code execution on the host, and Remote Desktop Client received 11 RCE patches including Critical-rated flaws. The three zero-days — YellowKey (BitLocker bypass), GreenPlasma (CTFMON EoP), and HTTP/2 Bomb (DoS via CVE-2026-49160) — are all patched. Separately, researcher Chaotic Eclipse released a PoC for "RoguePlanet," a new Defender zero-day that works on fully patched systems. <a href="https://www.tenable.com/blog/microsofts-june-2026-patch-tuesday-addresses-198-cves-cve-2026-49160-cve-2026-50507">Tenable</a></p>
               </div>
             </div>
           </div>
@@ -918,6 +922,12 @@
             </div>
             <p class="story-analysis">Apple's biggest developer-facing WWDC announcement is the new LanguageModel protocol in the Foundation Models framework — a public Swift interface that third-party cloud providers implement to expose a common inference surface across iOS 27, macOS 27, and all other Apple platforms. Developers can now prototype with Apple's on-device model and route to Claude or Gemini for complex queries using the same SDK and session logic, swapping providers with a configuration change rather than a code rewrite. The framework also gains multimodal support, accepting UIImage, CGImage, Core Video pixel buffers, and file URLs alongside text prompts for on-device vision tasks like receipt parsing and visual product search.</p>
             <div class="story-meta"><span class="tag tag-source">Apple Newsroom</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Wednesday, June 10</div>
+                <p class="update-text">WWDC Platforms State of the Union and session videos revealed major expansions: Foundation Models framework is going open source later this summer and will run on Linux servers via Swift's open-source runtime. Apple shipped a Python SDK alongside the Swift API. Developers with fewer than 2 million first-time App Store downloads get free access to Foundation Models on Private Cloud Compute — removing server costs as a barrier. The new AFM 3 "Core Advanced" model offers 20 billion parameters for on-device multimodal inference. Core AI — the full replacement for Core ML — now supports third-party model integration (Llama, Mistral, Qwen) with ahead-of-time compilation and a visual tensor debugger that traces values back to Python source. <a href="https://www.macrumors.com/2026/06/09/apple-outlines-major-ai-and-developer-tool-updates/">MacRumors</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="low" data-published="2026-06-08T20:00:00Z" data-searchable="macOS 27 Golden Gate beta 1 Core AI replaces Core ML Neural Engine scheduling Apple Silicon Intel dropped Apple Foundation Models v2 developer beta WWDC 2026">
@@ -982,6 +992,157 @@
             </div>
             <p class="story-analysis">OpenAI publicly confirmed on Sunday that it has submitted a confidential S-1 prospectus to the SEC, with Goldman Sachs, Morgan Stanley, and JPMorgan leading the offering. The company's candid framing — "we expected the filing to leak, so we're just announcing it" — sets an unusual tone for what could be a $1 trillion listing. OpenAI says it hasn't committed to timing yet, noting there are things it wants to do that are "likely easier as a private company." The confirmation comes exactly one week after rival Anthropic filed its own IPO paperwork, setting up a head-to-head race for the largest AI listings in history as both companies prepare to debut in Q4 2026.</p>
             <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-06-10">
+      <div class="day-header">
+        <h2>Wednesday, June 10</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">RoguePlanet Defender Zero-Day</span>
+        <span class="highlight-pill">Veeam Critical RCE Patch</span>
+        <span class="highlight-pill">SwiftUI Foldable APIs Drop</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-09T18:00:00Z" data-searchable="Veeam Backup Replication CVE-2026-44963 CVSS 9.4 RCE remote code execution domain-joined backup server Active Directory watchTowr Sina Kheirkhah patch 12.3.2.4854 ransomware enterprise infrastructure KB4696">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-veeam-vulnerability-exposes-backup-servers-to-rce-attacks/" target="_blank">Veeam Backup &amp; Replication CVE-2026-44963 (CVSS 9.4) — Critical RCE Lets Domain Users Take Over Backup Servers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Veeam released an emergency patch for CVE-2026-44963, a CVSS 9.4 critical vulnerability that lets any authenticated domain user execute arbitrary code on the backup server — the single most valuable target for ransomware operators. Discovered by watchTowr researcher Sina Kheirkhah, the flaw affects Veeam Backup &amp; Replication 12.3.2.4465 and all earlier v12 builds. Domain-joined installations are the only affected configuration; workgroup deployments are safe. Veeam explicitly warned that exploit development typically begins within hours of patch release, making rapid deployment critical. The fix is version 12.3.2.4854 (KB4696). Version 13.x is unaffected due to architectural changes.</p>
+            <div class="key-takeaway">If you run Veeam Backup on a domain-joined server, patch to 12.3.2.4854 immediately. Ransomware groups consistently target backup infrastructure first to prevent recovery — this vulnerability hands them the keys.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-06-10T08:00:00Z" data-searchable="Microsoft Defender RoguePlanet zero-day PoC proof of concept SYSTEM privilege escalation TOCTOU race condition Nightmare Eclipse Chaotic Eclipse Windows 11 10 patched June Patch Tuesday Malware Protection Engine local privilege escalation ISO mount unpatched">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-rogueplanet-zero-day-grants-system-privileges/" target="_blank">Microsoft Defender "RoguePlanet" Zero-Day PoC Released — SYSTEM Access on Fully Patched Windows 11</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Prolific security researcher Chaotic Eclipse (Nightmare Eclipse) released a proof-of-concept exploit for "RoguePlanet," a new Microsoft Defender zero-day that grants SYSTEM-level privileges on Windows 11 and 10 systems with the June 2026 Patch Tuesday updates installed. The exploit abuses a Time-of-Check to Time-of-Use (TOCTOU) race condition in Defender's internal file processing to redirect an operation into attacker-controlled code. Reliability varies — 100% on some hardware, inconsistent on others — but the race condition class is well-understood and weaponization is straightforward. Windows Server is currently unaffected since standard users cannot mount ISO images. This is the third Defender zero-day from the same researcher in 2026, after RedSun and BlueHammer.</p>
+            <div class="key-takeaway">There is no patch for RoguePlanet yet. Monitor Microsoft's Defender definition updates closely and assume local privilege escalation is possible on any desktop Windows system. Endpoint detection teams should watch for unusual Defender file operation patterns and ISO mounts by non-admin users.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-09T14:00:00Z" data-searchable="Google bug bounty vulnerability rewards program Android Chrome Titan M2 $1.5 million zero-click full chain exploit MiraclePtr AI automated tooling security researcher payout restructure $17 million 2025 $81.6 million lifetime">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/google-now-offers-up-to-15-million-for-some-android-exploits/" target="_blank">Google Restructures Bug Bounty — $1.5M for Android Titan M2 Zero-Click Chains as AI Reshapes Security Research</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google overhauled its Android and Chrome vulnerability rewards programs, headlined by a $1.5 million bounty for a zero-click full chain compromise of the Pixel Titan M2 secure enclave with persistence. Chrome full-chain exploits now pay up to $250,000 plus a $250,128 MiraclePtr bypass bonus. The restructuring is explicitly driven by AI's impact on vulnerability research: Google is deprioritizing bug classes that automated AI tooling can already find efficiently and redirecting reward dollars toward categories that "remain more challenging for automated AI tooling." Google paid $17.1 million to 747 researchers in 2025 — a 40% year-over-year increase and all-time high — bringing lifetime payouts past $81.6 million.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-09T12:00:00Z" data-searchable="OpenSSL CVE-2026-45447 heap use-after-free PKCS7 S/MIME verification high severity 18 vulnerabilities patched Claude AI Anthropic Research AISLE vulnerability discovery open source cryptography TLS SSL remote code execution">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/openssl-patches-high-severity-vulnerability-found-with-ai/" target="_blank">OpenSSL Patches 18 Vulnerabilities Including High-Severity Heap UAF Discovered by Claude AI</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The latest OpenSSL release addresses 18 security vulnerabilities, the most notable being CVE-2026-45447 — a high-severity heap use-after-free in the PKCS#7 signature verification code path. The bug, discovered in collaboration between a security researcher and Claude AI via Anthropic Research, can be triggered with a crafted S/MIME signed message during PKCS#7 verification, potentially enabling remote code execution. This continues a trend of AI-assisted vulnerability discovery in foundational open-source cryptographic libraries: the AISLE platform uncovered 5 of 7 flaws in OpenSSL's April 2026 release, and Google's AI previously found memory safety issues in the same codebase. The steady pace of AI-discovered bugs suggests human review alone has been insufficient for code of this complexity.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-09T16:00:00Z" data-searchable="Arista EOS CVE-2026-7473 CISA KEV known exploited vulnerability VXLAN GRE tunnel decapsulation incomplete comparison active exploitation network switch CVSS 6.8 remediation June 23 federal agencies">
+            <div class="story-header">
+              <h4><a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog" target="_blank">CISA Adds Arista EOS CVE-2026-7473 to KEV — Tunnel Decapsulation Flaw Under Active Exploitation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA added Arista EOS CVE-2026-7473 (CVSS 6.8) to its Known Exploited Vulnerabilities catalog on June 9 after confirming active exploitation. The flaw causes affected switches to incorrectly decapsulate and forward tunneled packets with a destination IP matching the switch's decapsulation configuration — impacting VXLAN, decap-group, and GRE tunnel setups. Federal agencies have until June 23 to remediate. The same KEV update also added the Chrome V8 zero-day (CVE-2026-11645) and Cisco SD-WAN flaw (CVE-2026-20245), both previously reported.</p>
+            <div class="story-meta"><span class="tag tag-source">CISA</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Apple/iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple &amp; iOS</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-09T20:00:00Z" data-searchable="SwiftUI UIKit adaptive foldable layout API hinge state detection multi-configuration display iPhone Fold iOS 27 developer beta reflow letterbox SDK groundwork WWDC 2026 flexible screen hardware reorderable containers sidebar">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/06/09/apple-outlines-major-ai-and-developer-tool-updates/" target="_blank">SwiftUI and UIKit Ship Adaptive Foldable Layout APIs in iOS 27 Beta — iPhone Fold SDK Groundwork</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Buried in the WWDC Platforms State of the Union details: SwiftUI and UIKit both gained new adaptive layout APIs for hinge-state detection and multi-configuration display handling. Apple made clear that fluid reflow — not letterboxing — is the expected default on flexible-screen hardware, with side-by-side app support and sidebar APIs already in the SDK even though the consumer iPhone Fold isn't expected until September. Developers who adopt these APIs now will have their apps reflow cleanly on day one. SwiftUI also ships reorderable containers, swipe actions for any container, layouts that resize up to 2x faster, and lazy state initialization — a quality-of-life release alongside the foldable groundwork.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-09T19:00:00Z" data-searchable="Apple Private Cloud Compute free indie developer Foundation Models framework 2 million downloads threshold AI inference server cost WWDC 2026 Platforms State of the Union PCC on-device cloud model AFM 3 Core Advanced 20B parameter Python SDK open source">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/06/09/apple-outlines-major-ai-and-developer-tool-updates/" target="_blank">Apple Opens Free Private Cloud Compute to Indie Developers — AI Inference at Zero Cost for Apps Under 2M Downloads</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">At the WWDC 2026 Platforms State of the Union, Apple announced that developers with fewer than two million first-time App Store downloads get free access to Apple Foundation Models running on Private Cloud Compute — removing server infrastructure costs as a barrier to shipping AI-powered features. This pairs with the new AFM 3 "Core Advanced" model (20 billion parameters) that runs on-device via the Core AI framework, supporting text, image, and multimodal inference. Apple also shipped a Python SDK for the Foundation Models framework and confirmed it will go open source later this summer to run on Linux servers via Swift's open-source runtime. For indie iOS developers, the combination of free cloud AI and a 20B on-device model eliminates two of the biggest barriers to adding intelligence to apps.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T10:00:00Z" data-searchable="Apple Core AI framework WWDC 2026 sessions on-device model inference third-party Llama Mistral Qwen SAM3 Neural Engine GPU CPU Apple Silicon replace Core ML custom model integration Instruments debugger tensor Python Swift ahead-of-time compilation">
+            <div class="story-header">
+              <h4><a href="https://developer.apple.com/videos/play/wwdc2026/324/" target="_blank">WWDC Sessions Go Live: Core AI Framework Enables Third-Party On-Device Models — Llama, Mistral, Qwen Supported</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple's WWDC session videos for Core AI dropped today, revealing the full scope of Core ML's replacement. Core AI provides a memory-safe Swift API for running AI models entirely on-device across CPU, GPU, and Neural Engine — with zero server dependencies and zero token costs. The headline developer story: third-party model integration is now first-class. Developers can plug in fine-tuned Llama variants, custom Mistral deployments, and other models without being locked to Apple's format. Apple ships a curated collection of optimized open-source models (Qwen, Mistral, SAM3) for Apple Silicon. The toolchain includes ahead-of-time compilation, dedicated Core AI Instruments, and a visual debugger that traces tensor values back to original Python source code — a major quality-of-life improvement for ML engineers working across both ecosystems.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Funding</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T06:00:00Z" data-searchable="AI stock selloff SoftBank plunge 10 percent SK Hynix Samsung Asia tech rout Nikkei Kospi OpenAI stake margin loan AI valuation profit-taking chip stocks NVIDIA Broadcom monetization skepticism IPO">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/10/softbank-samsung-skhynix-asia-tech-stocks-ai-ipo.html" target="_blank">Global AI Stock Selloff Accelerates — SoftBank Plunges 10%, SK Hynix Down 8% as Asia Tech Rout Deepens</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The AI stock correction that began last week extended sharply on Tuesday, with SoftBank plunging 10% after its effort to secure a $6 billion margin loan backed by its OpenAI stake hit a snag. SK Hynix dropped over 8% and Samsung fell 7.5% as South Korea's Kospi took the worst of the selling. The Nasdaq closed down 0.97% to 25,679 overnight, leading the global decline. The trigger is a confluence of profit-taking after extended gains, growing skepticism about AI monetization timelines, and uncertainty around the OpenAI and Anthropic IPO valuations. For developers building on AI infrastructure, the selloff doesn't change product timelines, but it signals that the market is testing whether current AI spending translates to sustainable returns.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-06T22:00:00Z" data-searchable="Marvell Technology MRVL S&P 500 index inclusion AI chip semiconductor custom silicon data center Jensen Huang trillion dollar PoolCorp June 22 stock tripled 2026 ASIC networking hyperscaler">
+            <div class="story-header">
+              <h4><a href="https://finance.yahoo.com/markets/stocks/articles/marvell-stock-pops-p-500-221524366.html" target="_blank">Marvell Technology Joins S&amp;P 500 — Stock Has Tripled in 2026 on AI Custom Chip Demand</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Marvell Technology will join the S&amp;P 500 on June 22, replacing PoolCorp — a milestone that caps a remarkable run: the stock has tripled in 2026 alone, driven by surging demand for custom AI silicon and data center networking ASICs. Marvell designs the custom chips that hyperscalers use alongside NVIDIA GPUs, making it a second-order play on AI infrastructure buildout. NVIDIA CEO Jensen Huang described Marvell as a candidate for becoming a "trillion-dollar company" at Computex Taipei. The S&amp;P inclusion was delayed through several rebalancing cycles despite Marvell being the largest eligible firm not in the index — the selection committee apparently needed the profitability trajectory to solidify first.</p>
+            <div class="story-meta"><span class="tag tag-source">Yahoo Finance</span></div>
           </div>
         </div>
       </div>
