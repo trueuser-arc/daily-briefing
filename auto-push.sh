@@ -14,6 +14,9 @@ cd "$REPO" || exit 1
 
 echo "[$(date)] auto-push started" >> "$LOG"
 
+# Drop any new digests into the Obsidian vault (non-fatal)
+python3 "$REPO/vault-drop.py" >> "$LOG" 2>&1 || echo "[$(date)] vault-drop failed (non-fatal)" >> "$LOG"
+
 for attempt in $(seq 1 $MAX_ATTEMPTS); do
   # Fetch to compare local vs remote
   git fetch origin main --quiet 2>> "$LOG"
