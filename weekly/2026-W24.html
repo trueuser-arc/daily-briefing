@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 8 – June 14, 2026</div>
-    <div class="meta">Last updated: 2026-06-10T11:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-11T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1143,6 +1143,156 @@
             </div>
             <p class="story-analysis">Marvell Technology will join the S&amp;P 500 on June 22, replacing PoolCorp — a milestone that caps a remarkable run: the stock has tripled in 2026 alone, driven by surging demand for custom AI silicon and data center networking ASICs. Marvell designs the custom chips that hyperscalers use alongside NVIDIA GPUs, making it a second-order play on AI infrastructure buildout. NVIDIA CEO Jensen Huang described Marvell as a candidate for becoming a "trillion-dollar company" at Computex Taipei. The S&amp;P inclusion was delayed through several rebalancing cycles despite Marvell being the largest eligible firm not in the index — the selection committee apparently needed the profitability trajectory to solidify first.</p>
             <div class="story-meta"><span class="tag tag-source">Yahoo Finance</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-06-11">
+      <div class="day-header">
+        <h2>Thursday, June 11</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">CISA Rewrites Federal Patching Rules</span>
+        <span class="highlight-pill">OpenAI–Anthropic Price War Heats Up</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T14:00:00Z" data-searchable="ServiceNow security incident unauthenticated API customer data breach REST endpoint related_list_edit Fortune 500 enterprise ITSM KB3067321 bug bounty April patch June 5 zero-auth">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/" target="_blank">ServiceNow Discloses Security Incident — Unauthenticated API Endpoint Exposed Customer Instance Data</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">ServiceNow disclosed that attackers exploited an unauthenticated REST endpoint at <code>/api/now/related_list_edit/create</code> — configured with <code>requires_authentication=false</code> — to query data from customer instances. The company received a bug bounty report describing the issue on April 22 but didn't apply a security update until June 5, after malicious activity targeting customer instances began days earlier. This is the third significant authentication-related vulnerability in ServiceNow within eight months, and the first where attackers reached customer data before a patch was applied. The platform serves over 8,000 enterprises including a majority of the Fortune 500.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T10:00:00Z" data-searchable="SAP NetWeaver Commerce Cloud CVE-2026-44748 CVSS 9.9 SAML bypass CVE-2026-27671 CVSS 9.8 memory corruption RFC CVE-2026-40128 directory traversal CVE-2026-22732 Spring Security June Patch Day ABAP critical enterprise ERP">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/sap-patches-critical-netweaver-commerce-vulnerabilities/" target="_blank">SAP Patches Four Critical Vulnerabilities in NetWeaver and Commerce Cloud — CVSS 9.9 SAML Bypass Tops the List</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SAP's June 2026 Patch Day addresses 15 vulnerabilities including four critical-severity flaws. The most severe, CVE-2026-44748 (CVSS 9.9), is an XML Signature Wrapping vulnerability in SAP NetWeaver AS ABAP that lets an authenticated user with normal privileges tamper with SAML assertions to bypass authentication — enabling privilege escalation and unauthorized access to sensitive data. CVE-2026-27671 (CVSS 9.8) is a memory corruption flaw in the RFC protocol handler that allows unauthenticated stack-based buffer overflows leading to arbitrary code execution. CVE-2026-40128 (CVSS 9.0) is a directory traversal in the Java Web Container, and CVE-2026-22732 (CVSS 9.1) hits Commerce Cloud via Spring Security. Organizations running SAP should prioritize the SAML and RFC patches immediately.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-09T16:00:00Z" data-searchable="Fortinet FortiSandbox CVE-2026-25089 CVSS 9.1 critical unauthenticated command injection OS command VNC JSON second-order CWE-78 FortiSandbox Cloud PaaS malware analysis threat detection pipeline patch 5.0.6 4.4.9">
+            <div class="story-header">
+              <h4><a href="https://cybersecuritynews.com/fortinet-fortisandbox-vulnerability-exploited/" target="_blank">Fortinet FortiSandbox CVE-2026-25089 (CVSS 9.1) — Unauthenticated OS Command Injection via VNC Feature</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Fortinet disclosed CVE-2026-25089, a critical OS command injection vulnerability in FortiSandbox's Web UI that allows unauthenticated remote attackers to execute arbitrary commands. The flaw lives in the "start VNC" feature: specially crafted JSON input triggers a second-order command injection where malicious input is stored and later executed in a different context. FortiSandbox is widely deployed as an enterprise malware analysis platform, meaning a compromise could undermine an organization's entire threat detection pipeline. Affected versions span FortiSandbox 4.2 through 5.0.5, FortiSandbox Cloud 5.0.4–5.0.5, and FortiSandbox PaaS 5.0.4–5.0.5. Patches are available in versions 5.0.6 and 4.4.9.</p>
+            <div class="story-meta"><span class="tag tag-source">Cybersecurity News</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Apple/iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple &amp; iOS</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T12:00:00Z" data-searchable="SiriKit deprecated App Intents mandatory iOS 27 WWDC 2026 Siri Gemini migration deadline two three years iOS 29 2028 third-party app invisible voice assistant Apple developer API integration App Intents 2.0 streaming multi-turn">
+            <div class="story-header">
+              <h4><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank">SiriKit Formally Deprecated at WWDC — App Intents Now Mandatory, Apps Without It Are Invisible to Siri</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">WWDC 2026 sessions this week confirmed that SiriKit has received a formal deprecation notice, with App Intents becoming the exclusive integration surface for the new Gemini-powered Siri. Apps that have not adopted App Intents are completely invisible to Siri in iOS 27 — the assistant routes exclusively through the newer framework. Apple signaled a two-to-three-year support window before SiriKit removal, placing the hard cutoff around iOS 29 in fall 2028. App Intents 2.0 adds richer entity types, streaming responses for long-running actions, and multi-turn conversational follow-ups. For any iOS developer shipping a voice-interactive app, the migration clock is now ticking.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Newsroom</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-10T08:00:00Z" data-searchable="Apple App Store age rating Australia Vietnam June 18 2026 15+ removed 16+ Vietnam Decree 147 region-specific rating developer compliance App Store Connect">
+            <div class="story-header">
+              <h4><a href="https://developer.apple.com/news/?id=yrrb45pw" target="_blank">Apple App Store Age Ratings Updated June 18 for Australia and Vietnam — Developer Action Required</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Starting June 18, Apple will update age ratings in two markets. In Australia, the 15+ rating is eliminated — all apps currently rated 15+ will automatically bump to 16+. In Vietnam, apps must carry a region-specific age rating (00+, 12+, 16+, or 18+) to comply with Article 38 of Decree 147. The changes are automatic based on existing App Store Connect questionnaire responses, but developers should verify their ratings remain accurate, especially if their app falls near the 15+/16+ boundary in Australia or serves Vietnamese users with age-gated content.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T15:00:00Z" data-searchable="xAI Grok Build coding agent terminal CLI TUI Grok 4.3 headless mode ACP Agent Client Protocol parallel subagents worktree SuperGrok Heavy Claude Code Codex competitor beta coding AI developer tool">
+            <div class="story-header">
+              <h4><a href="https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/" target="_blank">xAI Ships Grok Build — Terminal-Based Coding Agent Enters the Claude Code and Codex Arena</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">xAI launched Grok Build in public beta — a terminal TUI coding agent powered by Grok 4.3 that targets the same developer workflow as Claude Code and OpenAI Codex. The tool ships with parallel subagents for concurrent task execution, git worktree isolation for safe experimentation, a headless mode for CI/CD integration, and Agent Client Protocol (ACP) support for interoperability with other agent frameworks. Access requires a SuperGrok Heavy subscription. The release is part of xAI's broader June product push that also included Grok Voice for spoken interaction and Connectors for deep integration with SharePoint, GitHub, Notion, and custom MCP servers. Three major coding agents now compete directly for terminal-centric developers.</p>
+            <div class="story-meta"><span class="tag tag-source">DevOps.com</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T13:00:00Z" data-searchable="Xcode 27 Neural Engine on-device code completion privacy no server inline suggestions Apple Silicon unified memory local model inference Swift SDK zero cloud dependency WWDC 2026 sessions Day 3">
+            <div class="story-header">
+              <h4><a href="https://www.techtimes.com/articles/318110/20260610/wwdc-2026-day-3-xcode-27-neural-engine-completes-code-without-sending-source-any-server.htm" target="_blank">WWDC Sessions Reveal: Xcode 27 Inline Code Completion Runs Entirely On-Device via Neural Engine</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">WWDC Day 3 sessions revealed a key architectural detail in Xcode 27: all inline code completions run entirely on Apple Silicon's Neural Engine — no source code ever leaves the developer's machine. Because the CPU, GPU, and Neural Engine share unified on-chip memory, inference passes require no cross-bus transfer and no network call, enabling real-time suggestions tuned to the active Swift project and Apple SDK context. The optional third-party coding agents (Claude, Gemini, OpenAI) do route to external servers for complex multi-step tasks, but only via explicit developer opt-in — never by default. For teams with strict IP policies, this on-device-first design eliminates the code exfiltration concern that has slowed enterprise adoption of AI-assisted development tools.</p>
+            <div class="story-meta"><span class="tag tag-source">TechTimes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Funding</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-11T06:00:00Z" data-searchable="OpenAI price cuts API token Anthropic competition WSJ Wall Street Journal IPO enterprise customers revenue war pricing slash discount Claude ChatGPT profitability 2030 coding tools market share">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html" target="_blank">OpenAI Mulls Drastic API Price Cuts to Compete with Anthropic Before Both Go Public</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Wall Street Journal reported that OpenAI is considering significant cuts to its API token pricing as it tries to win enterprise customers back from Anthropic, which has surged on the strength of its coding tools and briefly surpassed OpenAI's valuation. The price discussions are still in flux, but the timing is striking: both companies have filed confidential IPO paperwork and are racing to demonstrate user growth and revenue momentum ahead of Q4 listings. OpenAI already projects losses of $14 billion in 2026 with profitability not expected until 2030, so cutting prices deepens the cash burn at exactly the moment it needs to impress public market investors. The move signals that the AI API market is entering a commoditization phase far faster than the labs anticipated.</p>
+            <div class="key-takeaway">If you're budgeting for AI API costs, hold off on long-term commitments. An OpenAI price cut would likely trigger a response from Anthropic and Google, compressing margins across all providers. The pricing floor may drop significantly before either company's IPO.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC / WSJ</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-10T20:00:00Z" data-searchable="AI semiconductor stocks recovery bounce Nasdaq rebound $1.4 trillion crash Broadcom NVIDIA Marvell SK Hynix selloff correction Philadelphia Semiconductor Index profit taking valuation">
+            <div class="story-header">
+              <h4><a href="https://moneymorning.com/2026/06/10/amd-intel-chip-stocks-ai-rebound-june-2026" target="_blank">AI Semiconductor Stocks Show Recovery After $1.4T Crash — Nasdaq Rebounds as Panic Selling Fades</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">After last week's dramatic AI semiconductor selloff erased approximately $1.4 trillion in market value — triggered by Broadcom's cautious outlook and a hot jobs report fueling rate hike fears — chip stocks demonstrated resilience in subsequent trading sessions. The Nasdaq recovered nearly 0.9% by Monday as AI-related semiconductor firms reclaimed ground lost during the Friday rout. Broadcom had dropped 12.6%, Marvell plunged 17%, and NVIDIA saw significant volatility. The correction was the most severe single-day AI sector decline in history, but analysts note it was driven more by crowded positioning and profit-taking than by any fundamental change in AI infrastructure demand. For builders relying on AI infrastructure, the selloff doesn't change product timelines or cloud provider commitments.</p>
+            <div class="story-meta"><span class="tag tag-source">Money Morning</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-10T16:00:00Z" data-searchable="CISA BOD 26-04 binding operational directive risk-based vulnerability remediation patching federal agencies 3-day deadline forensic triage supersedes BOD 22-01 BOD 19-02 KEV catalog exploit publicly exposed EPSS four criteria asset prioritization cybersecurity government">
+            <div class="story-header">
+              <h4><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" target="_blank">CISA Issues BOD 26-04 — Rewrites Federal Patching Requirements With Risk-Based Framework and 3-Day Critical Deadlines</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA issued Binding Operational Directive 26-04 on June 10, replacing both BOD 22-01 (the KEV catalog mandate from 2021) and BOD 19-02 (internet-facing vulnerability remediation from 2019) with a unified risk-based framework. Agencies must now assess four factors for every vulnerability: whether the asset is publicly exposed, whether the vulnerability is known to be exploited, whether exploitation is automatable, and whether exploitation grants partial or total control. If all four criteria are met, agencies have just three days to patch and must perform forensic triage to determine if systems were already compromised. Within 60 days, agencies must update their remediation processes, and within 180 days they must meet all remediation timelines. While the directive applies to federal civilian agencies, it will reset private-sector expectations too — every organization that benchmarks against CISA guidance now has a new standard for vulnerability prioritization.</p>
+            <div class="key-takeaway">Even if you're not a federal agency, BOD 26-04's four-factor risk framework is the clearest prioritization model CISA has ever published. Adopt it internally: publicly exposed + exploited + automatable + full control = patch within 72 hours, no exceptions.</div>
+            <div class="story-meta"><span class="tag tag-source">CISA</span> <span class="tag tag-importance-high">HIGH</span></div>
           </div>
         </div>
       </div>
