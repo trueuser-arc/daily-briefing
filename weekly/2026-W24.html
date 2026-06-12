@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 8 – June 14, 2026</div>
-    <div class="meta">Last updated: 2026-06-11T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-12T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -735,6 +735,10 @@
               <div class="update-entry">
                 <div class="update-date">UPDATE — Wednesday, June 10</div>
                 <p class="update-text">Full analysis confirms this as the largest Patch Tuesday in history: 198 CVEs with 32 rated critical and 54 remote code execution flaws. Most concerning: a cluster of Critical RCE vulnerabilities in Windows Hyper-V enables VM guest escape and code execution on the host, and Remote Desktop Client received 11 RCE patches including Critical-rated flaws. The three zero-days — YellowKey (BitLocker bypass), GreenPlasma (CTFMON EoP), and HTTP/2 Bomb (DoS via CVE-2026-49160) — are all patched. Separately, researcher Chaotic Eclipse released a PoC for "RoguePlanet," a new Defender zero-day that works on fully patched systems. <a href="https://www.tenable.com/blog/microsofts-june-2026-patch-tuesday-addresses-198-cves-cve-2026-49160-cve-2026-50507">Tenable</a></p>
+              </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Friday, June 12</div>
+                <p class="update-text">ZDI's final count puts the release at 208 CVEs — the largest by far, eclipsing the previous record of 177. The most critical flaw is now receiving urgent attention: CVE-2026-45657 (CVSS 9.8) is a wormable use-after-free in the Windows Kernel TCP/IP stack that allows remote unauthenticated code execution at SYSTEM level. Microsoft classified it as wormable — a successful exploit can self-propagate without user interaction. Affected: Windows 11 23H2–26H1 and Server 2022/2025. Multiple researchers warn a public exploit could appear within days. Patch CVE-2026-45657 before anything else. <a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review">ZDI</a></p>
               </div>
             </div>
           </div>
@@ -1293,6 +1297,184 @@
             <p class="story-analysis">CISA issued Binding Operational Directive 26-04 on June 10, replacing both BOD 22-01 (the KEV catalog mandate from 2021) and BOD 19-02 (internet-facing vulnerability remediation from 2019) with a unified risk-based framework. Agencies must now assess four factors for every vulnerability: whether the asset is publicly exposed, whether the vulnerability is known to be exploited, whether exploitation is automatable, and whether exploitation grants partial or total control. If all four criteria are met, agencies have just three days to patch and must perform forensic triage to determine if systems were already compromised. Within 60 days, agencies must update their remediation processes, and within 180 days they must meet all remediation timelines. While the directive applies to federal civilian agencies, it will reset private-sector expectations too — every organization that benchmarks against CISA guidance now has a new standard for vulnerability prioritization.</p>
             <div class="key-takeaway">Even if you're not a federal agency, BOD 26-04's four-factor risk framework is the clearest prioritization model CISA has ever published. Adopt it internally: publicly exposed + exploited + automatable + full control = patch within 72 hours, no exceptions.</div>
             <div class="story-meta"><span class="tag tag-source">CISA</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-06-12">
+      <div class="day-header">
+        <h2>Friday, June 12</h2>
+        <span class="day-story-count">13 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">SpaceX IPO Debuts on Nasdaq</span>
+        <span class="highlight-pill">Oracle PeopleSoft Zero-Day</span>
+        <span class="highlight-pill">Anthropic's $35B Compute Deal</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security &amp; Privacy</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-11T14:00:00Z" data-searchable="Oracle PeopleSoft CVE-2026-35273 CVSS 9.8 RCE zero-day ShinyHunters UNC6240 Mandiant University Nottingham education higher-ed breach 100 orgs out-of-band patch unauthenticated HTTP PeopleTools">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/" target="_blank">Oracle PeopleSoft Zero-Day CVE-2026-35273 (CVSS 9.8) — ShinyHunters Breach 100+ Orgs, Universities Hardest Hit</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">ShinyHunters (tracked by Mandiant as UNC6240) exploited a critical RCE in Oracle PeopleSoft Enterprise PeopleTools between May 27 and June 9, breaching over 100 organizations — 68% of them universities. The University of Nottingham alone lost 40 GB of student data. CVE-2026-35273 requires no authentication and no user interaction — just network access over HTTP — making it trivially exploitable against any internet-facing PeopleSoft instance. Oracle didn't publish its advisory until June 10, meaning the bug was a true zero-day for the entire campaign. The attackers staged customized MeshCentral agents masquerading as legitimate cloud endpoints for lateral movement.</p>
+            <div class="key-takeaway">If you run PeopleSoft, apply Oracle's out-of-band patch immediately. The flaw is unauthenticated RCE via HTTP — the same ShinyHunters crew behind the Canvas LMS breach is actively targeting education and enterprise PeopleSoft deployments.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T16:00:00Z" data-searchable="CVE-2026-45657 Windows Kernel wormable RCE TCP/IP use-after-free CVSS 9.8 SYSTEM remote unauthenticated Patch Tuesday June 2026 self-propagating network exploit ZDI CrowdStrike">
+            <div class="story-header">
+              <h4><a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review" target="_blank">Windows Kernel Wormable Flaw CVE-2026-45657 (CVSS 9.8) — Use-After-Free in TCP/IP Stack Enables Self-Propagating Exploits</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Buried in Tuesday's record 208-CVE Patch Tuesday is a vulnerability that security researchers are calling the most dangerous Windows flaw since EternalBlue. CVE-2026-45657 is a use-after-free in the Windows Kernel's TCP/IP processing that allows remote, unauthenticated code execution at SYSTEM level — and Microsoft itself classified it as wormable. The CVSS vector confirms Attack Vector: Network, Authentication: None, User Interaction: None — the trifecta that enables self-propagation. Affected systems include Windows 11 23H2 through 26H1 and Windows Server 2022/2025. ZDI and multiple researchers warn the window between patch release and a reliable public exploit may be days, not weeks.</p>
+            <div class="story-meta"><span class="tag tag-source">Zero Day Initiative</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T12:00:00Z" data-searchable="Langflow CVE-2026-5027 path traversal file write AI development platform unauthenticated RCE 7000 instances VulnCheck exploitation MCP RAG drag-and-drop agent builder">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/" target="_blank">Langflow CVE-2026-5027 Under Active Exploitation — Unauthenticated File Write Hits 7K Exposed AI Dev Instances</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Langflow, the popular drag-and-drop platform for building AI agents and RAG workflows, has a path traversal flaw in its file upload endpoint that lets attackers write arbitrary files without authentication. Langflow's default config enables auto-login, so a single HTTP request gets a valid session token. Censys identified roughly 7,000 publicly exposed instances. VulnCheck confirmed in-the-wild exploitation on June 8. A patch shipped in v1.9.0 back in April, but adoption has been slow — if you're running Langflow in any capacity, upgrade to 1.10.0 immediately and disable auto-login.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-11T10:00:00Z" data-searchable="device code phishing 37x spike 18 kits PhaaS Kali365 EvilTokens Tycoon 2FA OAuth Microsoft 365 MFA bypass criminal commodity espionage technique Push Security">
+            <div class="story-header">
+              <h4><a href="https://pushsecurity.com/blog/device-code-phishing" target="_blank">Device Code Phishing Surges 37x in 2026 — 18 Criminal Kits Turn State-Level Espionage Technique Into Commodity</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Push Security reports that device code phishing — which abuses OAuth device authorization flows to bypass MFA — has exploded from a niche APT technique to a criminal commodity in six months. Detections are up 37x since January, with 18 distinct kits now in circulation. The Kali365 kit, flagged by the FBI in May, is the biggest threat, but Tycoon 2FA's operator has also added device code phishing to its PhaaS offerings. The technique works regardless of what login controls you've deployed because it tricks users into entering a code on a legitimate Microsoft page, handing attackers a fully authenticated session token. Every major AiTM vendor now supports it.</p>
+            <div class="story-meta"><span class="tag tag-source">Push Security</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-10T08:00:00Z" data-searchable="Kyushu Electric Power Japan SSD lost unencrypted 10.9 million customer records physical security contractor data breach storage device">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/japanese-energy-firm-loses-drive-with-data-of-109-million-clients/" target="_blank">Kyushu Electric Subsidiary Loses Unencrypted SSD With 10.9M Customer Records — Drive Was Stored in Unlocked Cabinet</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A contractor backed up Kyushu Electric Power's customer database onto a palm-sized SSD on April 27 and stored it in an unlocked cabinet. The loss wasn't noticed for a full month, during which 57 individuals from 10 contracting firms had room access. The drive contained names, addresses, and electricity-usage data for 10.9 million customers — and was neither encrypted nor password-protected. Japan's Ministry of Economy has given the firm until July 8 to report preventive measures. A reminder that physical security hygiene still matters: no encryption, no lock, no audit trail.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Finance</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-12T09:30:00Z" data-searchable="SpaceX IPO SPCX Nasdaq $135 share price $1.77 trillion market cap $75 billion raised largest IPO history Elon Musk Starlink xAI Goldman Sachs retail investors Fidelity oversubscribed Cursor acquisition">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html" target="_blank">SpaceX Begins Trading on Nasdaq Under SPCX — $75B Raised at $1.77T Valuation, Largest IPO in History</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SpaceX shares began trading today on Nasdaq at $135/share, closing the largest IPO in history with $75 billion in capital raised and a $1.77 trillion market cap — nearly 4x the previous record held by Alibaba. The offering was close to 4x oversubscribed with $250 billion in demand. SpaceX reserved 30% of shares for retail investors, accessible via Fidelity with a $2,000 minimum account balance. The company is now the world's most valuable private-to-public transition, powered by Starlink's explosive revenue growth and its position as the dominant commercial launch provider. The IPO also sets the stage for SpaceX's planned $60B acquisition of AI coding startup Cursor within 30 days.</p>
+            <div class="key-takeaway">SpaceX's $1.77T debut — larger than Meta's current market cap — redefines what a "tech company" means. The planned Cursor acquisition signals SpaceX intends to compete directly in AI developer tools, not just rockets and satellites.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-11T15:00:00Z" data-searchable="Jeff Bezos Prometheus $12 billion Series B $41 billion valuation artificial general engineer industrial AI physical products JPMorgan BlackRock Goldman Sachs manufacturing engineering">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/" target="_blank">Bezos' Prometheus Raises $12B at $41B Valuation — Building an "Artificial General Engineer" for Physical Products</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Prometheus, the industrial AI startup co-led by Jeff Bezos and former Google exec Vik Bajaj, closed a $12 billion Series B at a $41 billion valuation — making it one of the largest AI funding rounds ever. Investors include JPMorgan, BlackRock, Goldman Sachs, and DST Global. The company's core ambition is an "artificial general engineer" that can take a complex physical product from concept through production, compressing design-build cycles by 10x or more. Bezos described his involvement as his first CEO role since stepping down from Amazon in 2021, saying he "couldn't sit on the sidelines." The 150-person team spans San Francisco, London, and Zurich.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-12T06:00:00Z" data-searchable="SpaceX Cursor acquisition $60 billion AI coding startup Anysphere Bloomberg post-IPO 30 days largest software acquisition developer tools IDE Elon Musk">
+            <div class="story-header">
+              <h4><a href="https://thenextweb.com/news/spacex-plans-to-buy-cursor-for-60-billion-once-its-record-ipo-wraps" target="_blank">SpaceX Plans $60B Cursor Acquisition 30 Days Post-IPO — Would Be Largest Software Deal in History</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Bloomberg reported that SpaceX secured a $60 billion option to acquire Cursor, the AI-powered IDE used by more than half the Fortune 500, roughly 30 days after today's IPO. A $10 billion breakup fee protects the transaction. Cursor's parent company Anysphere was reportedly hours from closing a $2 billion funding round at a $50 billion valuation when SpaceX's offer preempted the raise. The deal positions SpaceX as an AI platform company, not just a launch provider — combining xAI's compute infrastructure with the most popular AI coding tool on the market. For developers, the key question is whether Cursor's model-agnostic approach survives under SpaceX/xAI ownership.</p>
+            <div class="story-meta"><span class="tag tag-source">The Next Web</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-10T18:00:00Z" data-searchable="Apollo Blackstone $35 billion debt Anthropic AI compute infrastructure Broadcom TPU Google chips private credit SPV gigawatt Fluidstack XPV Platform largest financing">
+            <div class="story-header">
+              <h4><a href="https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai" target="_blank">Apollo and Blackstone Finalize $35B Debt Deal for Anthropic's AI Compute Expansion — Largest Private Credit Transaction Ever</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apollo and Blackstone have closed a $35 billion financing package — the largest private credit transaction ever assembled — to fund Anthropic's compute infrastructure expansion. The deal, structured through Broadcom's new AI XPV Platform, lets Anthropic lease Google-designed TPU chips through a special-purpose vehicle rather than tying up its own equity on hardware. Broadcom backstops the largest debt tranches, guaranteeing principal repayment even if chip values decline. The initial commitment adds one gigawatt of capacity at Fluidstack sites from mid-2026, with the platform designed to enable over 20GW of compute through 2028. Anthropic's run-rate revenue has surpassed $30 billion, up from $9 billion at end of 2025.</p>
+            <div class="story-meta"><span class="tag tag-source">Apollo IR</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-11T16:00:00Z" data-searchable="DoorDash Ask DoorDash AI chatbot photo ordering food grocery text prompt recipe iOS OpenAI Anthropic Google multimodal restaurant discovery">
+            <div class="story-header">
+              <h4><a href="https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/" target="_blank">DoorDash Launches "Ask DoorDash" — AI Chatbot Orders Food and Groceries From Photos, Recipes, and Text Prompts</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">DoorDash's new "Ask DoorDash" chatbot lets users snap a photo of a cookbook page, a shopping list, or describe a craving in natural language — and the app builds a cart, finds restaurants, or books reservations automatically. The system draws on models from OpenAI, Anthropic, and Google. Nearly half of all restaurant orders placed through the tool were from restaurants the customer had never ordered from before, suggesting the AI is genuinely shifting discovery patterns rather than just automating existing habits. Available now on iOS in select markets, with broader U.S. rollout coming.</p>
+            <div class="story-meta"><span class="tag tag-source">TechCrunch</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Apple/iOS ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127822; Apple &amp; iOS</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="low" data-published="2026-06-10T18:00:00Z" data-searchable="Apple Watch Walkie-Talkie watchOS 27 removed retired push-to-talk FaceTime feature deprecated beta">
+            <div class="story-header">
+              <h4><a href="https://www.macrumors.com/2026/06/10/watchos-27-removes-walkie-talkie/" target="_blank">Apple Removes Walkie-Talkie From watchOS 27 Beta — Push-to-Talk Feature Quietly Retired After 8 Years</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Walkie-Talkie app, introduced with watchOS 5 in 2018, has been removed from the watchOS 27 developer beta — vanishing from both the app list and Control Center. Apple gave the feature no meaningful updates across eight major watchOS releases, and users have long complained about connection problems and unreliable message delivery. While the app could theoretically return before the fall public release, the removal looks like a quiet retirement rather than a beta omission. Developers who integrated Walkie-Talkie-adjacent features via FaceTime APIs should verify their watch apps still build cleanly.</p>
+            <div class="story-meta"><span class="tag tag-source">MacRumors</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-12T08:00:00Z" data-searchable="G7 summit France AI executives Sam Altman OpenAI Dario Amodei Anthropic Demis Hassabis Google Macron youth safety frontier risk governance regulation">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/03/openai-sam-altman-g7-macron-france-big-tech.html" target="_blank">AI CEOs Invited to G7 Summit — Altman, Hassabis, and Amodei to Attend France Meeting Next Week</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">For the first time, the CEOs of all three frontier AI labs — Sam Altman (OpenAI), Demis Hassabis (Google DeepMind), and Dario Amodei (Anthropic) — will attend the G7 Leaders' Summit, hosted by France from June 15–17. Macron personally invited Altman, whose stated priority is youth safety. The inclusion of AI executives at the highest level of multilateral diplomacy signals that AI governance has moved from a future-tense debate to an active governing reality. Expect concrete commitments on frontier model risk disclosure, cross-border incident reporting, and potentially a formal G7 position on Anthropic's recent call for a coordinated development pause.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-11T18:00:00Z" data-searchable="Iran Elon Musk SpaceX Starlink military targets Middle East ground stations Israel Qatar UAE Oman Jordan geopolitical threat infrastructure">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/11/iran-threatens-elon-musks-companies-in-middle-east-iranian-state-media.html" target="_blank">Iran Designates Musk's Middle East Companies as Military Targets — Starlink Ground Stations in Five Countries Named</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Iranian state media outlet Fars announced that all of Elon Musk's companies in the Middle East — including Starlink ground stations in Israel, Qatar, Jordan, the UAE, and Oman — are now classified as military targets. Iran asserts that Starlink has supported U.S. military operations including drone strikes and unmanned surveillance vessels. The designation came after a spate of U.S.-Iran strikes this week. For the tech industry, this is a notable escalation: commercial satellite infrastructure being formally designated as a military target by a state actor sets a troubling precedent for other commercial space and connectivity providers.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
           </div>
         </div>
       </div>
