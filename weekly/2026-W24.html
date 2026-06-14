@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 8 – June 14, 2026</div>
-    <div class="meta">Last updated: 2026-06-13T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-14T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1336,6 +1336,12 @@
             <p class="story-analysis">ShinyHunters (tracked by Mandiant as UNC6240) exploited a critical RCE in Oracle PeopleSoft Enterprise PeopleTools between May 27 and June 9, breaching over 100 organizations — 68% of them universities. The University of Nottingham alone lost 40 GB of student data. CVE-2026-35273 requires no authentication and no user interaction — just network access over HTTP — making it trivially exploitable against any internet-facing PeopleSoft instance. Oracle didn't publish its advisory until June 10, meaning the bug was a true zero-day for the entire campaign. The attackers staged customized MeshCentral agents masquerading as legitimate cloud endpoints for lateral movement.</p>
             <div class="key-takeaway">If you run PeopleSoft, apply Oracle's out-of-band patch immediately. The flaw is unauthenticated RCE via HTTP — the same ShinyHunters crew behind the Canvas LMS breach is actively targeting education and enterprise PeopleSoft deployments.</div>
             <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Sunday, June 14</div>
+                <p class="update-text">CISA added CVE-2026-35273 to the KEV catalog on June 12 with a remediation deadline of June 15 (tomorrow) under the new BOD 26-04 3-day critical patch framework. Rapid7 published a detailed exploitation analysis confirming UNC6240/ShinyHunters activity across May 27–June 9 predated Oracle's advisory by two weeks. PeopleTools versions 8.61 and 8.62 are confirmed affected; Oracle says earlier unsupported versions are likely vulnerable too. <a href="https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog">CISA</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-06-10T16:00:00Z" data-searchable="CVE-2026-45657 Windows Kernel wormable RCE TCP/IP use-after-free CVSS 9.8 SYSTEM remote unauthenticated Patch Tuesday June 2026 self-propagating network exploit ZDI CrowdStrike">
@@ -1478,6 +1484,12 @@
             </div>
             <p class="story-analysis">For the first time, the CEOs of all three frontier AI labs — Sam Altman (OpenAI), Demis Hassabis (Google DeepMind), and Dario Amodei (Anthropic) — will attend the G7 Leaders' Summit, hosted by France from June 15–17. Macron personally invited Altman, whose stated priority is youth safety. The inclusion of AI executives at the highest level of multilateral diplomacy signals that AI governance has moved from a future-tense debate to an active governing reality. Expect concrete commitments on frontier model risk disclosure, cross-border incident reporting, and potentially a formal G7 position on Anthropic's recent call for a coordinated development pause.</p>
             <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+            <div class="update-thread">
+              <div class="update-entry">
+                <div class="update-date">UPDATE — Sunday, June 14</div>
+                <p class="update-text">All three CEOs confirmed attending. Amodei arrives under extraordinary circumstances — the US government pulled his company's most powerful models just two days before the summit. Both Anthropic and OpenAI have confidential S-1 filings pending. The three rivals also jointly signed a letter to Congress advocating stricter regulation on synthetic DNA and AI-related biological threats. The summit opens tomorrow. <a href="https://www.bloomberg.com/news/articles/2026-06-12/anthropic-openai-google-executives-plan-to-attend-g7-summit">Bloomberg</a></p>
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="low" data-published="2026-06-11T18:00:00Z" data-searchable="Iran Elon Musk SpaceX Starlink military targets Middle East ground stations Israel Qatar UAE Oman Jordan geopolitical threat infrastructure">
@@ -1646,6 +1658,139 @@
             </div>
             <p class="story-analysis">EU lawmakers reached political agreement on May 7 to push the AI Act's most consequential obligations — Annex III high-risk AI system requirements, conformity assessments, and CE marking — from August 2, 2026 to December 2027, a 16-month postponement. AI systems embedded in products governed by EU product safety rules get a 12-month delay. However, transparency requirements for AI-generated content were only delayed three months, to December 2, 2026. Prohibited practices (manipulative AI, social scoring, unauthorized biometric identification) remain enforceable now with fines up to &euro;35 million or 7% of global revenue. For developers shipping AI features to EU users: the breathing room on high-risk classification is significant, but transparency and disclosure obligations are still imminent.</p>
             <div class="story-meta"><span class="tag tag-source">Latham &amp; Watkins</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-06-14">
+      <div class="day-header">
+        <h2>Sunday, June 14</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">US Pulls Fable 5 &amp; Mythos 5</span>
+        <span class="highlight-pill">Ivanti Sentry CVSS 10.0 Exploited</span>
+        <span class="highlight-pill">Agentjacking Hits AI Coding Tools</span>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-12T21:21:00Z" data-searchable="Anthropic Fable 5 Mythos 5 US government directive export control national security jailbreak foreign nationals suspend recall Claude frontier model NSA IEEPA">
+            <div class="story-header">
+              <h4><a href="https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security" target="_blank">US Government Orders Anthropic to Suspend Fable 5 and Mythos 5 — Frontier Models Pulled Three Days After Launch</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">In an unprecedented action, the US government issued an export control directive on June 12 at 5:21 PM ET ordering Anthropic to immediately suspend all access to Fable 5 and Mythos 5 by any foreign national — whether inside or outside the United States, including Anthropic's own foreign national employees. The directive cites national security authorities and is based on the government's belief that a method of "jailbreaking" Fable 5 has been discovered. Anthropic complied but publicly disagreed, calling the alleged jailbreaks "either entirely benign responses or minor findings that provide no Mythos-specific uplift." Both models launched just three days earlier on June 9. This is the first time the US government has ordered a commercial AI model recalled from public access, setting a dramatic precedent for how frontier AI capabilities intersect with export control law.</p>
+            <div class="key-takeaway">If you depend on Fable 5 or Mythos 5, switch to Claude Opus 4 or Sonnet 4 immediately — those remain unaffected. The broader signal: frontier model launches now carry regulatory risk that can materialize in days, not months. Enterprise buyers should build provider-switching capability into their AI stacks.</div>
+            <div class="story-meta"><span class="tag tag-source">Axios</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-12T14:00:00Z" data-searchable="Anthropic Public Record survey AI safety governance public opinion poll 52000 Americans job loss cognitive dependency misinformation regulation bipartisan support fear hope cancer disease">
+            <div class="story-header">
+              <h4><a href="https://www.anthropic.com/news/anthropic-public-record" target="_blank">Anthropic Publishes First "Public Record" Survey — 64% of Americans Fear AI Job Loss, 70%+ Want Government Regulation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic released results from its first Public Record on June 12 — a survey of nearly 52,000 Americans fielded in late 2025. The top hope for AI: curing diseases like cancer or Alzheimer's (48%). The top fear: job displacement (64% in every state), followed by cognitive dependency (56%) and misinformation (52%). Over 70% support government regulation of AI, with bipartisan backing. The survey arrives at an awkward moment — published the same day the US government ordered Anthropic to pull its most powerful models. The data provides rare large-sample evidence of where American public sentiment actually sits on AI, rather than relying on pundit proxies.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-14T06:00:00Z" data-searchable="Google Gemini 3.5 Pro limited preview GA June 2026 2 million token context Deep Think reasoning frontier multimodal Sundar Pichai Google I/O Vertex AI">
+            <div class="story-header">
+              <h4><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank">Gemini 3.5 Pro Remains in Limited Preview — GA Expected Later This Month as Google Misses Self-Imposed June Target</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Two weeks past Sundar Pichai's Google I/O promise to ship Gemini 3.5 Pro "next month," the model remains in internal use and limited Vertex AI preview with no public GA date announced. Pro targets a 2-million-token context window, "Deep Think" reasoning mode, and frontier multimodal understanding. Expected pricing is roughly $15/$60 per million input/output tokens — about 10x Flash. With Fable 5 now suspended by the US government, Pro's delayed availability leaves a gap in the frontier model market that only Claude Opus 4 and GPT-5.5 currently fill. Developers waiting on Pro for production workloads should plan contingency with available alternatives.</p>
+            <div class="story-meta"><span class="tag tag-source">Google AI Blog</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">5 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-11T12:00:00Z" data-searchable="Ivanti Sentry CVE-2026-10520 CVSS 10.0 OS command injection root RCE unauthenticated mobile gateway CISA KEV June 14 deadline watchTowr PoC proof of concept Shadowserver exploitation backdoor enterprise">
+            <div class="story-header">
+              <h4><a href="https://www.helpnetsecurity.com/2026/06/10/ivanti-sentry-cve-2026-10520-cve-2026-10523/" target="_blank">Ivanti Sentry CVE-2026-10520 (CVSS 10.0) Under Active Exploitation — Unauthenticated Root RCE, CISA Deadline Today</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A maximum-severity OS command injection flaw in Ivanti Sentry (CVE-2026-10520, CVSS 10.0) gives any unauthenticated attacker the ability to execute arbitrary commands as root on the appliance. watchTowr published a full PoC on June 10, and by June 11 the Shadowserver Foundation confirmed active exploitation with at least two gateways already backdoored. Ivanti Sentry is widely deployed as a mobile access gateway for enterprise environments — compromised appliances give attackers a pivot point into internal networks. CISA added it to the KEV catalog with a remediation deadline of today, June 14. A companion flaw, CVE-2026-10523, enables further post-auth exploitation. Patches are available in versions 10.5.2, 10.6.2, and 10.7.1.</p>
+            <div class="key-takeaway">Patch Ivanti Sentry to 10.5.2+, 10.6.2+, or 10.7.1+ immediately — the CISA deadline is today. If you can't patch now, take the appliance offline. The public PoC makes exploitation trivial and attackers are already backdooring exposed instances.</div>
+            <div class="story-meta"><span class="tag tag-source">Help Net Security</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-13T08:00:00Z" data-searchable="Splunk Enterprise CVE-2026-20253 CVSS 9.8 PostgreSQL sidecar unauthenticated RCE remote code execution file operations backup restore AWS SIEM security monitoring">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html" target="_blank">Splunk Enterprise CVE-2026-20253 (CVSS 9.8) — Unauthenticated RCE via PostgreSQL Sidecar Lets Attackers Own Your SIEM</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Splunk disclosed CVE-2026-20253 on June 10 — a CVSS 9.8 critical flaw in the PostgreSQL Sidecar Service introduced in Splunk Enterprise 10. The /v1/postgres/recovery/backup and /v1/postgres/recovery/restore endpoints lack any authentication and are reachable through Splunk's web proxy, meaning any network-adjacent attacker can dump an attacker-controlled database and execute arbitrary SQL to write malicious files. AWS-hosted instances are especially vulnerable — the PostgreSQL Sidecar is installed and enabled by default. The irony of a critical unauthenticated RCE in one of the most widely deployed security monitoring platforms is hard to overstate. Upgrade to Splunk Enterprise 10.4.0, 10.2.4, or 10.0.7 immediately.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-12T10:00:00Z" data-searchable="Agentjacking AI coding agents Sentry MCP Model Context Protocol injection Tenet Security Claude Code Cursor Windsurf remote code execution developer machine npx command prompt injection supply chain">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html" target="_blank">"Agentjacking" Attack Hijacks AI Coding Agents via Sentry MCP — Fake Bug Reports Trigger Code Execution on Dev Machines</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Tenet Security disclosed "Agentjacking" on June 12 — a new attack class that exploits the intersection of Sentry's event ingestion (which accepts payloads from anyone holding the DSN) and the Sentry MCP server (which returns that data to AI agents as trusted system output). An attacker injects a crafted "error" into Sentry containing a malicious npx command. When a developer asks their AI coding agent to fix unresolved Sentry issues, the agent queries Sentry via MCP, receives the injected event, and executes the attacker's command with the developer's full system privileges. Sentry acknowledged the issue on June 3 but declined to fix it, calling it "technically not defensible" at the platform level. The broader implication: any MCP tool integration returning externally influenced data creates the same vulnerability class.</p>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-12T06:00:00Z" data-searchable="Arch Linux AUR Atomic Arch supply chain attack 1500 packages compromised rootkit infostealer eBPF credential stealer orphaned packages npm atomic-lockfile developer workstation SSH GitHub Docker browser secrets">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer/" target="_blank">"Atomic Arch" Supply Chain Attack Compromises 1,500+ AUR Packages — eBPF Rootkit Targets Developer Credentials</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Researchers identified the "Atomic Arch" campaign on June 11, in which attackers systematically claimed orphaned AUR packages through the standard adoption process and injected malicious npm dependencies (atomic-lockfile, js-digest, lockfile-js) into PKGBUILD scripts. The payload is an ELF binary that steals credentials from browsers, Electron apps (Slack, Teams, Discord), GitHub/npm tokens, Vault secrets, Docker/Podman configs, SSH keys, VPN material, and shell histories. When running as root, it loads an optional eBPF rootkit that hides its processes and socket inodes from standard monitoring tools. Preliminary analysis suggests approximately 1,500 packages were compromised across multiple waves. Arch Linux users should audit installed AUR packages against the community-maintained detection tool on GitHub.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-11T09:00:00Z" data-searchable="UpdraftPlus WordPress CVE-2026-0352 CVE-2026-10795 authentication bypass unauthenticated admin RCE 3 million sites backup migration plugin Wordfence 8172 attacks remote communications">
+            <div class="story-header">
+              <h4><a href="https://www.searchenginejournal.com/updraftplus-wordpress-vulnerability-puts-3-million-sites-at-risk/578912/" target="_blank">UpdraftPlus CVE-2026-10795 — Critical Auth Bypass Puts 3 Million WordPress Sites at Risk of Full Takeover</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A critical authentication bypass in UpdraftPlus (CVE-2026-10795), the most popular WordPress backup plugin with 3+ million active installations, lets unauthenticated attackers execute commands as an administrator. The flaw lies in how the UpdraftPlus Remote Communications V2 module validates messages — insufficient format validation allows complete authentication bypass. Wordfence blocked 8,172 exploitation attempts in a single 24-hour period. Attackers are using the bypass to install malicious plugins and establish persistent backdoors. All versions through 1.26.4 are affected; update to 1.26.5 immediately. With Everest Forms Pro, Kirki, and now UpdraftPlus all seeing active exploitation this month, WordPress plugin security is having an exceptionally bad June.</p>
+            <div class="story-meta"><span class="tag tag-source">Search Engine Journal</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-14T08:00:00Z" data-searchable="G7 summit Evian France AI CEOs Sam Altman Dario Amodei Demis Hassabis OpenAI Anthropic Google DeepMind frontier AI safety regulation synthetic DNA biological threats youth safety IPO">
+            <div class="story-header">
+              <h4><a href="https://www.bloomberg.com/news/articles/2026-06-12/anthropic-openai-google-executives-plan-to-attend-g7-summit" target="_blank">AI's Three Most Powerful CEOs Head to G7 This Weekend — Altman, Amodei, and Hassabis to Brief World Leaders in &Eacute;vian</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Sam Altman, Dario Amodei, and Demis Hassabis — the CEOs of OpenAI, Anthropic, and Google DeepMind — are all confirmed to attend the G7 summit in &Eacute;vian-les-Bains, France, running June 15–17. The agenda includes frontier AI risks (especially cyber and biological), youth safety, and synthetic DNA regulation — topics the three CEOs jointly addressed in a recent letter to Congress. The timing is extraordinary: Amodei arrives with his most powerful models just pulled by the US government, both Anthropic and OpenAI have S-1 filings pending, and the three rivals will brief seven heads of state in the same room. An OpenAI spokesperson confirmed the company expects to discuss "opportunities and threats posed by advanced AI."</p>
+            <div class="story-meta"><span class="tag tag-source">Bloomberg</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-12T16:00:00Z" data-searchable="Oracle PeopleSoft CVE-2026-35273 CISA KEV deadline June 15 ShinyHunters UNC6240 universities zero-day exploitation Mandiant BOD 26-04 3-day patch window federal agencies">
+            <div class="story-header">
+              <h4><a href="https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA KEV Weekend Deadlines: Oracle PeopleSoft CVE-2026-35273 Due Tomorrow, Ivanti Sentry Due Today</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Two critical actively-exploited vulnerabilities hit their CISA KEV remediation deadlines this weekend under the new BOD 26-04 risk-based framework. Ivanti Sentry CVE-2026-10520 (CVSS 10.0) is due today, June 14. Oracle PeopleSoft CVE-2026-35273 (CVSS 9.8) is due tomorrow, June 15 — the flaw that ShinyHunters (UNC6240) exploited as a zero-day between May 27 and June 9 to breach 100+ organizations, with universities hardest hit. BOD 26-04's 3-day mandatory patch window for critical vulnerabilities means federal agencies must complete remediation over the weekend. This is the first weekend test of the new risk-based patching framework that replaced the older fixed-timeline model.</p>
+            <div class="story-meta"><span class="tag tag-source">CISA</span></div>
           </div>
         </div>
       </div>
