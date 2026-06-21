@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 15 – June 21, 2026</div>
-    <div class="meta">Last updated: 2026-06-20T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-21T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1160,6 +1160,10 @@
                 <div class="update-date">UPDATE &mdash; Saturday, June 20</div>
                 <p class="update-text">With the NEET UG re-examination scheduled for tomorrow (June 21), the Telegram ban remains in effect and is expected to lift June 22. The Delhi High Court has publicly questioned the ban&rsquo;s proportionality, asking why 150 million users should be punished for the actions of cheating rackets. BleepingComputer reported the ban inadvertently affected users in the UAE as well, with some ISPs over-broadly implementing the block. The message-editing restriction continues until June 30. User data, chats, and files remain intact on Telegram&rsquo;s servers and will be accessible when service resumes. <a href="https://www.outlookindia.com/national/delhi-high-court-questions-telegram-ban">Outlook India</a></p>
               </div>
+              <div class="update-entry">
+                <div class="update-date">UPDATE &mdash; Sunday, June 21</div>
+                <p class="update-text">The NEET UG 2026 re-examination took place today as scheduled. The Telegram ban is expected to lift tomorrow, June 22, per the original MeitY directive. However, the message-editing feature restriction remains in place until June 30 &mdash; the government found that scammers were editing old posts to insert fake leaked papers with timestamps predating the exam, then extorting panicked students. The Delhi High Court upheld the temporary ban through June 22 but signaled it would not support an extension. No legislation is pending to make the ban permanent. <a href="https://www.barandbench.com/news/litigation/delhi-high-court-upholds-temporary-ban-on-telegram-till-june-22">Bar and Bench</a></p>
+              </div>
             </div>
           </div>
 
@@ -1554,6 +1558,166 @@
             </div>
             <p class="story-analysis">codebase-memory-mcp, an open-source MCP server from DeusData, is trending on GitHub after demonstrating dramatic efficiency gains for AI coding agents. The tool indexes any codebase into a persistent knowledge graph using tree-sitter AST parsing across 158 languages, with hybrid LSP semantic type resolution for 12 popular languages including TypeScript, Python, Go, Rust, and Swift. In evaluations across 31 real-world repositories, it achieved 83% answer quality while using 10x fewer tokens and 2.1x fewer tool calls compared to file-by-file exploration. The project ships as a single static C binary with zero dependencies and has an accompanying research paper on arXiv (2603.27277). For developers using Claude Code or any MCP-compatible agent, this represents a significant upgrade to codebase navigation &mdash; structural queries that previously required reading dozens of files can be answered from the knowledge graph in sub-millisecond response times.</p>
             <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="day-section" data-date="2026-06-21">
+      <div class="day-header">
+        <h2>Sunday, June 21</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Unpatchable Apple A12/A13 BootROM Exploit</span>
+        <span class="highlight-pill">FERC Fast-Tracks AI Data Center Grid Access</span>
+        <span class="highlight-pill">Aflac Breach Hits 22.6M</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-18T14:00:00Z" data-searchable="usbliter8 Apple A12 A13 SecureROM BootROM exploit unpatchable Paradigm Shift DFU USB DMA buffer underflow Synopsys DWC2 iPhone XS XR 11 iPad Air mini Apple Watch checkm8 silicon hardware vulnerability CVE jailbreak">
+            <div class="story-header">
+              <h4><a href="https://thehackernews.com/2026/06/unpatchable-usbliter8-exploit-breaks.html" target="_blank">Unpatchable &lsquo;usbliter8&rsquo; Exploit Breaks Apple A12 and A13 SecureROM Boot Chain &mdash; Affects iPhone XS Through iPhone 11</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Security firm Paradigm Shift published a working proof-of-concept exploit called usbliter8 that achieves arbitrary code execution inside the SecureROM of Apple&rsquo;s A12 and A13 chips &mdash; the first checkm8-style BootROM attack to reach post-A11 silicon. The root cause is a hardware bug in the Synopsys DWC2 USB controller: the controller stores incoming USB Setup packets via DMA, buffers up to three, then resets its write pointer on the fourth by decrementing it by a fixed 24 bytes, creating a repeatable buffer underflow that steps the write pointer backwards through memory 12 bytes at a time. The exploit requires physical access with the device in DFU mode connected to a dedicated RP2350-based microcontroller board and completes in under two seconds. Because the vulnerable code is burned into silicon at manufacture, no software update can patch it. Affected devices include iPhone XS, XR, and 11 families, iPad Air 3rd gen, iPad mini 5th gen, iPad 8th gen, Apple Watch Series 4 and 5, and the HomePod mini.</p>
+            <div class="key-takeaway">If you still support A12/A13 devices in your app&rsquo;s deployment target, this exploit means those devices carry a permanent hardware-level trust chain vulnerability. iOS 27 supports iPhone 11+ (A13), so these devices remain in your user base. For enterprise MDM deployments handling sensitive data, consider accelerating hardware refresh cycles to A14+ devices where this flaw does not exist.</div>
+            <div class="story-meta"><span class="tag tag-source">The Hacker News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-20T12:00:00Z" data-searchable="Prinz Eugen ransomware recent files encryption no ransom note Go ChaCha20-Poly1305 Argon2id Standard Bank Malwarebytes ThreatDown RMM servertool.exe out-of-band communication RDP living-off-the-land 1 BTC">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/new-prinz-eugen-ransomware-prioritizes-recent-files-for-encryption/" target="_blank">Prinz Eugen: New Ransomware Prioritizes Recently Modified Files, Drops No Ransom Note on Disk</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Malwarebytes&rsquo; ThreatDown team published an analysis of Prinz Eugen, a new ransomware operation that inverts the typical encryption strategy by targeting recently modified files first &mdash; maximizing impact on actively used business-critical data before defenders can respond. The Go-based payload (&lsquo;servertool.exe&rsquo;) uses ChaCha20-Poly1305 encryption with a 32-byte master key, random per-file initialization vectors, and key derivation via Argon2id, SHA-256, and HKDF-SHA256. Notably, Prinz Eugen drops no text ransom note and does not change the desktop wallpaper &mdash; all ransom communications happen out-of-band through direct email or dark-web portals, reducing forensic artifacts. The group gains initial access through stolen RDP credentials and relies on legitimate RMM tools and living-off-the-land binaries. Among at least five confirmed victims, Standard Bank was demanded 1 BTC and refused to pay.</p>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-20T16:00:00Z" data-searchable="Aflac data breach 22.6 million customers social engineering SSN health insurance claims data identity protection June 2026 insurance supplemental">
+            <div class="story-header">
+              <h4><a href="https://securityaffairs.com/186144/data-breach/aflac-confirms-june-data-breach-affecting-over-22-million-customers.html" target="_blank">Aflac Confirms June Data Breach Affecting 22.6 Million People &mdash; Social Engineering Attack Exposes SSNs and Claims Data</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Supplemental insurance giant Aflac disclosed that a social engineering attack in June compromised personal data for approximately 22.65 million individuals &mdash; customers, employees, agents, and affiliated parties. The exposed data includes names, contact details, Social Security numbers, claims and health information, and other personal records. Aflac stated the incident was contained within hours, no ransomware was deployed, and systems remained operational throughout. The company is offering two years of identity protection services to affected individuals. This is the largest insurance-sector breach of 2026 by affected count and the fourth-largest US data breach this year overall, behind the Canvas LMS (275M), Aflac now slots in ahead of DentaQuest (2.6M) among recent major incidents. The social engineering vector &mdash; rather than a software vulnerability &mdash; underscores that human factors remain the weakest link even in organizations with substantial security budgets.</p>
+            <div class="story-meta"><span class="tag tag-source">Security Affairs</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-21T08:00:00Z" data-searchable="Secure Boot certificate expiration June 24 2026 Microsoft UEFI CA 2011 KEK Windows Server manual update deadline 2023 certificate rollover enterprise DBX revocation">
+            <div class="story-header">
+              <h4><a href="https://techcommunity.microsoft.com/blog/windows-itpro-blog/secure-boot-playbook-for-certificates-expiring-in-2026/4469235" target="_blank">Secure Boot Certificate Expires in 3 Days &mdash; Windows Server Admins Must Manually Deploy 2023 Certificates by June 24</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Microsoft Corporation KEK CA 2011 certificate expires June 24, followed by the UEFI CA 2011 on June 27 &mdash; marking the end of the 15-year-old Secure Boot trust chain. Consumer PCs on Windows Update receive the replacement 2023 certificates automatically, but Windows Server requires manual deployment. Devices that miss the deadline won&rsquo;t suddenly fail to boot, but they will lose the ability to receive future DBX revocation payloads signed with the old certificate, potentially leaving them unable to block known-bad bootloaders and UEFI drivers. Microsoft published a detailed Secure Boot playbook in May, but enterprise teams with large server fleets have just three days remaining to validate and push the new KEK and UEFI CA certificates. For organizations that delayed patching after June&rsquo;s record-breaking Patch Tuesday, this is the hard deadline that cannot slip.</p>
+            <div class="story-meta"><span class="tag tag-source">Microsoft Tech Community</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-18T18:00:00Z" data-searchable="FERC show cause order AI data center power grid PJM MISO SPP CAISO ISO-NE NYISO 60-day 30-day deadline interconnection transmission large load co-location behind-the-meter generation ratepayer cost shifting energy infrastructure">
+            <div class="story-header">
+              <h4><a href="https://www.tomshardware.com/tech-industry/data-centers/us-energy-regulator-to-order-grid-operators-to-expedite-ai-data-center-applications-says-projects-should-bring-their-own-power-or-cut-usage-during-high-demand" target="_blank">FERC Orders Six US Grid Operators to Fast-Track AI Data Center Power Connections &mdash; 60-Day Deadline to Justify or Reform Rules</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">In a unanimous 5&ndash;0 vote on June 18, the Federal Energy Regulatory Commission issued tailored &ldquo;show cause&rdquo; orders to all six US regional grid operators &mdash; PJM, MISO, SPP, CAISO, ISO New England, and NYISO &mdash; requiring each to either defend their existing interconnection frameworks or propose reforms to fast-track large-load customers, specifically AI data centers. Grid operators have 60 days to explain why current tariffs are adequate or submit changes across five areas: faster transmission service applications, safeguards against cost-shifting to residential ratepayers, rules for co-location and behind-the-meter generation, new flexible load services, and study processes for generation facilities serving nearby large loads. A separate 30-day report must detail how each operator plans to ensure adequate generation capacity for existing and future large loads. The action stems from Energy Secretary Chris Wright&rsquo;s October 2025 directive and reflects the growing tension between AI infrastructure buildout and grid reliability.</p>
+            <div class="key-takeaway">This is the most significant federal action on AI infrastructure power access to date. If you&rsquo;re evaluating data center capacity for AI workloads, the 60-day reform window will reshape interconnection timelines and pricing across all major US grid regions. Watch for co-location and behind-the-meter rules &mdash; they directly affect the economics of on-premise GPU clusters.</div>
+            <div class="story-meta"><span class="tag tag-source">Tom&rsquo;s Hardware</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Dev Tools ── -->
+      <div class="category cat-dev" data-category="dev">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128736; Dev Tools</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-17T10:00:00Z" data-searchable="JetBrains Junie GA general availability AI coding agent agentic debugging ACP Agent Communication Protocol LLM-agnostic CLI IntelliJ WebStorm PyCharm breakpoints debugger MCP Anthropic OpenAI Google xAI Ollama local models">
+            <div class="story-header">
+              <h4><a href="https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/" target="_blank">JetBrains Junie Exits Beta &mdash; AI Coding Agent Ships with Agentic Debugging, ACP Protocol, and LLM-Agnostic CLI</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">JetBrains moved Junie to general availability on June 17, shipping an AI coding agent that works across IntelliJ IDEA, WebStorm, PyCharm, and the full JetBrains IDE family, plus a standalone CLI for terminal, CI/CD, and GitHub/GitLab workflows. The GA release is built on the Agent Communication Protocol (ACP), an open standard that lets any ACP-compatible agent run inside any ACP-compatible editor. The headline feature is agentic debugging through the real IDE debugger &mdash; instead of sprinkling print statements, Junie can set breakpoints, step through execution, inspect variables, and iterate on fixes against live runtime state. Authentication supports JetBrains Account (OAuth), a Junie API key, or bring-your-own-key from Anthropic, OpenAI, Google, xAI, OpenRouter, or GitHub Copilot. You can also point Junie at local runtimes like Ollama, LM Studio, or LiteLLM so prompts and code never leave your machine.</p>
+            <div class="story-meta"><span class="tag tag-source">JetBrains Blog</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-19T14:00:00Z" data-searchable="Claude Code v2.1.183 auto mode safety destructive git commands blocked terraform destroy model deprecation warning settings attribution sessionUrl config toggle bug fixes">
+            <div class="story-header">
+              <h4><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" target="_blank">Claude Code v2.1.183 Ships Auto Mode Safety Guardrails &mdash; Blocks Destructive Git and Infrastructure Commands</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic released Claude Code v2.1.183 on June 19 with a focus on auto mode safety. Destructive git commands (git reset --hard, git checkout -- ., git clean -fd, git stash drop) are now blocked when the user didn&rsquo;t explicitly ask to discard work, git commit --amend is blocked when the commit wasn&rsquo;t made by the agent in the current session, and infrastructure teardown commands (terraform destroy, pulumi destroy, cdk destroy) are blocked unless specifically requested. The update also adds model deprecation warnings on stderr and in agent frontmatter, a new attribution.sessionUrl setting to omit session links from commits in web and Remote Control sessions, and /config --help for listing all available shorthand keys. Numerous bug fixes address JetBrains IDE terminal display, PowerShell validation, voice mode auth, and managed settings enforcement.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Open Source ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128230; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-19T08:00:00Z" data-searchable="OpenMontage open source agentic video production system GitHub trending 12 pipelines 52 tools 500 agent skills Claude Code Cursor Codex Copilot documentary montage real footage AGPL-3.0 Remotion Piper TTS calesthio">
+            <div class="story-header">
+              <h4><a href="https://github.com/calesthio/OpenMontage" target="_blank">OpenMontage Hits GitHub Trending &mdash; Open-Source Agentic Video Production System With 12 Pipelines and 500+ Agent Skills</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">OpenMontage, a new AGPL-3.0 project trending on GitHub with 7,500+ stars, turns AI coding assistants into full video production studios. Unlike text-to-video generators that produce single clips, OpenMontage orchestrates the entire production pipeline: research, scripting, asset generation, editing, and final composition &mdash; all from a natural language prompt. The system includes 12 production pipelines (explainers, talking heads, documentaries, cinematic trailers, animations, podcasts, and more), 52 integrated tools, and 500+ agent skills. Its standout feature is a documentary montage pipeline that pulls real motion footage from Archive.org, NASA, Wikimedia Commons, Pexels, and Pixabay &mdash; no paid video generation API required. A zero-key setup uses Piper TTS for narration and Remotion for animated composition. Configuration files ship for Claude Code, Cursor, Codex, GitHub Copilot, and Windsurf.</p>
+            <div class="story-meta"><span class="tag tag-source">GitHub</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Funding</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="low" data-published="2026-06-19T06:00:00Z" data-searchable="Gradial $65 million Series C Insight Partners agentic marketing $675 million valuation enterprise AI agents Adobe Salesforce ServiceNow AWS Prudential T-Mobile Vanguard Kaiser Permanente US Bank VMG Madrona Pruven">
+            <div class="story-header">
+              <h4><a href="https://www.geekwire.com/2026/gradial-raises-65m-as-startup-sees-rapid-growth-around-agentic-tools-for-enterprise-marketing/" target="_blank">Gradial Raises $65M Series C for Agentic Enterprise Marketing &mdash; Valued at $675M as AI Agents Automate Cross-Platform Campaigns</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Seattle-based Gradial closed a $65 million Series C led by Insight Partners with VMG Partners, Madrona, and Pruven Software participating, valuing the company at $675 million. Gradial deploys AI agents that automate enterprise marketing workflows across existing tools like Adobe, Salesforce, and ServiceNow &mdash; handling asset generation, cross-platform publishing, and campaign orchestration without requiring platform migrations. The client roster includes AWS, Prudential, T-Mobile, Vanguard, Kaiser Permanente, and US Bank. Total funding now exceeds $120 million. The round reflects a broader pattern in 2026: &ldquo;agentic&rdquo; positioning commands premium multiples in enterprise SaaS, particularly when the product integrates with established vendor ecosystems rather than competing against them.</p>
+            <div class="story-meta"><span class="tag tag-source">GeekWire</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="low" data-published="2026-06-21T06:00:00Z" data-searchable="Gemini 3.5 Pro Google delayed 9 days June GA window Vertex AI limited preview Deep Think 2M context frontier model launch deadline Sundar Pichai AI Studio pricing">
+            <div class="story-header">
+              <h4><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank">Gemini 3.5 Pro Watch: 9 Days Left in Google&rsquo;s Self-Imposed June GA Window &mdash; Model Still in Limited Preview</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">With nine days left in June, Google&rsquo;s Gemini 3.5 Pro remains in limited Vertex AI preview with no public GA date confirmed. Sundar Pichai promised at Google I/O on May 19 that Pro would ship &ldquo;next month,&rdquo; a comment that reportedly drew audible groans from the developer audience. The model targets a 2-million-token context window, a Deep Think reasoning mode, and frontier multimodal capabilities at roughly $15/$60 per million input/output tokens. If Google maintains its June commitment, the launch must happen within the final week of the month. With Fable 5 suspended by government order and Pro still unavailable, the frontier model market has narrowed to Claude Opus 4 and GPT-5.5 as the only generally available top-tier options &mdash; giving developers building on those models an unusual period of stability while competitors sort out availability.</p>
+            <div class="story-meta"><span class="tag tag-source">Google AI Blog</span></div>
           </div>
         </div>
       </div>
