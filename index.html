@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 22 – June 28, 2026</div>
-    <div class="meta">Last updated: 2026-06-25T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-26T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1209,6 +1209,11 @@
             <p class="story-analysis">A high-severity SSRF vulnerability in Cisco Unified Communications Manager's WebDialer service is under active exploitation three weeks after Cisco released patches on June 3. Threat intelligence firm Defused reports honeypots detecting automated sweeps via Tor that abuse the SSRF to deploy a rogue Apache Axis service, write a first-stage JSP file-writer, then drop a command-execution webshell — achieving root access on the underlying OS. The attack chain exploits improper input validation of HTTP requests processed by WebDialer, which is disabled by default but widely enabled in enterprise VoIP deployments. Organizations running Cisco UCM should patch immediately or disable WebDialer if it's not operationally required — the latter eliminates the attack surface entirely.</p>
             <div class="key-takeaway">If you run Cisco Unified Communications Manager, check whether WebDialer is enabled and patch to the latest release immediately. The exploit chain is fully automated and routed through Tor, making attribution difficult and attack volume unpredictable.</div>
             <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+            <div class="update-thread">
+              <div class="update" data-update-date="2026-06-25">
+                <span class="update-date">June 25 update:</span> CISA added CVE-2026-20230 to its Known Exploited Vulnerabilities catalog, setting a federal remediation deadline of July 16. All FCEB agencies must patch or mitigate by that date; private-sector organizations should treat the KEV listing as confirmation that exploitation is widespread and prioritize accordingly.
+              </div>
+            </div>
           </div>
 
           <div class="story-card" data-importance="medium" data-published="2026-06-24T14:00:00Z" data-searchable="Mistic backdoor MLTBackdoor KongTuke 404TDS LandUpdate808 TAG-124 Woodgnat ModeloRAT ClickFix ransomware initial access broker DLL side-loading memory-only kill switch Qilin Interlock Rhysida Akira 8Base Black Basta">
@@ -1364,6 +1369,166 @@
             </div>
             <p class="story-analysis">Apple's macOS 27 developer beta 2 closes the Terminal command that previously let developers bypass the Siri AI waitlist and enable the on-device intelligence features early. Developers who used the workaround now find their access revoked and are back in the queue. The change signals Apple is enforcing a controlled rollout for its on-device AI capabilities — likely to manage server-side capacity for the hybrid on-device/cloud inference pipeline that powers Apple Intelligence features. If you were relying on the workaround for testing, plan for potential delays before official access is granted.</p>
             <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section" data-date="2026-06-26">
+      <div class="day-header">
+        <h2>Friday, June 26</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Apple Hikes Mac/iPad Prices</span>
+        <span class="highlight-pill">IBM Sub-1nm Nanostack Chip</span>
+        <span class="highlight-pill">Scattered Spider Guilty Pleas</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-26T09:00:00Z" data-searchable="Scattered Spider UNC0842 Tyler Buchanan Noah Urban Flowers Jubair UK trial guilty pleas TfL M&S Harrods 120 intrusions $115M ransoms SIM swap social engineering">
+            <div class="story-header">
+              <h4><a href="https://krebsonsecurity.com/2026/06/scattered-spider-members-plead-guilty-day-1-uk-trial/" target="_blank">Scattered Spider Members Plead Guilty on Day 1 of UK Trial — 120 Intrusions, $115M in Ransoms</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Two alleged Scattered Spider members — Flowers (18) and Jubair (20) — entered guilty pleas on the opening day of their trial at Southwark Crown Court. UK prosecutors linked the pair to at least 120 intrusions across transport, retail, and telecom sectors, including the high-profile breaches at Transport for London, Marks &amp; Spencer, and Harrods. The group's total attributed ransom haul stands at roughly $115 million. Sentencing is scheduled for July 15-16. The guilty pleas mark the first successful prosecution of Scattered Spider affiliates — a group that has frustrated law enforcement for years despite being composed largely of teenagers and young adults operating from Western countries. The case signals that the SIM-swapping and social-engineering playbook that made the group prolific is no longer providing legal cover.</p>
+            <div class="key-takeaway">The first convictions of Scattered Spider members may deter recruitment into the group's loose affiliate network, but the underlying social-engineering techniques remain effective against organizations that haven't hardened help desks and MFA enrollment processes.</div>
+            <div class="story-meta"><span class="tag tag-source">Krebs on Security</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T06:00:00Z" data-searchable="NAIC ShinyHunters 3.1TB data breach PeopleSoft zero-day insurance filings rating agency 100 organizations National Association of Insurance Commissioners">
+            <div class="story-header">
+              <h4><a href="https://www.insurancejournal.com/news/national/2026/06/26/shinyhunters-naic-breach.html" target="_blank">ShinyHunters Publish 3.1 TB From NAIC Breach — PeopleSoft Zero-Day Exposed 100+ Org Filings</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Threat actor ShinyHunters has published a 3.1 TB archive exfiltrated from the National Association of Insurance Commissioners, exploiting a previously unknown vulnerability in the organization's PeopleSoft deployment. The dump contains regulatory filings, rating agency correspondence, and internal documents from more than 100 member organizations. NAIC confirmed no personally identifiable information or payment data was included in the breach, limiting the direct consumer impact. However, the exposed filings contain non-public financial data and regulatory correspondence that could give adversaries insight into insurer solvency positions and pending enforcement actions — information with significant competitive and market-moving value.</p>
+            <div class="story-meta"><span class="tag tag-source">Insurance Journal</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-25T22:00:00Z" data-searchable="CISA KEV Known Exploited Vulnerabilities CVE-2026-12569 PTC Windchill CVE-2026-20230 Cisco UCM federal remediation deadline July 16">
+            <div class="story-header">
+              <h4><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA Adds Two to KEV Catalog — PTC Windchill and Cisco UCM Under Active Exploitation</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA added two vulnerabilities to its Known Exploited Vulnerabilities catalog on June 25: CVE-2026-12569 in PTC Windchill (a PLM platform widely used in manufacturing and defense supply chains) and CVE-2026-20230 in Cisco Unified Communications Manager (covered in Thursday's briefing). Both carry federal remediation deadlines of July 16. The Windchill vulnerability is particularly concerning for defense-industrial-base organizations, as the platform manages product lifecycle data including CAD files and engineering BOMs that represent high-value intellectual property targets. Organizations running either product should verify patch status immediately.</p>
+            <div class="story-meta"><span class="tag tag-source">CISA</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Apple ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#63743; Apple</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-26T13:00:00Z" data-searchable="Apple Mac iPad price increase $300 MacBook Neo $699 iPad $449 MacBook Air $1299 MacBook Pro $1999 memory upgrade shares drop 6 percent tariff supply chain">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/26/apple-raises-mac-ipad-prices.html" target="_blank">Apple Raises Mac and iPad Prices Up to $300 Across the Lineup — Shares Drop 6%</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple announced price increases of $100 to $300 across its Mac and iPad product lines, the broadest repricing since 2022. The MacBook Neo rises from $599 to $699, the base iPad from $349 to $449, the MacBook Air 512 GB from $1,099 to $1,299, and the MacBook Pro 1 TB from $1,699 to $1,999. Apple attributed the increases to rising component costs and noted it has quadrupled base memory configurations over the past three quarters to justify the higher price points. Shares fell 6% in pre-market trading as investors weighed the demand impact. The move comes as Apple absorbs tariff-driven supply chain cost increases that competitors have largely passed through already — Apple held prices longer but is now catching up in a single step rather than incremental adjustments.</p>
+            <div class="key-takeaway">If you're planning Mac or iPad purchases for your team, current-generation inventory at old prices will sell out quickly. Enterprise buyers with open quotes should lock in pricing immediately — Apple's education and enterprise discount structures typically adjust within 30 days of list price changes.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T08:00:00Z" data-searchable="Apple iOS alternative app marketplaces Brazil CADE MarketplaceKit third-party payments sideloading competition antitrust">
+            <div class="story-header">
+              <h4><a href="https://www.apple.com/newsroom/2026/06/apple-opens-ios-to-alternative-marketplaces-in-brazil/" target="_blank">Apple Opens iOS to Alternative App Marketplaces in Brazil — CADE Agreement Brings MarketplaceKit and Third-Party Payments</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple has agreed to allow alternative app marketplaces and third-party payment processing on iOS in Brazil, following a settlement with competition authority CADE. The implementation uses MarketplaceKit, the same framework Apple built for EU Digital Markets Act compliance, allowing approved marketplace operators to distribute apps outside the App Store while maintaining notarization and security scanning. Third-party payment processors can now handle in-app purchases with a reduced Apple commission. Brazil becomes the third jurisdiction (after the EU and Japan) where Apple has formally opened iOS distribution. For developers with Brazilian user bases, the practical impact depends on whether any marketplace operators build sufficient scale to justify maintaining a separate distribution channel — the EU experience suggests most developers continue to prefer the App Store's built-in audience.</p>
+            <div class="story-meta"><span class="tag tag-source">Apple Newsroom</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-26T11:00:00Z" data-searchable="IBM 0.7nm nanostack transistor 100 billion gate-all-around CFET stacked complementary FET 50 percent performance 70 percent efficiency 7000 TOPS AI inference training semiconductor">
+            <div class="story-header">
+              <h4><a href="https://newsroom.ibm.com/2026-06-26-ibm-nanostack-transistor" target="_blank">IBM Unveils 0.7nm 'Nanostack' Transistor — 100B Transistors, ~7,000 TOPS for AI</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">IBM Research demonstrated a 0.7nm gate-all-around nanostack transistor architecture that stacks complementary FETs vertically, achieving roughly 100 billion transistors per chip. IBM claims 50% higher performance and 70% better power efficiency compared to current 2nm designs, with AI inference capability around 7,000 TOPS — enough to reduce model training times from three months to approximately two weeks for current-generation large language models. The technology is approximately five years from volume production, requiring new EUV lithography tooling and manufacturing processes that don't yet exist at scale. While the timeline is long, the demonstration validates the CFET (complementary FET) roadmap that TSMC and Samsung are also pursuing, confirming that continued transistor scaling beyond 2nm remains physically feasible.</p>
+            <div class="key-takeaway">The 5-year production timeline means this won't affect near-term hardware decisions, but it signals that the semiconductor industry's density roadmap extends well beyond current 2nm nodes — countering narratives that Moore's Law scaling has hit a wall.</div>
+            <div class="story-meta"><span class="tag tag-source">IBM Newsroom</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T07:00:00Z" data-searchable="TSMC price hike advanced nodes 3nm 5nm 7nm wafer revenue 74 percent 25 percent revenue tariff AI demand semiconductor foundry">
+            <div class="story-header">
+              <h4><a href="https://www.tomshardware.com/tech-industry/tsmc-hikes-prices-all-advanced-nodes" target="_blank">TSMC Hikes Prices Across All Advanced Nodes — 3nm Now 25% of Wafer Revenue</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">TSMC is raising prices across its entire advanced-node portfolio (3nm, 5nm, and 7nm), with increases ranging from 5% to 10% depending on volume commitments and node. Advanced nodes now represent 74% of TSMC's total wafer revenue, with 3nm alone accounting for 25% — a faster ramp than any previous node. The price increases reflect both sustained AI-driven demand that has filled TSMC's capacity allocation through 2027 and rising costs from EUV lithography consumables. For hardware companies and cloud providers, this feeds directly into chip costs: Apple, Nvidia, AMD, and Qualcomm all depend on TSMC's advanced nodes, and the increases will eventually surface in device and compute pricing. Combined with Apple's price hikes announced today, the semiconductor cost environment is clearly tightening.</p>
+            <div class="story-meta"><span class="tag tag-source">Tom's Hardware</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T14:00:00Z" data-searchable="tech sell-off market correction Apple shares Nasdaq Korea Kospi circuit breaker semiconductor tariff pricing supply chain investor confidence">
+            <div class="story-header">
+              <h4><a href="https://www.thestreet.com/technology/tech-sell-off-extends-friday-apple-pricing-tsmc" target="_blank">Tech Sell-Off Extends Into Friday — Korea's Kospi Triggers Circuit Breaker as Apple Drops 6%</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">A broad technology sell-off that began in Asian markets extended into US pre-market trading Friday, driven by Apple's surprise price increases and TSMC's node-wide cost hikes. Korea's Kospi index triggered its circuit breaker mechanism after falling more than 8% intraday, led by semiconductor equipment and component suppliers. Apple's 6% pre-market decline dragged the Nasdaq futures down 2.3%. The sell-off reflects investor concern that tariff-driven cost increases are now being passed to consumers simultaneously across the hardware supply chain — from foundry pricing through finished devices — potentially dampening the consumer upgrade cycle that analysts had projected for H2 2026. The breadth of the move, spanning Korean chipmakers to US consumer tech, suggests this is being treated as a sector-wide repricing event rather than company-specific news.</p>
+            <div class="story-meta"><span class="tag tag-source">TheStreet</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#127963; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T15:00:00Z" data-searchable="Fable 5 Mythos 5 Anthropic Commerce Secretary Lutnick congressional deadline June 26 Day 14 suspension executive order AI policy prediction markets ban lift">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/26/fable-5-congressional-deadline-day-14.html" target="_blank">Fable 5 Hits Day-14 Congressional Deadline — Commerce Secretary Lutnick Faces Lawmaker Pressure</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Today marks the 14-day deadline set by four bipartisan lawmakers for Commerce Secretary Howard Lutnick to explain the legal basis for suspending Anthropic's Fable 5 and Mythos 5 models under executive order. The letter, signed by two senators and two representatives, demanded a response by June 26 — today. Prediction markets currently give the suspension a 57% chance of being lifted within 30 days, up from 42% a week ago. Meanwhile, Anthropic's traffic to the affected models has dropped to effectively zero since the suspension took effect, with users migrating to competitor models. The congressional pressure adds a political cost to maintaining the suspension, but the Commerce Department has shown no public indication it intends to respond by the deadline or reverse course.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AI ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="low" data-published="2026-06-26T05:00:00Z" data-searchable="Gemini 3.5 Pro Google delay July missed window DeepMind schedule slip benchmark AI model release competition">
+            <div class="story-header">
+              <h4><a href="https://www.analyticsinsight.net/artificial-intelligence/gemini-3-5-pro-delayed-july-2026" target="_blank">Gemini 3.5 Pro Pushed to July — Google Misses Second Launch Window</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google DeepMind has confirmed that Gemini 3.5 Pro will not ship in June as some internal timelines had indicated, with the release now expected in July 2026. This marks the second missed launch window for the model, which was originally expected alongside Google I/O in May. The delay extends a pattern of schedule slips for Google's flagship model family at a time when competitors are shipping aggressively — Anthropic launched (and had suspended) Fable 5, OpenAI shipped GPT-5 Turbo, and Meta released Llama 4 Scout, all in the past month. For developers building on Gemini APIs, the practical impact is limited since Gemini 2.5 Pro remains capable, but the repeated delays raise questions about whether Google's safety evaluation pipeline is creating a structural speed disadvantage.</p>
+            <div class="story-meta"><span class="tag tag-source">Analytics Insight</span></div>
           </div>
         </div>
       </div>
