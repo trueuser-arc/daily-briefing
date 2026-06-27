@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 22 – June 28, 2026</div>
-    <div class="meta">Last updated: 2026-06-25T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-27T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -1364,6 +1364,175 @@
             </div>
             <p class="story-analysis">Apple's macOS 27 developer beta 2 closes the Terminal command that previously let developers bypass the Siri AI waitlist and enable the on-device intelligence features early. Developers who used the workaround now find their access revoked and are back in the queue. The change signals Apple is enforcing a controlled rollout for its on-device AI capabilities — likely to manage server-side capacity for the hybrid on-device/cloud inference pipeline that powers Apple Intelligence features. If you were relying on the workaround for testing, plan for potential delays before official access is granted.</p>
             <div class="story-meta"><span class="tag tag-source">Apple Developer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section" data-date="2026-06-27">
+      <div class="day-header">
+        <h2>Saturday, June 27</h2>
+        <span class="day-story-count">11 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Gaslight macOS Malware Tricks AI</span>
+        <span class="highlight-pill">Mythos 5 Limited Re-Release</span>
+        <span class="highlight-pill">IBM Debuts Sub-1nm Chip</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">4 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-26T14:00:00Z" data-searchable="Gaslight macOS malware North Korea Rust backdoor prompt injection AI analysis LLM triage SentinelOne Telegram C2 LaunchAgent keychain browser credential theft information stealer DPRK">
+            <div class="story-header">
+              <h4><a href="https://www.sentinelone.com/labs/macos-gaslight-rust-backdoor-turns-prompt-injection-on-the-analyst-not-the-sandbox/" target="_blank">macOS.Gaslight: North Korea-Linked Rust Backdoor Uses Prompt Injection to Trick AI Malware Analysts</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">SentinelOne discovered a previously undocumented Rust-based macOS implant called Gaslight, attributed with high confidence to North Korean threat actors. The malware's standout feature is an embedded cascade of 38 fabricated "system" messages designed to make LLM-assisted triage agents doubt their own session — attacking the analyst's AI perception rather than the sandbox. Gaslight uses a Telegram bot API for C2, enters a polling loop for interactive shell access, and deploys a 6.6 KB Python info-stealer that harvests Terminal histories, Keychain databases, browser data from Chrome, Brave, Firefox, and Safari, and running processes — compressing everything into a ZIP uploaded via Telegram. Persistence is achieved through a LaunchAgent masquerading as "com.apple.system.services.activity." This is a warning shot: as security teams increasingly rely on AI-assisted analysis, adversaries are now designing malware specifically to defeat those tools.</p>
+            <div class="key-takeaway">If your security team uses LLM-based triage, this is the threat model you need to prepare for. Gaslight doesn't try to evade AI analysis — it actively gaslights it with fake system errors. Audit your AI analysis pipelines for prompt injection resilience, and ensure human analysts review AI-flagged "benign" samples.</div>
+            <div class="story-meta"><span class="tag tag-source">SentinelOne</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-25T10:00:00Z" data-searchable="Ubiquiti UniFi OS CVE-2026-34908 CVE-2026-34909 CVE-2026-34910 CVSS 10.0 triple critical CISA KEV access control path traversal command injection remote takeover network infrastructure enterprise">
+            <div class="story-header">
+              <h4><a href="https://www.securityweek.com/critical-ubiquiti-vulnerabilities-in-attackers-crosshairs/" target="_blank">Triple CVSS 10.0 in Ubiquiti UniFi OS Now Under Active Exploitation — CISA Orders Emergency Patches</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Three maximum-severity vulnerabilities in Ubiquiti UniFi OS — CVE-2026-34908 (improper access control), CVE-2026-34909 (path traversal to underlying OS accounts), and CVE-2026-34910 (command injection) — are now being actively exploited in the wild, prompting CISA to add all three to its KEV catalog with a three-day patching deadline for federal agencies. Ubiquiti patched the flaws in UniFi OS Server 5.0.8 on May 21, but exploitation has accelerated since proof-of-concept code appeared. UniFi devices are centrally integrated into network infrastructure, so successful compromise provides lateral movement across the entire enterprise. The attack chain combines the three vulnerabilities for unauthenticated remote takeover — no credentials needed.</p>
+            <div class="story-meta"><span class="tag tag-source">SecurityWeek</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-25T08:00:00Z" data-searchable="Edgecution Edge extension sandbox escape Native Messaging Python backdoor Payouts Kings ransomware initial access broker Zscaler ThreatLabz headless browser Microsoft Teams social engineering">
+            <div class="story-header">
+              <h4><a href="https://www.zscaler.com/blogs/security-research/payouts-king-ransomware-initial-access-broker-deploys-new-edgecution" target="_blank">Edgecution: Malicious Edge Extension Escapes Browser Sandbox via Native Messaging — Linked to Payouts Kings Ransomware</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Zscaler ThreatLabz uncovered Edgecution, a rogue Microsoft Edge extension deployed by the Payouts Kings ransomware initial access broker. The extension abuses Chrome's Native Messaging protocol to escape the browser sandbox and communicate with a Python-based backdoor running on the host. The attack starts via Teams messages impersonating IT staff, directing victims to a fake Microsoft site for a "spam filter update." Once installed, the extension runs in a headless Edge browser — invisible to the user — while the Python backdoor executes shell and PowerShell commands, writes files, and collects system information. The technique is notable because browser extensions are generally sandboxed; Native Messaging provides a legitimate bridge to the host that attackers are now weaponizing for ransomware delivery.</p>
+            <div class="story-meta"><span class="tag tag-source">Zscaler ThreatLabz</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-24T16:00:00Z" data-searchable="Operation Endgame Europol Amadey StealC SocGholish 326 servers 142 domains 47 million cryptocurrency 27 million credentials malware-as-a-service takedown Microsoft law enforcement">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/amadey-stealc-malware-operations-disrupted-in-operation-endgame-action/" target="_blank">Operation Endgame Strikes Again — Europol Seizes 326 Servers, $47M in Crypto, and 27M Stolen Credentials</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Europol's Operation Endgame executed its second major wave, dismantling infrastructure behind three widely used malware families: Amadey, StealC, and SocGholish. The coordinated action across Canada, Denmark, Germany, the Netherlands, the UK, and the US seized 326 servers and 142 domains, froze &euro;41 million ($47M) in cryptocurrency, and recovered approximately 27 million credentials stolen from over 385,000 compromised systems. Amadey provides initial access while StealC extracts passwords and sensitive data — together they form a critical link in the ransomware supply chain. Microsoft partnered with law enforcement on the operation, targeting the interconnected malware-as-a-service ecosystem that feeds affiliates of major ransomware operations.</p>
+            <div class="story-meta"><span class="tag tag-source">Europol / BleepingComputer</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-27T06:00:00Z" data-searchable="Anthropic Mythos 5 limited re-release US government critical infrastructure Commerce Secretary Lutnick 100 organizations cybersecurity model vulnerability discovery guardrails export control June 12 suspension">
+            <div class="story-header">
+              <h4><a href="https://www.nbcnews.com/tech/tech-news/us-government-gives-anthropic-green-light-limited-re-release-mythos-5-rcna352018" target="_blank">US Government Clears Anthropic to Redeploy Mythos 5 to 100+ Critical Infrastructure Organizations</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Commerce Secretary Howard Lutnick notified Anthropic on June 26 that Mythos 5, its most powerful cybersecurity model, can be redeployed to approximately 100 US organizations that operate and defend critical infrastructure — including government agencies and Fortune 500 companies. The approval follows a government-led review that began when Anthropic abruptly disabled Mythos 5 and Fable 5 on June 12 after an export control order. The model had demonstrated unprecedented autonomous vulnerability discovery, uncovering thousands of high-severity flaws across every major OS and browser — including a 27-year-old OpenBSD vulnerability and a 16-year-old FFmpeg flaw. Lutnick wrote that the government is "confident in the guardrails Anthropic has put in place." Anthropic says discussions about broader Mythos 5 access and Fable 5 general restoration will continue into the weekend.</p>
+            <div class="key-takeaway">This is a partial un-suspension: Mythos 5 returns for a vetted list of US defenders, but Fable 5 remains dark for everyone. The approval validates Anthropic's approach of working within the regulatory framework rather than fighting it, and sets a precedent for government-gated access to frontier AI capabilities deemed dual-use.</div>
+            <div class="story-meta"><span class="tag tag-source">NBC News</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-27T10:00:00Z" data-searchable="Fable 5 suspension day 15 prediction market Polymarket restoration odds July 1 43 percent July 31 90 percent Garbarino demo Anthropic Claude export control">
+            <div class="story-header">
+              <h4><a href="https://finance.yahoo.com/markets/crypto/articles/prediction-market-bets-fable-5-102900668.html" target="_blank">Fable 5 Day 15: Prediction Markets Give 43% Odds of Restoration by July 1 — Traders Treat It as Timing, Not Terminal</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Fifteen days after the US government's June 12 export control order forced Anthropic to suspend Fable 5, the model remains completely dark — Anthropic is serving zero traffic. Polymarket odds for restoration by June 29 sit at 34.5%, June 30 at 41.5%, and July 1 at 43%, while the July 31 contract trades at 90.2% — implying traders overwhelmingly expect eventual restoration but not this weekend. The curve is pricing the suspension as a compliance negotiation problem, not a permanent block. Yesterday's Mythos 5 limited re-release to critical infrastructure organizations reinforces this reading: the government is releasing capabilities incrementally as guardrails are validated. For developers with Fable 5 integrations, the market signal suggests planning for a July restoration window rather than seeking permanent alternatives.</p>
+            <div class="story-meta"><span class="tag tag-source">Polymarket / Yahoo Finance</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Apple ── -->
+      <div class="category cat-apple" data-category="apple">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#63743; Apple</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-25T18:00:00Z" data-searchable="Apple MacBook iPad price increase $300 memory shortage AI data center HBM DRAM chip supply Neo MacBook Air MacBook Pro iPad Air iPad Pro stock drop 6 percent Tim Cook">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/25/apple-macbook-ipad-price-hike-memory.html" target="_blank">Apple Hikes MacBook and iPad Prices Up to $300 — AI Data Center Demand Drives Memory Shortage to Consumers</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Apple announced price increases of up to $300 across its MacBook and iPad lines — the MacBook Neo rises from $599 to $699, MacBook Air from $1,099 to $1,299, MacBook Pro from $1,699 to $1,999, iPad from $349 to $449, iPad Mini from $499 to $599, iPad Air from $599 to $749, and iPad Pro from $999 to $1,199. The driver is memory and storage costs that have quadrupled in three quarters, according to Counterpoint Research, as chip suppliers redirect production toward the high-bandwidth memory (HBM) consumed by AI data centers. Apple shares fell over 6% on the news — the worst single-day drop since April 2025. Tim Cook said the increases had become "unavoidable." For developers, expect downstream effects on device adoption rates, particularly at the entry-level iPad tier where education and first-time buyer segments are most price-sensitive.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware &amp; Chips</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-25T13:00:00Z" data-searchable="IBM sub-1nm chip 0.7nm 7 angstrom nanostack architecture 100 billion transistors 3D sequential integration VLSI 2026 SRAM scaling Moore's Law semiconductor transistor density">
+            <div class="story-header">
+              <h4><a href="https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology" target="_blank">IBM Debuts World's First Sub-1nm Chip — 0.7nm Nanostack Packs Nearly 100 Billion Transistors</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">IBM unveiled the world's first sub-1-nanometer chip technology at VLSI 2026, demonstrating a 0.7nm (7 angstrom) architecture called nanostack that packs nearly 100 billion transistors onto a chip the size of a fingernail — roughly double the density of IBM's 2021 2nm demonstration. Rather than shrinking transistors further in two dimensions, nanostack goes vertical: stacking and staggering transistors through 3D sequential integration, with different material combinations per layer allowing independent tuning of each transistor's performance and power characteristics. IBM demonstrated 40% SRAM scaling, enabling significantly more efficient chip designs for AI workloads. This is a research demonstration, not a product — commercialization timeline remains undisclosed while IBM focuses on helping partners scale today's 2nm nanosheet technology — but it signals that Moore's Law has at least another decade of runway.</p>
+            <div class="key-takeaway">The nanostack approach matters more than the node number. By going vertical instead of smaller, IBM sidesteps the physical limits that were supposed to end transistor scaling. MIT Technology Review estimates this could extend Moore's Law another decade — meaning the AI compute trajectory has more room than skeptics predicted.</div>
+            <div class="story-meta"><span class="tag tag-source">IBM Newsroom</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Startups</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T20:00:00Z" data-searchable="Oracle stock worst week since 2001 dot-com bust 19 percent decline AI infrastructure debt $156 billion negative free cash flow capital expenditure $55.7 billion OpenAI headcount cuts 13 percent ORCL">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/26/oracle-stock-ends-worst-week-since-2001-as-investors-dwell-on-finances.html" target="_blank">Oracle Posts Worst Week Since 2001 Dot-Com Bust — AI Infrastructure Debt Pile Hits $156B, Free Cash Flow Goes Negative</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Oracle shares capped a 19% weekly decline on June 26 — the steepest since August 2001 — as investors balked at the financial cost of the company's AI infrastructure push. Total debt reached $156.2 billion (up from $87B a year ago), capital expenditure jumped 162% to $55.7 billion in fiscal 2026, and free cash flow went negative $23.7 billion. The debt is primarily driven by Oracle's commitment to build AI data centers for OpenAI. Compounding the pain: headcount shrank 13% to 141,000 employees as the company cut sales and marketing while pouring capital into infrastructure. The stock has lost roughly 55% from its September 2025 peak of $900B market cap, raising questions about whether the AI infrastructure build-out can generate returns before the debt becomes unsustainable.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-26T12:00:00Z" data-searchable="Google Alphabet Intel custom AI chips TPU 3 million 2028 TSMC Samsung Icefish next-gen 18A process node foundry diversification multi-foundry manufacturing">
+            <div class="story-header">
+              <h4><a href="https://www.semicone.com/article-464.html" target="_blank">Google Taps Intel to Produce 3M+ Custom AI Chips by 2028 — Validates Intel 18A Process Node</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google is in talks with Intel to manufacture more than three million TPU chips using Intel's 18A process node, with production targeted for 2028. Separately, Google's next-gen TPU codenamed "Icefish" will split manufacturing between TSMC (compute die on 1.4nm) and Samsung (memory I/O die) — the most complex multi-foundry approach Google has attempted. The Intel deal is significant beyond volume: it validates Intel's 18A as production-ready for a top-tier customer at a time when Intel desperately needs foundry wins. For the broader industry, Google's multi-foundry strategy signals that even the largest AI companies are diversifying beyond TSMC dependency — a trend that could reshape the semiconductor manufacturing landscape as AI chip demand continues to outstrip single-foundry capacity.</p>
+            <div class="story-meta"><span class="tag tag-source">Semicon Electronics</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── OSS ── -->
+      <div class="category cat-oss" data-category="oss">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128230; Open Source</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="low" data-published="2026-06-26T09:00:00Z" data-searchable="OpenCode open source AI coding agent 160K GitHub stars 7.5 million developers terminal CLI model-agnostic MIT license Cursor alternative Claude GPT-5 Gemini Ollama $25 million revenue">
+            <div class="story-header">
+              <h4><a href="https://www.abhs.in/blog/opencode-160k-github-stars-7-5m-developers-ai-coding-agent-june-2026" target="_blank">OpenCode Hits 160K GitHub Stars and 7.5M Monthly Developers — Open-Source AI Coding Agent Challenges Cursor</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">OpenCode, the open-source MIT-licensed AI coding agent, crossed 160,000 GitHub stars and 7.5 million monthly active developers in June 2026, with its founder telling BetaKit the actual user count has reached 8 million and annualized revenue from its hosted model service is on track for $25 million. The terminal-first tool supports 75+ AI providers including Claude, GPT-5, Gemini, and local Ollama models — its model-agnostic architecture is the key differentiator against Cursor ($9B valuation) and GitHub Copilot. With 900 contributors and 13,000 commits, OpenCode achieved comparable adoption to Cursor in less time while remaining fully open-source. For developers evaluating AI coding tools, OpenCode eliminates vendor lock-in and runs in CI/CD pipelines — use cases that proprietary alternatives don't serve.</p>
+            <div class="story-meta"><span class="tag tag-source">Various</span></div>
           </div>
         </div>
       </div>
