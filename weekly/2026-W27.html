@@ -613,7 +613,7 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark theme">&#9790;</button>
     <h1>Weekly Tech Briefing</h1>
     <div class="week-range">June 29 – July 5, 2026</div>
-    <div class="meta">Last updated: 2026-06-29T12:00:00Z · Auto-generated daily</div>
+    <div class="meta">Last updated: 2026-06-30T12:00:00Z · Auto-generated daily</div>
   </div>
 
   <div class="stats">
@@ -812,6 +812,157 @@
             </div>
             <p class="story-analysis">Palo Alto Networks announced it is joining IBM and Red Hat's Project Lightwell, the $5 billion initiative to secure the open source software supply chain using AI-driven vulnerability discovery and remediation. The expansion adds Palo Alto's virtual patching capability, combining rapid network-level protection with software-level fixes to reduce exposure windows for emerging threats. Project Lightwell uses over 20,000 engineers and frontier AI to operate as a "trusted enterprise clearinghouse" for open source software — scanning, validating, and patching vulnerabilities at unprecedented scale. Early adopters include Bank of America, Goldman Sachs, JPMorgan Chase, Visa, and Mastercard. For developers relying on open source dependencies, Lightwell's automated patching pipeline could materially reduce the window between vulnerability disclosure and fix availability across the ecosystem.</p>
             <div class="story-meta"><span class="tag tag-source">Palo Alto Networks</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section" data-date="2026-06-30">
+      <div class="day-header">
+        <h2>Tuesday, June 30</h2>
+        <span class="day-story-count">10 stories</span>
+        <span class="reading-time"></span>
+      </div>
+      <div class="day-highlights">
+        <span class="highlight-pill">Splunk RCE Actively Exploited</span>
+        <span class="highlight-pill">Device Code Phishing Goes Commodity</span>
+        <span class="highlight-pill">SpaceX Joins Nasdaq-100</span>
+      </div>
+
+      <!-- ── Security ── -->
+      <div class="category cat-security" data-category="security">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128274; Security</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-29T10:00:00Z" data-searchable="Splunk Enterprise CVE-2026-20253 CISA KEV PostgreSQL sidecar unauthenticated RCE WatchTowr proof of concept exploit active exploitation patch deadline SIEM security monitoring critical infrastructure federal agencies">
+            <div class="story-header">
+              <h4><a href="https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/" target="_blank">Splunk Enterprise CVE-2026-20253 Under Active Exploitation — CISA Ordered Emergency Patch by Sunday</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">CISA added Splunk Enterprise CVE-2026-20253 to its Known Exploited Vulnerabilities catalog on June 18 after confirming in-the-wild exploitation that began just three days after WatchTowr published a proof-of-concept on June 12. The critical flaw allows unauthenticated remote code execution via Splunk's PostgreSQL sidecar service, affecting versions 10.2.0–10.2.3 and 10.0.0–10.0.6. Federal agencies were given until Sunday June 29 to patch — a notably tight deadline reflecting the severity: attackers who compromise a SIEM can tamper with security telemetry, steal stored credentials, and pivot into the very infrastructure organizations rely on for threat detection. Splunk released patches (10.4.0, 10.2.4, 10.0.7) on June 10, but exploitation started before many organizations could deploy them.</p>
+            <div class="key-takeaway">If you run Splunk Enterprise on-prem, treat this as a drop-everything patch. A compromised SIEM is uniquely dangerous because it lets attackers blind your security monitoring while they move laterally. Verify you're on 10.4.0+, 10.2.4+, or 10.0.7+ and audit PostgreSQL sidecar access logs back to June 12.</div>
+            <div class="story-meta"><span class="tag tag-source">BleepingComputer</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="high" data-published="2026-06-29T12:00:00Z" data-searchable="device code phishing commodity PhaaS 18 kits 1380 percent increase Huntress Tycoon2FA EvilTokens Kali365 Ghost Hub Cyb3r OAuth token theft MFA bypass Microsoft 365 AI-generated lures espionage criminal">
+            <div class="story-header">
+              <h4><a href="https://www.axios.com/2026/06/23/ai-automation-phishing-emails-hackers" target="_blank">Device Code Phishing Goes From Espionage to Criminal Commodity — 18 Kits in the Wild, 1,380% Detection Spike</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">At the start of 2026, device code phishing was a niche technique associated with Russian state-linked campaigns targeting high-value diplomats. Six months later, researchers at Push Security are tracking 18 commodity kits in the wild, Huntress has observed a 1,380% increase in attacks, and every major phishing-as-a-service vendor — Tycoon2FA, EvilTokens, Kali365, Ghost Hub, and Cyb3r — now offers device code phishing as a standard feature. The technique exploits the OAuth device authorization flow to steal session tokens that bypass all forms of MFA, including hardware keys. Attackers are using generative AI to personalize lures at scale — across hundreds of incidents, no two phishing messages were identical. A single campaign in March 2026 targeted 344 organizations across five countries.</p>
+            <div class="key-takeaway">Device code phishing bypasses every traditional MFA method including hardware keys. If your apps use the OAuth device authorization flow (common for CLI tools, smart TVs, IoT), review whether you can restrict or monitor device code grants. Consider conditional access policies that block device code flows entirely for high-privilege accounts.</div>
+            <div class="story-meta"><span class="tag tag-source">Axios</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AI/ML ── -->
+      <div class="category cat-ai" data-category="ai">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#129302; AI &amp; Machine Learning</h3>
+          <div><span class="count">3 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-27T18:00:00Z" data-searchable="Anthropic Claude API rate limits tiers simplified Start Build Scale Sonnet Haiku Opus matching equal RPM tokens per minute consolidation developer experience pricing">
+            <div class="story-header">
+              <h4><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank">Anthropic Simplifies API Rate Limits — Three Tiers, Sonnet and Haiku Now Match Opus at Every Level</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Anthropic overhauled its API rate limit structure on June 27, consolidating usage tiers from four to three — Start, Build, and Scale — and equalizing rate limits across all Claude models. Claude Sonnet and Haiku now receive the same requests-per-minute, input-tokens-per-minute, and output-tokens-per-minute limits as Opus at every tier. Most organizations moved to a higher tier automatically, and no organization received lower limits than before. The change removes a longstanding friction point where developers had to track different rate limit matrices per model, making it significantly easier to swap between Claude models without hitting unexpected throttling. For teams building agentic applications that route between Haiku for speed and Opus for complex reasoning, the unified limits simplify capacity planning considerably.</p>
+            <div class="story-meta"><span class="tag tag-source">Anthropic</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-29T08:00:00Z" data-searchable="Google Gemini 3.5 Pro delayed July release date Vertex AI preview Sundar Pichai coding long-task performance enterprise testing feedback frontier model launch benchmark">
+            <div class="story-header">
+              <h4><a href="https://www.analyticsinsight.net/news/is-google-delaying-gemini-35-pro-launch-to-july-for-further-testing" target="_blank">Gemini 3.5 Pro Misses June Window — Google Reportedly Delays to July for Long-Task Performance Fixes</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Google's Gemini 3.5 Pro, announced at I/O on May 19 with Sundar Pichai's promise to ship it "next month," has not materialized by month's end. Reports indicate Google is reviewing early tester feedback and refining coding, token efficiency, and long-task performance before general availability. The model remains in limited Vertex AI preview for select enterprise customers. Prediction markets gave roughly 50–55% odds of a June 30 release — effectively a coin flip. The delay contrasts with Gemini 3.5 Flash, which went GA at I/O and has been well-received. For developers who built integrations anticipating a June GA, the slip means continuing to rely on Flash or competing models for production workloads. Google has not provided a revised timeline beyond "soon."</p>
+            <div class="story-meta"><span class="tag tag-source">Analytics Insight</span></div>
+          </div>
+
+          <div class="story-card" data-importance="medium" data-published="2026-06-27T14:00:00Z" data-searchable="Anthropic Fable 5 return restoration Axios scoop identity verification July 8 US customers export control Commerce Department Mythos 5 critical infrastructure government cleared prediction market">
+            <div class="story-header">
+              <h4><a href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon" target="_blank">Fable 5 Return "On Track" Per Axios Sources — Identity Verification July 8 Could Enable US-First Restoration</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Axios reported on June 27 that Anthropic's suspended Fable 5 model is "on track to return soon," citing sources familiar with the negotiations. The key enabling mechanism appears to be Anthropic's identity verification policy taking effect July 8, which would let the company verify US citizenship and potentially restore Fable 5 to domestic users without requiring the export control directive to be fully lifted. Meanwhile, Mythos 5 is already being redeployed to 100+ critical infrastructure organizations following government clearance. Prediction markets price restoration by July 1 at roughly 29%, but analysts see the July 8 verification date as the more realistic milestone. The most likely resolution — a negotiated compromise with Fable restored under expanded oversight while Mythos and foreign access stay restricted — is priced at 45–54% across scenarios.</p>
+            <div class="story-meta"><span class="tag tag-source">Axios</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Business ── -->
+      <div class="category cat-business" data-category="business">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128188; Business &amp; Funding</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="high" data-published="2026-06-26T14:00:00Z" data-searchable="SpaceX SPCX Nasdaq-100 index addition July 7 IPO June 12 fast-tracked ETF fund flows $4.3 billion J.P. Morgan Nasdaq methodology rule change passive investing index rebalancing QQQ">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100.html" target="_blank">SpaceX to Join Nasdaq-100 on July 7 — Fast-Tracked Addition After June 12 IPO Triggers $4.3B in Estimated Fund Flows</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Nasdaq announced that SpaceX will be added to the Nasdaq-100 index effective July 7 — one of the fastest inclusions in the benchmark's history, just 25 days after its June 12 IPO. The speed was enabled by Nasdaq's updated methodology (effective May 1, 2026) that lets large newly listed companies qualify sooner when they rank within the top 40 of current constituents by full market capitalization. J.P. Morgan estimates approximately $4.3 billion in passive fund buying as index-tracking ETFs like QQQ adjust their portfolios. SpaceX is expected to enter with less than 1% weighting, but the forced buying pressure from index funds makes the July 7 rebalancing date a significant liquidity event. Active managers tracking the Nasdaq-100 closely are already repositioning ahead of the official inclusion.</p>
+            <div class="key-takeaway">The $4.3B in estimated passive fund flows isn't just a SpaceX story — it's the first test of Nasdaq's new fast-track inclusion rule for mega-cap IPOs. Watch how this precedent affects future large listings and whether the compressed timeline creates new dynamics for IPO pricing and post-listing volatility.</div>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span> <span class="tag tag-importance-high">HIGH</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-29T09:30:00Z" data-searchable="Alphabet Google DJIA Dow Jones Industrial Average Verizon replacement index change S&P Dow Jones Indices AI cloud computing digital advertising market capitalization price-weighted Honeywell Technologies">
+            <div class="story-header">
+              <h4><a href="https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html" target="_blank">Alphabet Officially Enters Dow Jones Industrial Average — Verizon Exits After 22 Years as Index Catches Up to AI Era</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Alphabet's Class A shares began trading as a Dow Jones Industrial Average component on Monday June 29, replacing Verizon Communications in the 130-year-old index. Verizon had become almost irrelevant to the Dow's daily moves at just 0.5% of overall weight, while Alphabet brings exposure to AI, cloud computing, healthcare technology, and digital advertising. S&P Dow Jones Indices said the change would "broaden and strengthen the DJIA's exposure" to the sectors driving the current market. Honeywell International also remained in the index under its new name, Honeywell Technologies, following its aerospace spinoff. The move closes a long-standing gap in the price-weighted index's representation of the technology sector that dominates global market capitalization.</p>
+            <div class="story-meta"><span class="tag tag-source">CNBC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Hardware ── -->
+      <div class="category cat-hardware" data-category="hardware">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#128313; Hardware</h3>
+          <div><span class="count">2 stories</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-28T12:00:00Z" data-searchable="Jefferies DRAM memory prices surge 50 percent Q3 40 percent Q4 2026 shortage HBM AI data center Samsung SK Hynix Micron supply gap consumer RAM NAND no relief 2028 chipmaker priority">
+            <div class="story-header">
+              <h4><a href="https://www.techspot.com/news/112934-ram-prices-expected-rise-another-40-50-q3.html" target="_blank">Jefferies Warns DRAM Prices to Surge 50% in Q3 and Another 40% in Q4 — No Relief Until 2028</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Jefferies Equity Research published a note on June 28 projecting DRAM prices will rise 40–50% in Q3 2026 versus the current quarter, followed by another 30–40% hike in Q4, with no meaningful price decline until 2028 when 15–20% new capacity comes online. The three major DRAM makers — Samsung, SK Hynix, and Micron — are prioritizing high-margin AI data center HBM orders over standard consumer memory, creating a pricing squeeze that flows through to MacBooks, iPhones, PCs, and game consoles. Apple already raised MacBook and iPad prices up to $300 earlier in June, citing memory costs. For developers budgeting infrastructure or device costs, the Jefferies forecast means current pricing is the floor, not the ceiling, through at least mid-2027.</p>
+            <div class="story-meta"><span class="tag tag-source">TechSpot</span></div>
+          </div>
+
+          <div class="story-card" data-importance="low" data-published="2026-06-30T06:00:00Z" data-searchable="Valve Steam Machine launch June 30 SteamOS AMD Zen 4 RDNA 3 $1049 gaming PC living room Linux console alternative Steam Deck reservation system controller VR headset">
+            <div class="story-header">
+              <h4><a href="https://noisypixel.net/steam-machine-price-specs-reservations-june-2026/" target="_blank">Valve Steam Machine Ships Today — $1,049 SteamOS Gaming PC Hits Shelves With AMD Zen 4 and RDNA 3</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">Valve's Steam Machine officially launched today at $1,049 for the 512GB model, rising to $1,428 for a 2TB bundle with the new Steam Controller and VR headset. The compact cube-shaped PC runs SteamOS on semi-custom AMD Zen 4 CPU and RDNA 3 GPU hardware with 16GB DDR5 and 8GB GDDR6 VRAM. Rather than standard pre-orders, Valve used a reservation system requiring an established Steam account with a purchase before April 27 — selected customers received fulfillment emails during the week of June 29. The device boots directly into Steam's Big Picture interface but remains an open platform supporting desktop mode, sideloaded storefronts, and alternative OS installation. At gaming-PC prices without the Steam Deck's bargain positioning, the Steam Machine is less a console competitor than a bet that Valve's software ecosystem can sell living-room Linux hardware on merit.</p>
+            <div class="story-meta"><span class="tag tag-source">NoisyPixel</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Policy ── -->
+      <div class="category cat-policy" data-category="policy">
+        <div class="category-header" onclick="toggleCategory(this)">
+          <h3>&#9878; Policy &amp; Regulation</h3>
+          <div><span class="count">1 story</span> <span class="chevron">&#9660;</span></div>
+        </div>
+        <div class="category-items">
+          <div class="story-card" data-importance="medium" data-published="2026-06-29T16:00:00Z" data-searchable="DOJ Department of Justice Operation Offsides FIFA World Cup 2026 illegal streaming domains seized 400 copyright piracy ICHIP Peru Bulgaria Croatia Romania Poland Colombia NBC FIFA beIN ACE UFC">
+            <div class="story-header">
+              <h4><a href="https://www.justice.gov/opa/pr/united-states-seizes-hundreds-internet-domains-used-illegally-stream-world-cup-matches" target="_blank">DOJ Seizes ~400 Domains in 'Operation Offsides' — Largest Enforcement Action Against World Cup Streaming Piracy</a></h4>
+              <span class="story-time"></span>
+            </div>
+            <p class="story-analysis">The Department of Justice's Criminal Division seized nearly 400 web domains used to illegally stream 2026 FIFA World Cup matches, in one of the largest single enforcement actions against sports piracy ever conducted. Dubbed "Operation Offsides," the takedown was coordinated through the International Computer Hacking and Intellectual Property (ICHIP) Network of US prosecutors, targeting servers and domains in Peru, Bulgaria, Croatia, Romania, Poland, and Colombia. FIFA identified the infringing domains, with supporting intelligence from beIN Media Group, NBCUniversal, the Motion Picture Association's Alliance for Creativity and Entertainment (ACE), UFC, and Warner Brothers. The seized domains were offering real-time restreams of matches as they aired. For developers building streaming or media apps, the operation signals intensified cross-border enforcement coordination during major events — something to factor into content-protection architecture decisions.</p>
+            <div class="story-meta"><span class="tag tag-source">DOJ</span></div>
           </div>
         </div>
       </div>
